@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     const grades = [
-        { id: 4, name: '4to Grado', status: 'Muy Pronto', disabled: true },
+        { id: 4, name: '4to Grado', status: 'Disponible', disabled: false },
         { id: 5, name: '5to Grado', status: 'Disponible', disabled: false },
         { id: 6, name: '6to Grado', status: 'Disponible', disabled: false }
     ];

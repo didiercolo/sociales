@@ -1,43 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import QuizStart from './Quiz/QuizStart';
+import QuizActive from './Quiz/QuizActive';
+import QuizResults from './Quiz/QuizResults';
 
 const Quiz = ({ questions }) => {
     const [activeQuestions, setActiveQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
-    const [showResults, setShowResults] = useState(false);
-    const [hasStarted, setHasStarted] = useState(false);
-    const [feedback, setFeedback] = useState(null); // { type: 'correct' | 'incorrect', text: string }
+    const [gameState, setGameState] = useState('START'); // START, ACTIVE, RESULTS
+    const [feedback, setFeedback] = useState(null);
     const [selectedOption, setSelectedOption] = useState(null);
 
-    useEffect(() => {
-        // Shuffle and pick 5 questions on mount (or restart)
+    const initializeQuiz = useCallback(() => {
         if (questions && questions.length > 0) {
             const shuffled = [...questions].sort(() => 0.5 - Math.random());
             setActiveQuestions(shuffled.slice(0, 5));
         }
-    }, [questions, hasStarted]);
+    }, [questions]);
+
+    useEffect(() => {
+        initializeQuiz();
+    }, [initializeQuiz]);
 
     const handleStart = () => {
-        setHasStarted(true);
+        setGameState('ACTIVE');
         setCurrentQuestionIndex(0);
         setScore(0);
-        setShowResults(false);
         setFeedback(null);
         setSelectedOption(null);
     };
 
     const handleRestart = () => {
-        const shuffled = [...questions].sort(() => 0.5 - Math.random());
-        setActiveQuestions(shuffled.slice(0, 5));
-        setCurrentQuestionIndex(0);
-        setScore(0);
-        setShowResults(false);
-        setFeedback(null);
-        setSelectedOption(null);
+        initializeQuiz();
+        handleStart();
     };
 
     const handleOptionClick = (index) => {
-        if (selectedOption !== null) return; // Prevent double clicking
+        if (selectedOption !== null) return;
 
         setSelectedOption(index);
         const currentQ = activeQuestions[currentQuestionIndex];
@@ -56,81 +55,34 @@ const Quiz = ({ questions }) => {
             setFeedback(null);
             setSelectedOption(null);
         } else {
-            setShowResults(true);
+            setGameState('RESULTS');
         }
     };
 
-    // Initial State
-    if (!hasStarted) {
-        return (
-            <div className="content-section quiz-container">
-                <h2>📝 ¡Hora de la Prueba!</h2>
-                <p>Demuestra lo que aprendiste.</p>
-                <button className="btn" onClick={handleStart}>Comenzar Quiz</button>
-            </div>
-        );
+    switch (gameState) {
+        case 'ACTIVE':
+            return (
+                <QuizActive
+                    question={activeQuestions[currentQuestionIndex]}
+                    index={currentQuestionIndex}
+                    total={activeQuestions.length}
+                    selectedOption={selectedOption}
+                    onOptionClick={handleOptionClick}
+                    feedback={feedback}
+                    onNext={handleNext}
+                />
+            );
+        case 'RESULTS':
+            return (
+                <QuizResults
+                    score={score}
+                    total={activeQuestions.length}
+                    onRestart={handleRestart}
+                />
+            );
+        default:
+            return <QuizStart onStart={handleStart} />;
     }
-
-    // Results State
-    if (showResults) {
-        return (
-            <div className="content-section quiz-container">
-                <div className="result-card">
-                    <h3>¡Terminaste!</h3>
-                    <p>Tu puntuación es:</p>
-                    <div className="score">{score} / {activeQuestions.length}</div>
-                    <button className="btn" onClick={handleRestart}>Intentar de Nuevo</button>
-                </div>
-            </div>
-        );
-    }
-
-    // Active Quiz State
-    const currentQ = activeQuestions[currentQuestionIndex];
-
-    return (
-        <div className="content-section quiz-container">
-            <div className="quiz-question">
-                {currentQuestionIndex + 1}. {currentQ.question}
-            </div>
-
-            <div className="options-grid">
-                {currentQ.options.map((option, index) => {
-                    let extraClass = '';
-                    if (selectedOption !== null) {
-                        if (index === currentQ.correct) extraClass = 'correct';
-                        else if (index === selectedOption) extraClass = 'incorrect';
-                    }
-
-                    return (
-                        <button
-                            key={index}
-                            className={`quiz-btn ${extraClass}`}
-                            onClick={() => handleOptionClick(index)}
-                            disabled={selectedOption !== null}
-                        >
-                            {option}
-                        </button>
-                    );
-                })}
-            </div>
-
-            {feedback && (
-                <>
-                    <p style={{
-                        marginTop: '1rem',
-                        fontWeight: 'bold',
-                        color: feedback.type === 'correct' ? 'green' : 'red'
-                    }}>
-                        {feedback.text}
-                    </p>
-                    <button className="btn" onClick={handleNext}>
-                        {currentQuestionIndex + 1 === activeQuestions.length ? 'Ver Resultados' : 'Siguiente Pregunta'}
-                    </button>
-                </>
-            )}
-        </div>
-    );
 };
 
 export default Quiz;
