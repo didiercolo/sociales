@@ -11,7 +11,7 @@ const LessonsList = () => {
         <div className="lessons-list-view">
             <Link to="/" className="back-link">⬅ Volver a Grados</Link>
             <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--primary-color)', fontSize: '2.2rem' }}>
-                Lecciones de {gradeId}to Grado
+                {gradeId === 'resumen' ? 'Resumen General MEP 2026' : `Lecciones de ${gradeId}to Grado`}
             </h2>
 
             <div className="lessons-grid">
