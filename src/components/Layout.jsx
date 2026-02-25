@@ -8,7 +8,7 @@ const Layout = () => {
                 <div className="container">
                     <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
                         <h1>🌍 Estudios Sociales</h1>
-                        <p>5to Grado - Costa Rica y Geografía</p>
+                        <p>Material de Apoyo - Primaria</p>
                     </Link>
                 </div>
             </header>
