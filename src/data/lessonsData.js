@@ -36,7 +36,8 @@ export const lessonsData = {
                     content: [
                         "Las líneas imaginarias nos ayudan a ubicar lugares en la Tierra. No son reales, pero son muy importantes.",
                         "<h3>Paralelos</h3><ul><li>Van de este a oeste.</li><li>Miden la <strong>latitud</strong>.</li><li>El más importante es el <strong>Ecuador (0°)</strong>.</li><li>Divide la Tierra en Hemisferio Norte y Hemisferio Sur.</li></ul>",
-                        "<h3>Meridianos</h3><ul><li>Van de norte a sur.</li><li>Miden la <strong>longitud</strong>.</li><li>El más importante es el <strong>Meridiano de Greenwich (0°)</strong>.</li><li>Divide la Tierra en Hemisferio Oriental y Hemisferio Occidental.</li></ul>"
+                        "<h3>Meridianos</h3><ul><li>Van de norte a sur.</li><li>Miden la <strong>longitud</strong>.</li><li>El más importante es el <strong>Meridiano de Greenwich (0°)</strong>.</li><li>Divide la Tierra en Hemisferio Oriental y Hemisferio Occidental.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cómo se llaman las líneas que miden la latitud?</li><li>¿Cuál es el meridiano más importante?</li><li>¿En qué hemisferios divide el Ecuador a la Tierra?</li></ul>"
                     ],
                     videoId: "r6Mg005jCds"
                 },
@@ -44,14 +45,16 @@ export const lessonsData = {
                     title: "2. Ubicación de Costa Rica",
                     content: [
                         "Costa Rica se ubica en:",
-                        "<ul><li><strong>Hemisferio Norte</strong> (al norte del Ecuador).</li><li><strong>Hemisferio Occidental</strong> (al oeste de Greenwich).</li><li>En <strong>América Central</strong>, entre América del Norte y América del Sur.</li><li>Entre el Océano Pacífico y el Mar Caribe.</li></ul>"
+                        "<ul><li><strong>Hemisferio Norte</strong> (al norte del Ecuador).</li><li><strong>Hemisferio Occidental</strong> (al oeste de Greenwich).</li><li>En <strong>América Central</strong>, entre América del Norte y América del Sur.</li><li>Entre el Océano Pacífico y el Mar Caribe.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿En qué hemisferios se ubica Costa Rica?</li><li>¿En qué parte del continente americano se encuentra nuestro país?</li><li>¿Cuáles son los dos cuerpos de agua que rodean a Costa Rica?</li></ul>"
                     ]
                 },
                 {
                     title: "3. Océanos y Continentes",
                     content: [
                         "<h3>Océanos</h3><p>Los cinco océanos son: Pacífico, Atlántico, Índico, Ártico y Antártico.</p>",
-                        "<h3>Continentes</h3><p>Los continentes son: Asia, África, Europa, América, Oceanía y Antártida.</p>"
+                        "<h3>Continentes</h3><p>Los continentes son: Asia, África, Europa, América, Oceanía y Antártida.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>Mencione el nombre de los cinco océanos.</li><li>¿Cuántos continentes existen y cuáles son sus nombres?</li></ul>"
                     ],
                     videoId: "QDfJ4m1t1mQ"
                 },
@@ -59,28 +62,32 @@ export const lessonsData = {
                     title: "4. Costas de Costa Rica",
                     content: [
                         "<h3>Costa Pacífica</h3><ul><li>Es más grande.</li><li>Tiene muchos golfos, bahías y penínsulas.</li><li>Importante para turismo y pesca.</li></ul>",
-                        "<h3>Costa Caribe</h3><ul><li>Es más pequeña.</li><li>Tiene playas hermosas.</li><li>Importante para puertos y comercio.</li></ul>"
+                        "<h3>Costa Caribe</h3><ul><li>Es más pequeña.</li><li>Tiene playas hermosas.</li><li>Importante para puertos y comercio.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuál de las dos costas de Costa Rica es la más extensa?</li><li>¿Qué actividades económicas son importantes en la costa pacífica?</li><li>¿Para qué son importantes los puertos en el Caribe?</li></ul>"
                     ]
                 },
                 {
                     title: "5. Sistemas Montañosos",
                     content: [
                         "Principales cordilleras:<ul><li>Cordillera Volcánica Central</li><li>Cordillera de Talamanca</li><li>Cordillera de Guanacaste</li><li>Cordillera de Tilarán</li></ul>",
-                        "Estas montañas tienen volcanes, ayudan a formar ríos, afectan el clima y son importantes para la naturaleza y el turismo."
+                        "Estas montañas tienen volcanes, ayudan a formar ríos, afectan el clima y son importantes para la naturaleza y el turismo.",
+                        "<h4>Preguntas de repaso</h4><ul><li>Mencione dos de las principales cordilleras de Costa Rica.</li><li>¿Por qué son importantes las montañas para nuestro país?</li></ul>"
                     ]
                 },
                 {
                     title: "6. Ventajas y Desventajas de la Ubicación",
                     content: [
                         "<h3>Ventajas</h3><ul><li>Acceso a dos océanos.</li><li>Rica en biodiversidad.</li><li>Bellas playas y bosques.</li><li>Buenas oportunidades de comercio.</li></ul>",
-                        "<h3>Desventajas</h3><ul><li>Puede tener terremotos y huracanes.</li><li>Inundaciones en algunas áreas.</li><li>Actividad volcánica.</li></ul>"
+                        "<h3>Desventajas</h3><ul><li>Puede tener terremotos y huracanes.</li><li>Inundaciones en algunas áreas.</li><li>Actividad volcánica.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>Mencione dos ventajas de la ubicación geográfica de Costa Rica.</li><li>¿Cuáles son algunos riesgos naturales que enfrenta el país?</li></ul>"
                     ]
                 },
                 {
                     title: "7. Importancia de Estudios Sociales y Cívica",
                     content: [
                         "<p><strong>Estudios Sociales:</strong> Nos ayuda a entender historia y geografía, aprender sobre nuestro país y ser ciudadanos responsables.</p>",
-                        "<p><strong>Educación Cívica:</strong> Nos enseña respeto, responsabilidad, democracia y cómo vivir en paz con los demás.</p>"
+                        "<p><strong>Educación Cívica:</strong> Nos enseña respeto, responsabilidad, democracia y cómo vivir en paz con los demás.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿En qué nos ayuda la materia de Estudios Sociales?</li><li>¿Qué valores nos enseña la Educación Cívica?</li></ul>"
                     ]
                 }
             ],
@@ -122,28 +129,32 @@ export const lessonsData = {
                 {
                     title: "El pasado precolombino",
                     content: [
-                        "Costa Rica fue habitada por grupos humanos desde hace aproximadamente 12,000 años. Los costarricenses de hoy son producto del mestizaje entre indígenas, blancos, negros y otras etnias. Los modos de vida se dividen en cuatro etapas."
+                        "Costa Rica fue habitada por grupos humanos desde hace aproximadamente 12,000 años. Los costarricenses de hoy son producto del mestizaje entre indígenas, blancos, negros y otras etnias. Los modos de vida se dividen en cuatro etapas.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Hace cuántos años aproximadamente llegaron los primeros pobladores a Costa Rica?</li><li>¿Cuáles son las cuatro etapas de los modos de vida precolombinos?</li></ul>"
                     ]
                 },
                 {
                     title: "Cazadores y recolectores (12,000 a.C. – 2,000 a.C.)",
                     content: [
                         "Eran nómadas que buscaban alimento. Los hombres cazaban animales de la <strong>megafauna</strong> como el mastodonte y el perezoso gigante, mientras las mujeres recolectaban frutos.",
-                        "Usaban herramientas de piedra, hueso y madera, como puntas de lanza y raspadores. Con el tiempo, la megafauna desapareció por cambios climáticos y empezaron a cazar animales pequeños como venados y dantas."
+                        "Usaban herramientas de piedra, hueso y madera, como puntas de lanza y raspadores. Con el tiempo, la megafauna desapareció por cambios climáticos y empezaron a cazar animales pequeños como venados y dantas.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué significa ser nómada?</li><li>¿Qué tipo de animales de la megafauna cazaban los primeros pobladores?</li><li>¿Qué herramientas utilizaban para cazar?</li></ul>"
                     ]
                 },
                 {
                     title: "Aldeanos igualitarios (2,000 a.C. – 500 a.C.)",
                     content: [
                         "La agricultura se volvió central y los pobladores se hicieron sedentarios. No existían jefes: todos eran iguales. Fabricaban cerámica de colores para guardar cultivos.",
-                        "Practicaban la <strong>semicultura</strong> (siembra de semillas como el maíz) y la <strong>vegecultura</strong> (siembra de tubérculos como la yuca). Usaban la técnica de roza y quema para preparar la tierra."
+                        "Practicaban la <strong>semicultura</strong> (siembra de semillas como el maíz) y la <strong>vegecultura</strong> (siembra de tubérculos como la yuca). Usaban la técnica de roza y quema para preparar la tierra.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuál es la diferencia entre semicultura y vegecultura?</li><li>¿Por qué se les llama 'aldeanos igualitarios' a los pobladores de este periodo?</li><li>¿En qué consiste la técnica de roza y quema?</li></ul>"
                     ]
                 },
                 {
                     title: "Aldeanos cacicales (500 a.C. – 1,500 d.C.)",
                     content: [
                         "Las aldeas crecieron y surgieron líderes: caciques (políticos) y chamanes (religiosos). La sociedad se dividió en clases sociales.",
-                        "Se fabricaron objetos de jade y luego de oro. Las aldeas se hicieron complejas, con construcciones como <strong>montículos</strong> y calzadas."
+                        "Se fabricaron objetos de jade y luego de oro. Las aldeas se hicieron complejas, con construcciones como <strong>montículos</strong> y calzadas.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué funciones tenía el cacique y quién era el líder religioso?</li><li>¿Qué tipo de construcciones complejas se hicieron en las aldeas cacicales?</li></ul>"
                     ]
                 },
                 {
@@ -191,7 +202,8 @@ export const lessonsData = {
                     content: [
                         "<strong>Área Mesoamericana:</strong> Desde México hasta el norte de Costa Rica. Civilizaciones como aztecas y mayas. Tenían escritura, calendarios y dieta de maíz.",
                         "<strong>Área Intermedia:</strong> Desde Honduras hasta Colombia y Venezuela. Organización en tribus con caciques. Trabajo en piedra, jade, oro y barro. Famosas esferas de piedra.",
-                        "<strong>Área Andina:</strong> Cordillera de los Andes, con los Incas como cultura principal. Cultivo en terrazas y uso de quipus."
+                        "<strong>Área Andina:</strong> Cordillera de los Andes, con los Incas como cultura principal. Cultivo en terrazas y uso de quipus.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son las tres áreas culturales de América que influyeron en Costa Rica?</li><li>¿Qué dieta caracterizaba al Área Mesoamericana?</li><li>¿Qué civilización fue la más importante en el Área Andina?</li></ul>"
                     ]
                 },
                 {
@@ -199,7 +211,8 @@ export const lessonsData = {
                     content: [
                         "<strong>Gran Nicoya:</strong> Guanacaste y norte de Puntarenas. Influencia mesoamericana (Chorotegas). Cerámica policroma.",
                         "<strong>Región Central:</strong> Centro del país. Influencia de las tres áreas. Habitada por huetares y malekus. Monumento Guayabo.",
-                        "<strong>Subregión Diquís:</strong> Sureste del país. Influencia andina. Esferas de piedra."
+                        "<strong>Subregión Diquís:</strong> Sureste del país. Influencia andina. Esferas de piedra.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son las tres regiones arqueológicas de Costa Rica?</li><li>¿En qué región se encuentra el Monumento Nacional Guayabo?</li><li>¿Qué influencia recibió la Gran Nicoya?</li></ul>"
                     ]
                 },
                 {
@@ -212,7 +225,8 @@ export const lessonsData = {
                         "<strong>5. Bruncas:</strong> En Puntarenas. Celebran el 'Baile de los Diablitos' cada 31 de diciembre.",
                         "<strong>6. Malekus:</strong> Alajuela. Creen en el dios Tocu. Trabajan madera de balsa.",
                         "<strong>7. Térrabas:</strong> Buenos Aires. Veneran la Mano de Tigre. Hacen artesanías con jícaras.",
-                        "<strong>8. Ngäbes:</strong> Pacífico Sur. Las mujeres usan vestidos coloridos. Fabrican bolsas (chácaras)."
+                        "<strong>8. Ngäbes:</strong> Pacífico Sur. Las mujeres usan vestidos coloridos. Fabrican bolsas (chácaras).",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son las ocho etnias indígenas de Costa Rica?</li><li>¿Qué celebran los bruncas cada 31 de diciembre?</li><li>¿Quién es el dios creador para los cabécares y bribris?</li></ul>"
                     ]
                 },
                 {
@@ -261,13 +275,15 @@ export const lessonsData = {
                         "<strong>Alimentación:</strong> Maíz, frijoles, cacao, tortillas, tamales.",
                         "<strong>Palabras:</strong> Aguacate, chocolate, tomate, iguana.",
                         "<strong>Medicina:</strong> Conocimiento de plantas como sábila, manzanilla y romero.",
-                        "<strong>Otros:</strong> Orfebrería, esferas de piedra, respeto por la naturaleza y leyendas."
+                        "<strong>Otros:</strong> Orfebrería, esferas de piedra, respeto por la naturaleza y leyendas.",
+                        "<h4>Preguntas de repaso</h4><ul><li>Mencione tres productos alimenticios que heredamos de los indígenas.</li><li>¿Qué plantas medicinales son parte de la herencia indígena?</li><li>Mencione tres palabras que provienen de lenguas indígenas.</li></ul>"
                     ]
                 },
                 {
                     title: "Desafíos Actuales",
                     content: [
-                        "Los pueblos indígenas enfrentan retos como la falta de caminos, pobreza extrema (90%) y el riesgo de perder sus lenguas nativas."
+                        "Los pueblos indígenas enfrentan retos como la falta de caminos, pobreza extrema (90%) y el riesgo de perder sus lenguas nativas.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué porcentaje de la población indígena vive en pobreza extrema?</li><li>Mencione dos desafíos que enfrentan los pueblos originarios actualmente.</li></ul>"
                     ]
                 },
                 {
@@ -310,7 +326,8 @@ export const lessonsData = {
                     content: [
                         "Desde 2015, la Constitución reconoce a Costa Rica como 'multiétnica y pluricultural'.",
                         "Nuestra identidad se forma por indígenas, afrodescendientes, chinos, europeos y migrantes de todo el mundo.",
-                        "<strong>Mestizo:</strong> El costarricense tiene raíces de diversas culturas y todas merecen respeto e igualdad."
+                        "<strong>Mestizo:</strong> El costarricense tiene raíces de diversas culturas y todas merecen respeto e igualdad.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué significa que Costa Rica sea un país multiétnico y pluricultural?</li><li>¿En qué año se reformó la Constitución para este reconocimiento?</li><li>¿Qué significa ser mestizo?</li></ul>"
                     ]
                 },
                 {
@@ -342,7 +359,8 @@ export const lessonsData = {
                     title: "El encuentro",
                     content: [
                         "El 18 de septiembre de 1502, Cristóbal Colón llegó a Cariay (Limón) en su cuarto viaje.",
-                        "Para los indígenas fue algo sobrenatural por la vestimenta, animales e idioma diferentes."
+                        "Para los indígenas fue algo sobrenatural por la vestimenta, animales e idioma diferentes.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿En qué fecha llegó Cristóbal Colón a Costa Rica?</li><li>¿Cómo llamaban los indígenas al lugar donde llegó Colón?</li><li>¿Por qué Colón llamó a estas tierras 'Costa Rica'?</li></ul>"
                     ]
                 },
                 {
@@ -351,14 +369,16 @@ export const lessonsData = {
                         "<strong>1er (1492):</strong> Descubrió San Salvador y La Española.",
                         "<strong>2do (1493):</strong> Descubrió Dominica y Puerto Rico con 17 barcos.",
                         "<strong>3er (1498):</strong> Llegó a Venezuela (tierra continental).",
-                        "<strong>4to (1502):</strong> Llegó a Costa Rica. Murió en 1506 sin saber que era un nuevo continente."
+                        "<strong>4to (1502):</strong> Llegó a Costa Rica. Murió en 1506 sin saber que era un nuevo continente.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué tierras descubrió Colón en su primer viaje?</li><li>¿En cuál de sus viajes llegó por primera vez a tierra continental (Venezuela)?</li><li>¿Cuántos barcos llevó Colón en su segundo viaje?</li></ul>"
                     ]
                 },
                 {
                     title: "Fases de la conquista",
                     content: [
                         "<strong>Primera fase (1502-1543):</strong> Exploración de las costas por Gil González Dávila y otros. Sin poblaciones estables.",
-                        "<strong>Segunda fase (1560-1575):</strong> <strong>Juan de Cavallón</strong> introdujo el ganado. <strong>Vásquez de Coronado</strong> fundó Cartago. <strong>Perafán de Rivera</strong> impuso la encomienda."
+                        "<strong>Segunda fase (1560-1575):</strong> <strong>Juan de Cavallón</strong> introdujo el ganado. <strong>Vásquez de Coronado</strong> fundó Cartago. <strong>Perafán de Rivera</strong> impuso la encomienda.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuál es la diferencia entre la primera y la segunda fase de la conquista?</li><li>¿Quién fundó la ciudad de Cartago y es considerado el verdadero conquistador?</li><li>¿Qué introdujo Juan de Cavallón en Costa Rica?</li></ul>"
                     ]
                 },
                 {
@@ -396,7 +416,8 @@ export const lessonsData = {
                     content: [
                         "España controló sus colonias mediante instituciones:",
                         "<ul><li><strong>En España:</strong> Consejo de Indias (leyes) y Casa de Contratación de Sevilla (comercio).</li><li><strong>En América:</strong> Virreinatos, Capitanías Generales y Cabildos.</li></ul>",
-                        "Costa Rica pertenecía a la <strong>Capitanía General de Guatemala</strong>."
+                        "Costa Rica pertenecía a la <strong>Capitanía General de Guatemala</strong>.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿A qué capitanía general pertenecía la provincia de Costa Rica?</li><li>¿Qué institución en España se encargaba de crear las leyes para América?</li><li>¿Cuál era la función de la Casa de Contratación de Sevilla?</li></ul>"
                     ]
                 },
                 {
@@ -405,21 +426,24 @@ export const lessonsData = {
                         "Costa Rica era una provincia pobre y aislada. La capital era Cartago.",
                         "<strong>Chacra:</strong> Pequeñas fincas de subsistencia (Valle Central).",
                         "<strong>Hacienda:</strong> Grandes extensiones de ganadería (Guanacaste).",
-                        "<strong>Plantación:</strong> Cultivo de cacao (Matina)."
+                        "<strong>Plantación:</strong> Cultivo de cacao (Matina).",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuál fue la capital de Costa Rica durante la mayor parte de la colonia?</li><li>¿Qué era una chacra y qué se producía en ella?</li><li>¿En qué zona se ubicaban las plantaciones de cacao?</li></ul>"
                     ]
                 },
                 {
                     title: "Clases Sociales",
                     content: [
                         "La sociedad era desigual, basada en el color de piel:",
-                        "<ul><li><strong>Peninsulares:</strong> Nacidos en España, tenían el poder.</li><li><strong>Criollos:</strong> Hijos de españoles nacidos en América.</li><li><strong>Mestizos:</strong> Blanco e indígena.</li><li><strong>Mulatos y Zambos:</strong> Mezclas con afrodescendientes, discriminados.</li><li><strong>Negros:</strong> Esclavos traídos de África.</li></ul>"
+                        "<ul><li><strong>Peninsulares:</strong> Nacidos en España, tenían el poder.</li><li><strong>Criollos:</strong> Hijos de españoles nacidos en América.</li><li><strong>Mestizos:</strong> Blanco e indígena.</li><li><strong>Mulatos y Zambos:</strong> Mezclas con afrodescendientes, discriminados.</li><li><strong>Negros:</strong> Esclavos traídos de África.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuál era la diferencia entre un español peninsular y un criollo?</li><li>¿Quiénes ocupaban el lugar más alto en la pirámide social colonial?</li></ul>"
                     ]
                 },
                 {
                     title: "Sistemas de Trabajo y Resistencia",
                     content: [
                         "<strong>Encomienda:</strong> Sistema donde un español controlaba un grupo de indígenas para trabajo o tributo.",
-                        "<strong>Resistencia:</strong> Líderes como <strong>Pablo Presbere</strong> (Talamanca) lucharon contra la dominación española."
+                        "<strong>Resistencia:</strong> Líderes como <strong>Pablo Presbere</strong> (Talamanca) lucharon contra la dominación española.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿En qué consistía el sistema de encomienda?</li><li>¿Quién fue Pablo Presbere y por qué es importante en nuestra historia?</li></ul>"
                     ]
                 },
                 {
@@ -464,7 +488,8 @@ export const lessonsData = {
                         "<strong>Independencia de EE.UU. (1776):</strong> George Washington y Thomas Jefferson inspiraron a los criollos.",
                         "<strong>Revolución Francesa (1789):</strong> Declaración de los derechos del hombre.",
                         "<strong>Independencia de Haití:</strong> Primera república negra libre.",
-                        "<strong>Invasión Napoleónica:</strong> Napoleon encarceló al rey de España, debilitando su control."
+                        "<strong>Invasión Napoleónica:</strong> Napoleon encarceló al rey de España, debilitando su control.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué ideas promovía el movimiento de la Ilustración?</li><li>¿En qué año se independizaron las Trece Colonias de Inglaterra?</li><li>¿Qué sucedió con el rey de España durante la invasión napoleónica?</li></ul>"
                     ]
                 },
                 {
@@ -472,7 +497,8 @@ export const lessonsData = {
                     content: [
                         "<strong>Descontento Criollo:</strong> No podían ocupar cargos públicos.",
                         "<strong>Monopolio comercial:</strong> Solo se podía comerciar con España.",
-                        "<strong>Cortes de Cádiz:</strong> Intento de dar más libertades que luego el Rey eliminó."
+                        "<strong>Cortes de Cádiz:</strong> Intento de dar más libertades que luego el Rey eliminó.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Por qué estaban descontentos los criollos con la corona española?</li><li>¿En qué consistía el monopolio comercial?</li></ul>"
                     ]
                 },
                 {
@@ -510,14 +536,16 @@ export const lessonsData = {
                     content: [
                         "El 15 de septiembre se firmó el acta en Guatemala. <strong>Dolores Bedoya</strong> animó al pueblo a presionar por la libertad.",
                         "El Acta llegó a Cartago el 13 de octubre junto con el 'Acta de los Nublados'. El 29 de octubre, Costa Rica firmó su independencia.",
-                        "El <strong>Pacto de Concordia</strong> (diciembre 1821) fue la primera Constitución. Estableció un gobierno rotativo."
+                        "El <strong>Pacto de Concordia</strong> (diciembre 1821) fue la primera Constitución. Estableció un gobierno rotativo.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿En qué fecha firmó Costa Rica su acta de independencia?</li><li>¿Quién fue Dolores Bedoya y qué hizo para apoyar la independencia?</li><li>¿Cómo se llamó nuestra primera Constitución Política?</li></ul>"
                     ]
                 },
                 {
                     title: "Guerra de Ochomogo (1823)",
                     content: [
                         "Guerra civil entre imperialistas (Cartago/Heredia) y republicanos (San José/Alajuela).",
-                        "<strong>Gregorio José Ramírez</strong> lideró a los republicanos y ganó. La capital pasó de Cartago a San José."
+                        "<strong>Gregorio José Ramírez</strong> lideró a los republicanos y ganó. La capital pasó de Cartago a San José.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué provincias se enfrentaron en la Guerra de Ochomogo?</li><li>¿Quién lideró a los republicanos y cuál fue el resultado de la guerra?</li><li>¿A qué ciudad pasó la capital después de este conflicto?</li></ul>"
                     ]
                 },
                 {
@@ -554,7 +582,8 @@ export const lessonsData = {
                     title: "El proceso",
                     content: [
                         "El Jefe de Estado <strong>Juan Mora Fernández</strong> invitó a Nicoya a unirse. El <strong>25 de julio de 1824</strong>, Nicoya, Santa Cruz y Guanacaste (Liberia) decidieron unirse.",
-                        "El alcalde <strong>Cupertino Briceño</strong> organizó el cabildo bajo el lema: 'De la Patria por nuestra voluntad'."
+                        "El alcalde <strong>Cupertino Briceño</strong> organizó el cabildo bajo el lema: 'De la Patria por nuestra voluntad'.",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿En qué fecha se celebra la Anexión del Partido de Nicoya?</li><li>¿Quién era el Jefe de Estado de Costa Rica que invitó a Nicoya a unirse?</li><li>¿Qué significa la frase 'De la Patria por nuestra voluntad'?</li></ul>"
                     ]
                 },
                 {
@@ -562,7 +591,8 @@ export const lessonsData = {
                     content: [
                         "<strong>Cultura:</strong> La marimba, el quijongo, las bombas y retahílas.",
                         "<strong>Comida:</strong> Tortillas, tamales, pozol.",
-                        "<strong>Economía:</strong> Tierras para ganadería y hermosas playas para el turismo."
+                        "<strong>Economía:</strong> Tierras para ganadería y hermosas playas para el turismo.",
+                        "<h4>Preguntas de repaso</h4><ul><li>Mencione tres aportes culturales de Guanacaste a Costa Rica.</li><li>¿Qué beneficios económicos obtuvo el país con esta anexión?</li></ul>"
                     ]
                 },
                 {
@@ -600,7 +630,8 @@ export const lessonsData = {
                     content: [
                         "<strong>Bandera Nacional (1848):</strong> Diseñada por Pacífica Fernández. Inspirada en Francia (azul, blanco y rojo).",
                         "<strong>Escudo Nacional (1848):</strong> Marco dorado, tres volcanes, un valle entre dos océanos con barcos mercantes, un sol naciente y siete estrellas.",
-                        "<strong>Himno Nacional:</strong> Música de Manuel María Gutiérrez (1852) y letra de José María Zeledón (1903)."
+                        "<strong>Himno Nacional:</strong> Música de Manuel María Gutiérrez (1852) y letra de José María Zeledón (1903).",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Quién diseñó la bandera actual y en qué país se inspiró?</li><li>¿Qué representan los tres volcanes y las siete estrellas en el escudo?</li><li>¿Quiénes compusieron la música y la letra del Himno Nacional?</li></ul>"
                     ]
                 },
                 {
@@ -618,7 +649,8 @@ export const lessonsData = {
                         "<li><strong>Manatí (2014):</strong> Símbolo de la fauna marina.</li>",
                         "<li><strong>Esferas de piedra (2014):</strong> Herencia indígena.</li>",
                         "<li><strong>Teatro Nacional (2018):</strong> Símbolo del arte y la cultura.</li>",
-                        "</ul>"
+                        "</ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Por qué se eligió al yigüirro como ave nacional?</li><li>¿Qué representa la carreta típica como símbolo nacional?</li><li>Mencione tres emblemas nacionales que representen nuestra fauna.</li></ul>"
                     ]
                 },
                 {
@@ -1169,6 +1201,77 @@ export const lessonsData = {
                 {
                     question: "¿Qué debe incluir un maletín de emergencias?",
                     options: ["Juguetes", "Agua, alimentos y linterna", "Solo dinero"],
+                    correct: 1
+                }
+            ]
+        },
+        {
+            id: 6,
+            title: "Lección 6: Banco de Preguntas Completo (6°)",
+            description: "Repaso general de todos los temas de 6to grado.",
+            sections: [
+                {
+                    title: "1. La Campaña Nacional y el Estado Liberal",
+                    content: [
+                        "<p>👉 ¿Quién fue Juan Rafael Mora Porras y cuántas veces fue presidente?</p>",
+                        "<p>👉 ¿Qué ambiciones tenía William Walker en Nicaragua?</p>",
+                        "<p>👉 ¿Qué significaba la frase 'América para los americanos' en la Doctrina Monroe?</p>",
+                        "<p>👉 ¿Por qué era importante la Vía del Tránsito para Estados Unidos?</p>",
+                        "<p>👉 ¿Qué grupos peleaban en la guerra civil de Nicaragua?</p>",
+                        "<p>👉 ¿Qué es un filibustero?</p>",
+                        "<p>👉 ¿En qué batalla Juan Santamaría quemó el Mesón de Guerra?</p>",
+                        "<p>👉 ¿Cuál fue la primera victoria costarricense en territorio nacional?</p>",
+                        "<p>👉 ¿Cómo afectó la peste del cólera a la población costarricense?</p>",
+                        "<p>👉 Mencione dos consecuencias de la Campaña Nacional.</p>",
+                        "<p>👉 ¿Quién fue el líder que inició la modernización del Estado Liberal?</p>",
+                        "<p>👉 ¿Cuál era el lema de esta época?</p>",
+                        "<p>👉 ¿Por qué era necesario construir un ferrocarril al Caribe?</p>",
+                        "<p>👉 ¿Quién fue Minor Keith y qué cultivo impulsó?</p>",
+                        "<p>👉 ¿Cuáles son las tres características de la educación según la reforma de 1886?</p>",
+                        "<p>👉 Mencione una reforma jurídica o religiosa de la época liberal.</p>"
+                    ]
+                },
+                {
+                    title: "2. Reformas del 40, Guerra del 48 y Constitución",
+                    content: [
+                        "<p>👉 ¿Qué problemas sociales dejó el modelo liberal sin resolver?</p>",
+                        "<p>👉 ¿Por qué era necesaria una reforma en los derechos de los trabajadores?</p>",
+                        "<p>👉 Mencione tres de las reformas sociales más importantes de la década de 1940.</p>",
+                        "<p>👉 ¿Qué actores formaron la 'Alianza Histórica' para estas reformas?</p>",
+                        "<p>👉 ¿Cuál fue la causa principal del estallido de la Guerra Civil de 1948?</p>",
+                        "<p>👉 ¿Quién ganó oficialmente las elecciones de 1948 antes de ser anuladas?</p>",
+                        "<p>👉 ¿Por qué es importante la abolición del ejército para Costa Rica?</p>",
+                        "<p>👉 ¿Qué nuevos derechos políticos se otorgaron tras la guerra de 1948?</p>",
+                        "<p>👉 ¿Qué derechos fundamentales establece la Constitución de 1949?</p>",
+                        "<p>👉 ¿Qué significa que la vida humana sea inviolable según la ley?</p>"
+                    ]
+                },
+                {
+                    title: "3. Ciudadanía y Desafíos del Siglo XXI",
+                    content: [
+                        "<p>👉 ¿De qué formas pueden participar los estudiantes en su escuela?</p>",
+                        "<p>👉 ¿Por qué es importante pagar los impuestos?</p>",
+                        "<p>👉 ¿Cuáles son los principales factores de protección contra las drogas?</p>",
+                        "<p>👉 Mencione un riesgo de las redes sociales y cómo evitarlo.</p>",
+                        "<p>👉 Mencione dos normas fundamentales para los peatones.</p>",
+                        "<p>👉 ¿Qué debe contener un kit o maletín de emergencias?</p>"
+                    ]
+                }
+            ],
+            quiz: [
+                {
+                    question: "¿Cuál es el lema del Estado Liberal?",
+                    options: ["Pura Vida", "Orden y Progreso", "Paz y Trabajo"],
+                    correct: 1
+                },
+                {
+                    question: "¿En qué año se abolió el ejército en Costa Rica?",
+                    options: ["1948", "1949", "1856"],
+                    correct: 0
+                },
+                {
+                    question: "¿Quién es el héroe que quemó el Mesón de Guerra?",
+                    options: ["Juan Rafael Mora", "Juan Santamaría", "Minor Keith"],
                     correct: 1
                 }
             ]
