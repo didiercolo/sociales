@@ -913,136 +913,262 @@ export const lessonsData = {
         {
             id: 1,
             title: "Lección 1: La Campaña Nacional de Costa Rica (1856-1857)",
-            description: "La Campaña Nacional de Costa Rica",
+            description: "Consolidación de la independencia y lucha contra los filibusteros.",
             sections: [
                 {
-                    title: "Conociendo a los personajes",
+                    title: "1. Conociendo a los personajes",
                     content: [
-                        "<p><strong>Juan Rafael Mora Porras:</strong> Nació en San José en 1814. Fue presidente de Costa Rica tres veces (1849-1859). Promovió el café, el alumbrado público y dirigió la Campaña Nacional.</p>",
-                        "<p><strong>William Walker:</strong> Estadounidense que intentó conquistar Centroamérica. Se declaró presidente de Nicaragua en 1856.</p>"
+                        "<p><strong>Juan Rafael Mora Porras:</strong> Nació en San José en 1814. Fue presidente tres veces (1849-1859). Promovió el café, el alumbrado público y dirigió la defensa nacional. A pesar de no tener educación formal, fue un líder extraordinario.</p>",
+                        "<p><strong>William Walker:</strong> Estadounidense ambicioso (médico y abogado) que intentó conquistar Centroamérica. Se declaró presidente de Nicaragua en 1856 y buscaba extender la esclavitud.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Quién fue Juan Rafael Mora Porras y cuántas veces fue presidente?</li><li>¿Qué ambiciones tenía William Walker en Nicaragua?</li></ul>"
                     ]
                 },
                 {
-                    title: "Antecedentes de la Campaña",
+                    title: "2. Antecedentes y Causas",
                     content: [
-                        "<p>Fue una serie de batallas (1856-1857) donde Costa Rica defendió Centroamérica de los filibusteros.</p>",
-                        "<h3>Imperialismo norteamericano</h3><p>Estados Unidos creía en el 'destino manifiesto' y la 'Doctrina Monroe', buscando expandirse sobre América.</p>"
+                        "<h3>Causas Internacionales</h3><ul><li><strong>Imperialismo:</strong> Potencias como Inglaterra y EE.UU. querían controlar la región.</li><li><strong>Destino Manifiesto:</strong> Idea de que EE.UU. debía expandirse por todo el continente.</li><li><strong>Doctrina Monroe:</strong> 'América para los americanos'.</li></ul>",
+                        "<h3>Vía del Tránsito</h3><p>Nicaragua era clave para viajar a California (Fiebre del Oro) por el río San Juan y el lago, siendo el punto estratégico que Walker quería controlar.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué significaba la frase 'América para los americanos' en la Doctrina Monroe?</li><li>¿Por qué era importante la Vía del Tránsito para Estados Unidos?</li></ul>"
                     ]
                 },
                 {
-                    title: "Situación de Nicaragua",
+                    title: "3. La Guerra en Nicaragua",
                     content: [
-                        "<p>Nicaragua tenía una guerra interna entre Liberales y Conservadores. Walker aprovechó esto para tomar el poder.</p>",
-                        "<h3>Vía del Tránsito</h3><p>Nicaragua era clave para viajar a California por el río San Juan y el lago.</p>"
+                        "<p>Nicaragua estaba en guerra civil entre <strong>Liberales (León)</strong> y <strong>Conservadores (Granada)</strong>. Los liberales contrataron a Walker y sus filibusteros como mercenarios.</p>",
+                        "<p><strong>¿Qué es un filibustero?</strong> Invasores extranjeros que usan la fuerza para apoderarse de territorios y convertirlos en colonias.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué grupos peleaban en la guerra civil de Nicaragua?</li><li>¿Qué es un filibustero?</li></ul>"
                     ]
                 },
                 {
-                    title: "Llegaron los filibusteros",
+                    title: "4. Primera Fase: Batallas Principales",
                     content: [
-                        "<p><strong>¿Qué es un filibustero?</strong> Invasores extranjeros que usan la fuerza para apoderarse de territorios.</p>",
-                        "<p>Mora se enteró del peligro por sus diplomáticos y preparó al pueblo con la proclama del 20 de noviembre de 1855.</p>"
+                        "<ul><li><strong>Batalla de Santa Rosa (20 de marzo, 1856):</strong> Primera victoria tica en Guanacaste en solo 14 minutos.</li><li><strong>Batalla de Sardinal (10 de abril, 1856):</strong> Se detuvo el avance filibustero por el río Sarapiquí.</li><li><strong>Batalla de Rivas (11 de abril, 1856):</strong> <strong>Juan Santamaría</strong> quemó el Mesón de Guerra, obligando a Walker a huir.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿En qué batalla Juan Santamaría quemó el Mesón de Guerra?</li><li>¿Cuál fue la primera victoria costarricense en territorio nacional?</li></ul>"
+                    ]
+                },
+                {
+                    title: "5. Peste del Cólera y Consecuencias",
+                    content: [
+                        "<p>La <strong>peste del cólera</strong> obligó al ejército a regresar. Murieron cerca de 10,000 personas (10% de la población). Fue más letal que las balas.</p>",
+                        "<h3>Consecuencias finales</h3><ul><li>Consolidación de la identidad nacional.</li><li>Nacimiento de héroes como Santamaría, Mora y <strong>Pancha Carrasco</strong>.</li><li>Fortalecimiento de la unión centroamericana.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cómo afectó la peste del cólera a la población costarricense?</li><li>Mencione dos consecuencias de la Campaña Nacional.</li></ul>"
                     ]
                 }
             ],
             quiz: [
                 {
-                    question: "¿Quién dirigió el ejército de Costa Rica en la Campaña Nacional?",
-                    options: ["Juan Rafael Mora Porras", "William Walker", "Felipe Molina"],
+                    question: "¿Quién fue el presidente que lideró la Campaña Nacional?",
+                    options: ["Juan Rafael Mora Porras", "Tomás Guardia", "José Figueres"],
                     correct: 0
                 },
                 {
-                    question: "¿En qué años se llevó a cabo la Campaña Nacional?",
-                    options: ["1821-1823", "1856-1857", "1948-1949"],
+                    question: "¿Qué edificio quemó Juan Santamaría en la Batalla de Rivas?",
+                    options: ["El Cuartel", "El Mesón de Guerra", "La Catedral"],
                     correct: 1
                 },
                 {
-                    question: "¿Qué doctrina decía 'América para los americanos'?",
-                    options: ["Destino Manifiesto", "Tratado Cañas-Jerez", "Doctrina Monroe"],
+                    question: "¿Qué enfermedad causó más muertes que la guerra misma?",
+                    options: ["Gripe", "Cólera", "Fiebre Amarilla"],
+                    correct: 1
+                },
+                {
+                    question: "¿En qué país nació William Walker?",
+                    options: ["Inglaterra", "Nicaragua", "Estados Unidos"],
                     correct: 2
                 },
                 {
-                    question: "¿Dónde nació William Walker?",
-                    options: ["Nashville, Tennessee", "San José, Costa Rica", "León, Nicaragua"],
-                    correct: 0
+                    question: "¿Cuál fue la primera batalla ganada en territorio costarricense?",
+                    options: ["Rivas", "Santa Rosa", "Sardinal"],
+                    correct: 1
+                }
+            ]
+        },
+        {
+            id: 2,
+            title: "Lección 2: El Estado Liberal y los Sueños de Progreso",
+            description: "Modernización del país, ferrocarril y reformas.",
+            sections: [
+                {
+                    title: "1. El Estado Liberal",
+                    content: [
+                        "<p>A finales del siglo XIX, bajo el lema <strong>'Orden y Progreso'</strong>, Costa Rica inició una modernización liderada por el general <strong>Tomás Guardia</strong> (1870).</p>",
+                        "<h3>Características</h3><ul><li>Desarrollo económico.</li><li>Libertades individuales (expresión, culto).</li><li>Separación de la Iglesia y el Estado.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Quién fue el líder que inició la modernización del Estado Liberal?</li><li>¿Cuál era el lema de esta época?</li></ul>"
+                    ]
                 },
                 {
-                    question: "¿Qué grupo contrataron los liberales en Nicaragua?",
-                    options: ["Cofetaleros", "Mercenarios/Filibusteros", "Ingleses"],
+                    title: "2. El Ferrocarril al Caribe",
+                    content: [
+                        "<p>Para exportar café a Europa más barato, era necesario un puerto en Limón. Se pidió un préstamo a Inglaterra, pero no alcanzó.</p>",
+                        "<p>El estadounidense <strong>Minor Keith</strong> terminó la obra a cambio de tierras para cultivar banano, lo que cambió la economía del Caribe.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Por qué era necesario construir un ferrocarril al Caribe?</li><li>¿Quién fue Minor Keith y qué cultivo impulsó?</li></ul>"
+                    ]
+                },
+                {
+                    title: "3. Reformas Liberales",
+                    content: [
+                        "<h3>Reforma Educativa (1886)</h3><p><strong>Mauro Fernández</strong> impulsó leyes para que la educación primaria fuera <strong>gratuita, obligatoria y laica</strong>.</p>",
+                        "<h3>Otras reformas</h3><ul><li><strong>Jurídica:</strong> Matrimonio civil y divorcio.</li><li><strong>Religiosa:</strong> Cementerios pasaron al Estado (secularización).</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son las tres características de la educación según la reforma de 1886?</li><li>Mencione una reforma jurídica o religiosa de la época liberal.</li></ul>"
+                    ]
+                }
+            ],
+            quiz: [
+                {
+                    question: "¿Quién impulsó la reforma educativa en 1886?",
+                    options: ["Juan Rafael Mora", "Mauro Fernández", "Tomás Guardia"],
                     correct: 1
                 },
                 {
-                    question: "¿Qué ruta estratégica buscaban controlar en Nicaragua?",
-                    options: ["Carretera Interamericana", "Vía del Tránsito", "Ferrocarril al Atlántico"],
+                    question: "¿Qué producto se empezó a cultivar masivamente gracias al ferrocarril?",
+                    options: ["Café", "Bananos", "Cacao"],
                     correct: 1
                 },
                 {
-                    question: "¿Cómo se enteró Mora del peligro de Walker?",
-                    options: ["Por internet", "Por los periódicos de Nicaragua", "Por sus diplomáticos en Washington"],
+                    question: "¿Cuál era el lema del Estado Liberal?",
+                    options: ["Pura Vida", "Libertad o Muerte", "Orden y Progreso"],
                     correct: 2
                 },
                 {
-                    question: "¿Qué fecha tuvo la primera proclama de Mora?",
-                    options: ["20 de noviembre de 1855", "11 de abril de 1856", "1 de mayo de 1857"],
+                    question: "¿Qué presidente liberal abolió la pena de muerte?",
+                    options: ["Tomás Guardia", "Braulio Carrillo", "Rafael Yglesias"],
+                    correct: 0
+                }
+            ]
+        },
+        {
+            id: 3,
+            title: "Lección 3: El Estado Social y las Reformas de 1940",
+            description: "La creación de la CCSS, UCR y garantías sociales.",
+            sections: [
+                {
+                    title: "1. Crisis del Modelo Liberal",
+                    content: [
+                        "<p>El modelo liberal dejó problemas: pobreza, desnutrición y falta de derechos laborales. Los trabajadores no tenían salario mínimo ni seguro médico.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué problemas sociales dejó el modelo liberal sin resolver?</li><li>¿Por qué era necesaria una reforma en los derechos de los trabajadores?</li></ul>"
+                    ]
+                },
+                {
+                    title: "2. Las Grandes Reformas",
+                    content: [
+                        "<p>El presidente <strong>Rafael Ángel Calderón Guardia</strong> impulsó cambios profundos con una alianza histórica entre el Gobierno, la Iglesia Católica y el Partido Comunista.</p>",
+                        "<ul>",
+                        "<li><strong>UCR (1941):</strong> Creación de la primera universidad pública moderna.</li>",
+                        "<li><strong>CCSS:</strong> Seguro social para salud y pensiones.</li>",
+                        "<li><strong>Garantías Sociales:</strong> Derechos incluidos en la Constitución (vacaciones, huelga, 8 horas).</li>",
+                        "<li><strong>Código de Trabajo (1943):</strong> Leyes que protegen al trabajador frente al patrono.</li>",
+                        "</ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>Mencione tres de las reformas sociales más importantes de esta década.</li><li>¿Qué actores formaron la 'Alianza Histórica' para estas reformas?</li></ul>"
+                    ]
+                }
+            ],
+            quiz: [
+                {
+                    question: "¿Quién fue el presidente de las Reformas Sociales de 1940?",
+                    options: ["José Figueres", "Rafael Ángel Calderón Guardia", "Otilio Ulate"],
+                    correct: 1
+                },
+                {
+                    question: "¿Qué significan las siglas CCSS?",
+                    options: ["Caja Costarricense de Seguro Social", "Centro de Salud y Seguridad", "Código Civil de Seguridad"],
                     correct: 0
                 },
                 {
-                    question: "¿Cuál era la principal profesión de William Walker?",
-                    options: ["Médico, abogado y periodista", "Solo militar", "Comerciante de café"],
-                    correct: 0
+                    question: "¿Cuántas horas es la jornada laboral máxima según las Garantías Sociales?",
+                    options: ["10 horas", "6 horas", "8 horas"],
+                    correct: 2
+                }
+            ]
+        },
+        {
+            id: 4,
+            title: "Lección 4: La Guerra Civil de 1948",
+            description: "Abolición del ejército y la nueva Constitución.",
+            sections: [
+                {
+                    title: "1. Causas de la Guerra",
+                    content: [
+                        "<p>La <strong>anulación de las elecciones de 1948</strong> (donde ganó Otilio Ulate) y la corrupción electoral llevaron al país al conflicto armado.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuál fue la causa principal del estallido de la Guerra Civil?</li><li>¿Quién ganó oficialmente las elecciones de 1948 antes de ser anuladas?</li></ul>"
+                    ]
                 },
                 {
-                    question: "¿Qué país era la principal potencia imperialista en el siglo XIX?",
-                    options: ["Inglaterra", "España", "Francia"],
-                    correct: 0
+                    title: "2. José Figueres Ferrer y el Conflicto",
+                    content: [
+                        "<p>Figueres lideró el Ejército de Liberación Nacional. La guerra duró 44 días y cambió el rumbo del país.</p>",
+                        "<h3>Logros de la Segunda República</h3><ul><li><strong>Abolición del Ejército (1º dic, 1948):</strong> Se eliminaron las fuerzas armadas para invertir en educación.</li><li><strong>Voto Femenino:</strong> Las mujeres pudieron votar por primera vez.</li><li><strong>TSE:</strong> Creación del tribunal para garantizar elecciones limpias.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Por qué es importante la abolición del ejército para Costa Rica?</li><li>¿Qué nuevos derechos políticos se otorgaron tras la guerra?</li></ul>"
+                    ]
                 },
                 {
-                    question: "¿Cuántas veces fue presidente Mora Porras?",
-                    options: ["1", "5", "3"],
+                    title: "3. Constitución de 1949",
+                    content: [
+                        "<p>Es la ley fundamental que nos rige hoy. Estableció el derecho a la vida, la libertad de pensamiento y prohibió el ejército permanentemente.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Qué derechos fundamentales establece la Constitución de 1949?</li><li>¿Qué significa que la vida humana sea inviolable según la ley?</li></ul>"
+                    ]
+                }
+            ],
+            quiz: [
+                {
+                    question: "¿En qué año se abolió el ejército en Costa Rica?",
+                    options: ["1821", "1948", "2015"],
+                    correct: 1
+                },
+                {
+                    question: "¿Quién lideró el Ejército de Liberación Nacional?",
+                    options: ["Calderón Guardia", "Juan Santamaría", "José Figueres Ferrer"],
                     correct: 2
                 },
                 {
-                    question: "¿Qué recurso usaban los filibusteros para comprar armas?",
-                    options: ["Recursos de estados del sur de EE.UU.", "Oro de California", "Impuestos de Nicaragua"],
-                    correct: 0
+                    question: "¿Qué institution se encarga hoy de las elecciones en el país?",
+                    options: ["ICE", "TSE", "CCSS"],
+                    correct: 1
+                }
+            ]
+        },
+        {
+            id: 5,
+            title: "Lección 5: Ciudadanía y Desafíos Actuales",
+            description: "Participación, seguridad y desafíos de la sociedad.",
+            sections: [
+                {
+                    title: "1. Participación Ciudadana",
+                    content: [
+                        "<p>Ser ciudadano no es solo votar. Es participar en el <strong>Gobierno Estudiantil</strong>, comités comunales y actos cívicos.</p>",
+                        "<h3>Cultura Fiscal</h3><p>Pagar <strong>impuestos</strong> es necesario para que el Estado construya escuelas, hospitales y carreteras.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿De qué formas pueden participar los estudiantes en su escuela?</li><li>¿Por qué es importante pagar los impuestos?</li></ul>"
+                    ]
                 },
                 {
-                    question: "¿Qué grupo nicaragüense contactó a Walker?",
-                    options: ["Conservadores", "Liberales", "Socialistas"],
+                    title: "2. Desafíos Sociales",
+                    content: [
+                        "<h3>Prevención de Drogas</h3><p>Las drogas alteran el organismo y causan dependencia. La familia y el deporte son los mejores factores de protección.</p>",
+                        "<h3>Redes Sociales</h3><p>Evitar el <strong>ciberbullying</strong> y no compartir datos personales con desconocidos.</p>",
+                        "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son los principales factores de protección contra las drogas?</li><li>Mencione un riesgo de las redes sociales y cómo evitarlo.</li></ul>"
+                    ]
+                },
+                {
+                    title: "3. Seguridad Vial y Riesgos",
+                    content: [
+                        "<ul><li><strong>Seguridad Vial:</strong> Cruzar por las esquinas, usar semáforos y respetar señales previene muertes.</li><li><strong>Gestión de Riesgo:</strong> Tener un plan de emergencias y un maletín listo ante terremotos o inundaciones.</li></ul>",
+                        "<h4>Preguntas de repaso</h4><ul><li>Mencione dos normas fundamentales para los peatones.</li><li>¿Qué debe contener un kit o maletín de emergencias?</li></ul>"
+                    ]
+                }
+            ],
+            quiz: [
+                {
+                    question: "¿Para qué sirven los impuestos que recolecta Hacienda?",
+                    options: ["Para viajes de políticos", "Para construir escuelas y hospitales", "Para nada"],
                     correct: 1
                 },
                 {
-                    question: "¿Qué ciudad nicaragüense era el centro de los conservadores?",
-                    options: ["León", "Managua", "Granada"],
-                    correct: 2
-                },
-                {
-                    question: "¿Qué ciudad nicaragüense era el centro de los liberales?",
-                    options: ["Granada", "León", "Rivas"],
+                    question: "¿Qué es el ciberbullying?",
+                    options: ["Un juego online", "Acoso o humillación en medios digitales", "Ver videos en YouTube"],
                     correct: 1
                 },
                 {
-                    question: "¿Qué se construyó durante el gobierno de Mora?",
-                    options: ["El Teatro Nacional", "La Fábrica Nacional de Licores", "El Aeropuerto Juan Santamaría"],
-                    correct: 1
-                },
-                {
-                    question: "¿Qué sentimiento promovió Mora ante la guerra?",
-                    options: ["Miedo", "Indiferencia", "Unidad y amor por la patria"],
-                    correct: 2
-                },
-                {
-                    question: "¿Qué país intentó Pierce comprarle a España?",
-                    options: ["Cuba", "México", "Puerto Rico"],
-                    correct: 0
-                },
-                {
-                    question: "¿Quién era el presidente de EE.UU. en ese tiempo?",
-                    options: ["Abraham Lincoln", "Franklin Pierce", "George Washington"],
-                    correct: 1
-                },
-                {
-                    question: "¿Qué tipo de armas compraron los filibusteros?",
-                    options: ["Espadas y lanzas", "Cañones y rifles", "Tanques de guerra"],
+                    question: "¿Qué debe incluir un maletín de emergencias?",
+                    options: ["Juguetes", "Agua, alimentos y linterna", "Solo dinero"],
                     correct: 1
                 }
             ]
