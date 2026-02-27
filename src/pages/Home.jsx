@@ -44,17 +44,19 @@ const Home = () => {
 
     return (
         <div className="home-page">
-            <section className="hero">
+            <section className="hero" style={{ background: 'radial-gradient(circle at top right, rgba(46, 204, 113, 0.15), transparent), radial-gradient(circle at bottom left, rgba(52, 152, 219, 0.05), transparent)' }}>
                 <div className="container">
-                    <span style={{ background: 'var(--accent)', color: 'var(--bg-dark)', padding: '4px 12px', borderRadius: 'full', fontWeight: '800', fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: '1rem', display: 'inline-block' }}>Educación Divertida</span>
-                    <h2>¡Bienvenido a tu aventura de Estudios Sociales!</h2>
-                    <p>Explora el mundo, la historia y la cultura de una manera divertida, interactiva y moderna.</p>
+                    <Link to="/" style={{ textDecoration: 'none', color: 'var(--secondary)', fontWeight: '700', fontSize: '0.9rem', marginBottom: '1.5rem', display: 'inline-block' }}>← Volver a Materias</Link>
+                    <br />
+                    <span className="badge">Estudios Sociales</span>
+                    <h2>¡Bienvenido a tu aventura de Geografía e Historia!</h2>
+                    <p>Explora el mundo, la historia y la cultura de Costa Rica de una manera divertida, interactiva y moderna.</p>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
                         <button
                             onClick={() => document.getElementById('grados')?.scrollIntoView({ behavior: 'smooth' })}
                             className="btn-primary"
                         >
-                            Comenzar Ahora
+                            Ver Grados
                         </button>
                     </div>
                 </div>

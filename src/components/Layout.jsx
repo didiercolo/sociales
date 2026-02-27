@@ -6,13 +6,13 @@ const Layout = () => {
 
     const scrollToGrados = (e) => {
         e.preventDefault();
-        if (location.pathname === '/') {
+        if (location.pathname === '/sociales') {
             const element = document.getElementById('grados');
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         } else {
-            navigate('/');
+            navigate('/sociales');
             // The scroll will be handled by useEffect in Home.jsx
             window.scrollTo(0, 0);
             // We set a small timeout to allow Home to mount
@@ -30,13 +30,14 @@ const Layout = () => {
             <header className="main-header">
                 <div className="container header-content">
                     <Link to="/" className="logo">
-                        <span className="logo-icon">🌍</span>
-                        <h1>Social Studies Portal</h1>
+                        <span className="logo-icon">🎓</span>
+                        <h1>EduPortal CR</h1>
                     </Link>
                     <nav>
                         <ul className="nav-links">
-                            <li><Link to="/">Inicio</Link></li>
-                            <li><a href="#grados" onClick={scrollToGrados}>Cursos</a></li>
+                            <li><Link to="/">Materias</Link></li>
+                            <li><Link to="/sociales">Sociales</Link></li>
+                            <li><a href="#grados" onClick={scrollToGrados}>Grados</a></li>
                         </ul>
                     </nav>
                 </div>

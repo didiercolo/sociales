@@ -145,11 +145,25 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 4rem 0;
+    padding: 6rem 0;
     background: radial-gradient(circle at top right, rgba(46, 204, 113, 0.1), transparent),
         radial-gradient(circle at bottom left, rgba(52, 152, 219, 0.1), transparent);
     text-align: center;
     animation: fadeIn 0.8s ease-out;
+}
+
+.badge {
+    background: var(--accent);
+    color: var(--bg-dark);
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .hero h2 {
@@ -158,14 +172,14 @@ body {
     font-weight: 800;
     color: var(--bg-dark);
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero p {
     font-size: 1.25rem;
     color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
 }
 
 /* Grades Grid */

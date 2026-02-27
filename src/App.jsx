@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 
 // Lazy load pages for better initial performance
 const Home = lazy(() => import('./pages/Home'));
+const SubjectSelection = lazy(() => import('./pages/SubjectSelection'));
 const LessonsList = lazy(() => import('./pages/LessonsList'));
 const LessonView = lazy(() => import('./pages/LessonView'));
 
@@ -19,7 +20,8 @@ function App() {
         <Suspense fallback={<PageLoader />}>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
+                    <Route index element={<SubjectSelection />} />
+                    <Route path="sociales" element={<Home />} />
                     <Route path="grade/:gradeId" element={<LessonsList />} />
                     <Route path="grade/:gradeId/lesson/:lessonId" element={<LessonView />} />
                 </Route>
