@@ -4,17 +4,17 @@ import { lessonsData } from '../data/lessonsData';
 import Quiz from '../components/Quiz';
 
 const LessonView = () => {
-    const { gradeId, lessonId } = useParams();
-    const gradeLessons = lessonsData[gradeId] || [];
+    const { subject, gradeId, lessonId } = useParams();
+    const gradeLessons = lessonsData[subject]?.[gradeId] || [];
     const lesson = gradeLessons.find(l => l.id.toString() === lessonId);
 
     if (!lesson) {
-        return <Navigate to={`/grade/${gradeId}`} replace />;
+        return <Navigate to={`/${subject}/grade/${gradeId}`} replace />;
     }
 
     return (
         <div className="lesson-view container" style={{ padding: '3rem 1.5rem' }}>
-            <Link to={`/grade/${gradeId}`} className="back-link" style={{
+            <Link to={`/${subject}/grade/${gradeId}`} className="back-link" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',

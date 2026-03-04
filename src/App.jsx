@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 
 // Lazy load pages for better initial performance
 const Home = lazy(() => import('./pages/Home'));
+const CienciasHome = lazy(() => import('./pages/CienciasHome'));
 const SubjectSelection = lazy(() => import('./pages/SubjectSelection'));
 const LessonsList = lazy(() => import('./pages/LessonsList'));
 const LessonView = lazy(() => import('./pages/LessonView'));
@@ -22,8 +23,9 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<SubjectSelection />} />
                     <Route path="sociales" element={<Home />} />
-                    <Route path="grade/:gradeId" element={<LessonsList />} />
-                    <Route path="grade/:gradeId/lesson/:lessonId" element={<LessonView />} />
+                    <Route path="ciencias" element={<CienciasHome />} />
+                    <Route path=":subject/grade/:gradeId" element={<LessonsList />} />
+                    <Route path=":subject/grade/:gradeId/lesson/:lessonId" element={<LessonView />} />
                 </Route>
             </Routes>
         </Suspense>

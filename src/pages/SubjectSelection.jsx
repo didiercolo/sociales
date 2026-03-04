@@ -9,8 +9,9 @@ const SubjectSelection = () => {
             desc: 'Explora el mundo natural, los seres vivos y la materia.',
             icon: '🧪',
             color: '#3498DB',
-            status: 'Próximamente',
-            disabled: true
+            status: 'Disponible',
+            disabled: false,
+            link: '/ciencias'
         },
         {
             id: 'sociales',

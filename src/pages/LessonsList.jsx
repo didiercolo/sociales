@@ -4,12 +4,12 @@ import LessonCard from '../components/LessonCard';
 import { lessonsData } from '../data/lessonsData';
 
 const LessonsList = () => {
-    const { gradeId } = useParams();
-    const lessons = lessonsData[gradeId] || [];
+    const { subject, gradeId } = useParams();
+    const lessons = lessonsData[subject]?.[gradeId] || [];
 
     return (
         <div className="lessons-list-view container" style={{ padding: '3rem 1.5rem' }}>
-            <Link to="/" className="back-link" style={{
+            <Link to={`/${subject}`} className="back-link" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
@@ -43,6 +43,7 @@ const LessonsList = () => {
                             title={lesson.title}
                             description={lesson.description}
                             gradeId={gradeId}
+                            subject={subject}
                             imageUrl={`https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=500&auto=format&fit=crop&sig=${idx}`}
                         />
                     ))
