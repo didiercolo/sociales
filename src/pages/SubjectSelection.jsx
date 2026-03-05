@@ -38,8 +38,9 @@ const SubjectSelection = () => {
             desc: 'Fortalece tu lectura, escritura y comunicación.',
             icon: '📚',
             color: '#E67E22',
-            status: 'Próximamente',
-            disabled: true
+            status: 'Disponible',
+            disabled: false,
+            link: '/espanol'
         }
     ];
 
