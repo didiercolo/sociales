@@ -80,7 +80,7 @@ const LessonView = () => {
                             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem' }}>¡Pon a prueba lo aprendido!</h2>
                             <p style={{ color: 'var(--text-muted)' }}>Responde las siguientes preguntas para completar la lección.</p>
                         </div>
-                        <Quiz questions={lesson.quiz} />
+                        <Quiz questions={lesson.quiz} questionCount={lesson.questionCount || 5} />
                     </div>
                 )}
             </div>

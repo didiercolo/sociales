@@ -3,7 +3,7 @@ import QuizStart from './Quiz/QuizStart';
 import QuizActive from './Quiz/QuizActive';
 import QuizResults from './Quiz/QuizResults';
 
-const Quiz = ({ questions }) => {
+const Quiz = ({ questions, questionCount = 5 }) => {
     const [activeQuestions, setActiveQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [score, setScore] = useState(0);
@@ -14,9 +14,9 @@ const Quiz = ({ questions }) => {
     const initializeQuiz = useCallback(() => {
         if (questions && questions.length > 0) {
             const shuffled = [...questions].sort(() => 0.5 - Math.random());
-            setActiveQuestions(shuffled.slice(0, 5));
+            setActiveQuestions(shuffled.slice(0, questionCount));
         }
-    }, [questions]);
+    }, [questions, questionCount]);
 
     useEffect(() => {
         initializeQuiz();
