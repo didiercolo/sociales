@@ -388,3 +388,33 @@ body {
         padding: 2rem;
     }
 }
+
+/* Custom Summary Table */
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.summary-table th {
+  background-color: var(--primary);
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+}
+.summary-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-color);
+}
+.summary-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.summary-table tbody tr:hover {
+  background-color: rgba(var(--primary-rgb), 0.05); /* very subtle hover */
+}
