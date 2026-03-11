@@ -3,248 +3,74 @@ export const grade6Lessons = [
         id: 1,
         title: "Lección 1: La Campaña Nacional de Costa Rica (1856-1857)",
         description: "Consolidación de la independencia y lucha contra los filibusteros.",
+        extraMaterial: {
+            title: "Examen de Repaso: Estudios Sociales",
+            url: "/sociales/docs/Examen_EstudiosSociales_6toGrado_2026.pdf",
+            type: "PDF"
+        },
         sections: [
             {
-                title: "1. Conociendo a los personajes",
+                title: "1. Primera Campaña de la Guerra (Ruta y Preparación)",
                 content: [
-                    "<p><strong>Juan Rafael Mora Porras:</strong> Nació en San José en 1814. Fue presidente tres veces (1849-1859). Promovió el café, el alumbrado público y dirigió la defensa nacional. A pesar de no tener educación formal, fue un líder extraordinario.</p>",
-                    "<p><strong>William Walker:</strong> Estadounidense ambicioso (médico y abogado) que intentó conquistar Centroamérica. Se declaró presidente de Nicaragua en 1856 y buscaba extender la esclavitud.</p>",
-                    "<h4>Preguntas de repaso</h4><ul><li>¿Quién fue Juan Rafael Mora Porras y cuántas veces fue presidente?</li><li>¿Qué ambiciones tenía William Walker en Nicaragua?</li></ul>"
+                    "<p><strong>La Ruta de los Héroes:</strong> El ejército costarricense usó dos rutas para enfrentar a los filibusteros: por mar hacia Nicaragua (Océano Pacífico) y al norte usando los ríos Sarapiquí y San Carlos para proteger la Vía de Tránsito.</p>",
+                    "<p><strong>Proyecto 'Federación Caribe':</strong> Walker envió a Schlessinger para que Costa Rica se anexara voluntariamente. El presidente Mora rechazó la propuesta y expulsó a los emisarios.</p>",
+                    "<h3>Medidas de Preparación</h3><ul><li>Desconocer al gobierno nicaragüense provisorio.</li><li>Préstamo nacional de 100,000 pesos.</li><li>Incrementar el ejército a 9,000 hombres.</li><li>Mora asumió el mando personalmente dejando a Francisco María Oreamuno a cargo de la presidencia.</li></ul>"
                 ]
             },
             {
-                title: "2. Antecedentes y Causas",
+                title: "2. Primera Fase: Las Batallas y la Peste",
                 content: [
-                    "<h3>Causas Internacionales</h3><ul><li><strong>Imperialismo:</strong> Potencias como Inglaterra y EE.UU. querían controlar la región.</li><li><strong>Destino Manifiesto:</strong> Idea de que EE.UU. debía expandirse por todo el continente.</li><li><strong>Doctrina Monroe:</strong> 'América para los americanos'.</li></ul>",
-                    "<h3>Vía del Tránsito</h3><p>Nicaragua era clave para viajar a California (Fiebre del Oro) por el río San Juan y el lago, siendo el punto estratégico que Walker quería controlar.</p>",
-                    "<h4>Preguntas de repaso</h4><ul><li>¿Qué significaba la frase 'América para los americanos' en la Doctrina Monroe?</li><li>¿Por qué era importante la Vía del Tránsito para Estados Unidos?</li></ul>"
+                    "<h3>Batallas Principales</h3><ul><li><strong>Batalla de Santa Rosa (20 de marzo, 1856):</strong> Triunfo tico en 14 minutos en Guanacaste contra Schlessinger.</li><li><strong>Batalla de Sardinal (10 de abril, 1856):</strong> Triunfo en los ríos Sarapiquí y Sardinal.</li><li><strong>Batalla de Rivas (11 de abril, 1856):</strong> <strong>Juan Santamaría</strong> logró quemar el Mesón de Guerra corriendo en zigzag, asegurando la victoria.</li></ul>",
+                    "<h3>La Peste del Cólera (Mayo-Agosto 1856)</h3><p>Al regresar, el ejército trajo la enfermedad del cólera por consumir agua contaminada. Mató al <strong>8.5% de la población</strong> (unas 9,000 personas), incluyendo al presidente en ejercicio Francisco María Oreamuno.</p>"
                 ]
             },
             {
-                title: "3. La Guerra en Nicaragua",
+                title: "3. Segunda Campaña y Final (Campaña del Tránsito)",
                 content: [
-                    "<p>Nicaragua estaba en guerra civil entre <strong>Liberales (León)</strong> and <strong>Conservadores (Granada)</strong>. Los liberales contrataron a Walker y sus filibusteros como mercenarios.</p>",
-                    "<p><strong>¿Qué es un filibustero?</strong> Invasores extranjeros que usan la fuerza para apoderarse de territorios y convertirlos en colonias.</p>",
-                    "<h4>Preguntas de repaso</h4><ul><li>¿Qué grupos peleaban en la guerra civil de Nicaragua?</li><li>¿Qué es un filibustero?</li></ul>"
+                    "<p>Tras recuperarse del cólera (Fase Intermedia), en <strong>diciembre de 1856</strong> Mora retomó las armas para bloquear la Vía de Tránsito y el río San Juan.</p>",
+                    "<ul><li><strong>Aliados:</strong> El Comodoro Vanderbilt ayudó a los ticos contra Walker enviando al Capitán Sylvanus Spencer.</li><li><strong>Héroe Nicolás Aguilar:</strong> Destacó manejando un cañón en el Río San Juan.</li></ul>",
+                    "<h3>El Final de los Filibusteros</h3><p>Al perder el control del río San Juan se quedaron sin provisiones. Walker se rindió el <strong>10 de mayo de 1857</strong>. Más tarde intentó volver dos veces hasta que fue fusilado en Honduras en 1860.</p>"
                 ]
             },
             {
-                title: "4. Primera Fase: Batallas Principales",
+                title: "4. Participación de Mujeres, Niños y Pueblos Indígenas",
                 content: [
-                    "<ul><li><strong>Batalla de Santa Rosa (20 de marzo, 1856):</strong> Primera victoria tica en Guanacaste en solo 14 minutos.</li><li><strong>Batalla de Sardinal (10 de abril, 1856):</strong> Se detuvo el avance filibustero por el río Sarapiquí.</li><li><strong>Batalla de Rivas (11 de abril, 1856):</strong> <strong>Juan Santamaría</strong> quemó el Mesón de Guerra, obligando a Walker a huir.</li></ul>",
-                    "<h4>Preguntas de repaso</h4><ul><li>¿En qué batalla Juan Santamaría quemó el Mesón de Guerra?</li><li>¿Cuál fue la primera victoria costarricense en territorio nacional?</li></ul>"
+                    "<p>La Campaña Nacional fue un esfuerzo de <strong>todo el pueblo costarricense</strong>.</p>",
+                    "<ul><li><strong>Mujeres:</strong> Asumieron el control del país (cultivos, ganado, educación y crianza) mientras los hombres luchaban. <strong>Pancha Carrasco</strong> fue la figura femenina más destacada que participó activamente en la defensa.</li><li><strong>Pueblos Indígenas:</strong> Apoyaron activamente al ejército costarricense en su lucha contra los invasores.</li></ul>"
                 ]
             },
             {
-                title: "5. Peste del Cólera y Consecuencias",
+                title: "5. Vocabulario Clave",
                 content: [
-                    "<p>La <strong>peste del cólera</strong> obligó al ejército a regresar. Murieron cerca de 10,000 personas (10% de la población). Fue más letal que las balas.</p>",
-                    "<h3>Consecuencias finales</h3><ul><li>Consolidación de la identidad nacional.</li><li>Nacimiento de héroes como Santamaría, Mora y <strong>Pancha Carrasco</strong>.</li><li>Fortalecimiento de la unión centroamericana.</li></ul>",
-                    "<h4>Preguntas de repaso</h4><ul><li>¿Cómo afectó la peste del cólera a la población costarricense?</li><li>Mencione dos consecuencias de la Campaña Nacional.</li></ul>"
+                    "<ul><li><strong>Filibustero:</strong> Extranjero que usa la fuerza para apoderarse de un territorio.</li><li><strong>Doctrina Monroe:</strong> 'América para los americanos' (estadounidenses).</li><li><strong>Destino Manifiesto:</strong> Creencia de EE.UU. de que debía expandir su cultura.</li><li><strong>Vía del Tránsito:</strong> Ruta por San Juan y el lago de Nicaragua.</li><li><strong>Mercenario:</strong> Soldado que pelea por dinero.</li></ul>"
                 ]
             }
         ],
         quiz: [
-            {
-                question: "¿Quién fue el presidente que lideró la Campaña Nacional?",
-                options: ["Juan Rafael Mora Porras", "Tomás Guardia", "José Figueres"],
-                correct: 0
-            },
-            {
-                question: "¿Qué edificio quemó Juan Santamaría en la Batalla de Rivas?",
-                options: ["El Cuartel", "El Mesón de Guerra", "La Catedral"],
-                correct: 1
-            },
-            {
-                question: "¿Qué enfermedad causó más muertes que la guerra misma?",
-                options: ["Gripe", "Cólera", "Fiebre Amarilla"],
-                correct: 1
-            },
-            {
-                question: "¿En qué país nació William Walker?",
-                options: ["Inglaterra", "Nicaragua", "Estados Unidos"],
-                correct: 2
-            },
-            {
-                question: "¿Cuál fue la primera batalla ganada en territorio costarricense?",
-                options: ["Rivas", "Santa Rosa", "Sardinal"],
-                correct: 1
-            },
-            {
-                question: "¿En qué año nació Juan Rafael Mora Porras?",
-                options: ["1821", "1814", "1856"],
-                correct: 1
-            },
-            {
-                question: "¿Cuál era la profesión de William Walker?",
-                options: ["Solo militar", "Médico y abogado", "Ingeniero"],
-                correct: 1
-            },
-            {
-                question: "¿Cuántas veces fue presidente Juan Rafael Mora Porras?",
-                options: ["Una vez", "Tres veces", "Cinco veces"],
-                correct: 1
-            },
-            {
-                question: "¿Qué idea promovía que EE.UU. debía expandirse por todo el continente?",
-                options: ["Doctrina Monroe", "Destino Manifiesto", "Tratado de Paz"],
-                correct: 1
-            },
-            {
-                question: "¿Qué frase resume la Doctrina Monroe de 1823?",
-                options: ["Pura Vida", "América para los americanos", "Orden y Progreso"],
-                correct: 1
-            },
-            {
-                question: "¿Por qué Nicaragua era un punto estratégico para EE.UU.?",
-                options: ["Por su comida", "Por el proyecto del canal interoceánico", "Por sus volcanes"],
-                correct: 1
-            },
-            {
-                question: "¿Cómo se llamaba la ruta que cruzaba Nicaragua hacia California?",
-                options: ["Vía del Tránsito", "Ruta de la Seda", "Camino de mulas"],
-                correct: 0
-            },
-            {
-                question: "¿Qué grupos peleaban en la guerra civil de Nicaragua?",
-                options: ["Rojos y Azules", "Liberales y Conservadores", "Norte y Sur"],
-                correct: 1
-            },
-            {
-                question: "¿Quiénes informaban a Mora desde Washington sobre el peligro?",
-                options: ["Los hermanos Molina", "Juan Santamaría", "Minor Keith"],
-                correct: 0
-            },
-            {
-                question: "¿Qué es un filibustero?",
-                options: ["Un pirata del mar", "Un invasor que busca apoderarse de territorios ajenos", "Un soldado oficial de un país"],
-                correct: 1
-            },
-            {
-                question: "¿En qué fecha se dio la Batalla de Santa Rosa?",
-                options: ["20 de marzo de 1856", "11 de abril de 1856", "1 de mayo de 1857"],
-                correct: 0
-            },
-            {
-                question: "¿Cuánto duró el combate principal en la Batalla de Santa Rosa?",
-                options: ["Tres días", "14 minutos", "Una hora"],
-                correct: 1
-            },
-            {
-                question: "¿En qué batalla se detuvo el avance filibustero por el río Sarapiquí?",
-                options: ["Batalla de Rivas", "Batalla de Sardinal", "Batalla de la Trinidad"],
-                correct: 1
-            },
-            {
-                question: "¿Cuál es la fecha de la famosa Batalla de Rivas?",
-                options: ["20 de marzo", "11 de abril", "1 de mayo"],
-                correct: 1
-            },
-            {
-                question: "¿Quién es reconocida como la heroína de la Campaña Nacional?",
-                options: ["Pacífica Fernández", "Pancha Carrasco", "Dolores Bedoya"],
-                correct: 1
-            },
-            {
-                question: "¿Qué porcentaje aproximado de la población tica murió por el cólera?",
-                options: ["1%", "5%", "10%"],
-                correct: 2
-            },
-            {
-                question: "¿De dónde venía el dinero para los filibusteros?",
-                options: ["Del gobierno de EE.UU.", "De estados esclavistas del sur de EE.UU.", "De Inglaterra"],
-                correct: 1
-            },
-            {
-                question: "¿Qué firmó Mora el 20 de noviembre de 1855 para alertar al pueblo?",
-                options: ["La Constitución", "Su renuncia", "La Primera Proclama"],
-                correct: 2
-            },
-            {
-                question: "¿Quién era el presidente de EE.UU. durante la Campaña Nacional?",
-                options: ["Franklin Pierce", "Abraham Lincoln", "George Washington"],
-                correct: 0
-            },
-            {
-                question: "¿En qué ciudad de Nicaragua se refugiaron los filibusteros en el Mesón?",
-                options: ["Granada", "León", "Rivas"],
-                correct: 2
-            },
-            {
-                question: "¿Qué puerto era la entrada a la Vía del Tránsito por el Caribe?",
-                options: ["Puerto Limón", "San Juan del Norte", "Puerto Puntarenas"],
-                correct: 1
-            },
-            {
-                question: "¿Qué buscaba Walker restablecer en Centroamérica?",
-                options: ["La democracia", "La esclavitud", "La monarquía"],
-                correct: 1
-            },
-            {
-                question: "¿Qué país ayudó a Mora con armas e información contra Walker?",
-                options: ["Solo Inglaterra", "Inglaterra, Francia y Perú", "Nicaragua"],
-                correct: 1
-            },
-            {
-                question: "¿Cuál fue una consecuencia positiva de la guerra?",
-                options: ["La peste", "La pérdida de dinero", "La consolidación de la identidad nacional"],
-                correct: 2
-            },
-            {
-                question: "¿Qué batallón dirigió Mora en la campaña?",
-                options: ["Batallón de Zapadores", "El Ejército de Costa Rica", "Los Filibusteros"],
-                correct: 1
-            },
-            {
-                question: "¿Qué cargo ocupaba William Walker en Nicaragua?",
-                options: ["General", "Presidente", "Gobernador"],
-                correct: 1
-            },
-            {
-                question: "¿Qué tipo de barco usaban en la Vía del Tránsito?",
-                options: ["Veleros", "Barcos de vapor", "Submarinos"],
-                correct: 1
-            },
-            {
-                question: "¿Quién era el líder liberal que contrató a los filibusteros?",
-                options: ["Francisco Castellón", "Juan Mora", "Minor Keith"],
-                correct: 0
-            },
-            {
-                question: "¿A qué se dedicaba Mora antes de ser presidente?",
-                options: ["Solo militar", "Comerciante de café y bienes raíces", "Abogado"],
-                correct: 1
-            },
-            {
-                question: "¿Qué ciudad tica fue el punto de reunión de las tropas antes de salir?",
-                options: ["Cartago", "San José", "Alajuela"],
-                correct: 1
-            },
-            {
-                question: "¿Qué instrumento musical se asocia con el himno nacional compuesto en esa época?",
-                options: ["Marimba", "Guitarra", "Banda militar"],
-                correct: 2
-            },
-            {
-                question: "¿Qué hacía William Walker en Baja California antes de venir a Nicaragua?",
-                options: ["Turismo", "Trató de fundar una república independiente", "Fue médico"],
-                correct: 1
-            },
-            {
-                question: "¿Qué hacía Pancha Carrasco en la batalla?",
-                options: ["Cocinaba y cuidaba heridos", "Solo observaba", "No participó"],
-                correct: 0
-            },
-            {
-                question: "¿Cómo murió finalmente la amenaza filibustera en 1857?",
-                options: ["Se fueron solos", "Se rindieron tras la toma de la Vía del Tránsito", "Walker murió en Rivas"],
-                correct: 1
-            },
-            {
-                question: "¿Qué valor representa Juan Santamaría para los costarricenses?",
-                options: ["Individualismo", "Sacrificio por la patria", "Interés económico"],
-                correct: 1
-            }
+            // Tema 1
+            { question: "¿A quiénes encomendó Walker convencer a Costa Rica de unirse a su 'Federación Caribe'?", options: ["A Francisco Castellón", "Al Comandante Schlessinger", "Al Comodoro Vanderbilt", "A Sylvanus Spencer"], correct: 1 },
+            { question: "¿Qué hizo el presidente Juan Rafael Mora Porras ante la propuesta de unirse a la 'Federación Caribe'?", options: ["La aceptó inmediatamente", "La consultó con el Congreso", "La rechazó y expulsó a los emisarios", "Se unió secretamente"], correct: 2 },
+            { question: "¿Cuáles fueron las dos rutas que siguió el ejército costarricense hacia Nicaragua?", options: ["Por aire y tierra", "Por mar hacia el Pacífico y al norte por ríos Sarapiquí y San Carlos", "Por el Caribe y por Panamá", "Por Honduras y El Salvador"], correct: 1 },
+            { question: "¿A cargo de quién dejó Mora la presidencia de la República mientras iba a la guerra?", options: ["José Joaquín Mora", "Máximo Blanco", "Francisco María Oreamuno", "Pancha Carrasco"], correct: 2 },
+            // Tema 2
+            { question: "¿Cuánto tiempo duró aproximadamente el combate principal de la Batalla de Santa Rosa?", options: ["5 horas", "2 días", "14 minutos", "30 minutos"], correct: 2 },
+            { question: "¿En qué batalla las tropas al mando del general Florentino detuvieron a los filibusteros en los ríos del norte?", options: ["Batalla de Sardinal", "Batalla de Santa Rosa", "Batalla de Rivas", "Batalla de San Jorge"], correct: 0 },
+            { question: "¿Quién fue el soldado que finalmente logró incendiar el Mesón en Rivas corriendo en zigzag?", options: ["Luis Pacheco Bertora", "Joaquín Rosales", "Nicolás Aguilar", "Juan Santamaría Carvajal"], correct: 3 },
+            { question: "¿Por qué el ejército costarricense tuvo que regresar precipitadamente de Rivas?", options: ["Por falta de municiones", "Por la peste del cólera", "Porque habían perdido la batalla", "Por un terremoto"], correct: 1 },
+            { question: "¿Qué enfermedad causó la muerte de aproximadamente el 8.5% de la población costarricense en 1856?", options: ["Fiebre amarilla", "Cólera", "Malaria", "Viruela"], correct: 1 },
+            { question: "¿Qué figura política importante falleció como víctima de la epidemia del cólera?", options: ["Juan Rafael Mora Porras", "William Walker", "Francisco María Oreamuno", "José Joaquín Mora"], correct: 2 },
+            // Tema 3
+            { question: "¿Qué ocurrió políticamente durante la 'fase intermedia' de la guerra que fortaleció a Costa Rica?", options: ["Estados Unidos invadió", "Walker se declaró presidente de Nicaragua ganándose el odio de toda Centroamérica", "Costa Rica se rindió", "Inglaterra envió tropas"], correct: 1 },
+            { question: "¿Cuál era el principal objetivo militar de la Segunda Campaña o Campaña del Tránsito?", options: ["Atacar San José", "Invadir Honduras", "Controlar la Vía del Tránsito y el Río San Juan", "Gobernar El Salvador"], correct: 2 },
+            { question: "¿Por qué el control de la Vía del Tránsito era decisivo para derrotar a los filibusteros?", options: ["Era donde escondían su oro", "Les cortaba el suministro de provisiones y tropas desde EE.UU.", "Era su única fuente de agua", "Era un lugar turístico"], correct: 1 },
+            { question: "¿Qué magnate naviero estadounidense se convirtió en aliado de Costa Rica enviando a Sylvanus Spencer?", options: ["Cornelius Vanderbilt", "Henry Ford", "John D. Rockefeller", "Andrew Carnegie"], correct: 0 },
+            { question: "¿Quién fue el soldado costarricense que destacó en el Río San Juan manejando un cañón?", options: ["Juan Santamaría", "Nicolás Aguilar", "Máximo Blanco", "Pierre Barillier"], correct: 1 },
+            { question: "¿En qué fecha se rindió oficialmente William Walker?", options: ["20 de marzo de 1856", "11 de abril de 1856", "10 de mayo de 1857", "12 de septiembre de 1860"], correct: 2 },
+            { question: "¿En qué país centroamericano fue Walker finalmente juzgado y fusilado en 1860?", options: ["Nicaragua", "El Salvador", "Costa Rica", "Honduras"], correct: 3 },
+            // Tema 4 y Vocabulario
+            { question: "¿Qué rol clave desempeñaron las mujeres costarricenses durante la Campaña Nacional?", options: ["Solo cuidaron a los niños", "Fueron presidentas", "Asumieron los cultivos, ganado, educación y crianza mientras los hombres luchaban", "Se fueron a vivir a Nicaragua"], correct: 2 },
+            { question: "¿Qué mujer destacó en el campo de batalla llamando a otras a participar activamente en la defensa?", options: ["Pacífica Fernández", "Dolores Bedoya", "Pancha Carrasco", "Luisa Molina"], correct: 2 },
+            { question: "¿Cuál era la idea de la 'Doctrina Monroe'?", options: ["Todo para todos", "América para los americanos (estadounidenses)", "Libertad de esclavos", "Paz mundial"], correct: 1 }
         ]
     },
     {
