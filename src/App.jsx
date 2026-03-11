@@ -9,6 +9,8 @@ const EspanolHome = lazy(() => import('./pages/EspanolHome'));
 const SubjectSelection = lazy(() => import('./pages/SubjectSelection'));
 const LessonsList = lazy(() => import('./pages/LessonsList'));
 const LessonView = lazy(() => import('./pages/LessonView'));
+const ComingSoon = lazy(() => import('./pages/ComingSoon'));
+const About = lazy(() => import('./pages/About'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -26,6 +28,8 @@ function App() {
                     <Route path="sociales" element={<Home />} />
                     <Route path="ciencias" element={<CienciasHome />} />
                     <Route path="espanol" element={<EspanolHome />} />
+                    <Route path="coming-soon" element={<ComingSoon />} />
+                    <Route path="sobre-nosotros" element={<About />} />
                     <Route path=":subject/grade/:gradeId" element={<LessonsList />} />
                     <Route path=":subject/grade/:gradeId/lesson/:lessonId" element={<LessonView />} />
                 </Route>

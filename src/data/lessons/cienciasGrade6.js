@@ -3,6 +3,11 @@ export const cienciasGrade6Lessons = [
         id: 1,
         title: "Capítulo 1: La Gravedad y Otras Fuerzas",
         description: "Explora la masa, el peso, las fuerzas, la gravedad y cómo se mueven los objetos en el espacio y el agua.",
+        extraMaterial: {
+            title: "Examen de Repaso: Capítulo 1",
+            url: "/sociales/docs/Science_Exam_Chapter1_6thGrade.pdf",
+            type: "PDF"
+        },
         sections: [
             {
                 title: "1. ¿Qué es la masa?",

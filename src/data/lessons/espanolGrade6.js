@@ -88,6 +88,10 @@ export const espanolGrade6Lessons = [
             { question: "El lenguaje coloquial sigue estrictas reglas...", options: ["Verdadero", "Falso", "Depende del día", "A veces"], correct: 1 },
             { question: "'¡Nos vemos al rato!' es un claro ejemplo de lenguaje:", options: ["Técnico", "Figurado", "Formal", "Coloquial"], correct: 3 },
             { question: "La frase 'Sus ojos son dos luceros' pertenece a:", options: ["Lenguaje figurado", "Lenguaje formal", "Lenguaje coloquial", "Lenguaje técnico"], correct: 0 },
+            { question: "Identifique el registro: 'el sol parece una gran bola de fuego que pinta el cielo... las nubes parecen barcos'", options: ["Formal", "Coloquial", "Figurado", "Técnico"], correct: 2 },
+            { question: "Identifique el registro: 'amigos conversan sobre el partido... casi meten otro gol... van a entrenar más.'", options: ["Formal", "Técnico", "Figurado", "Coloquial"], correct: 3 },
+            { question: "Identifique el registro: 'la directora se dirige con un tono claro y respetuoso... agradece la colaboración.'", options: ["Técnico", "Formal", "Figurado", "Coloquial"], correct: 1 },
+            { question: "Identifique el registro: 'las plantas producen su propio alimento mediante la fotosíntesis... liberando oxígeno.'", options: ["Coloquial", "Formal", "Figurado", "Técnico"], correct: 3 },
 
             // Tema 2 - La Comunicación (20 preguntas)
             { question: "¿Qué es el proceso de comunicación?", options: ["Intercambio de información e ideas", "Hablar solo", "Leer un libro en silencio", "Solo enviar señales de humo"], correct: 0 },
@@ -166,6 +170,23 @@ export const espanolGrade6Lessons = [
             { question: "¿Qué terminación animal se usa con V?", options: ["-ivo", "-ívoro (omnìvoro, carnívoro)", "-ero", "-ario"], correct: 1 },
             { question: "El prefijo que siempre usa V y significa 'en vez de' es:", options: ["bi-", "anti-", "vice- (vicepresidente)", "re-"], correct: 2 },
             { question: "¿Lleva B o V la palabra 'in_ierno'?", options: ["V", "B", "W", "F"], correct: 0 },
+            { question: "Complete la oración: 'El científico realizó un experimento en el la__oratorio.'", options: ["b", "v", "d", "p"], correct: 0 },
+            { question: "Complete la oración: 'Mi hermano siempre se le__anta muy temprano.'", options: ["b", "v", "f", "d"], correct: 1 },
+            { question: "Complete la oración: 'El perro mo__ía la cola cuando veía a su dueño.'", options: ["b", "v", "c", "s"], correct: 1 },
+            { question: "Complete la oración: 'En la excursión o__servamos muchas plantas y animales.'", options: ["v", "b", "c", "s"], correct: 1 },
+            { question: "Complete la oración: 'Mi mamá compró una nue__a mochila para el colegio.'", options: ["b", "v", "j", "g"], correct: 1 },
+            { question: "Complete la oración: 'El estudiante escri__ió una historia muy interesante.'", options: ["v", "b", "c", "s"], correct: 1 },
+            { question: "Complete la oración: 'Los niños canta__an y juga__an en el recreo.'", options: ["v", "b", "c", "s"], correct: 1 },
+            { question: "Complete la oración: 'El a__uelo nos contó historias de su infancia.'", options: ["v", "b", "c", "z"], correct: 1 },
+            { question: "Complete la oración: 'El atleta tuvo que su__ir una montaña muy alta.'", options: ["v", "b", "c", "s"], correct: 1 },
+            { question: "Complete la oración: 'La profesora nos pidió descri__ir el paisaje.'", options: ["v", "c", "b", "s"], correct: 2 },
+            { question: "Complete la oración: 'El gato se su__ió al tejado de la casa.'", options: ["v", "c", "b", "s"], correct: 2 },
+            { question: "Complete la oración: 'La maestra re__isó las tareas antes de la clase.'", options: ["b", "v", "c", "s"], correct: 1 },
+            { question: "Complete la oración: 'El niño reci__ió un premio por su esfuerzo.'", options: ["v", "b", "c", "z"], correct: 1 },
+            { question: "Complete la oración: 'Nosotros ser__imos jugo natural en la fiesta.'", options: ["b", "v", "c", "s"], correct: 1 },
+            { question: "Complete la oración: 'El a__ión voló sobre las montañas.'", options: ["b", "v", "c", "z"], correct: 1 },
+            { question: "Complete la oración: 'El estudiante resol__ió el problema de matemáticas.'", options: ["b", "v", "c", "s"], correct: 1 },
+            { question: "Complete la oración: 'Mi familia con__ivió un momento muy especial.'", options: ["b", "v", "c", "s"], correct: 1 },
 
             // Tema 6 - Uso de C, S y Z (10 preguntas para balancear 120 total)
             { question: "¿Qué terminaciones de diminutivos usan C?", options: ["-mente, -dad", "-ismo", "-oso, -osa", "-cito, -cillo (pececito, jardincillo)"], correct: 3 },
@@ -177,7 +198,25 @@ export const espanolGrade6Lessons = [
             { question: "Las palabras con sufijo aumentativo o de golpe '-zón' usan:", options: ["c", "z (corazón, caparazón)", "s", "x"], correct: 1 },
             { question: "¿'Pe__es' y 'fuga__es' van con?", options: ["z (pez -> pezes)", "c (porque en plural z pasa a c)", "s (fugas)", "x"], correct: 1 },
             { question: "¿'Gigan_e_co' va con?", options: ["gigantesco (terminación -esco con s)", "gigantezco", "gigantecco", "gigantecco"], correct: 0 },
-            { question: "Identifica el error:", options: ["Veloces", "Costarricenze", "Estadounidense", "Corazón"], correct: 1 }
+            { question: "Identifica el error:", options: ["Veloces", "Costarricenze", "Estadounidense", "Corazón"], correct: 1 },
+            { question: "Complete la palabra: 'La profe__ora explicó la lección con mucha claridad.'", options: ["c", "z", "s", "x"], correct: 2 },
+            { question: "Complete la palabra: 'El estudiante mostró mucho interé__ por la lectura.'", options: ["c", "z", "x", "s"], correct: 3 },
+            { question: "Complete la palabra: 'Mi mamá preparó un deli__ioso almuerzo.'", options: ["s", "c", "z", "x"], correct: 1 },
+            { question: "Complete la palabra: 'El atleta hizo un gran esfuer__o durante la competencia.'", options: ["s", "c", "z", "x"], correct: 2 },
+            { question: "Complete la palabra: 'La maripo__a volaba sobre las flores del jardín.'", options: ["c", "z", "s", "x"], correct: 2 },
+            { question: "Complete la palabra: 'El niño pidió permi__o para salir al recreo.'", options: ["c", "z", "x", "s"], correct: 3 },
+            { question: "Complete la palabra: 'En el zoológico vimos un fero__ tigre.'", options: ["s", "c", "z", "x"], correct: 2 },
+            { question: "Complete la palabra: 'La maestra revisó la redac__ión de los estudiantes.'", options: ["s", "z", "x", "c"], correct: 3 },
+            { question: "Complete la palabra: 'La pa__iencia es una virtud importante para aprender.'", options: ["s", "z", "c", "x"], correct: 2 },
+            { question: "Complete la palabra: 'El alumno tomó una buena deci__ión.'", options: ["c", "z", "s", "x"], correct: 2 },
+            { question: "Complete la palabra: 'El lápi__ se cayó debajo del pupitre.'", options: ["s", "c", "x", "z"], correct: 3 },
+            { question: "Complete la palabra: 'La noticia causó gran sorpre__a en el pueblo.'", options: ["c", "z", "s", "x"], correct: 2 },
+            { question: "Complete la palabra: 'El campesino sembró maí__ en su parcela.'", options: ["s", "c", "z", "x"], correct: 2 },
+            { question: "Complete la palabra: 'Los estudiantes escucharon con aten__ión las instrucciones.'", options: ["s", "z", "x", "c"], correct: 3 },
+            { question: "Complete la palabra: 'La enfermera explicó la importan__ia de lavarse las manos.'", options: ["s", "z", "c", "x"], correct: 2 },
+            { question: "Complete la palabra: 'El pescador atrapó un gran pe__ en el río.'", options: ["s", "c", "z", "x"], correct: 2 },
+            { question: "Complete la palabra: 'La maestra pidió silen__io durante el examen.'", options: ["s", "z", "c", "x"], correct: 2 },
+            { question: "Complete la palabra: 'Los alumnos escribieron una compo__ición sobre el medio ambiente.'", options: ["c", "z", "x", "s"], correct: 3 }
         ],
         get openQuestions() { return textQuestionsData; }
     }
@@ -204,6 +243,10 @@ export const textQuestionsData = [
     { question: "Verdadero o falso: 'El lenguaje coloquial sigue reglas gramaticales estrictas.'", acceptableAnswers: ["falso"] },
     { question: "Identifica el lenguaje: 'La fotosíntesis convierte el CO2 en glucosa.'", acceptableAnswers: ["tecnico"] },
     { question: "Identifica el lenguaje: 'Sus ojos son dos estrellas en la noche.'", acceptableAnswers: ["figurado", "literario"] },
+    { question: "Identifique el registro del habla: 'el sol parece una gran bola de fuego que pinta el cielo de colores'", acceptableAnswers: ["figurado", "literario"] },
+    { question: "Identifique el registro del habla: 'dos amigos conversan sobre el partido de fútbol que jugaron'", acceptableAnswers: ["coloquial"] },
+    { question: "Identifique el registro del habla: 'la directora se dirige a los estudiantes con un tono claro y respetuoso'", acceptableAnswers: ["formal"] },
+    { question: "Identifique el registro del habla: 'las plantas producen su alimento mediante la fotosíntesis'", acceptableAnswers: ["tecnico"] },
 
     // Tema 2
     { question: "¿Qué es el proceso de comunicación?", acceptableAnswers: ["intercambiar", "informacion", "ideas", "emociones", "personas"] },
@@ -292,6 +335,11 @@ export const textQuestionsData = [
     { question: "Escribe dos palabras que empiecen con eva- o evo-.", acceptableAnswers: ["evadir", "evaporar", "evento", "evolucion"] },
     { question: "¿Cuál es la diferencia de sonido entre la 'b' y la 'v' en español moderno?", acceptableAnswers: ["ninguna", "igual", "suenan", "mismo"] },
     { question: "Escribe una palabra que termine en -aba.", acceptableAnswers: ["caminaba", "jugaba", "cantaba", "lloraba", "soñaba"] },
+    { question: "Complete la palabra de esta oración: El científico realizó un experimento en el la__oratorio.", acceptableAnswers: ["b"] },
+    { question: "Complete la palabra de esta oración: Mi hermano siempre se le__anta muy temprano.", acceptableAnswers: ["v"] },
+    { question: "Complete la palabra de esta oración: El perro mo__ía la cola cuando veía a su dueño.", acceptableAnswers: ["v"] },
+    { question: "Complete la palabra de esta oración: Mi mamá compró una nue__a mochila.", acceptableAnswers: ["v"] },
+    { question: "Complete la palabra de esta oración: El a__uelo nos contó historias de su infancia.", acceptableAnswers: ["b"] },
 
     // Tema 6
     { question: "¿Qué terminaciones de sustantivos (como farmacia o ganancia) se escriben siempre con 'c'?", acceptableAnswers: ["acia", "ancia", "encia", "icie", "icio"] },
@@ -313,5 +361,10 @@ export const textQuestionsData = [
     { question: "Verdadero o falso: 'Las palabras terminadas en -ísimo se escriben con c.'", acceptableAnswers: ["falso"] },
     { question: "Escribe una palabra con terminación -izo.", acceptableAnswers: ["resbaladizo", "postizo", "rojizo", "huidizo"] },
     { question: "Escribe una palabra con terminación -eza.", acceptableAnswers: ["belleza", "pureza", "tristeza", "nobleza", "riqueza"] },
-    { question: "¿Cuál es la diferencia entre casería y casorio en cuanto al uso de la s?", acceptableAnswers: ["ambas", "s", "significados", "diferentes", "eria", "orio"] }
+    { question: "¿Cuál es la diferencia entre casería y casorio en cuanto al uso de la s?", acceptableAnswers: ["ambas", "s", "significados", "diferentes", "eria", "orio"] },
+    { question: "Complete la palabra: La profe__ora explicó la lección.", acceptableAnswers: ["s"] },
+    { question: "Complete la palabra: En el zoológico vimos un fero__ tigre.", acceptableAnswers: ["z"] },
+    { question: "Complete la palabra: La pa__iencia es una virtud.", acceptableAnswers: ["c"] },
+    { question: "Complete la palabra: El lápi__ se cayó debajo del pupitre.", acceptableAnswers: ["z"] },
+    { question: "Complete la palabra: El campesino sembró maí__ en su parcela.", acceptableAnswers: ["z"] }
 ];

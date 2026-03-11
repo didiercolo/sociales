@@ -35,9 +35,7 @@ const Layout = () => {
                     </Link>
                     <nav>
                         <ul className="nav-links">
-                            <li><Link to="/">Materias</Link></li>
-                            <li><Link to="/sociales">Sociales</Link></li>
-                            <li><a href="#grados" onClick={scrollToGrados}>Grados</a></li>
+                            <li><Link to="/sobre-nosotros">Sobre Nosotros</Link></li>
                         </ul>
                     </nav>
                 </div>
@@ -58,6 +56,7 @@ const Layout = () => {
                             <h4 style={{ marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Enlaces Rápidos</h4>
                             <ul style={{ listStyle: 'none', opacity: 0.7, fontSize: '0.9rem' }}>
                                 <li style={{ marginBottom: '0.5rem' }}><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Inicio</Link></li>
+                                <li style={{ marginBottom: '0.5rem' }}><Link to="/sobre-nosotros" style={{ color: 'white', textDecoration: 'none' }}>Sobre Nosotros</Link></li>
                                 <li style={{ marginBottom: '0.5rem' }}><a href="#grados" onClick={scrollToGrados} style={{ color: 'white', textDecoration: 'none' }}>Grados</a></li>
                             </ul>
                         </div>

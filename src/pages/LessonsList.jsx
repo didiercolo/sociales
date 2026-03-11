@@ -1,10 +1,18 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import LessonCard from '../components/LessonCard';
 import { lessonsData } from '../data/lessonsData';
 
 const LessonsList = () => {
     const { subject, gradeId } = useParams();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (subject === 'sociales' && (gradeId === '4' || gradeId === '5')) {
+            navigate('/coming-soon', { replace: true });
+        }
+    }, [subject, gradeId, navigate]);
+
     const lessons = lessonsData[subject]?.[gradeId] || [];
 
     return (
@@ -42,6 +50,7 @@ const LessonsList = () => {
                             id={lesson.id}
                             title={lesson.title}
                             description={lesson.description}
+                            disabled={lesson.disabled}
                             gradeId={gradeId}
                             subject={subject}
                             imageUrl={`https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=500&auto=format&fit=crop&sig=${idx}`}

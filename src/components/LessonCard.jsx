@@ -6,7 +6,7 @@ const LessonCard = ({ id, title, description, disabled, gradeId, imageUrl, subje
 
     if (disabled) {
         return (
-            <div className="lesson-card disabled">
+            <Link to="/coming-soon" className="lesson-card disabled">
                 <div className="card-image" style={{ backgroundImage: `url(${cardImage})` }}>
                     <div className="card-icon-overlay">🔒</div>
                 </div>
@@ -15,9 +15,9 @@ const LessonCard = ({ id, title, description, disabled, gradeId, imageUrl, subje
                     <p>{description}</p>
                 </div>
                 <div className="card-footer">
-                    <span className="status-tag">No disponible</span>
+                    <span className="status-tag">Próximamente</span>
                 </div>
-            </div>
+            </Link>
         );
     }
 

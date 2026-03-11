@@ -249,6 +249,7 @@ export const grade6Lessons = [
     },
     {
         id: 2,
+        disabled: true,
         title: "Lección 2: El Estado Liberal y los Sueños de Progreso",
         description: "Modernización del país, ferrocarril y reformas.",
         sections: [
@@ -482,6 +483,7 @@ export const grade6Lessons = [
     },
     {
         id: 3,
+        disabled: true,
         title: "Lección 3: El Estado Social y las Reformas de 1940",
         description: "La creación de la CCSS, UCR y garantías sociales.",
         sections: [
@@ -711,6 +713,7 @@ export const grade6Lessons = [
     },
     {
         id: 4,
+        disabled: true,
         title: "Lección 4: La Guerra Civil de 1948",
         description: "Abolición del ejército y la nueva Constitución.",
         sections: [
@@ -942,6 +945,7 @@ export const grade6Lessons = [
     },
     {
         id: 5,
+        disabled: true,
         title: "Lección 5: Ciudadanía y Desafíos Actuales",
         description: "Participación, seguridad y desafíos de la sociedad.",
         sections: [
@@ -1174,6 +1178,7 @@ export const grade6Lessons = [
     },
     {
         id: 6,
+        disabled: true,
         title: "Lección 6: Banco de Preguntas Completo (6°)",
         description: "Repaso general de todos los temas de 6to grado.",
         sections: [
