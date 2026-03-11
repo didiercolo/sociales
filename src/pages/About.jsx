@@ -42,7 +42,7 @@ const About = () => {
                         textAlign: 'left'
                     }}>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            Una familia llega a Costa Rica. Su hijo de 11 años tiene quinto grado aprobado, habla de la Segunda Guerra Mundial con soltura, ha visto los remanentes del Muro de Berlín con sus propios ojos y sabe quién fue Hitler.
+                            Una familia llega a Costa Rica desde Berlin Alemania. Su hijo de 11 años tiene quinto grado aprobado, habla de la Segunda Guerra Mundial con soltura, ha visto los remanentes del Muro de Berlín con sus propios ojos y sabe quién fue Hitler.
                         </p>
                         <p style={{ marginBottom: '1.5rem', fontWeight: '600', color: 'var(--secondary)' }}>
                             Pero no sabe dónde está el río Tempisque. No conoce el Volcán Irazú. Cuando ve el Poás, ve una montaña alta, no un volcán activo con historia y ciencia detrás.
