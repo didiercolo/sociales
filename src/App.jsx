@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import { AuthProvider } from './context/AuthContext';
 
 // Lazy load pages for better initial performance
 const Home = lazy(() => import('./pages/Home'));
@@ -11,6 +12,8 @@ const LessonsList = lazy(() => import('./pages/LessonsList'));
 const LessonView = lazy(() => import('./pages/LessonView'));
 const ComingSoon = lazy(() => import('./pages/ComingSoon'));
 const About = lazy(() => import('./pages/About'));
+const Register = lazy(() => import('./pages/Register'));
+const Login = lazy(() => import('./pages/Login'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -21,20 +24,24 @@ const PageLoader = () => (
 
 function App() {
     return (
-        <Suspense fallback={<PageLoader />}>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<SubjectSelection />} />
-                    <Route path="sociales" element={<Home />} />
-                    <Route path="ciencias" element={<CienciasHome />} />
-                    <Route path="espanol" element={<EspanolHome />} />
-                    <Route path="coming-soon" element={<ComingSoon />} />
-                    <Route path="sobre-nosotros" element={<About />} />
-                    <Route path=":subject/grade/:gradeId" element={<LessonsList />} />
-                    <Route path=":subject/grade/:gradeId/lesson/:lessonId" element={<LessonView />} />
-                </Route>
-            </Routes>
-        </Suspense>
+        <AuthProvider>
+            <Suspense fallback={<PageLoader />}>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<SubjectSelection />} />
+                        <Route path="sociales" element={<Home />} />
+                        <Route path="ciencias" element={<CienciasHome />} />
+                        <Route path="espanol" element={<EspanolHome />} />
+                        <Route path="coming-soon" element={<ComingSoon />} />
+                        <Route path="sobre-nosotros" element={<About />} />
+                        <Route path="registro" element={<Register />} />
+                        <Route path="login" element={<Login />} />
+                        <Route path=":subject/grade/:gradeId" element={<LessonsList />} />
+                        <Route path=":subject/grade/:gradeId/lesson/:lessonId" element={<LessonView />} />
+                    </Route>
+                </Routes>
+            </Suspense>
+        </AuthProvider>
     );
 }
 

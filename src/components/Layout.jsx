@@ -1,8 +1,18 @@
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase/config';
 
 const Layout = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const { currentUser, userProfile } = useAuth();
+
+    const handleLogout = async () => {
+        await signOut(auth);
+        navigate('/');
+    };
+
 
     const scrollToGrados = (e) => {
         e.preventDefault();
@@ -36,6 +46,21 @@ const Layout = () => {
                     <nav>
                         <ul className="nav-links">
                             <li><Link to="/sobre-nosotros">Sobre Nosotros</Link></li>
+                            {currentUser && userProfile ? (
+                                <>
+                                    <li className="nav-user-info">
+                                        <span className="nav-nickname">👾 {userProfile.nickname}</span>
+                                    </li>
+                                    <li>
+                                        <button onClick={handleLogout} className="nav-logout-btn">Salir</button>
+                                    </li>
+                                </>
+                            ) : (
+                                <>
+                                    <li><Link to="/login">Ingresar</Link></li>
+                                    <li><Link to="/registro" className="nav-register-btn">Registrarse</Link></li>
+                                </>
+                            )}
                         </ul>
                     </nav>
                 </div>

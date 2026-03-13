@@ -27,3 +27,8 @@ dist-ssr
 legacy_static/
 documents/
 antigravity/
+
+# Environment variables (Firebase keys — never commit)
+.env
+.env.local
+.env.production
