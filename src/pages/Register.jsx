@@ -13,7 +13,6 @@ const STEPS = {
 export default function Register() {
     const [step, setStep] = useState(STEPS.PICK_NICKNAME);
     const [nicknameMode, setNicknameMode] = useState('list'); // 'list' | 'custom'
-    const [filter, setFilter] = useState('');
     const [availableNicknames, setAvailableNicknames] = useState([]); // [{ emoji, name, docId }] loaded from Firestore
     // docIds now embedded in each availableNicknames entry
     const [loadingNicknames, setLoadingNicknames] = useState(true);
@@ -63,10 +62,6 @@ export default function Register() {
 
         loadNicknames();
     }, []);
-
-    const filteredNicknames = availableNicknames.filter((entry) =>
-        entry.name.toLowerCase().includes(filter.toLowerCase())
-    );
 
     const activeNickname = nicknameMode === 'custom' ? customNickname.trim() : selectedNickname;
 
@@ -174,18 +169,12 @@ export default function Register() {
                         {/* List Mode */}
                         {nicknameMode === 'list' && (
                             <div className="nickname-list-section">
-                                <input
-                                    type="text"
-                                    className="nickname-search"
-                                    placeholder="🔍 Buscar nickname..."
-                                    value={filter}
-                                    onChange={(e) => setFilter(e.target.value)}
-                                />
+                                <p className="nickname-instruction">Si deseas selecciona un nickname o escoge uno propio</p>
                                 {loadingNicknames ? (
                                     <div className="nickname-loading">Cargando nombres disponibles...</div>
                                 ) : (
                                     <div className="nickname-grid">
-                                        {filteredNicknames.map((entry) => (
+                                        {availableNicknames.map((entry) => (
                                             <button
                                                 key={entry.name}
                                                 className={`nickname-chip ${selectedNickname === entry.name && nicknameMode === 'list' ? 'selected' : ''}`}
@@ -195,11 +184,9 @@ export default function Register() {
                                                 {entry.emoji} {entry.name}
                                             </button>
                                         ))}
-                                        {filteredNicknames.length === 0 && !loadingNicknames && (
+                                        {availableNicknames.length === 0 && !loadingNicknames && (
                                             <p className="no-results">
-                                                {availableNicknames.length === 0
-                                                    ? '¡Todos los nombres están tomados! Escribe el tuyo.'
-                                                    : `No se encontró "${filter}". ¡Escribe el tuyo!`}
+                                                ¡Todos los nombres están tomados! Escribe el tuyo.
                                             </p>
                                         )}
                                     </div>
