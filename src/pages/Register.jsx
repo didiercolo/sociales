@@ -1,55 +1,120 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc, getDocs, collection, query, where } from 'firebase/firestore';
+import { doc, setDoc, getDocs, updateDoc, collection, query, where } from 'firebase/firestore';
 import { auth, db } from '../firebase/config';
+import { seedNicknames } from '../scripts/seedNicknames';
+
+const STEPS = {
+    PICK_NICKNAME: 1,
+    SET_PASSWORD: 2,
+};
 
 export default function Register() {
-    const [nickname, setNickname] = useState('');
+    const [step, setStep] = useState(STEPS.PICK_NICKNAME);
+    const [nicknameMode, setNicknameMode] = useState('list'); // 'list' | 'custom'
+    const [filter, setFilter] = useState('');
+    const [availableNicknames, setAvailableNicknames] = useState([]); // [{ emoji, name, docId }] loaded from Firestore
+    // docIds now embedded in each availableNicknames entry
+    const [loadingNicknames, setLoadingNicknames] = useState(true);
+    const [selectedNickname, setSelectedNickname] = useState('');
+    const [customNickname, setCustomNickname] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [nicknameError, setNicknameError] = useState(''); // Firestore load error
     const [loading, setLoading] = useState(false);
-    // Honeypot field — bots will fill this; humans won't see it
     const [honeypot, setHoneypot] = useState('');
     const navigate = useNavigate();
+
+    // Load available (unused) nicknames from Firestore on mount
+    useEffect(() => {
+        const loadNicknames = async () => {
+            try {
+                // Seed collection if empty (first time setup)
+                await seedNicknames();
+
+                // Fetch only nicknames where used === false
+                const q = query(collection(db, 'nicknames'), where('used', '==', false));
+                const snapshot = await getDocs(q);
+
+                const entries = [];
+                snapshot.forEach((docSnap) => {
+                    const { name, emoji } = docSnap.data();
+                    entries.push({ name, emoji: emoji || '', docId: docSnap.id });
+                });
+
+                // Shuffle randomly so each kid sees a different order
+                for (let i = entries.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [entries[i], entries[j]] = [entries[j], entries[i]];
+                }
+                setAvailableNicknames(entries);
+            } catch (err) {
+                console.error('Error loading nicknames from Firestore:', err);
+                setNicknameError(
+                    'No se pudo cargar la lista de nombres. Por favor, escribe tu propio nickname.'
+                );
+                // Auto-switch to custom mode if Firestore is unavailable
+                setNicknameMode('custom');
+            } finally {
+                setLoadingNicknames(false);
+            }
+        };
+
+        loadNicknames();
+    }, []);
+
+    const filteredNicknames = availableNicknames.filter((entry) =>
+        entry.name.toLowerCase().includes(filter.toLowerCase())
+    );
+
+    const activeNickname = nicknameMode === 'custom' ? customNickname.trim() : selectedNickname;
+
+    const handleSelectNickname = (name) => {
+        setSelectedNickname(name); // only the plain name, no emoji
+        setNicknameMode('list');
+        setError('');
+    };
+
+    const handleNextStep = () => {
+        setError('');
+        if (activeNickname.length < 3) {
+            return setError('¡Selecciona un nombre o escribe uno con al menos 3 caracteres!');
+        }
+        setStep(STEPS.SET_PASSWORD);
+    };
 
     const handleRegister = async (e) => {
         e.preventDefault();
         setError('');
-
-        // Bot check: reject if honeypot is filled
         if (honeypot) return;
 
-        if (nickname.trim().length < 3) {
-            return setError('El nombre de usuario debe tener al menos 3 caracteres.');
-        }
         if (password.length < 6) {
             return setError('La contraseña debe tener al menos 6 caracteres.');
         }
 
         setLoading(true);
         try {
-            // 1. Check if nickname is already taken in Firestore
+            // 1. Double-check nickname uniqueness (especially for custom nicknames)
             const nicknameQuery = query(
                 collection(db, 'users'),
-                where('nickname', '==', nickname.trim())
+                where('nickname', '==', activeNickname)
             );
             const querySnapshot = await getDocs(nicknameQuery);
-
             if (!querySnapshot.empty) {
                 setLoading(false);
-                return setError('Ese nombre de usuario ya está tomado. ¡Elige otro!');
+                return setError('Ese nombre ya está tomado. ¡Elige otro!');
             }
 
-            // 2. Create Firebase account using a pseudo-email (user never sees this)
-            const pseudoEmail = `${nickname.trim().toLowerCase().replace(/\s+/g, '_')}@eduportalcr.app`;
+            // 2. Create Firebase account using pseudo-email (never shown to user)
+            const pseudoEmail = `${activeNickname.toLowerCase().replace(/\s+/g, '_')}@eduportalcr.app`;
             const userCredential = await createUserWithEmailAndPassword(auth, pseudoEmail, password);
             const user = userCredential.user;
 
-            // 3. Create the user profile document in Firestore
+            // 3. Create Firestore user document with default values
             await setDoc(doc(db, 'users', user.uid), {
                 uid: user.uid,
-                nickname: nickname.trim(),
+                nickname: activeNickname,
                 tier: 1,
                 tierSubject: null,
                 tierExpiresAt: null,
@@ -59,7 +124,14 @@ export default function Register() {
                 createdAt: new Date(),
             });
 
-            // 4. Redirect to home on success
+            // 4. If nickname came from predefined list, mark it as used in Firestore
+            const pickedEntry = availableNicknames.find((e) => e.name === activeNickname);
+            if (nicknameMode === 'list' && pickedEntry) {
+                await updateDoc(doc(db, 'nicknames', pickedEntry.docId), {
+                    used: true,
+                });
+            }
+
             navigate('/');
         } catch (err) {
             console.error(err);
@@ -70,61 +142,157 @@ export default function Register() {
 
     return (
         <div className="auth-page">
-            <div className="auth-card">
-                <div className="auth-header">
-                    <div className="auth-icon">🚀</div>
-                    <h1>Crear Cuenta</h1>
-                    <p>¡Elige tu nombre de guerrero y empieza a escalar el tablero!</p>
-                </div>
+            <div className="auth-card" style={{ maxWidth: step === STEPS.PICK_NICKNAME ? 620 : 480 }}>
 
-                <form onSubmit={handleRegister} className="auth-form">
-                    {/* Honeypot - hidden from humans */}
-                    <input
-                        type="text"
-                        value={honeypot}
-                        onChange={(e) => setHoneypot(e.target.value)}
-                        style={{ display: 'none' }}
-                        tabIndex="-1"
-                        autoComplete="off"
-                    />
+                {/* Step 1: Pick a Nickname */}
+                {step === STEPS.PICK_NICKNAME && (
+                    <>
+                        <div className="auth-header">
+                            <div className="auth-icon">🎮</div>
+                            <h1>Elige tu Nombre</h1>
+                            <p>Selecciona uno de la lista o escribe el tuyo propio.</p>
+                        </div>
 
-                    <div className="form-group">
-                        <label htmlFor="nickname">Nombre de Usuario (Nickname)</label>
-                        <input
-                            id="nickname"
-                            type="text"
-                            value={nickname}
-                            onChange={(e) => setNickname(e.target.value)}
-                            placeholder="Ej: NebulaByte, QuantumKitsune..."
-                            required
-                            autoComplete="username"
-                        />
-                    </div>
+                        {/* Mode Toggle */}
+                        <div className="nickname-mode-toggle">
+                            <button
+                                className={`mode-btn ${nicknameMode === 'list' ? 'active' : ''}`}
+                                onClick={() => setNicknameMode('list')}
+                                type="button"
+                            >
+                                🎲 Elegir de la lista
+                            </button>
+                            <button
+                                className={`mode-btn ${nicknameMode === 'custom' ? 'active' : ''}`}
+                                onClick={() => setNicknameMode('custom')}
+                                type="button"
+                            >
+                                ✏️ Escribir el mío
+                            </button>
+                        </div>
 
-                    <div className="form-group">
-                        <label htmlFor="password">Contraseña</label>
-                        <input
-                            id="password"
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            placeholder="Mínimo 6 caracteres"
-                            required
-                            autoComplete="new-password"
-                        />
-                    </div>
+                        {/* List Mode */}
+                        {nicknameMode === 'list' && (
+                            <div className="nickname-list-section">
+                                <input
+                                    type="text"
+                                    className="nickname-search"
+                                    placeholder="🔍 Buscar nickname..."
+                                    value={filter}
+                                    onChange={(e) => setFilter(e.target.value)}
+                                />
+                                {loadingNicknames ? (
+                                    <div className="nickname-loading">Cargando nombres disponibles...</div>
+                                ) : (
+                                    <div className="nickname-grid">
+                                        {filteredNicknames.map((entry) => (
+                                            <button
+                                                key={entry.name}
+                                                className={`nickname-chip ${selectedNickname === entry.name && nicknameMode === 'list' ? 'selected' : ''}`}
+                                                onClick={() => handleSelectNickname(entry.name)}
+                                                type="button"
+                                            >
+                                                {entry.emoji} {entry.name}
+                                            </button>
+                                        ))}
+                                        {filteredNicknames.length === 0 && !loadingNicknames && (
+                                            <p className="no-results">
+                                                {availableNicknames.length === 0
+                                                    ? '¡Todos los nombres están tomados! Escribe el tuyo.'
+                                                    : `No se encontró "${filter}". ¡Escribe el tuyo!`}
+                                            </p>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        )}
 
-                    {error && <div className="auth-error">⚠️ {error}</div>}
+                        {/* Custom Mode */}
+                        {nicknameMode === 'custom' && (
+                            <div className="form-group" style={{ marginBottom: '1.5rem' }}>
+                                <label htmlFor="custom-nickname">Tu Nickname Personalizado</label>
+                                <input
+                                    id="custom-nickname"
+                                    type="text"
+                                    value={customNickname}
+                                    onChange={(e) => setCustomNickname(e.target.value)}
+                                    placeholder="Ej: NebulaByte, QuantumKitsune..."
+                                    autoFocus
+                                />
+                            </div>
+                        )}
 
-                    <button type="submit" className="auth-btn" disabled={loading}>
-                        {loading ? 'Creando cuenta...' : '¡Crear mi cuenta! 🎮'}
-                    </button>
-                </form>
+                        {/* Preview */}
+                        {activeNickname && (
+                            <div className="nickname-preview">
+                                Nickname seleccionado: <strong>👾 {activeNickname}</strong>
+                            </div>
+                        )}
 
-                <p className="auth-footer">
-                    ¿Ya tienes cuenta?{' '}
-                    <Link to="/login">Inicia sesión aquí</Link>
-                </p>
+                        {error && <div className="auth-error">⚠️ {error}</div>}
+
+                        <button className="auth-btn" onClick={handleNextStep} style={{ marginTop: '1rem' }}>
+                            Continuar →
+                        </button>
+
+                        <p className="auth-footer">
+                            ¿Ya tienes cuenta? <Link to="/login">Inicia sesión aquí</Link>
+                        </p>
+                    </>
+                )}
+
+                {/* Step 2: Set Password */}
+                {step === STEPS.SET_PASSWORD && (
+                    <>
+                        <div className="auth-header">
+                            <div className="auth-icon">🔐</div>
+                            <h1>Crea tu Contraseña</h1>
+                            <p>
+                                Jugando como: <strong style={{ color: 'var(--primary-dark)' }}>👾 {activeNickname}</strong>
+                            </p>
+                        </div>
+
+                        <form onSubmit={handleRegister} className="auth-form">
+                            {/* Honeypot */}
+                            <input
+                                type="text"
+                                value={honeypot}
+                                onChange={(e) => setHoneypot(e.target.value)}
+                                style={{ display: 'none' }}
+                                tabIndex="-1"
+                                autoComplete="off"
+                            />
+
+                            <div className="form-group">
+                                <label htmlFor="password">Contraseña</label>
+                                <input
+                                    id="password"
+                                    type="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder="Mínimo 6 caracteres"
+                                    required
+                                    autoComplete="new-password"
+                                    autoFocus
+                                />
+                            </div>
+
+                            {error && <div className="auth-error">⚠️ {error}</div>}
+
+                            <button type="submit" className="auth-btn" disabled={loading}>
+                                {loading ? 'Creando cuenta...' : '¡Crear mi cuenta! 🚀'}
+                            </button>
+
+                            <button
+                                type="button"
+                                className="auth-back-btn"
+                                onClick={() => { setStep(STEPS.PICK_NICKNAME); setError(''); }}
+                            >
+                                ← Cambiar nickname
+                            </button>
+                        </form>
+                    </>
+                )}
             </div>
         </div>
     );
