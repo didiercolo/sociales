@@ -87,8 +87,28 @@ const Layout = () => {
                         </div>
                         <div>
                             <h4 style={{ marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Contacto</h4>
-                            <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>¿Tienes dudas? ¡Escríbenos!</p>
-                            <p style={{ marginTop: '0.5rem', fontWeight: 'bold' }}>soporte@socialesportal.com</p>
+                            <a 
+                                href="https://wa.me/50660326413" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                style={{ 
+                                    display: 'inline-flex', 
+                                    alignItems: 'center', 
+                                    gap: '0.5rem', 
+                                    background: '#25D366', 
+                                    color: 'white', 
+                                    padding: '0.6rem 1.2rem', 
+                                    borderRadius: 'var(--radius-md)', 
+                                    textDecoration: 'none',
+                                    fontWeight: '700',
+                                    fontSize: '0.9rem',
+                                    transition: 'var(--transition)'
+                                }}
+                                onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+                                onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                            >
+                                <span>💬 ¡Escríbenos por WhatsApp!</span>
+                            </a>
                         </div>
                     </div>
                     <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '3rem', paddingTop: '2rem', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
