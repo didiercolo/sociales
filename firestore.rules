@@ -2,17 +2,114 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: users
+    // Document ID: Firebase Auth UID
+    // Fields:
+    //   - uid: string (required, immutable) — must match document ID and request.auth.uid
+    //   - nickname: string (required, 3–50 chars, immutable after create)
+    //   - tier: number (required, must equal 1 on create, 1–4 on update, immutable from client)
+    //   - tierSubject: string|null (optional)
+    //   - tierExpiresAt: timestamp|null (optional)
+    //   - score: number (required, must equal 0 on create)
+    //   - questionsToday: number (required, must equal 0 on create)
+    //   - lastQuestionDate: timestamp|null (optional, null on create)
+    //   - createdAt: timestamp (required, immutable)
+    //
+    // Collection: nicknames
+    // Document ID: auto-generated
+    // Fields:
+    //   - name: string (required, 3–50 chars)
+    //   - emoji: string (optional)
+    //   - used: boolean (required) — client may only flip false → true
+    //
+    // Collection: dailyQuestions
+    // Document ID: YYYY-MM-DD
+    // Fields: managed exclusively by Cloud Functions (Admin SDK)
+    //
+    // Collection: system
+    // Document ID: 'scoreboard'
+    // Fields:
+    //   - topUsers: list — [{uid, nickname, score, tier}], no PII
+    //   - updatedAt: timestamp
+    //   Managed exclusively by Cloud Functions (Admin SDK)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function isValidUserCreate(data) {
+      return hasRequiredFields(['uid', 'nickname', 'tier', 'score', 'questionsToday', 'createdAt']) &&
+             hasOnlyAllowedFields(['uid', 'nickname', 'tier', 'tierSubject', 'tierExpiresAt', 'score', 'questionsToday', 'lastQuestionDate', 'createdAt']) &&
+             data.uid is string && data.uid == request.auth.uid &&
+             data.nickname is string && data.nickname.size() >= 3 && data.nickname.size() <= 50 &&
+             data.tier is number && data.tier == 1 &&
+             data.score is number && data.score == 0 &&
+             data.questionsToday is number && data.questionsToday == 0;
+    }
+
+    function isValidNicknameMarkUsed() {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['used']) &&
+             resource.data.used == false &&
+             request.resource.data.used == true;
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    // users: owner-only read and create; all score/tier updates go through Cloud Functions (Admin SDK)
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUserCreate(request.resource.data);
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    // nicknames: public read for registration flow; authenticated users may only flip used: false → true
     match /nicknames/{nicknameId} {
       allow read: if true;
+      allow create: if false;
+      allow update: if isAuthenticated() && isValidNicknameMarkUsed();
+      allow delete: if false;
     }
+
+    // dailyQuestions: authenticated read only; seeded and managed by Cloud Functions
+    match /dailyQuestions/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+
+    // system: public read (scoreboard shown to all visitors); written only by Cloud Functions
     match /system/{document=**} {
       allow read: if true;
-    }
-    match /dailyQuestions/{document=**} {
-      allow read: if true;
-    }
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow write: if false;
     }
   }
 }
