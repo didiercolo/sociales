@@ -8,6 +8,8 @@ import WeeklyChallengeStart from '../components/WeeklyChallenge/WeeklyChallengeS
 import WeeklyChallengeActive from '../components/WeeklyChallenge/WeeklyChallengeActive';
 import WeeklyChallengeResults from '../components/WeeklyChallenge/WeeklyChallengeResults';
 
+const functions = getFunctions();
+
 // State machine phases
 const PHASE = {
   LOADING: 'LOADING',
@@ -26,7 +28,7 @@ function getISOWeekId(date = new Date()) {
 }
 
 const WeeklyChallengePage = () => {
-  const { currentUser, userProfile } = useAuth();
+  const { currentUser, userProfile, loading } = useAuth();
 
   const [phase, setPhase] = useState(PHASE.LOADING);
   const [weekDoc, setWeekDoc] = useState(null);
@@ -39,9 +41,12 @@ const WeeklyChallengePage = () => {
   const [totalPointsEarned, setTotalPointsEarned] = useState(0);
   const [bonusAwarded, setBonusAwarded] = useState(false);
   const [alreadyCompleted, setAlreadyCompleted] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
   // Fetch weekly challenge doc on mount
   useEffect(() => {
+    if (loading) return; // wait for auth to resolve
+
     const fetchWeeklyChallenge = async () => {
       setPhase(PHASE.LOADING);
       setFetchError(null);
@@ -91,8 +96,7 @@ const WeeklyChallengePage = () => {
     };
 
     fetchWeeklyChallenge();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [loading, userProfile]);
 
   const handleStart = () => {
     setQuestionIndex(0);
@@ -101,10 +105,10 @@ const WeeklyChallengePage = () => {
 
   const handleSubmitAnswer = async (selectedAnswer) => {
     if (isSubmitting || !weekDoc) return;
+    setSubmitError(null);
     setIsSubmitting(true);
 
     try {
-      const functions = getFunctions();
       const submitAnswer = httpsCallable(functions, 'submitAnswer');
 
       const response = await submitAnswer({
@@ -132,14 +136,8 @@ const WeeklyChallengePage = () => {
       }
     } catch (err) {
       console.error('Error submitting weekly answer:', err);
-      // Still advance so user isn't stuck; optionally show a toast
-      const questions = weekDoc.questions || [];
-      const nextIndex = questionIndex + 1;
-      if (nextIndex >= questions.length) {
-        setPhase(PHASE.RESULTS);
-      } else {
-        setQuestionIndex(nextIndex);
-      }
+      setSubmitError('Error al enviar la respuesta. Por favor intenta de nuevo.');
+      setIsSubmitting(false);
     } finally {
       setIsSubmitting(false);
     }
@@ -265,13 +263,20 @@ const WeeklyChallengePage = () => {
 
       {/* ACTIVE */}
       {phase === PHASE.ACTIVE && weekDoc && weekDoc.questions && (
-        <WeeklyChallengeActive
-          question={weekDoc.questions[questionIndex]}
-          questionIndex={questionIndex}
-          totalQuestions={weekDoc.questions.length}
-          onSubmit={handleSubmitAnswer}
-          isSubmitting={isSubmitting}
-        />
+        <>
+          <WeeklyChallengeActive
+            question={weekDoc.questions[questionIndex]}
+            questionIndex={questionIndex}
+            totalQuestions={weekDoc.questions.length}
+            onSubmit={handleSubmitAnswer}
+            isSubmitting={isSubmitting}
+          />
+          {submitError && (
+            <p style={{ color: '#EF4444', textAlign: 'center', marginTop: '1rem', fontWeight: 700 }}>
+              ⚠️ {submitError}
+            </p>
+          )}
+        </>
       )}
 
       {/* RESULTS */}

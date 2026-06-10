@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WeeklyChallengeStart = ({ weekDoc, onStart }) => {
-  const { weekId, startDate, endDate, questions = [] } = weekDoc;
+  const { weekId, startDate, endDate, questions = [] } = weekDoc || {};
 
   // Format weekId like "2024-W24" → "Semana W24"
   const weekLabel = weekId ? `Semana ${weekId.split('-')[1]}` : 'Reto Semanal';
