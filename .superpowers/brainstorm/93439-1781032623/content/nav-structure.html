@@ -1,0 +1,81 @@
+<h2>Nueva estructura de navegación</h2>
+<p class="subtitle">De "dividido por año" → "dividido por materia". ¿Cómo se ordenan las lecciones dentro de cada materia?</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">❌ Estructura actual (por grado)</div>
+    <div class="mockup-body" style="font-size:13px;line-height:1.8">
+      <div style="padding:6px 0;border-bottom:1px solid #eee"><strong>📚 Estudios Sociales</strong></div>
+      <div style="padding:4px 12px;color:#888">▸ Grado 4 →</div>
+      <div style="padding:4px 24px;font-size:12px;color:#aaa">  Lección 1: Geografía</div>
+      <div style="padding:4px 12px;color:#888">▸ Grado 5 →</div>
+      <div style="padding:4px 24px;font-size:12px;color:#aaa">  Lección 1: Historia antigua</div>
+      <div style="padding:4px 24px;font-size:12px;color:#aaa">  Lección 2: Etnias...</div>
+      <div style="padding:4px 12px;color:#888">▸ Grado 6 →</div>
+      <div style="padding:4px 24px;font-size:12px;color:#aaa">  Lección 1: Campaña Nacional</div>
+      <div style="margin-top:16px;padding:6px 0;border-bottom:1px solid #eee"><strong>🔬 Ciencias</strong></div>
+      <div style="padding:4px 12px;color:#888">▸ Grado 4 →</div>
+      <div style="padding:4px 24px;font-size:12px;color:#bbb;font-style:italic">  (vacío)</div>
+      <div style="padding:4px 12px;color:#888">▸ Grado 5 →</div>
+      <div style="padding:4px 24px;font-size:12px;color:#bbb;font-style:italic">  (vacío)</div>
+      <div style="padding:4px 12px;color:#888">▸ Grado 6 →</div>
+      <div style="padding:4px 24px;font-size:12px;color:#aaa">  Lección 1: Gravedad</div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">✅ Nueva estructura (por materia)</div>
+    <div class="mockup-body" style="font-size:13px;line-height:1.8">
+      <div style="padding:6px 0;border-bottom:1px solid #eee"><strong>📚 Estudios Sociales</strong></div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 1: Costa Rica y su Geografía</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 2: Historia antigua de CR</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 3: Etnias indígenas</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 4: La Conquista</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 5: Campaña Nacional</div>
+      <div style="padding:4px 12px;font-size:12px;color:#aaa;font-style:italic">→ ... (todas las lecciones)</div>
+      <div style="margin-top:16px;padding:6px 0;border-bottom:1px solid #eee"><strong>🔬 Ciencias</strong></div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 1: La célula</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 2: Sistemas del cuerpo</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 3: Biodiversidad</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 4: Energía</div>
+      <div style="padding:4px 12px;font-size:12px;color:#aaa;font-style:italic">→ ... (todas las lecciones)</div>
+      <div style="margin-top:16px;padding:6px 0;border-bottom:1px solid #eee"><strong>📖 Español</strong></div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 1: Comprensión lectora</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 2: Tipos de lenguaje</div>
+      <div style="padding:4px 12px;font-size:12px;color:#aaa;font-style:italic">→ ...</div>
+      <div style="margin-top:16px;padding:6px 0;border-bottom:1px solid #eee"><strong>🔢 Matemática</strong></div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 1: Números decimales</div>
+      <div style="padding:4px 12px;font-size:12px;color:#555">→ Lección 2: Fracciones</div>
+      <div style="padding:4px 12px;font-size:12px;color:#aaa;font-style:italic">→ ...</div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:24px">
+<h3>Siguiente pregunta: ¿qué nivel de contenido tiene prioridad?</h3>
+<p class="subtitle">El PDF cubre 6° grado completo (Ciencias, Español, Matemática, Estudios Sociales). Las lecciones existentes cubren 4° y 5° para Estudios Sociales. Para Ciencias/Español/Mate en 4° y 5°, no hay documentos fuente.</p>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Solo 6° primero</h3>
+      <p>Usar el PDF para llenar Ciencias, Español y Matemática de 6°. Agregar lo que ya existe de Estudios Sociales 4°/5°/6°. Grados 4° y 5° en Ciencias/Español/Mate quedan pendientes.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Todo en una pasada</h3>
+      <p>Crear también contenido de 4° y 5° para Ciencias, Español y Matemática desde cero basado en el currículo MEP, además de usar el PDF para 6°.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Estructura lista, contenido incremental</h3>
+      <p>Crear toda la estructura de datos y navegación ahora (todas las materias, todos los niveles), pero solo llenar el contenido donde hay fuentes disponibles. El resto queda como lecciones "próximamente".</p>
+    </div>
+  </div>
+</div>

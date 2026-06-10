@@ -1,0 +1,107 @@
+<h2>¿Cómo se ve la página de una materia?</h2>
+<p class="subtitle">El "grade picker" desaparece. El estudiante llega directo a las lecciones. ¿Qué diseño prefieres?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:16px;border-bottom:1px solid #e2e8f0">
+      <div style="font-family:monospace;font-size:11px;color:#64748b;margin-bottom:8px">eduportalcr.com/ciencias</div>
+      <!-- Hero -->
+      <div style="background:linear-gradient(135deg,#0284c7,#0369a1);border-radius:8px;padding:12px;color:white;margin-bottom:8px;text-align:center">
+        <div style="font-size:11px;opacity:.8">🔬 Ciencias</div>
+        <div style="font-size:14px;font-weight:800;margin:4px 0">¡Tu Aventura Científica!</div>
+        <div style="font-size:10px;opacity:.7">Todo el contenido MEP — sin límite de grado</div>
+      </div>
+      <!-- Flat lesson cards -->
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <div style="background:white;border-radius:6px;padding:8px 10px;border:1px solid #e2e8f0;display:flex;align-items:center;gap:8px">
+          <span style="font-size:16px">🧬</span>
+          <div style="flex:1"><div style="font-size:11px;font-weight:700">La célula</div><div style="font-size:9px;color:#94a3b8">Cuerpo Humano</div></div>
+          <span style="font-size:9px;color:#0284c7;font-weight:700">→</span>
+        </div>
+        <div style="background:white;border-radius:6px;padding:8px 10px;border:1px solid #e2e8f0;display:flex;align-items:center;gap:8px">
+          <span style="font-size:16px">🫀</span>
+          <div style="flex:1"><div style="font-size:11px;font-weight:700">Sistemas del cuerpo</div><div style="font-size:9px;color:#94a3b8">Cuerpo Humano</div></div>
+          <span style="font-size:9px;color:#0284c7;font-weight:700">→</span>
+        </div>
+        <div style="background:white;border-radius:6px;padding:8px 10px;border:1px solid #e2e8f0;display:flex;align-items:center;gap:8px">
+          <span style="font-size:16px">🌿</span>
+          <div style="flex:1"><div style="font-size:11px;font-weight:700">Biodiversidad</div><div style="font-size:9px;color:#94a3b8">Biodiversidad</div></div>
+          <span style="font-size:9px;color:#0284c7;font-weight:700">→</span>
+        </div>
+        <div style="background:#f1f5f9;border-radius:6px;padding:8px 10px;border:1px solid #e2e8f0;display:flex;align-items:center;gap:8px;opacity:.6">
+          <span style="font-size:16px">⚡</span>
+          <div style="flex:1"><div style="font-size:11px;font-weight:700">Energía</div><div style="font-size:9px;color:#94a3b8">Próximamente</div></div>
+          <span style="font-size:9px;color:#94a3b8">🔒</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Hero + Lista de filas</h3>
+      <p>Mantiene el hero existente. Lecciones como lista vertical (más compacta, fácil de escanear). MEP bloque como subtítulo.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:16px;border-bottom:1px solid #e2e8f0">
+      <div style="font-family:monospace;font-size:11px;color:#64748b;margin-bottom:8px">eduportalcr.com/ciencias</div>
+      <!-- Minimal header -->
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding:8px;background:white;border-radius:6px;border:1px solid #e2e8f0">
+        <span style="font-size:18px">🔬</span>
+        <div><div style="font-size:12px;font-weight:800">Ciencias</div><div style="font-size:9px;color:#94a3b8">18 lecciones · MEP 2026</div></div>
+      </div>
+      <!-- Card grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+        <div style="background:white;border-radius:6px;padding:8px;border:1px solid #e2e8f0;text-align:center">
+          <div style="font-size:18px;margin-bottom:2px">🧬</div>
+          <div style="font-size:10px;font-weight:700;line-height:1.2">La célula</div>
+        </div>
+        <div style="background:white;border-radius:6px;padding:8px;border:1px solid #e2e8f0;text-align:center">
+          <div style="font-size:18px;margin-bottom:2px">🫀</div>
+          <div style="font-size:10px;font-weight:700;line-height:1.2">Sistemas del cuerpo</div>
+        </div>
+        <div style="background:white;border-radius:6px;padding:8px;border:1px solid #e2e8f0;text-align:center">
+          <div style="font-size:18px;margin-bottom:2px">🌿</div>
+          <div style="font-size:10px;font-weight:700;line-height:1.2">Biodiversidad</div>
+        </div>
+        <div style="background:#f1f5f9;border-radius:6px;padding:8px;border:1px solid #e2e8f0;text-align:center;opacity:.5">
+          <div style="font-size:18px;margin-bottom:2px">🔒</div>
+          <div style="font-size:10px;font-weight:700;line-height:1.2">Energía</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Header mínimo + Grid de tarjetas</h3>
+      <p>Sin hero grande. Encabezado compacto, luego grid 2×N de tarjetas como las actuales. Máxima densidad de contenido.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;padding:16px;border-bottom:1px solid #e2e8f0">
+      <div style="font-family:monospace;font-size:11px;color:#64748b;margin-bottom:8px">eduportalcr.com/ciencias</div>
+      <!-- Small hero -->
+      <div style="background:linear-gradient(135deg,#0284c7,#0369a1);border-radius:8px;padding:10px;color:white;margin-bottom:8px">
+        <div style="font-size:13px;font-weight:800">🔬 Ciencias</div>
+        <div style="font-size:9px;opacity:.8">18 lecciones · Prueba Estandarizada MEP 2026</div>
+      </div>
+      <!-- Bloque section headers + lessons -->
+      <div style="margin-bottom:6px">
+        <div style="font-size:9px;font-weight:800;color:#0284c7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px">Cuerpo Humano</div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="background:white;border-radius:4px;padding:5px 8px;font-size:10px;font-weight:700;border:1px solid #e2e8f0">🧬 La célula</div>
+          <div style="background:white;border-radius:4px;padding:5px 8px;font-size:10px;font-weight:700;border:1px solid #e2e8f0">🫀 Sistemas del cuerpo</div>
+        </div>
+      </div>
+      <div style="margin-bottom:6px">
+        <div style="font-size:9px;font-weight:800;color:#16a34a;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px">Biodiversidad</div>
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="background:white;border-radius:4px;padding:5px 8px;font-size:10px;font-weight:700;border:1px solid #e2e8f0">🌿 Biodiversidad</div>
+          <div style="background:#f1f5f9;border-radius:4px;padding:5px 8px;font-size:10px;font-weight:700;border:1px solid #e2e8f0;opacity:.5">🔒 Ecosistemas (próx.)</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Hero pequeño + Secciones por Bloque MEP</h3>
+      <p>Agrupa lecciones bajo los bloques del MEP (Cuerpo Humano, Biodiversidad, Energía, Geofísica). Sin divisiones por grado, pero con contexto curricular.</p>
+    </div>
+  </div>
+</div>
