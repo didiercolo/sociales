@@ -49,11 +49,11 @@ const SimulacroStart = ({ config, questionCount, bloqueBreakdown, onStart }) => 
         disabled={displayCount === 0}
         style={{
           background: displayCount === 0 ? '#CBD5E1' : 'var(--primary)',
-          color: 'white', border: '3px solid var(--bg-dark)',
+          color: 'white', border: 'none',
           borderRadius: 'var(--radius-full)', padding: '0.875rem 2.5rem',
           fontSize: '1.1rem', fontWeight: 800,
           cursor: displayCount === 0 ? 'not-allowed' : 'pointer',
-          boxShadow: displayCount === 0 ? 'none' : '4px 4px 0 var(--bg-dark)'
+          boxShadow: displayCount === 0 ? 'none' : '0 4px 14px rgba(99,102,241,0.35)'
         }}
       >
         {displayCount === 0 ? 'Sin preguntas disponibles' : '▶ Comenzar Simulacro'}

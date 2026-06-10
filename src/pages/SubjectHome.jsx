@@ -46,8 +46,8 @@ const SubjectHome = () => {
                         background: 'var(--primary)', color: 'white',
                         padding: '0.6rem 1.4rem', borderRadius: 'var(--radius-full)',
                         fontWeight: 700, fontSize: '0.95rem',
-                        border: '2px solid var(--bg-dark)',
-                        boxShadow: '3px 3px 0 var(--bg-dark)',
+                        border: 'none',
+                        boxShadow: '0 4px 14px rgba(99,102,241,0.30)',
                         textDecoration: 'none'
                     }}
                 >
@@ -90,9 +90,9 @@ const SubjectHome = () => {
                         {bloqueIdx === 0 && showBanner && (
                             <div style={{
                                 background: 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)',
-                                border: '3px solid var(--bg-dark)',
+                                border: '1px solid var(--border)',
                                 borderRadius: 'var(--radius-md)',
-                                boxShadow: '4px 4px 0 var(--bg-dark)',
+                                boxShadow: '0 4px 16px rgba(99,102,241,0.12)',
                                 padding: '1.5rem 2rem',
                                 marginBottom: '3rem',
                                 display: 'flex',
@@ -115,8 +115,8 @@ const SubjectHome = () => {
                                         background: 'var(--primary)', color: 'white',
                                         padding: '0.5rem 1.25rem', borderRadius: 'var(--radius-full)',
                                         fontWeight: 700, fontSize: '0.9rem',
-                                        border: '2px solid var(--bg-dark)',
-                                        boxShadow: '2px 2px 0 var(--bg-dark)',
+                                        border: 'none',
+                                        boxShadow: '0 4px 14px rgba(99,102,241,0.30)',
                                         textDecoration: 'none', whiteSpace: 'nowrap'
                                     }}
                                 >
