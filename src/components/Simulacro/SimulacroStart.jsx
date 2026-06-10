@@ -17,7 +17,7 @@ const SimulacroStart = ({ config, questionCount, bloqueBreakdown, onStart }) => 
 
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '2rem 0', flexWrap: 'wrap' }}>
         <span style={{ fontWeight: 700, color: 'var(--bg-dark)' }}>
-          📋 {isFull ? '60 preguntas' : `${displayCount} preguntas disponibles`}
+          📋 {displayCount === 0 ? 'Sin preguntas disponibles' : isFull ? '60 preguntas' : `${displayCount} preguntas disponibles`}
         </span>
         <span style={{ fontWeight: 700, color: 'var(--bg-dark)' }}>⏱ 120 minutos</span>
         <span style={{ fontWeight: 700, color: 'var(--bg-dark)' }}>✅ Selección única A/B/C/D</span>
