@@ -137,3 +137,57 @@ describe('SimulacroActive', () => {
     expect(screen.getByText(/\d{2}:\d{2}/)).toBeInTheDocument();
   });
 });
+
+import SimulacroResults from '../components/Simulacro/SimulacroResults';
+
+const resultsQuestions = [
+  { question: 'Q1', options: ['A','B','C','D'], correct: 0, mepBloque: 'geografia-historia' },
+  { question: 'Q2', options: ['A','B','C','D'], correct: 1, mepBloque: 'geografia-historia' },
+  { question: 'Q3', options: ['A','B','C','D'], correct: 2, mepBloque: 'educacion-civica' },
+];
+// Q1 correct (answered 0), Q2 wrong (answered 0), Q3 correct (answered 2) → 2/3
+const resultsAnswers = { 0: 0, 1: 0, 2: 2 };
+
+describe('SimulacroResults', () => {
+  const defaultProps = {
+    questions: resultsQuestions,
+    answers: resultsAnswers,
+    timeUsed: 3600,
+    subject: 'sociales',
+    onRestart: vi.fn(),
+  };
+
+  it('shows correct score out of total', () => {
+    render(<MemoryRouter><SimulacroResults {...defaultProps} /></MemoryRouter>);
+    expect(screen.getByText(/2 \/ 3/)).toBeInTheDocument();
+  });
+
+  it('shows percentage', () => {
+    render(<MemoryRouter><SimulacroResults {...defaultProps} /></MemoryRouter>);
+    expect(screen.getByText(/67%/)).toBeInTheDocument();
+  });
+
+  it('shows time used as MM:SS', () => {
+    render(<MemoryRouter><SimulacroResults {...defaultProps} /></MemoryRouter>);
+    expect(screen.getByText(/60:00/)).toBeInTheDocument();
+  });
+
+  it('shows bloque breakdown with both bloques', () => {
+    render(<MemoryRouter><SimulacroResults {...defaultProps} /></MemoryRouter>);
+    expect(screen.getByText(/Geografía e Historia/)).toBeInTheDocument();
+    expect(screen.getByText(/Educación Cívica/)).toBeInTheDocument();
+  });
+
+  it('calls onRestart when retry button clicked', () => {
+    const onRestart = vi.fn();
+    render(<MemoryRouter><SimulacroResults {...{ ...defaultProps, onRestart }} /></MemoryRouter>);
+    fireEvent.click(screen.getByRole('button', { name: /Intentar de nuevo/i }));
+    expect(onRestart).toHaveBeenCalledOnce();
+  });
+
+  it('shows back link to subject page', () => {
+    render(<MemoryRouter><SimulacroResults {...defaultProps} /></MemoryRouter>);
+    const link = screen.getByRole('link', { name: /Volver a/i });
+    expect(link.getAttribute('href')).toBe('/sociales');
+  });
+});
