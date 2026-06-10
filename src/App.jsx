@@ -13,6 +13,8 @@ const Login = lazy(() => import('./pages/Login'));
 const ScoreboardPage = lazy(() => import('./pages/ScoreboardPage'));
 const Simulacro = lazy(() => import('./pages/Simulacro'));
 const PruebaMEP = lazy(() => import('./pages/PruebaMEP'));
+const DailyQuestionPage = lazy(() => import('./pages/DailyQuestionPage'));
+const WeeklyChallengePage = lazy(() => import('./pages/WeeklyChallengePage'));
 
 const PageLoader = () => (
     <div style={{ padding: '2rem', textAlign: 'center', fontFamily: 'var(--font-heading)', color: 'var(--primary-color)' }}>
@@ -36,6 +38,8 @@ function App() {
                         <Route path="scoreboard" element={<ScoreboardPage />} />
                         <Route path="simulacro/:subject" element={<Simulacro />} />
                         <Route path="prueba-mep" element={<PruebaMEP />} />
+                        <Route path="pregunta-del-dia" element={<DailyQuestionPage />} />
+                        <Route path="reto-semanal" element={<WeeklyChallengePage />} />
                     </Route>
                 </Routes>
             </Suspense>

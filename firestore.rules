@@ -106,6 +106,12 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // weeklyChallenge: authenticated read only; seeded and managed by Cloud Functions
+    match /weeklyChallenge/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+
     // system: public read (scoreboard shown to all visitors); written only by Cloud Functions
     match /system/{document=**} {
       allow read: if true;

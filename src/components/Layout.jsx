@@ -38,6 +38,12 @@ const Layout = () => {
                     <nav>
                         <ul className="nav-links">
                             <li><Link to="/sobre-nosotros">Sobre Nosotros</Link></li>
+                            {currentUser && userProfile && (
+                                <>
+                                    <li><Link to="/pregunta-del-dia">⭐ Pregunta del Día</Link></li>
+                                    <li><Link to="/reto-semanal">🗓 Reto Semanal</Link></li>
+                                </>
+                            )}
                             <li><Link to="/scoreboard">🏆 Ranking</Link></li>
                             <li><Link to="/prueba-mep">📋 Prueba MEP</Link></li>
                             {currentUser && userProfile ? (
