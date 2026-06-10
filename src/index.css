@@ -13,6 +13,8 @@
   --accent-dark:    #16A34A;
   --warning:        #F59E0B;
   --danger:         #EF4444;
+  --bg-dark:        #111827;  /* dark border/shadow accent (same as --text-main) */
+  --cta:            #22C55E;  /* call-to-action green (same as --accent) */
 
   /* Neutral surface */
   --bg-page:        #F9FAFB;
