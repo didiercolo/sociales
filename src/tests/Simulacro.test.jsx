@@ -191,3 +191,38 @@ describe('SimulacroResults', () => {
     expect(link.getAttribute('href')).toBe('/sociales');
   });
 });
+
+import Simulacro from '../pages/Simulacro';
+
+describe('Simulacro page', () => {
+  const renderAt = (subject) =>
+    render(
+      <MemoryRouter initialEntries={[`/simulacro/${subject}`]}>
+        <Routes>
+          <Route path="/simulacro/:subject" element={<Simulacro />} />
+          <Route path="/" element={<div>Home</div>} />
+        </Routes>
+      </MemoryRouter>
+    );
+
+  it('shows start screen for sociales', () => {
+    renderAt('sociales');
+    expect(screen.getByRole('button', { name: /Comenzar Simulacro/i })).toBeInTheDocument();
+  });
+
+  it('redirects to / for unknown subject', () => {
+    renderAt('fisica');
+    expect(screen.getByText('Home')).toBeInTheDocument();
+  });
+
+  it('shows disabled button for matematicas (0 quiz items)', () => {
+    renderAt('matematicas');
+    expect(screen.getByRole('button', { name: /Sin preguntas/i })).toBeDisabled();
+  });
+
+  it('transitions to active screen when start clicked', () => {
+    renderAt('sociales');
+    fireEvent.click(screen.getByRole('button', { name: /Comenzar Simulacro/i }));
+    expect(screen.getByRole('progressbar')).toBeInTheDocument();
+  });
+});
