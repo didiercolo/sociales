@@ -5,40 +5,56 @@ import LessonCard from '../components/LessonCard';
 
 describe('LessonCard component', () => {
   const defaultProps = {
-    id: 1,
-    title: 'Test Lesson',
+    id: 'costa-rica-y-su-geografia',
+    title: 'Costa Rica y su Geografía',
     description: 'Test Description',
-    gradeId: 6,
     subject: 'sociales',
+    bloqueColor: '#0284c7',
+    lessonNumber: 1,
   };
 
-  it('renders correctly when enabled', () => {
+  it('renders lesson number with LECCIÓN prefix', () => {
     render(
       <MemoryRouter>
         <LessonCard {...defaultProps} />
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Lección 1')).toBeInTheDocument();
+    expect(screen.getByText(/LECCIÓN 1/)).toBeInTheDocument();
+  });
+
+  it('renders title', () => {
+    render(
+      <MemoryRouter>
+        <LessonCard {...defaultProps} />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('Costa Rica y su Geografía')).toBeInTheDocument();
+  });
+
+  it('renders description when provided', () => {
+    render(
+      <MemoryRouter>
+        <LessonCard {...defaultProps} />
+      </MemoryRouter>
+    );
+
     expect(screen.getByText('Test Description')).toBeInTheDocument();
-    expect(screen.getByText('Disponible')).toBeInTheDocument();
-    expect(screen.getByText(/ENTRAR/)).toBeInTheDocument();
   });
 
-  it('renders correctly when disabled', () => {
+  it('does not render description when omitted', () => {
+    const { description, ...propsWithoutDescription } = defaultProps;
     render(
       <MemoryRouter>
-        <LessonCard {...defaultProps} disabled={true} />
+        <LessonCard {...propsWithoutDescription} />
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Lección 1')).toBeInTheDocument();
-    expect(screen.getByText('Próximamente')).toBeInTheDocument();
-    expect(screen.queryByText(/ENTRAR/)).not.toBeInTheDocument();
-    expect(document.querySelector('.lesson-card.disabled')).toBeInTheDocument();
+    expect(screen.queryByText('Test Description')).not.toBeInTheDocument();
   });
 
-  it('navigates to the correct URL when enabled', () => {
+  it('links to /:subject/lesson/:id', () => {
     render(
       <MemoryRouter>
         <LessonCard {...defaultProps} />
@@ -46,17 +62,6 @@ describe('LessonCard component', () => {
     );
 
     const link = screen.getByRole('link');
-    expect(link.getAttribute('href')).toBe('/sociales/grade/6/lesson/1');
-  });
-
-  it('navigates to coming-soon when disabled', () => {
-    render(
-      <MemoryRouter>
-        <LessonCard {...defaultProps} disabled={true} />
-      </MemoryRouter>
-    );
-
-    const link = screen.getByRole('link');
-    expect(link.getAttribute('href')).toBe('/coming-soon');
+    expect(link.getAttribute('href')).toBe('/sociales/lesson/costa-rica-y-su-geografia');
   });
 });
