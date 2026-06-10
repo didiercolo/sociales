@@ -23,7 +23,7 @@ const DailyQuestionPage = () => {
                 style={{
                     fontFamily: 'var(--font-heading)',
                     fontSize: '2.5rem',
-                    color: 'var(--primary)',
+                    color: 'var(--bg-dark)',
                     marginBottom: '0.5rem',
                 }}
             >
