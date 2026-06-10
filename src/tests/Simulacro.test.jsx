@@ -59,3 +59,81 @@ describe('SimulacroStart', () => {
     expect(screen.getByText(/40/)).toBeInTheDocument();
   });
 });
+
+import SimulacroActive from '../components/Simulacro/SimulacroActive';
+
+const mockQuestions = [
+  {
+    question: '¿Cuál es la capital de Costa Rica?',
+    options: ['San José', 'Liberia', 'Cartago', 'Alajuela'],
+    correct: 0,
+    mepBloque: 'geografia-historia'
+  },
+  {
+    question: '¿Qué es la democracia?',
+    options: ['Sistema de gobierno', 'Tipo de clima', 'Clase de animal', 'Forma de moneda'],
+    correct: 0,
+    mepBloque: 'educacion-civica'
+  }
+];
+
+describe('SimulacroActive', () => {
+  it('renders the first question', () => {
+    render(<SimulacroActive questions={mockQuestions} onFinish={vi.fn()} />);
+    expect(screen.getByText(/¿Cuál es la capital/)).toBeInTheDocument();
+  });
+
+  it('renders all 4 answer options', () => {
+    render(<SimulacroActive questions={mockQuestions} onFinish={vi.fn()} />);
+    expect(screen.getByText('San José')).toBeInTheDocument();
+    expect(screen.getByText('Liberia')).toBeInTheDocument();
+    expect(screen.getByText('Cartago')).toBeInTheDocument();
+    expect(screen.getByText('Alajuela')).toBeInTheDocument();
+  });
+
+  it('"Siguiente" button is disabled before selecting an option', () => {
+    render(<SimulacroActive questions={mockQuestions} onFinish={vi.fn()} />);
+    expect(screen.getByRole('button', { name: /Siguiente/i })).toBeDisabled();
+  });
+
+  it('enables "Siguiente" after selecting an option', () => {
+    render(<SimulacroActive questions={mockQuestions} onFinish={vi.fn()} />);
+    fireEvent.click(screen.getByText('San José'));
+    expect(screen.getByRole('button', { name: /Siguiente/i })).not.toBeDisabled();
+  });
+
+  it('advances to next question when "Siguiente" clicked', () => {
+    render(<SimulacroActive questions={mockQuestions} onFinish={vi.fn()} />);
+    fireEvent.click(screen.getByText('San José'));
+    fireEvent.click(screen.getByRole('button', { name: /Siguiente/i }));
+    expect(screen.getByText(/¿Qué es la democracia\?/)).toBeInTheDocument();
+  });
+
+  it('shows "Finalizar" button on last question', () => {
+    render(<SimulacroActive questions={mockQuestions} onFinish={vi.fn()} />);
+    fireEvent.click(screen.getByText('San José'));
+    fireEvent.click(screen.getByRole('button', { name: /Siguiente/i }));
+    expect(screen.getByRole('button', { name: /Finalizar/i })).toBeInTheDocument();
+  });
+
+  it('calls onFinish with answers object when Finalizar clicked', () => {
+    const onFinish = vi.fn();
+    render(<SimulacroActive questions={mockQuestions} onFinish={onFinish} />);
+    fireEvent.click(screen.getByText('San José'));
+    fireEvent.click(screen.getByRole('button', { name: /Siguiente/i }));
+    fireEvent.click(screen.getByText('Sistema de gobierno'));
+    fireEvent.click(screen.getByRole('button', { name: /Finalizar/i }));
+    expect(onFinish).toHaveBeenCalledOnce();
+    expect(onFinish.mock.calls[0][0]).toEqual({ 0: 0, 1: 0 });
+  });
+
+  it('shows progress bar', () => {
+    render(<SimulacroActive questions={mockQuestions} onFinish={vi.fn()} />);
+    expect(screen.getByRole('progressbar')).toBeInTheDocument();
+  });
+
+  it('shows timer in MM:SS format', () => {
+    render(<SimulacroActive questions={mockQuestions} onFinish={vi.fn()} />);
+    expect(screen.getByText(/\d{2}:\d{2}/)).toBeInTheDocument();
+  });
+});
