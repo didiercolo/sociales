@@ -1,0 +1,59 @@
+// src/tests/PruebaMEP.test.jsx
+import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import { MemoryRouter } from 'react-router-dom';
+import PruebaMEP from '../pages/PruebaMEP';
+
+describe('PruebaMEP', () => {
+  const renderPage = () => render(<MemoryRouter><PruebaMEP /></MemoryRouter>);
+
+  it('renders the hero heading', () => {
+    renderPage();
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/Prueba MEP/i);
+  });
+
+  it('shows exam format info', () => {
+    renderPage();
+    expect(screen.getByText(/120 minutos/)).toBeInTheDocument();
+    expect(screen.getByText(/60 preguntas/)).toBeInTheDocument();
+  });
+
+  it('renders all 4 subject accordions', () => {
+    renderPage();
+    expect(screen.getByText('Estudios Sociales')).toBeInTheDocument();
+    expect(screen.getByText('Ciencias')).toBeInTheDocument();
+    expect(screen.getByText('Español')).toBeInTheDocument();
+    expect(screen.getByText('Matemática')).toBeInTheDocument();
+  });
+
+  it('accordion is collapsed by default', () => {
+    renderPage();
+    expect(screen.queryByText(/Geografía e Historia/)).not.toBeInTheDocument();
+  });
+
+  it('expands accordion when clicked and shows bloque list', () => {
+    renderPage();
+    fireEvent.click(screen.getByRole('button', { name: /Estudios Sociales/i }));
+    expect(screen.getByText(/Geografía e Historia/)).toBeInTheDocument();
+  });
+
+  it('collapses when clicked again', () => {
+    renderPage();
+    fireEvent.click(screen.getByRole('button', { name: /Estudios Sociales/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Estudios Sociales/i }));
+    expect(screen.queryByText(/Geografía e Historia/)).not.toBeInTheDocument();
+  });
+
+  it('shows Practicar Simulacro link inside expanded accordion', () => {
+    renderPage();
+    fireEvent.click(screen.getByRole('button', { name: /Estudios Sociales/i }));
+    const link = screen.getByRole('link', { name: /Practicar Simulacro/i });
+    expect(link.getAttribute('href')).toBe('/simulacro/sociales');
+  });
+
+  it('renders back link to /', () => {
+    renderPage();
+    const backLink = screen.getAllByRole('link').find(l => l.getAttribute('href') === '/');
+    expect(backLink).toBeTruthy();
+  });
+});

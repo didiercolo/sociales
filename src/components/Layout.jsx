@@ -39,6 +39,7 @@ const Layout = () => {
                         <ul className="nav-links">
                             <li><Link to="/sobre-nosotros">Sobre Nosotros</Link></li>
                             <li><Link to="/scoreboard">🏆 Ranking</Link></li>
+                            <li><Link to="/prueba-mep">📋 Prueba MEP</Link></li>
                             {currentUser && userProfile ? (
                                 <>
                                     <li>
