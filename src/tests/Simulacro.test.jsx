@@ -31,9 +31,9 @@ describe('SimulacroStart', () => {
     expect(screen.getByText('Estudios Sociales')).toBeInTheDocument();
   });
 
-  it('shows 60 preguntas when full pool available', () => {
+  it('shows 35 preguntas when full pool available', () => {
     render(<MemoryRouter><SimulacroStart {...defaultProps} /></MemoryRouter>);
-    expect(screen.getByText(/60 preguntas/)).toBeInTheDocument();
+    expect(screen.getByText(/35 preguntas/)).toBeInTheDocument();
   });
 
   it('shows actual count when fewer than 60 available', () => {
@@ -215,9 +215,9 @@ describe('Simulacro page', () => {
     expect(screen.getByText('Home')).toBeInTheDocument();
   });
 
-  it('shows disabled button for matematicas (0 quiz items)', () => {
+  it('shows start button for matematicas (quiz items populated)', () => {
     renderAt('matematicas');
-    expect(screen.getByRole('button', { name: /Sin preguntas/i })).toBeDisabled();
+    expect(screen.getByRole('button', { name: /Comenzar Simulacro/i })).toBeInTheDocument();
   });
 
   it('transitions to active screen when start clicked', () => {

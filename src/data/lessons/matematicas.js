@@ -61,7 +61,38 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'La siguiente tabla muestra la cantidad de lluvia acumulada, en milímetros, que se registró durante un día en cada una de tres regiones de Costa Rica:\nValle Central: 29,7 mm\nHuetar Norte: 29,07 mm\nPacífico Norte: 29,007 mm\nDe acuerdo con la información anterior, ¿cuál región muestra una cantidad de lluvia cuya representación literal es «veintinueve unidades con siete milésimas»?',
+        options: ['Valle Central', 'Huetar Norte', 'Pacífico Norte', 'Zona Sur'],
+        correct: 2,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'En una competencia de natación se otorga una medalla de oro a la persona que obtenga el menor tiempo. La siguiente tabla muestra el tiempo, en segundos:\nAna: 35,15 s\nSilvia: 35,05 s\nMargarita: 35,5 s\nDe acuerdo con la información anterior, ¿a cuál persona se le otorgó la medalla de oro?',
+        options: ['Ana', 'Silvia', 'Margarita', 'Ninguna, empataron'],
+        correct: 1,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'En un año determinado se reportaron 4745 especies de animales marinos en Costa Rica. De acuerdo con la información anterior, la notación desarrollada del número de especies que se reportaron ese año corresponde a',
+        options: ['4 + 7×10¹ + 4×10² + 5×10³', '4×10³ + 7×10² + 4×10¹ + 5', '4×10⁴ + 7×10³ + 4×10² + 5×10¹', '4×10³ + 7×10¹ + 4×10² + 5×10⁴'],
+        correct: 1,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'La siguiente tabla muestra la cantidad de vehículos que pasaron por un peaje durante cada uno de tres días:\nLunes: 2344\nMartes: 1535\nMiércoles: 4722\nDe acuerdo con la información anterior, ¿en cuál día la cantidad de vehículos corresponde a un número múltiplo de seis?',
+        options: ['Lunes', 'Martes', 'Miércoles', 'En ningún día'],
+        correct: 2,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'La siguiente tabla muestra la cantidad de estudiantes en cada grupo de música de una escuela:\nPiano: 35 estudiantes\nGuitarra: 34 estudiantes\nTrompeta: 31 estudiantes\nEl director necesita elegir un grupo para formar dos subgrupos con la misma cantidad de estudiantes, sin que ningún estudiante quede fuera. ¿Cuál grupo cumple con esas condiciones?',
+        options: ['Piano', 'Guitarra', 'Trompeta', 'Ningún grupo cumple la condición'],
+        correct: 1,
+        mepBloque: 'numeros'
+      }
+    ]
   },
 
   {
@@ -221,7 +252,44 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Para una carrera de atletismo, María José entrenó dos días por semana: el martes recorrió 6,5 km y el jueves recorrió 5,6 km. De acuerdo con la información anterior, ¿cuántos kilómetros en total recorrió María José esa semana como parte del entrenamiento?',
+        options: ['0,9 km', '11,1 km', '12,1 km', '13,5 km'],
+        correct: 2,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'Francisco fue a la feria de su comunidad y compró 10 naranjas y 12 guayabas. El precio de cada naranja era ₡120 y el de cada guayaba ₡280. De acuerdo con la información anterior, ¿cuál de los siguientes procedimientos permite conocer el monto total que pagó Francisco por esa compra?',
+        options: ['10 × (120 + 12) × 280', '(10 + 12) × (120 + 280)', '(10 × 120) + (12 × 280)', '(10 + 12) × 120 × 280'],
+        correct: 2,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'Durante una campaña de reforestación, se plantaron 48 árboles en una zona protegida. De esos árboles, se espera que sobreviva 3/4 del total durante la estación seca. De acuerdo con la información anterior, ¿cuántos árboles se espera que sobrevivan durante la estación seca?',
+        options: ['12', '36', '64', '48'],
+        correct: 1,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'Para un proyecto de costura, Mariana compró una tela cuya medida es 22/7 m. Ella decide escribir esa cantidad en notación mixta. De acuerdo con la información anterior, ¿cuál es la notación mixta correspondiente a la medida de la tela?',
+        options: ['3 1/7 m', '7 1/3 m', '1 3/7 m', '2 8/7 m'],
+        correct: 0,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'Durante una caminata en un parque nacional, un grupo de estudiantes recorrió un sendero dividido en ocho tramos de igual longitud. Al completar el quinto tramo observaron un letrero. Posteriormente, al completar el segundo tramo después del letrero, observaron un baño. De acuerdo con la información anterior, ¿qué fracción de la longitud total del sendero habían completado cuando observaron el baño?',
+        options: ['1/8', '2/8', '7/8', '5/8'],
+        correct: 2,
+        mepBloque: 'numeros'
+      },
+      {
+        question: 'Durante una clase de ciencias, Karina midió el volumen de agua de un recipiente y obtuvo 0,75 L. Luego, la maestra le pidió que representara esa cantidad como una fracción. De acuerdo con la información anterior, ¿cuál opción corresponde a la fracción que representa el volumen de agua?',
+        options: ['1/4 L', '3/4 L', '4/3 L', '2/3 L'],
+        correct: 1,
+        mepBloque: 'numeros'
+      }
+    ]
   },
 
   {
@@ -327,7 +395,26 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'En un parque con forma de trapecio, cuatro puntos son el banco (B), la tienda (T), el restaurante (R) y la escuela (E). Las distancias entre ellos son: B a T = 30 m, T a R = 35 m, R a E = 50 m, E a B = 35 m. Javier recorrió de B a E y luego de E a R. Marcos recorrió de T a B y luego de B a E. Gilberto recorrió de R a T y luego de T a B. ¿Quién recorrió la mayor distancia?',
+        options: ['Javier', 'Marcos', 'Gilberto', 'Los tres recorrieron la misma distancia'],
+        correct: 0,
+        mepBloque: 'geometria'
+      },
+      {
+        question: 'La siguiente tabla describe tres figuras geométricas que representan parques:\nFigura I: triángulo con lados de 4 cm, 4 cm y 2,5 cm\nFigura II: rombo con lados de 4 cm pero con ángulos desiguales\nFigura III: cuadrado con todos sus lados de 4 cm y todos sus ángulos iguales\nDe acuerdo con la información anterior, ¿cuál figura corresponde a un polígono regular?',
+        options: ['I', 'II', 'III', 'Ninguna de las tres figuras'],
+        correct: 2,
+        mepBloque: 'geometria'
+      },
+      {
+        question: 'La siguiente tabla muestra tres triángulos que representan la forma de la superficie de terrenos:\nTriángulo I: lados de 30 m, 30 m y 40 m\nTriángulo II: lados de 60 m, 60 m y 60 m\nTriángulo III: lados de 30 m, 40 m y 60 m\nDe acuerdo con la información anterior, ¿cuál triángulo se clasifica como escaleno?',
+        options: ['I', 'II', 'III', 'Los tres son escalenos'],
+        correct: 2,
+        mepBloque: 'geometria'
+      }
+    ]
   },
 
   {
@@ -421,7 +508,14 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Un prisma triangular representa una caja de plástico. ¿Cuántas caras de ese prisma corresponden a rectángulos?',
+        options: ['3', '5', '7', '6'],
+        correct: 0,
+        mepBloque: 'geometria'
+      }
+    ]
   },
 
   {
@@ -474,7 +568,26 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Dos terrenos tienen forma de cuadrilátero. El terreno M es un rombo con diagonales de 30 m y 20 m. El terreno P es un cuadrado con lado de 30 m. Si se requiere colocar zacate en la totalidad de la superficie de cada terreno, ¿qué cantidad de zacate requiere M comparado con P?',
+        options: ['igual que la que requiere P.', 'menor que la que requiere P.', 'mayor que la que requiere P.', 'el doble de la que requiere P.'],
+        correct: 1,
+        mepBloque: 'geometria'
+      },
+      {
+        question: 'La superficie de una mesa de cemento tiene forma de círculo, cuyo radio mide 55 cm. Si se requiere colocar una cinta adhesiva sobre la totalidad del borde de esa superficie, entonces la menor longitud de esa cinta que se requiere colocar es aproximadamente igual a',
+        options: ['110,0 cm.', '345,4 cm.', '9498,5 cm.', '172,7 cm.'],
+        correct: 1,
+        mepBloque: 'geometria'
+      },
+      {
+        question: 'La superficie de una mesa tiene forma de cuadrado, cuyo perímetro es 12 m. Si se requiere cubrir la totalidad de la superficie de la mesa con plástico adhesivo, entonces, ¿cuál es la cantidad mínima de plástico necesaria?',
+        options: ['12 m²', '9 m²', '6 m²', '3 m²'],
+        correct: 1,
+        mepBloque: 'geometria'
+      }
+    ]
   },
 
   {
@@ -517,7 +630,20 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Una figura simétrica tiene un eje de simetría vertical. Ocho puntos están marcados: M (esquina superior izquierda), P (izquierda media), N (esquina superior derecha), E, F (centro), G (derecha media), H y D. Los puntos homólogos entre sí respecto al eje de simetría de esa figura se identifican con las letras',
+        options: ['F y H.', 'P y G.', 'M y N.', 'E y D.'],
+        correct: 1,
+        mepBloque: 'geometria'
+      },
+      {
+        question: 'Una alfombra rectangular tiene tres esquinas marcadas: F en (4, 1), G en (6, 1) y H en (8, 1). En el piso hay una marca Z en las coordenadas (1, 5). La alfombra se traslada 120 cm al oeste y 160 cm al norte (cada cuadro de la cuadrícula mide 40 cm). De acuerdo con la información anterior, ¿cuál esquina de la alfombra coincide con la marca Z del piso?',
+        options: ['F', 'G', 'H', 'Ninguna coincide con Z'],
+        correct: 0,
+        mepBloque: 'geometria'
+      }
+    ]
   },
 
   // ─── MEDIDAS ─────────────────────────────────────────────
@@ -585,7 +711,26 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Cada saco de arroz que hay en un almacén pesa 49,75 kg. ¿Cuál es el peso total, en decagramos, de cinco de esos sacos?',
+        options: ['24 875', '2487,5', '2,4875', '248 750'],
+        correct: 0,
+        mepBloque: 'medidas'
+      },
+      {
+        question: 'Cuatro personas realizaron juntas una caminata y bebieron agua cada 24 minutos. La caminata duró 130 minutos en total. Cada persona bebió 100 mL de agua cada vez. De acuerdo con la información anterior, ¿cuál fue la cantidad total de agua que bebieron las cuatro personas al finalizar la caminata?',
+        options: ['1,2 L', '2,0 L', '2,5 L', '3,0 L'],
+        correct: 1,
+        mepBloque: 'medidas'
+      },
+      {
+        question: 'Javier compró un tanque para almacenar agua, cuya capacidad máxima es 2570 dL. ¿Cuál es la capacidad máxima, en litros, de ese tanque?',
+        options: ['257', '2570', '25 700', '25,7'],
+        correct: 0,
+        mepBloque: 'medidas'
+      }
+    ]
   },
 
   {
@@ -702,7 +847,32 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Randall fue al banco para cambiar un billete de ₡10 000 en billetes de ₡2000 y monedas de ₡500. Si él recibió la misma cantidad de billetes que de monedas, entonces, ¿cuántas monedas de ₡500 recibió Randall?',
+        options: ['4', '5', '10', '8'],
+        correct: 0,
+        mepBloque: 'algebra'
+      },
+      {
+        question: 'Para preparar cierta cantidad de refresco natural, se necesitan 3/4 kg de sandía (₡600 por kg), 500 g de azúcar (₡800 por kg) y 2 limones (₡100 la unidad). Si se compraron los ingredientes en el supermercado, ¿cuál fue el monto total pagado?',
+        options: ['₡750', '₡1050', '₡1450', '₡850'],
+        correct: 1,
+        mepBloque: 'algebra'
+      },
+      {
+        question: 'En una exposición de arte callejero, un grupo de personas colocó 20 figuras en una pared. La siguiente tabla muestra la cantidad de círculos de las primeras cuatro figuras:\nPosición 1: 4 círculos\nPosición 2: 7 círculos\nPosición 3: 10 círculos\nPosición 4: 13 círculos\nSi se mantuvo el patrón, ¿cuántos círculos tenía la figura en la posición 18?',
+        options: ['49', '52', '55', '58'],
+        correct: 2,
+        mepBloque: 'algebra'
+      },
+      {
+        question: 'En una escuela, un grupo de estudiantes decoró pizarras rectangulares con trozos de cinta. La siguiente tabla muestra la cantidad de trozos de cinta según la cantidad de pizarras en fila:\n1 pizarra: 4 trozos\n2 pizarras: 9 trozos\n3 pizarras: 16 trozos\n4 pizarras: 25 trozos\nSi se mantiene el patrón, ¿cuántos trozos de cinta se requieren si se forma una fila con cinco pizarras?',
+        options: ['25', '36', '49', '30'],
+        correct: 1,
+        mepBloque: 'algebra'
+      }
+    ]
   },
 
   {
@@ -797,7 +967,38 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Juan conduce un taxi cuya ocupación máxima es de cinco pasajeros y diariamente realiza distinta cantidad de viajes. La rapidez del taxi en cada viaje varía entre 0 km/h y 80 km/h. De acuerdo con la información anterior, una cantidad constante corresponde a la',
+        options: ['ocupación máxima del taxi.', 'rapidez del taxi en cada viaje.', 'cantidad de viajes realizados en los distintos días.', 'distancia recorrida en cada viaje.'],
+        correct: 0,
+        mepBloque: 'algebra'
+      },
+      {
+        question: 'En una feria del agricultor, se vende piña picada en tres puestos (R, S y T):\n• En R cada envase cuesta ₡950.\n• En S cada envase cuesta ₡1000 con 10 % de descuento.\n• En T cada envase cuesta ₡1200, con 20 % de descuento si se compran dos o más.\nSi Elena quiere comprar seis envases, ¿en cuál puesto pagaría la menor cantidad?',
+        options: ['R', 'S', 'T', 'Los tres puestos tienen el mismo precio'],
+        correct: 1,
+        mepBloque: 'algebra'
+      },
+      {
+        question: 'En una actividad cultural, Fernando trabajó vendiendo entradas. Por cada 4 horas de trabajo recibió ₡8800. Si al finalizar recibió un pago total de ₡35 200, ¿cuántas horas trabajó en total?',
+        options: ['12', '16', '20', '24'],
+        correct: 1,
+        mepBloque: 'algebra'
+      },
+      {
+        question: 'Una biblioteca tiene varios estantes y en cada estante hay igual cantidad de libros. En la siguiente expresión, cada ▲ representa la cantidad de libros que hay en cada estante:\n▲ + ▲ + 18 = 60\nDe acuerdo con la información anterior, ¿cuántos libros hay en cada estante de esa biblioteca?',
+        options: ['18', '21', '42', '39'],
+        correct: 1,
+        mepBloque: 'algebra'
+      },
+      {
+        question: 'Una caja contiene varias bolsas y cada una de estas bolsas contiene la misma cantidad de bolitas de plástico. En la siguiente ecuación, «c» representa la cantidad de bolitas que hay en cada bolsa:\n48 ÷ c = 6\nDe acuerdo con la información anterior, ¿cuántas bolitas hay en cada bolsa?',
+        options: ['8', '42', '288', '54'],
+        correct: 0,
+        mepBloque: 'algebra'
+      }
+    ]
   },
 
   // ─── ESTADÍSTICA Y PROBABILIDAD ──────────────────────────
@@ -852,7 +1053,20 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'La siguiente tabla muestra el tiempo, en minutos, que tardaron en llegar a la escuela seis estudiantes:\nIleana: 34, Liseth: 80, Gabriela: 55, Joaquín: 76, Rodolfo: 25, Alejandro: 68\nDe acuerdo con la información anterior, ¿cuál opción corresponde a la operación que permite calcular la mayor diferencia en minutos de esos tiempos?',
+        options: ['68 – 34', '76 – 55', '80 – 25', '80 – 34'],
+        correct: 2,
+        mepBloque: 'estadistica'
+      },
+      {
+        question: 'Una empresa quiere conocer la opinión de los clientes de una cafetería sobre la calidad del servicio. Para ello, se seleccionan al azar 200 clientes de esa cafetería y se les aplica una encuesta. De acuerdo con la información anterior, la muestra de ese estudio corresponde a',
+        options: ['todos los clientes de la cafetería.', 'los clientes de la cafetería que fueron seleccionados al azar.', 'la opinión que tienen los clientes sobre la calidad de ese servicio.', 'el personal del servicio al cliente de la cafetería.'],
+        correct: 1,
+        mepBloque: 'estadistica'
+      }
+    ]
   },
 
   {
@@ -949,7 +1163,14 @@ export const matematicasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'En una caja hay 28 lápices, los cuales se diferencian solo por su color. Seis de esos lápices son azules, siete son rojos, ocho son verdes y el resto amarillos. Si se escoge al azar un lápiz de esa caja, entonces el evento «obtener un lápiz amarillo» es igualmente probable que el evento «obtener un lápiz»',
+        options: ['verde.', 'azul.', 'rojo.', 'azul o verde.'],
+        correct: 2,
+        mepBloque: 'estadistica'
+      }
+    ]
   }
 
 ];

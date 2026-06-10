@@ -15,7 +15,7 @@ describe('PruebaMEP', () => {
   it('shows exam format info', () => {
     renderPage();
     expect(screen.getByText(/120 minutos/)).toBeInTheDocument();
-    expect(screen.getByText(/60 preguntas/)).toBeInTheDocument();
+    expect(screen.getByText(/35 preguntas/)).toBeInTheDocument();
   });
 
   it('renders all 4 subject accordions', () => {

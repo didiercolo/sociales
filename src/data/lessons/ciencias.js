@@ -186,7 +186,80 @@ export const cienciasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Lea la siguiente información:\nEstas estructuras son los componentes primarios de los tejidos. Algunas pueden ser aplanadas, otras redondeadas, estrelladas o con forma de prisma, por ejemplo, los glóbulos blancos y rojos, que a pesar de formar parte del mismo tejido tienen forma diferente.\nLos glóbulos rojos y blancos corresponden al nivel de organización del cuerpo humano denominado',
+        options: ['celular.', 'órganos.', 'sistemas.', 'tejidos.'],
+        correct: 0,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere la siguiente información:\n1. La tiroides es una glándula formada por diversos tipos de tejidos, participa en el crecimiento y síntesis de proteínas, también regula la frecuencia cardiaca y el metabolismo, entre otros.\n2. El hígado juega un papel fundamental en la digestión, el metabolismo, la secreción de bilis, la síntesis de proteínas y la eliminación de sustancias dañinas para el cuerpo.\nLa información anterior se refiere a los niveles de organización del cuerpo humano denominados',
+        options: ['1 órgano y 2 tejido.', '1 tejido y 2 sistema.', '1 órgano y 2 órgano.', '1 sistema y 2 sistema.'],
+        correct: 2,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere la siguiente información:\nCarlos estaba en una competencia de atletismo representando a su escuela, pero al saltar uno de los obstáculos se cayó y terminó con una lesión en su rodilla derecha que sangraba mucho. Los cruzrojistas encargados de revisarlo observaron que no tenía daño en los huesos. Lo limpiaron y después de unos minutos dejó de sangrar.\n¿Cuál es el nombre del componente del tejido sanguíneo que intervino para que Carlos dejara de sangrar?',
+        options: ['Los glóbulos blancos', 'Los glóbulos rojos', 'Las plaquetas', 'El plasma sanguíneo'],
+        correct: 2,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere la siguiente información:\nLa vacuna se emplea con el objetivo de que la persona reciba inmunidad contra un tipo de microorganismo en particular, permite estimular los mecanismos propios de defensa en el organismo y producir anticuerpos contra la enfermedad. De esta manera, en caso de que en algún momento la persona sea atacada por este tipo de microorganismo, el cuerpo estará preparado para combatirlo.\nSegún la información anterior, una vacuna logra que la persona produzca',
+        options: ['inmunidad contra cualquier tipo de enfermedad.', 'anticuerpos contra un microorganismo en particular.', 'antígeno para reducir momentáneamente la enfermedad.', 'glóbulos blancos adicionales de forma permanente.'],
+        correct: 1,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere la siguiente información relacionada con un órgano del sistema digestivo:\nEstá situado en el abdomen y se encarga de producir y verter al intestino algunos de los jugos que ayudan con la digestión de los alimentos, así como la hormona (insulina) que regula los niveles de azúcar en la sangre.\n¿Cuál es el nombre del órgano referido en la información anterior?',
+        options: ['Hígado', 'Esófago', 'Páncreas', 'Vesícula biliar'],
+        correct: 2,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere la siguiente información:\nEl cardiólogo que atiende a Saúl le hace especial énfasis en la importancia de mantener el sistema circulatorio en buen estado. Durante una consulta le mencionó las siguientes características de un órgano en particular:\n• Son vasos sanguíneos fuertes, resistentes, flexibles y elásticos para tolerar la presión que ejerce la sangre al ser bombeada por el corazón.\n• Son grandes conductos que llevan la sangre rica en oxígeno desde el corazón al resto del cuerpo.\nDe acuerdo con la información anterior, ¿a cuál órgano se refiere el cardiólogo de Saúl?',
+        options: ['Capilares', 'Arterias', 'Venas', 'Válvulas cardíacas'],
+        correct: 1,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Lea la siguiente información:\nSon estructuras del sistema reproductor femenino ubicadas una a cada lado del útero, se encargan de formar las células reproductoras y es el lugar donde se produce el estrógeno y la progesterona, que cumplen una función importante en el desarrollo de las características sexuales femeninas.\nLa información anterior corresponde a los órganos denominados',
+        options: ['óvulos.', 'ovarios.', 'trompas de Falopio.', 'útero.'],
+        correct: 1,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Lea la siguiente información:\n1. Calienta y filtra el aire que ingresa al sistema desde el exterior durante la inhalación.\n2. El paso regulado del aire a través de esta estructura produce los sonidos que conforman la emisión de la voz.\n3. Realiza el intercambio gaseoso con la sangre, para ello los alvéolos están en estrecho contacto con los capilares.\nDe la información anterior, ¿cuál señala una función de los pulmones?',
+        options: ['1', '2', '3', 'Ninguna de las anteriores'],
+        correct: 2,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere la siguiente información:\nLas células que forman el cuerpo humano necesitan oxígeno y nutrientes, ambos componentes llegan a estas por medio de la sangre. Si las células no contaran con estas sustancias al poco tiempo dejarían de funcionar, lo cual puede afectar la salud.\nCon base en la información anterior, ¿cuál opción señala una función del sistema circulatorio?',
+        options: ['Trasmitir el impulso nervioso', 'Expulsar el oxígeno del cuerpo', 'Transportar los nutrientes a las células', 'Regular los niveles hormonales del cuerpo'],
+        correct: 2,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere la siguiente información respecto a dos sistemas del cuerpo humano:\n1. Transporta el oxígeno del aire al interior del cuerpo y luego expulsa el dióxido de carbono al aire.\n2. El bombeo del corazón mantiene en movimiento el flujo sanguíneo a través de las arterias, los capilares y las venas. La sangre oxigenada es transportada desde el corazón al resto del cuerpo y después retorna a este desoxigenada.\nLa información anterior corresponde respectivamente a los sistemas',
+        options: ['circulatorio y nervioso.', 'respiratorio y endocrino.', 'respiratorio y circulatorio.', 'digestivo y circulatorio.'],
+        correct: 2,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere los siguientes procesos relacionados con sistemas del cuerpo humano:\nDespués de una comida, varios sistemas trabajan de forma conjunta para ayudar en la digestión y absorción de nutrientes. Los vasos sanguíneos de los órganos digestivos se ensanchan para transportar más sangre. Se envían impulsos nerviosos al cerebro indicándole que la actividad digestiva ha aumentado. También se estimula de forma directa el corazón mediante impulsos nerviosos y sustancias químicas liberadas en el torrente sanguíneo.\n¿Cuáles son los nombres de los sistemas que se involucran de manera directa para que se lleven a cabo los procesos anteriores?',
+        options: ['Circulatorio, digestivo y urinario', 'Digestivo, circulatorio y nervioso', 'Nervioso, endocrino y reproductor', 'Endocrino, digestivo y renal'],
+        correct: 1,
+        mepBloque: 'cuerpo-humano'
+      },
+      {
+        question: 'Considere la siguiente información:\nConsiste en un procedimiento médico complejo por medio del cual se extrae un órgano lesionado o enfermo y que pone en peligro la vida de una persona y se reemplaza por un órgano sano proveniente de otra persona. El órgano nuevo asume la función del órgano dañado del receptor, salvándole la vida o mejorando la calidad de vida.\nLa información anterior corresponde al avance científico y tecnológico denominado',
+        options: ['implante.', 'clonación.', 'trasplante de órgano.', 'diálisis renal.'],
+        correct: 2,
+        mepBloque: 'cuerpo-humano'
+      }
+    ]
   },
 
   {
@@ -507,7 +580,74 @@ export const cienciasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Lea la siguiente información sobre adaptaciones de los seres vivos para realizar sus funciones vitales:\nUna de las adaptaciones más importantes de los peces al ambiente acuático son sus branquias, ya que gracias a ellas pueden obtener el oxígeno del agua, que luego es transportado a todas sus células.\nLa información anterior corresponde a una adaptación utilizada para cumplir la función vital denominada',
+        options: ['respiración, permite el intercambio gaseoso.', 'alimentación, ayuda a digerir los alimentos.', 'de defensa, por medio de espinas.', 'excreción, elimina sustancias de desecho.'],
+        correct: 0,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Considere la siguiente información:\nA diferencia de las plantas, los hongos no poseen clorofila, por eso no son verdes. No producen su propio alimento y cumplen una importante función al reutilizar los nutrientes en los ecosistemas.\nPor la forma de obtener alimento, los hongos se clasifican como',
+        options: ['autótrofos.', 'heterótrofos.', 'fotosintéticos.', 'quimiosintéticos.'],
+        correct: 1,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Considere la siguiente información:\nLas aves son organismos que han modificado varios órganos, por ejemplo, el sistema circulatorio, en donde las células sanguíneas deben ser muy eficientes para transportar oxígeno, debido a la gran necesidad de energía que requieren durante el vuelo.\nSegún la información anterior, las aves son seres pluricelulares porque',
+        options: ['poseen una única célula.', 'están formadas por muchas células.', 'tienen un sistema circulatorio muy eficiente.', 'dependen del oxígeno para volar.'],
+        correct: 1,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Lea la siguiente información:\nDurante una clase de Ciencias el docente lleva a su grupo al patio de la escuela, observan un ave muerta y aprovecha para explicarles que existen organismos como las bacterias que son procariotas y unicelulares, que además desintegran la materia orgánica para contribuir con el reciclaje de los nutrientes.\nSegún la información anterior, las bacterias se clasifican en el reino biológico denominado',
+        options: ['fungi.', 'monera.', 'protista.', 'plantae.'],
+        correct: 1,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Considere la siguiente información:\nLos murciélagos se encuentran en todo el mundo, excepto en las regiones polares y los desiertos extremos. Viven en bosques y humedales. Se caracteriza porque tienen pelo, alimentan a sus crías con leche y tienen dientes diferenciados según su función.\nSegún la información anterior los murciélagos son vertebrados del grupo de',
+        options: ['las aves.', 'los reptiles.', 'los mamíferos.', 'los anfibios.'],
+        correct: 2,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Lea la siguiente información sobre relaciones en los seres vivos:\n(1) Las gaviotas suelen agruparse durante la época reproductiva, construyen sus nidos en la playa rocosa muy cerca unos de otros, ya que al haber tantas aves juntas los nidos están mejor protegidos. (2) Esto les brinda protección ante los depredadores como los zorros que buscan alimentarse de sus pichones.\nLa información numerada anteriormente, hace referencia a las relaciones de tipo',
+        options: ['1 intraespecífica y 2 interespecífica.', '1 interespecífica y 2 intraespecífica.', '1 intraespecífica y 2 intraespecífica.', '1 interespecífica y 2 interespecífica.'],
+        correct: 0,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Lea la siguiente información sobre interacciones entre los seres vivos:\nLas plantas enredaderas que producen flores de color rojo intenso suelen ser polinizadas por los colibríes, que son recompensados con el néctar.\nLa información anterior se refiere a una relación mutualista, porque',
+        options: ['las dos especies se benefician.', 'no hay interacción ni positiva ni negativa.', 'una especie se beneficia y la otra se perjudica.', 'una especie depende totalmente de la otra para sobrevivir.'],
+        correct: 0,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Considere la siguiente información sobre la fotosíntesis:\nLa fotosíntesis es un proceso natural de importancia para la sobrevivencia en el planeta. Por medio de este proceso las plantas fabrican su propio alimento para crecer y desarrollarse. Para realizarla se necesitan entre otras cosas: la luz del sol, agua y dióxido de carbono que obtienen del aire. Se realiza en las hojas y los tallos, dentro de los cloroplastos.\nDe acuerdo con la información anterior, un componente básico para realizar la fotosíntesis corresponde al',
+        options: ['dióxido de carbono.', 'oxígeno.', 'azúcar.', 'nitrógeno.'],
+        correct: 0,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Considere el siguiente texto:\nLos pelícanos viven e interaccionan con el medio acuático y comen principalmente peces, aunque también pueden comer otros organismos como camarones, cangrejos, plantas acuáticas, entre otros.\nDe acuerdo con el texto, el conjunto de componentes que ejemplifica una comunidad biológica corresponde a',
+        options: ['los pelícanos, ya que son individuos de la misma especie.', 'las plantas en interacción con el componente abiótico del medio acuático.', 'los camarones, los cangrejos y las plantas acuáticas correspondientes a poblaciones de diferentes especies.', 'el agua del mar como componente abiótico fundamental del ecosistema.'],
+        correct: 2,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Considere la siguiente información:\nLa selva tropical es un ecosistema que tiene cuatro características principales: precipitación lluviosa anual muy alta, altas temperaturas promedio, suelos pobres en nutrientes y niveles altos de biodiversidad (gran riqueza de especies). Habitan muchas especies vegetales y animales como los monos, las ardillas, los venados y las serpientes; además de un gran número de insectos.\nDe acuerdo con la información anterior, ¿cuáles corresponden a los componentes bióticos del ecosistema?',
+        options: ['Árboles y venados', 'Precipitación muy alta y altas temperaturas', 'Suelos pobres en nutrientes y gran riqueza de especies', 'Viento y luz solar como factores ambientales'],
+        correct: 0,
+        mepBloque: 'biodiversidad'
+      },
+      {
+        question: 'Considere las siguientes afirmaciones:\n1. Los derrames de petróleo en los océanos han causado daños irreparables a la fauna y la flora marina.\n2. Los fertilizantes químicos permiten el aumento de la producción agrícola, sin embargo, producen el deterioro de la estructura del suelo y dañan la microfauna.\n3. La eliminación de los árboles causa erosión debido a que no hay raíces que retengan el suelo, las partículas son arrastradas y provocan empobrecimiento de las superficies.\n4. La quema de basura cerca de las casas de habitación es muy peligrosa debido a que se liberan sustancias nocivas que se propagan por el aire.\nDe las afirmaciones anteriores, ¿cuáles corresponden a consecuencias de la degradación del suelo debido a las actividades humanas?',
+        options: ['1 y 2', '2 y 3', '3 y 4', '1 y 4'],
+        correct: 1,
+        mepBloque: 'biodiversidad'
+      }
+    ]
   },
 
   {
@@ -971,7 +1111,50 @@ export const cienciasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Considere la siguiente información:\nEl halcón peregrino es un ave que alcanza en su vuelo los 100 km/h. El vencejo es otra ave parecida a la golondrina y puede alcanzar los 200 km/h. Estas especies pasan la mayor parte de su vida volando, regresan a islas aisladas para reproducirse.\nSegún la información anterior, los 100 km/h que alcanza el halcón corresponde',
+        options: ['al tiempo.', 'a la rapidez.', 'al desplazamiento.', 'a la aceleración.'],
+        correct: 1,
+        mepBloque: 'energia'
+      },
+      {
+        question: 'Considere la siguiente información:\nEn clase de Ciencias están estudiando las diferentes formas de transmisión del calor; para explicar una de estas formas el docente utiliza el siguiente ejemplo: "cuando se coloca una olla con agua sobre la llama de la cocina, el agua caliente asciende y el agua menos caliente desciende, lo que provoca el movimiento del agua dentro de la olla".\nSegún la información anterior, la forma de transmisión del calor que produce el movimiento del agua se denomina',
+        options: ['radiación.', 'convección.', 'conducción.', 'irradiación.'],
+        correct: 1,
+        mepBloque: 'energia'
+      },
+      {
+        question: 'Considere la siguiente información:\nEn clase de Ciencias se entregó una planta a cada estudiante. Sergio la colocó detrás de un (1) armario que no dejaba pasar la luz, y su planta no sobrevivió. Patricia la colocó detrás de una (2) hoja de papel de seda que dejaba pasar parcialmente la luz, pero la planta se fue marchitando. Laura la colocó junto a la (3) ventana de vidrio, por lo que todos los días recibía luz, y su planta crecía normalmente.\nDe acuerdo con la información, en el orden 1, 2 y 3, ¿cómo se clasifican los objetos con base en su capacidad para dejar pasar la luz?',
+        options: ['Translúcido, opaco y transparente', 'Opaco, translúcido y transparente', 'Opaco, transparente y translúcido', 'Transparente, opaco y translúcido'],
+        correct: 1,
+        mepBloque: 'energia'
+      },
+      {
+        question: 'Lea la siguiente información:\nEn una excursión la familia de Esteban visita un río que tiene agua caliente. Esteban le pregunta a su papá, ¿por qué razón el agua está tan caliente? Él le explica que se llaman aguas termales y que el agua del río se calienta de forma natural.\nSegún la información anterior, la energía que calienta el agua proviene del',
+        options: ['interior de la Tierra.', 'calentamiento de las rocas por los rayos del Sol.', 'Sol que aumenta la temperatura de la superficie del agua.', 'movimiento de las placas tectónicas superficiales.'],
+        correct: 0,
+        mepBloque: 'energia'
+      },
+      {
+        question: 'Considere la siguiente información:\n1. El gas natural es un tipo de energía que se encuentra en cantidades limitadas, durante su aprovechamiento genera otros gases que causan el efecto invernadero, fenómeno relacionado con el calentamiento global.\n2. Es una energía renovable que aprovecha el calor del subsuelo para obtener agua caliente y vapor de forma ecológica. El agua y el vapor se aprovechan mediante una turbina para generar electricidad.\n3. La energía nuclear, si bien no produce dióxido de carbono directamente al ambiente, produce residuos que son radiactivos y de difícil manejo.\nLa información hace referencia a fuentes de energía',
+        options: ['1 limpia, 2 limpia y 3 contaminante.', '1 contaminante, 2 contaminante y 3 limpia.', '1 contaminante, 2 limpia y 3 contaminante.', '1 renovable, 2 renovable y 3 renovable.'],
+        correct: 2,
+        mepBloque: 'energia'
+      },
+      {
+        question: 'Considere la siguiente información:\nEl docente de Ciencias está explicando a los estudiantes sobre las cargas eléctricas y lo ejemplifica con la electricidad estática, frota dos globos con una franela y luego los acerca, inmediatamente observa que los globos se atraen entre sí.\nSegún la información anterior, hay una atracción entre los dos globos porque las cargas generadas son',
+        options: ['ambas positivas.', 'ambas negativas.', 'positivas y negativas.', 'neutras en ambos globos.'],
+        correct: 2,
+        mepBloque: 'energia'
+      },
+      {
+        question: 'Considere la siguiente información:\n1. Caballo en reposo\n2. Caballo en movimiento\nDe acuerdo con la información anterior, es correcto afirmar que',
+        options: ['ningún caballo tiene energía cinética.', 'el caballo 1 tiene energía cinética.', 'el caballo 2 tiene energía cinética.', 'ambos caballos tienen la misma energía cinética.'],
+        correct: 2,
+        mepBloque: 'energia'
+      }
+    ]
   },
 
   {
@@ -1118,7 +1301,38 @@ export const cienciasLessons = [
         ]
       }
     ],
-    quiz: []
+    quiz: [
+      {
+        question: 'Considere la siguiente información:\nLa atmósfera terrestre está dividida en capas con diferentes funciones, por ejemplo:\n1. Protege los seres vivos de las radiaciones ultravioletas del Sol por medio de la capa de ozono.\n2. Refleja las ondas de radio que permiten la comunicación a larga distancia.\n3. Produce los fenómenos meteorológicos.\nDe acuerdo con la información anterior, ¿cuál función cumple la capa de la atmósfera denominada troposfera?',
+        options: ['1', '2', '3', 'Ninguna de las anteriores'],
+        correct: 2,
+        mepBloque: 'geofisica'
+      },
+      {
+        question: 'Lea las siguientes afirmaciones:\n1. El agua de la lluvia deteriora las laderas, sobre todo si no hay vegetación que compacte la tierra.\n2. El mar (olas y corrientes marinas) actúan sobre el litoral y desgastan las rocas salientes creando golfos, cabos o playas.\n3. Las bruscas sacudidas que se dan en la corteza terrestre producidas por el roce de una placa tectónica con otra genera temblores.\n4. Las ondulaciones o plegamientos de la superficie terrestre son originadas por la fuerza compresiva de los movimientos tectónicos sobre rocas blandas.\n¿Cuáles afirmaciones hacen referencia a dos agentes externos que modifican el relieve terrestre?',
+        options: ['1 y 2', '2 y 4', '3 y 4', '1 y 3'],
+        correct: 0,
+        mepBloque: 'geofisica'
+      },
+      {
+        question: 'Considere la siguiente información:\nDamaris le contó a su mamá que iba a ir a arreglarse el cabello. Su madre le comentó que ella de niña escuchaba un mito de su abuela, el cual sostenía que el cabello dañado es mejor cortarlo cuando la Luna se hace visible completamente y se ve como un disco iluminado.\nLa fase de la Luna de la que hablaba la bisabuela de Damaris corresponde a Luna',
+        options: ['llena.', 'nueva.', 'cuarto creciente.', 'cuarto menguante.'],
+        correct: 0,
+        mepBloque: 'geofisica'
+      },
+      {
+        question: 'Considere la siguiente información:\nMatilda tiene que exponer sobre los tipos de eclipses, encontró varias características que luego numeró de la siguiente forma:\n1. El Sol se oscurece parcialmente debido a la sombra de la Luna.\n2. La Tierra se interpone entre el Sol y la Luna, proyecta su sombra sobre la Luna.\n3. La Luna se interpone entre la Tierra y el Sol, bloquea completamente la luz solar y crea una sombra en la Tierra.\nSegún la información anterior, ¿cuál de las características numeradas describe un eclipse total de Sol?',
+        options: ['1', '2', '3', 'Ninguna de las anteriores'],
+        correct: 2,
+        mepBloque: 'geofisica'
+      },
+      {
+        question: 'Lea la siguiente información:\nSon objetos que orbitan alrededor de un astro en el espacio, puede ser de origen natural como la Luna que está compuesta de rocas y minerales; también pueden ser fabricados por el ser humano (artificiales) y utilizados para diversas funciones como comunicación, meteorología, navegación, investigación científica, entre otros.\n¿Cuál es el nombre del astro u objeto descrito en la información anterior?',
+        options: ['Satélite', 'Planeta', 'Asteroide', 'Cometa'],
+        correct: 0,
+        mepBloque: 'geofisica'
+      }
+    ]
   },
 
   {

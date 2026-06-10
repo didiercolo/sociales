@@ -7,7 +7,7 @@ import SimulacroStart from '../components/Simulacro/SimulacroStart';
 import SimulacroActive from '../components/Simulacro/SimulacroActive';
 import SimulacroResults from '../components/Simulacro/SimulacroResults';
 
-const MAX_QUESTIONS = 60;
+const MAX_QUESTIONS = 35;
 
 const sampleQuestions = (subject) => {
   const { lessons } = lessonsData[subject];

@@ -28,7 +28,7 @@ const PruebaMEP = () => {
       </h1>
       <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>
         La Prueba de Bachillerato del MEP evalúa los contenidos de 6to grado en 4 materias.
-        Cada prueba tiene <strong>120 minutos</strong>, <strong>60 preguntas</strong> de selección única (A/B/C/D).
+        Cada prueba tiene <strong>120 minutos</strong>, <strong>35 preguntas</strong> de selección única (A/B/C/D).
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

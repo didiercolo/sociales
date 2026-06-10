@@ -427,6 +427,246 @@ export const socialesLessons = [
           "Saber todos los juegos"
         ],
         "correct": 0
+      },
+      {
+        "question": "Lea el siguiente texto:\nLos Estudios Sociales permiten entender cómo las sociedades han cambiado a lo largo del tiempo y en diferentes lugares. Además, prepara a los estudiantes para que puedan ejercer sus deberes y derechos ciudadanos de manera responsable dentro de la comunidad, el país y el mundo.\nDe acuerdo con el texto anterior, los Estudios Sociales son importantes porque",
+        "options": [
+          "permiten conocer únicamente las tradiciones antiguas de diferentes países.",
+          "contribuyen a formar personas informadas y comprometidas con la sociedad.",
+          "facilitan memorizar fechas y personajes históricos sin aplicar sus enseñanzas.",
+          "se enfocan en el estudio exclusivo de la geografía de Costa Rica."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea la siguiente información:\nEn los últimos años, huracanes como César (1996) y Mitch (1998), además de las tormentas tropicales Alma (2005), Tomas (2010) y el huracán Otto (2016), han originado severos daños en Costa Rica. A pesar de que estos se forman en el océano Atlántico, afectan también la costa del Pacífico, debido a la circulación de los vientos y del movimiento de la Zona de Convergencia Intertropical.\nLa información anterior hace referencia a una desventaja de Costa Rica relacionada con la",
+        "options": [
+          "posición geográfica del país, el cual es afectado por distintas alteraciones del clima.",
+          "explotación irracional de las reservas biológicas y la destrucción del bosque primario.",
+          "forma irregular de las costas, tanto en el sector del Pacífico como en el sector del Caribe.",
+          "poca capacidad del país para invertir en infraestructura de prevención de desastres."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Al considerar la siguiente información:\nEl transporte marítimo es muy importante para el comercio en todo el mundo, ya que los países pueden vender y comprar productos entre sí. Más o menos, el 80 % de todo lo que se mueve en el comercio mundial va en barcos.\n¿Qué ventaja ofrece la posición geográfica de Costa Rica al tener acceso a dos costas?",
+        "options": [
+          "Incrementa los costos operativos al requerir infraestructuras portuarias mixtas en ambos litorales.",
+          "Reduce la dependencia de mercados internacionales al priorizar intercambios con países vecinos.",
+          "Facilita el acceso a rutas oceánicas estratégicas al potenciar su integración en el comercio internacional.",
+          "Obliga al país a mantener una marina de guerra para proteger sus dos costas."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea el siguiente fragmento:\nCuentan que, en una ocasión, un hombre arreaba ganado por un camino que atravesaba largas y anchas extensiones de tierra plana. En cierto tramo, los animales se detenían y, en lugar de avanzar, se desviaban hacia el monte.\nEl fragmento anterior hace referencia a algunos elementos que caracterizan al tipo de relieve de Costa Rica denominado",
+        "options": [
+          "cordillera.",
+          "llanura.",
+          "colina.",
+          "meseta."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea el siguiente texto:\nEs un terreno bajo y alargado situado entre montañas, por donde generalmente fluye un río. Este relieve se forma cuando las placas de la tierra se mueven y también por el desgaste que producen los ríos y los glaciares al pasar por el terreno.\nEl texto anterior se refiere a elementos geográficos característicos del tipo de relieve denominado",
+        "options": [
+          "valle.",
+          "costa.",
+          "meseta.",
+          "llanura."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea la siguiente información:\nDentro de la cultura de los aborígenes, las señales que envía la naturaleza —como el cambio de las hojas, el florecimiento de los árboles, los frutos, la época lluviosa y seca— son primordiales para la cacería, la agricultura y la construcción. El pedir permiso a la Madre Tierra es un valor que practica el aborigen y simboliza el respeto que todo indígena debe realizar antes de hacer uso de la tierra.\nLa información anterior describe la cosmovisión de las etnias de la Costa Rica antigua, que se caracteriza por",
+        "options": [
+          "una visión de la Tierra como un ser vivo que sufre y que puede sentir el maltrato causado por los seres humanos.",
+          "una interpretación de la creación del mundo igual a la de otras personas pertenecientes a culturas mestizas.",
+          "dejar de lado el aspecto de lo sobrenatural, ya que la naturaleza es simplemente un medio para poder subsistir.",
+          "creer que la naturaleza debe ser controlada y dominada para garantizar la supervivencia del grupo."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea el siguiente texto:\nEn Costa Rica, las sociedades tribales y dirigidas por caciques se dedicaban sobre todo a la agricultura. Casi todos realizaban trabajos parecidos, porque no había muchas tareas diferentes. Estas comunidades eran más fuertes y estables cuando tenían problemas, a diferencia de otros grupos que tenían muchos jefes y trabajos especializados.\nSegún el texto anterior, ¿qué impacto tiene la organización social ancestral de Costa Rica en la sociedad actual?",
+        "options": [
+          "La diversidad de pueblos antiguos permitió crear los sistemas económicos aún vigentes.",
+          "Las prácticas agrícolas prehispánicas influyeron en los aspectos culturales que perduran hoy.",
+          "Los modelos de organización precolombinos enseñan a cuidar el ambiente y afrontar desafíos sociales.",
+          "Las comunidades cacicales impidieron el desarrollo de la democracia moderna en Costa Rica."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea el siguiente texto:\nEn Costa Rica, en el arte Boruca, la máscara no solo sirve para asustar al enemigo. También permite conectarse con el espíritu animal que aparece tallado en la parte superior de la máscara. Se cree que este espíritu tiene el poder de protegernos, y que puede incluso aparecer en momentos de peligro para defendernos del conquistador o colonizador.\nSegún el texto anterior, ¿qué rasgo distintivo presenta el arte de las máscaras del pueblo Boruca?",
+        "options": [
+          "Representan una identidad espiritual animal que protege y puede aparecer en situaciones de amenaza o peligro.",
+          "Simbolizan el poderío de los invasores frente a los pobladores durante los rituales tradicionales indígenas.",
+          "Son utilizadas como ornamentos decorativos que reflejan la estética de la cultura indígena local.",
+          "Se fabrican exclusivamente para ceremonias religiosas y no pueden usarse en actividades cotidianas."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea la siguiente información:\nEn la década de 1940, en Limón, había reglas que querían cambiar las costumbres de la comunidad afrocaribeña, pero esta mantuvo sus tradiciones. La comunidad creó y apoyó sus propias escuelas, lo que les permitió seguir hablando el inglés caribeño y conservar el idioma de sus abuelos.\nSegún la información anterior, ¿cuál es un aporte de la población afrocaribeña a la sociedad costarricense?",
+        "options": [
+          "La creación de escuelas públicas para imponer la enseñanza del español.",
+          "La conservación del idioma ancestral reforzó el carácter plurilingüe del país.",
+          "La adaptación a las normas modificó las prácticas afrocaribeñas de Costa Rica.",
+          "El dominio del inglés caribeño facilitó las relaciones comerciales con Jamaica."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea el siguiente texto:\nEn Costa Rica, algunas personas indígenas no reciben el trato justo porque no se conocen ni se cumplen bien las leyes que protegen sus derechos. Esto hace que, por ejemplo, la niñez de estas comunidades a veces no cuente con la protección que necesitan, porque los proyectos del gobierno no siempre toman en cuenta la forma de ver y vivir de estos pueblos originarios.\nEl texto anterior hace referencia a la situación de los pueblos originarios, caracterizada por la",
+        "options": [
+          "desinformación legal y la carencia de la cosmovisión indígena en las políticas públicas, con lo que se perpetúa su marginación.",
+          "inclusión social y el reconocimiento estatal de la visión de mundo indígena en programas de desarrollo comunitario.",
+          "integración cultural y la promoción gubernamental de sus tradiciones en los proyectos nacionales.",
+          "garantía de derechos establecidos en la Constitución que se aplican de forma efectiva en todas las comunidades."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea la siguiente información:\nEn Costa Rica, como consecuencia del abandono de los caminos y el difícil acceso geográfico, los niños y las niñas de los territorios aborígenes tienen un limitado ingreso a los servicios de salud, con pocas posibilidades de recibir controles de crecimiento y desarrollo.\nLa información anterior describe una situación vivida por la niñez indígena del país, por lo que se hace necesario",
+        "options": [
+          "impedir que los niños y las niñas tengan contacto con culturas mestizas, para evitar contagios de enfermedades desconocidas.",
+          "establecer todos los centros de salud fuera de los territorios indígenas, para una mejor atención médica por especialistas.",
+          "acciones estatales y de la sociedad en general que propicien mejor y mayor acceso a los servicios de salud para esta población.",
+          "construir escuelas dentro de las comunidades indígenas para sustituir los servicios de salud necesarios."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea el siguiente texto:\n«Al final, vencidos por el hambre, los pueblos autóctonos tuvieron que someterse, pues como lo manifestó el cacique Quitao, estaba cansado de traer su gente intranquilos por los montes. Una vez sometidas, las poblaciones fueron concentradas en reducciones y los indígenas repartidos en encomiendas personales.»\nDe acuerdo con el texto anterior, ¿cuáles fueron las consecuencias de la conquista española para los pueblos originarios en Costa Rica?",
+        "options": [
+          "Los pueblos originarios conservaron su independencia y establecieron alianzas pacíficas con los conquistadores españoles.",
+          "Los indígenas fueron forzados a abandonar su autonomía y reorganizados bajo el control español en reducciones.",
+          "Los aborígenes mantuvieron su libertad, pero recibieron ayuda alimentaria de los colonizadores europeos.",
+          "Los pueblos originarios adoptaron voluntariamente la cultura española para mejorar sus condiciones de vida."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea el siguiente texto:\nA partir de 1520, la expansión española en el territorio del Pacífico Norte del país fue nefasta para las poblaciones locales, pues el interés principal de los recién llegados era reducir sus habitantes a la esclavitud y llevarlos hacia Panamá y al Perú donde serían vendidos. Tal situación provocaría un rápido descenso de la población autóctona.\nSegún el texto anterior, ¿cuál opción refiere una consecuencia demográfica del proceso de conquista española en Costa Rica?",
+        "options": [
+          "La institución de la servidumbre hasta la independencia.",
+          "La comercialización de esclavos africanos hacia América del Sur.",
+          "La disminución de la cantidad de población autóctona que habitaba el país.",
+          "El fortalecimiento de las alianzas entre los pueblos indígenas del Pacífico."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea el siguiente texto:\nDurante este periodo de la historia de Costa Rica, la sociedad se organizó en torno a las estructuras impuestas por la Corona española. La mayoría de la población vivía en pequeñas villas y pueblos, se dedicaban a la agricultura y a la ganadería. La educación estuvo a cargo, principalmente, de órdenes religiosas. La Iglesia católica tuvo un papel clave en la vida cotidiana.\n¿A qué periodo histórico de Costa Rica corresponde la descripción del texto?",
+        "options": [
+          "Liberal",
+          "Colonia",
+          "Conquista",
+          "Independencia"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea la siguiente información:\nEn Costa Rica, durante la época colonial, la exportación de ganado, víveres, cacao y tabaco destacaba como actividades económicas primordiales. La producción y el comercio externo fueron sostenidos, inicialmente, por la mano de obra indígena y posteriormente, por esclavos de origen africano.\nDe acuerdo con la información anterior, la economía de Costa Rica durante el período colonial se caracterizó por",
+        "options": [
+          "usar mano de obra nativa y luego esclava para apoyar la producción y el comercio interno y externo.",
+          "desarrollar un comercio local centrado en el intercambio de café en el Istmo centroamericano.",
+          "enfocar la economía en la producción de artículos básicos, especialmente en áreas remotas.",
+          "exportar únicamente productos manufacturados hacia Europa y América del Sur."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Considere la siguiente información:\nEntre 1751 y 1801 el grupo poblacional de Costa Rica se duplicó para alcanzar en ese último año la cifra de 52 591 habitantes. Poco menos del 10 % estaba constituido por población española: un 16 % eran aborígenes y negros, mulatos eran un 22 %, y el resto, el 52 % estaba formado por mestizos.\nAl considerar la información anterior, ¿qué característica social se puede contemplar como un aporte de la colonia a la sociedad costarricense?",
+        "options": [
+          "El predominio de la población mulata consolidó una estructura social jerárquica y excluyente.",
+          "Se configuró una sociedad multiétnica y pluricultural, resultado de las múltiples mezclas étnicas.",
+          "La preservación de la mayoría indígena permitió el respeto y la continuidad de sus estructuras socioculturales.",
+          "La llegada de migrantes europeos benefició a todos los grupos sociales por igual."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea el siguiente texto:\nEl Pacto de Concordia estableció que el país era libre de España y capaz de constituir un sistema de gobierno propio. Sabiamente, desde el momento en que se emitió el Pacto, el 1° de diciembre de 1821, se estableció que Costa Rica era una unidad política con la totalidad de sus derechos, lo que para muchos ha marcado el inicio de una cultura apegada al orden constitucional.\nDe acuerdo con el texto anterior, ¿cuál es un aspecto que reconoce la importancia del Pacto de Concordia?",
+        "options": [
+          "Se constituyó en la primera y única Constitución Política que se ha creado en el país.",
+          "Se iniciaron relaciones diplomáticas y económicas con los países de Nicaragua y Panamá.",
+          "La decisión de que Costa Rica sería un Estado libre, para escoger el camino a seguir ante la declaratoria de independencia de España.",
+          "El Pacto estableció las fronteras definitivas entre Costa Rica y sus países vecinos."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea la siguiente información:\nEl Acta de Independencia de Centroamérica fue un documento fundamental que definió los principios sobre los cuales debía organizarse el nuevo país. Estableció que la soberanía residía en el pueblo y que todos los ciudadanos debían ser tratados con igualdad. Por ello, los territorios que antes eran gobernados por España pasaron a ser administrados por sus propios habitantes.\nSegún la información anterior, ¿cuál opción identifica los principios de soberanía e igualdad actualmente?",
+        "options": [
+          "Las personas eligen a sus representantes mediante votaciones libres y secretas.",
+          "Los gobiernos toman decisiones políticas al consultar solo a ciertos grupos económicos.",
+          "El gobierno decide sin consultar a la población sobre los asuntos nacionales.",
+          "Los ciudadanos delegan toda autoridad en sus representantes por períodos ilimitados."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea la siguiente información:\nEn el pasado, Costa Rica era reconocida por su paz y estabilidad, lo que motivó al Partido de Nicoya a unirse voluntariamente. Esta anexión no solo respondió al deseo de seguridad de su población, sino que también contribuyó a proyectar una imagen diferenciada del país respecto a otros países de Centroamérica.\nDe acuerdo con la información anterior, ¿cuál es la importancia de la anexión del Partido de Nicoya a Costa Rica?",
+        "options": [
+          "Promovió la paz interna, aunque limitó el desarrollo económico a nivel local.",
+          "Facilitó la integración territorial y proyectó una imagen de orden frente a la región.",
+          "Contribuyó al fortalecimiento inicial de la identidad nacional basada en la estabilidad.",
+          "Permitió a Costa Rica aumentar su territorio y su población de manera significativa."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea la siguiente información:\nLa gastronomía de Nicoya refleja su diversidad cultural con sabores auténticos. Las tortillas de maíz hechas a mano son esenciales en cada comida. También se preparan «chorreadas», tortitas de maíz fresco, y «tamal asado», un pastel dulce horneado. El «chicheme», bebida fermentada de maíz, evidencia la influencia indígena.\nSegún la información anterior, ¿qué expresa la gastronomía de Nicoya como parte del aporte cultural tras la Anexión a Costa Rica?",
+        "options": [
+          "La sustitución de platos tradicionales del Valle Central por comidas típicas de Nicoya.",
+          "La incorporación de las prácticas culinarias aborígenes, lo que enriqueció la gastronomía nacional.",
+          "La conservación de recetas aborígenes en la cocina nicoyana, sin influencia de otras tradiciones culturales.",
+          "La pérdida de las tradiciones culinarias de Nicoya tras la incorporación al territorio costarricense."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea el siguiente texto:\nDentro de las reformas liberales en Costa Rica, La Ley General de Educación Común (1886) le concedía al secretario de Educación Pública la dirección y supervisión de la enseñanza primaria; además del control y supervisión de organismos que ya se habían creado con fines educativos pero que, por diferentes motivos, no funcionaban.\nDe acuerdo con el texto anterior, uno de los aspectos que produjo la reforma educativa como parte de las reformas liberales consistió en",
+        "options": [
+          "que los únicos autorizados para impartir la educación en el país serían los sacerdotes de la Iglesia Católica.",
+          "la formación académica y militar de hombres y mujeres para que pudieran integrar las fuerzas armadas del país.",
+          "que la dirección de la educación costarricense estaría a cargo de las autoridades y organismos estatales.",
+          "la creación de universidades públicas para garantizar el acceso a la educación superior gratuita."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea la siguiente información:\nEn 1856, Costa Rica enfrentó una gran amenaza cuando un grupo de invasores, llamados filibusteros, quería tomar el control del país. Para defender la libertad y la independencia, los costarricenses se unieron en la Campaña Nacional y lucharon con valentía por su territorio.\n¿Qué relación establece el texto entre la Campaña Nacional y la consolidación del Estado costarricense?",
+        "options": [
+          "El fortalecimiento de la unión nacional garantizó la autonomía política del país.",
+          "El impulso de las relaciones diplomáticas con los gobiernos centroamericanos.",
+          "El reconocimiento del derecho de la ciudadanía a preservar su cultura y lengua.",
+          "La creación de un ejército permanente para defender el territorio nacional."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea el siguiente texto:\nEn Costa Rica, el 22 de diciembre de 1856, se efectuó el combate en el que el ejército costarricense tomó posiciones en la llamada «Vía del Tránsito», ruta interoceánica que une el Mar Caribe y el Océano Pacífico, a través de Río San Juan y el Lago de Nicaragua, lo que significó el principio del fin de la presencia filibustera en Centroamérica.\nEn el contexto de la Campaña Nacional, ¿a cuál batalla hace referencia el texto anterior?",
+        "options": [
+          "Sardinal",
+          "Santa Rosa",
+          "Combate de la Trinidad",
+          "Rivas"
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea el siguiente texto:\nEn el siglo XIX, el Licenciado Mauro Fernández Acuña impulsó cambios importantes en la educación de Costa Rica. Antes, cada municipalidad organizaba las escuelas, pero él centralizó el sistema bajo el Ministerio de Instrucción Pública. Esta reforma garantizó que todas las instituciones de primaria y secundaria trabajaran juntas de manera organizada y ofrecieran educación de calidad.\nDe acuerdo con el texto anterior, ¿qué acción de las Reformas Liberales ayudó a consolidar el Estado Nación en Costa Rica?",
+        "options": [
+          "El control de la educación restringió el acceso a ciertos grupos sociales a nivel nacional.",
+          "El establecimiento de un sistema educativo centralizado fortaleció la enseñanza a nivel nacional.",
+          "El mantenimiento de la autonomía municipal permitió regionalizar la educación en el territorio nacional.",
+          "La creación del Ministerio de Instrucción Pública eliminó las escuelas religiosas del país."
+        ],
+        "correct": 1
       }
     ]
   },
@@ -8858,6 +9098,116 @@ export const socialesLessons = [
           "La fuerza",
           "La participación y el respeto a la ley",
           "El dinero"
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea el siguiente texto:\nLa ley Orgánica del Ambiente en su artículo 6 establece que: «El Estado y las municipalidades, fomentarán la participación activa y organizada de los habitantes de la República, en la toma de decisiones y acciones tendientes a proteger y mejorar el ambiente.»\nCon respecto al texto anterior, se puede distinguir que las buenas prácticas y actitudes ciudadanas en materia ambiental",
+        "options": [
+          "responden a la iniciativa conjunta entre los organismos estatales y la ciudadanía.",
+          "requieren ser impuestas y fiscalizadas por organismos sin fines de lucro.",
+          "dependen exclusivamente de las políticas gubernamentales del país.",
+          "son responsabilidad únicamente de los municipios, no del gobierno central."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea el siguiente texto:\nEn Costa Rica en la década de 1940 se impulsaron cambios importantes para mejorar la vida de los costarricenses. Se creó la Caja Costarricense de Seguro Social (CCSS), lo que aseguró la atención médica de las personas, se aprobaron derechos laborales, como el salario mínimo y la jornada limitada. Además, se estableció la Universidad de Costa Rica (UCR).\nSegún el texto anterior, ¿cuál fue el impacto de las reformas sociales en Costa Rica durante la década de 1940?",
+        "options": [
+          "Lograron una aparente igualdad que benefició principalmente a los sectores acomodados.",
+          "Favorecieron el acceso a salud, a educación y a los derechos laborales, lo cual impulsó el bienestar social.",
+          "Transformaron el sistema educativo y la salud, pero sin garantizar los derechos de los trabajadores del sector público.",
+          "Crearon instituciones públicas que solo beneficiaron a los trabajadores del sector agrícola."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea la siguiente información:\nDesde la llegada de los europeos a Costa Rica y durante el período colonial, las sociedades indígenas sufrieron cambios drásticos en todos los aspectos de su vida. El desarrollo de las sociedades aborígenes, con diez mil años de historia, se vio cortado producto de la conquista y diferenciación social, y la población disminuyó debido a las enfermedades traídas por los españoles y a la explotación de mano de obra forzada.\nLa información anterior presenta un problema ético y social durante el período colonial en Costa Rica, que consistió en la",
+        "options": [
+          "aceptación del modo de vida de los pueblos nativos.",
+          "explotación de la fuerza laboral de los grupos originarios.",
+          "apreciación de los europeos hacia las creencias de los pueblos autóctonos.",
+          "integración pacífica de los pueblos indígenas a la sociedad colonial."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea la siguiente información:\nCon la Reforma Social de la década de 1940, al otorgar rango constitucional a los derechos de los trabajadores costarricenses, se establecieron derechos como salario mínimo, jornada diurna de ocho horas y nocturna de seis, vacaciones anuales pagadas, derecho a sindicalización y huelga, seguros sociales, entre otros, para trabajadores y sus familias.\nSegún la información anterior, ¿cuál es la importancia de la Reforma Social en Costa Rica?",
+        "options": [
+          "Estableció un marco constitucional que corrigió las desigualdades laborales y aseguró los derechos para los trabajadores.",
+          "Introdujo regulaciones parciales que priorizaron aspectos laborales sin tener en cuenta la protección familiar.",
+          "Consolidó un sistema que mantuvo limitaciones para la participación sindical y derechos patronales.",
+          "Garantizó los derechos laborales solo para los trabajadores del sector público y las empresas exportadoras."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea el siguiente texto:\nLa Educación Cívica ayuda a que las personas comprendan sus derechos y responsabilidades en la sociedad. Enseña a respetar normas, colaborar con la comunidad y participar en decisiones importantes. Cada persona es parte de una comunidad y acciones como cuidar el ambiente, respetar reglas o votar, contribuyen a construir un lugar más justo y organizado.\nSegún el texto anterior, ¿cuál es la importancia de la Educación Cívica en la sociedad costarricense?",
+        "options": [
+          "Se centra en el conocimiento legal para evitar las sanciones y conflictos sociales.",
+          "Prioriza la defensa de los derechos individuales sin enfatizar la responsabilidad colectiva.",
+          "Fomenta los valores y las acciones sociales que robustecen la convivencia y el bienestar común.",
+          "Enseña únicamente los procedimientos para elegir representantes políticos en elecciones."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea la siguiente información:\nLos estudiantes beneficiarios del programa «Avancemos» del Instituto Mixto de Ayuda Social (IMAS), podrán capacitarse mediante el Instituto Nacional de Aprendizaje (INA), por un convenio entre ambas instituciones. Jóvenes de décimo y undécimo año acceden a cursos virtuales que no interfieran con sus horarios escolares.\nSegún la información anterior, ¿de qué manera contribuye el IMAS como promotora de los derechos de las personas estudiantes?",
+        "options": [
+          "Limita el acceso a capacitaciones complementarias, al priorizar la permanencia en el sistema escolar tradicional.",
+          "Facilita oportunidades educativas adicionales que fortalecen la formación y mejoran la inserción laboral de jóvenes beneficiarios.",
+          "Promueve la importancia de impedir que el estudiantado participe en actividades formativas fuera del horario escolar.",
+          "Ofrece becas económicas exclusivamente para estudiantes de zonas rurales con dificultades académicas."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Lea la siguiente información:\nLa mayoría de la comunidad afrocostarricense llegó al país en los años 1870 para construir el ferrocarril y luego trabajó en la industria bananera. Provenientes de Jamaica, los primeros agricultores se vincularon con el inicio del ferrocarril. Además de su aporte económico, introdujeron música, gastronomía e inglés criollo.\nSegún la información anterior y desde una perspectiva cultural, ¿cuál es una contribución de las etnias africanas a la identidad costarricense?",
+        "options": [
+          "Propició una diversidad cultural que ha enriquecido tradiciones y costumbres dentro de la identidad costarricense.",
+          "Sustituyó las tradiciones culturales y sociales que conformaban la identidad nacional antes de su llegada.",
+          "Impulsó el desarrollo económico mediante su trabajo en el ferrocarril y la agricultura bananera.",
+          "Introdujo el sistema de transporte ferroviario como parte de su aporte tecnológico a Costa Rica."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea el siguiente texto:\nEn la época colonial, los españoles se consideraban superiores porque creían que su cultura y forma de vida eran mejores que las de otros grupos. Por eso, muchas personas eran tratadas como inferiores y tenían menos derechos y oportunidades. Esta forma de organizar la sociedad generó grandes desigualdades que afectaron a muchas comunidades.\nSegún el texto anterior, ¿qué consecuencia tuvo la estratificación social basada en el origen étnico durante el periodo colonial en Costa Rica?",
+        "options": [
+          "Los grupos sociales, en general, tenían igualdad para participar en la política colonial.",
+          "Los indígenas y afrodescendientes gozaban de los mismos beneficios que la población española.",
+          "La mayoría de la población vivía con menos privilegios socioeconómicos y políticos frente a los españoles.",
+          "La estructura colonial garantizó la movilidad social de todos los grupos étnicos por igual."
+        ],
+        "correct": 2
+      },
+      {
+        "question": "Lea el siguiente texto:\nLos símbolos son los instrumentos por excelencia de la integración social. Esta integración responde a ideologías particulares que intentan, mediante los símbolos o imágenes, consolidar las formas de pensar, de creer y de actuar de determinados grupos de personas. Parte primordial de la razón de ser de los íconos nacionales consiste en hacer ver la nación como un tronco macizo y unitario.\nEl texto anterior plantea el papel de los símbolos nacionales en la conformación del Estado nación al propiciar",
+        "options": [
+          "el reconocimiento de los aportes de la clase política a la imagen que proyecta el país fuera de sus fronteras.",
+          "un sentido de unidad y una expresión de la evolución histórica y sociopolítica de la nación costarricense.",
+          "la estructura socioeconómica y política sobre la cual se debe organizar el país.",
+          "la eliminación de las diferencias culturales y étnicas para crear una identidad uniforme."
+        ],
+        "correct": 1
+      },
+      {
+        "question": "Considere el siguiente texto:\nEl ordenamiento jurídico de Costa Rica establece expresamente la inviolabilidad de la vida humana. Esto obliga al Estado a protegerla por todos los medios jurídicos y constitucionales a su alcance. A manera de ejemplo y por esta razón, no existe posibilidad para que el Estado implante la pena de muerte sin violentar este ideal consagrado en la Constitución Política.\nSegún el texto anterior, ¿por qué el derecho a la vida es un principio esencial en Costa Rica?",
+        "options": [
+          "Asegura que la vida de todas las personas sea protegida y respetada, sin excepciones.",
+          "Permite aplicar la pena de muerte en casos graves para proteger la seguridad del país.",
+          "Autoriza su suspensión cuando otros derechos tienen mayor relevancia legal.",
+          "Limita su protección únicamente a los ciudadanos costarricenses por nacimiento."
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Lea el siguiente texto:\nTodos tenemos los mismos derechos, sin importar quiénes somos. Por ejemplo, tenemos derecho a la educación, a la salud, a jugar y a ser protegidos. Estos derechos se establecen en la Constitución Política de Costa Rica (1949) para asegurar el respeto, la igualdad y la libertad. Es importante conocerlos para pedir ayuda si no se cumplen.\nSegún el texto anterior, ¿cuál es la función esencial de los derechos constitucionales en la vida cotidiana de los costarricenses?",
+        "options": [
+          "Regulan únicamente los servicios de salud y educación, sin afectar otros derechos fundamentales.",
+          "Garantizan la igualdad, la libertad y el respeto para vivir en una sociedad democrática.",
+          "Dan libertad a cada persona para crear sus propias reglas sin seguir leyes.",
+          "Aplican solo a los ciudadanos adultos que participan activamente en procesos electorales."
         ],
         "correct": 1
       }

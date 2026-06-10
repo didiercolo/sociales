@@ -2,8 +2,8 @@
 import React from 'react';
 
 const SimulacroStart = ({ config, questionCount, bloqueBreakdown, onStart }) => {
-  const displayCount = Math.min(questionCount, 60);
-  const isFull = questionCount >= 60;
+  const displayCount = Math.min(questionCount, 35);
+  const isFull = questionCount >= 35;
 
   return (
     <div style={{ maxWidth: 600, margin: '0 auto', padding: '3rem 1.5rem', textAlign: 'center' }}>
@@ -17,7 +17,7 @@ const SimulacroStart = ({ config, questionCount, bloqueBreakdown, onStart }) => 
 
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '2rem 0', flexWrap: 'wrap' }}>
         <span style={{ fontWeight: 700, color: 'var(--bg-dark)' }}>
-          📋 {displayCount === 0 ? 'Sin preguntas disponibles' : isFull ? '60 preguntas' : `${displayCount} preguntas disponibles`}
+          📋 {displayCount === 0 ? 'Sin preguntas disponibles' : isFull ? '35 preguntas' : `${displayCount} preguntas disponibles`}
         </span>
         <span style={{ fontWeight: 700, color: 'var(--bg-dark)' }}>⏱ 120 minutos</span>
         <span style={{ fontWeight: 700, color: 'var(--bg-dark)' }}>✅ Selección única A/B/C/D</span>
