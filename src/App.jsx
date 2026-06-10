@@ -10,6 +10,7 @@ const ComingSoon = lazy(() => import('./pages/ComingSoon'));
 const About = lazy(() => import('./pages/About'));
 const Register = lazy(() => import('./pages/Register'));
 const Login = lazy(() => import('./pages/Login'));
+const ScoreboardPage = lazy(() => import('./pages/ScoreboardPage'));
 
 const PageLoader = () => (
     <div style={{ padding: '2rem', textAlign: 'center', fontFamily: 'var(--font-heading)', color: 'var(--primary-color)' }}>
@@ -30,6 +31,7 @@ function App() {
                         <Route path="sobre-nosotros" element={<About />} />
                         <Route path="registro" element={<Register />} />
                         <Route path="login" element={<Login />} />
+                        <Route path="scoreboard" element={<ScoreboardPage />} />
                     </Route>
                 </Routes>
             </Suspense>
