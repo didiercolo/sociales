@@ -89,8 +89,8 @@ const DailyQuestion = () => {
         color: 'white',
         textAlign: 'center',
         marginTop: '2rem',
-        border: '3px solid var(--text-main)',
-        boxShadow: '6px 6px 0px var(--text-main)'
+        border: 'none',
+        boxShadow: '0 4px 16px rgba(99,102,241,0.20)'
       }}>
         <h2 style={{ fontFamily: 'var(--font-heading)', fontWeight: '800' }}>✨ Pregunta del Día ✨</h2>
         <p style={{ marginTop: '1rem', fontSize: '1.2rem', marginBottom: '2rem', fontWeight: '600' }}>
@@ -106,7 +106,7 @@ const DailyQuestion = () => {
 
   if (!question) {
     return (
-      <div style={{ textAlign: 'center', padding: '2.5rem', background: '#F8FAFC', borderRadius: 'var(--radius-md)', border: '3px solid var(--bg-dark)', boxShadow: '6px 6px 0px var(--bg-dark)', marginTop: '2rem' }}>
+      <div style={{ textAlign: 'center', padding: '2.5rem', background: '#F8FAFC', borderRadius: 'var(--radius-md)', border: 'none', boxShadow: '0 4px 16px rgba(99,102,241,0.12)', marginTop: '2rem' }}>
         <h3 style={{ color: 'var(--text-muted)', fontWeight: '800' }}>¡Ups! No hay pregunta configurada para hoy.</h3>
       </div>
     );
@@ -117,15 +117,15 @@ const DailyQuestion = () => {
       background: 'white',
       borderRadius: 'var(--radius-md)',
       padding: '2.5rem',
-      boxShadow: '6px 6px 0px var(--bg-dark)',
+      boxShadow: '0 4px 16px rgba(99,102,241,0.12)',
       marginTop: '2rem',
-      border: '3px solid var(--bg-dark)'
+      border: 'none'
     }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <h2 style={{ fontSize: '1.8rem', color: 'var(--bg-dark)', margin: 0, fontFamily: 'var(--font-heading)', fontWeight: '800' }}>
           💡 Pregunta del Día
         </h2>
-        <span style={{ background: '#EEF2FF', color: 'var(--primary)', padding: '0.5rem 1.25rem', borderRadius: 'var(--radius-full)', border: '2px solid var(--bg-dark)', fontWeight: '800', fontSize: '0.9rem', boxShadow: '2px 2px 0px var(--bg-dark)' }}>
+        <span style={{ background: '#EEF2FF', color: 'var(--primary)', padding: '0.5rem 1.25rem', borderRadius: 'var(--radius-full)', border: 'none', fontWeight: '800', fontSize: '0.9rem' }}>
           {question.subject}
         </span>
       </div>
@@ -144,7 +144,7 @@ const DailyQuestion = () => {
                 style={{
                   padding: '1.1rem 1.5rem',
                   borderRadius: 'var(--radius-sm)',
-                  border: '3px solid var(--bg-dark)',
+                  border: selectedOption === opt ? 'none' : '1px solid var(--border)',
                   background: selectedOption === opt ? 'var(--accent)' : 'white',
                   color: 'var(--bg-dark)',
                   fontSize: '1.1rem',
@@ -152,8 +152,7 @@ const DailyQuestion = () => {
                   cursor: 'pointer',
                   transition: 'var(--transition)',
                   fontWeight: '800',
-                  boxShadow: selectedOption === opt ? 'inset 2px 2px 4px rgba(0,0,0,0.1), 2px 2px 0px var(--bg-dark)' : '4px 4px 0px var(--bg-dark)',
-                  transform: selectedOption === opt ? 'translate(2px, 2px)' : 'none'
+                  boxShadow: selectedOption === opt ? '0 2px 8px rgba(99,102,241,0.20)' : '0 1px 3px rgba(0,0,0,0.06)'
                 }}
               >
                 <span style={{ marginRight: '0.75rem', opacity: 0.5 }}>{String.fromCharCode(65 + idx)}.</span> {opt}
@@ -184,12 +183,12 @@ const DailyQuestion = () => {
             Has ganado <strong style={{ color: 'var(--accent)' }}>+{result.pointsEarned} puntos</strong>
           </p>
           {result.bonusAwarded && (
-             <p style={{ color: 'var(--accent)', fontWeight: '800', marginBottom: '1rem', background: '#FEF3C7', padding: '0.5rem', borderRadius: '12px', border: '2px solid var(--bg-dark)' }}>
+             <p style={{ color: 'var(--accent)', fontWeight: '800', marginBottom: '1rem', background: '#FEF3C7', padding: '0.5rem', borderRadius: '12px', border: 'none' }}>
                🌟 ¡Bono de Sesión Completada! (+2 ptos extras) 🌟
              </p>
           )}
           {!result.isCorrect && result.correctAnswerMessage && (
-            <div style={{ background: '#FEF2F2', border: '3px solid #EF4444', padding: '1.25rem', borderRadius: 'var(--radius-sm)', color: '#B91C1C', fontWeight: '700', textAlign: 'left', boxShadow: '3px 3px 0px rgba(239, 68, 68, 0.15)' }}>
+            <div style={{ background: '#FEF2F2', border: '1px solid #FCA5A5', padding: '1.25rem', borderRadius: 'var(--radius-sm)', color: '#B91C1C', fontWeight: '700', textAlign: 'left' }}>
               {result.correctAnswerMessage}
             </div>
           )}

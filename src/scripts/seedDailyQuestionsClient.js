@@ -36,7 +36,7 @@ export async function seedDailyQuestionsClient() {
     }
 
     const today = new Date();
-    const countToSeed = Math.min(30, allQuestions.length);
+    const countToSeed = Math.min(90, allQuestions.length);
     console.log(`Seeding ${countToSeed} daily questions to Firestore...`);
 
     const usedIndices = new Set();

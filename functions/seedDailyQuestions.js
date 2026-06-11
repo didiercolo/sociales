@@ -4,8 +4,10 @@ const admin = require('firebase-admin');
 // Initialize Firebase Admin (assuming default credentials or emulator for local)
 // You may need to provide service account credentials if running against// IMPORTANT: Initialize admin only once
 if (!admin.apps.length) {
+  const serviceAccount = require('./service-account.json');
   admin.initializeApp({
-      projectId: 'eduportalcrapp'
+    credential: admin.credential.cert(serviceAccount),
+    projectId: 'eduportalcr'
   });
 }const db = getFirestore();
 
@@ -57,7 +59,7 @@ async function runSeed() {
 
     // Take random 30 questions
     // Make sure we have 30
-    const countToSeed = Math.min(30, allQuestions.length);
+    const countToSeed = Math.min(90, allQuestions.length);
     console.log(`Seeding ${countToSeed} daily questions...`);
 
     const usedIndices = new Set();
