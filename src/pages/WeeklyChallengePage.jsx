@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
 import { getFunctions, httpsCallable } from 'firebase/functions';
@@ -43,6 +43,11 @@ const WeeklyChallengePage = () => {
   const [alreadyCompleted, setAlreadyCompleted] = useState(false);
   const [submitError, setSubmitError] = useState(null);
 
+  // Holds the result of the last submitted answer until the user clicks Siguiente/Ver Resultados
+  const [questionResult, setQuestionResult] = useState(null);
+  // Remembers whether the last response indicated the challenge is now complete
+  const lastResponseRef = useRef({ weeklyComplete: false });
+
   // Fetch weekly challenge doc on mount
   useEffect(() => {
     if (loading) return; // wait for auth to resolve
@@ -68,10 +73,18 @@ const WeeklyChallengePage = () => {
         const data = { weekId: snap.id, ...snap.data() };
         setWeekDoc(data);
 
-        // Determine starting phase based on user profile
-        const weeklyWeekId = userProfile?.weeklyWeekId;
-        const weeklyAnsweredCount = userProfile?.weeklyAnsweredCount ?? 0;
-        const weeklyBonusAwarded = userProfile?.weeklyBonusAwarded ?? false;
+        // Re-fetch the user doc fresh so we don't rely on the stale AuthContext snapshot
+        let weeklyWeekId = null;
+        let weeklyAnsweredCount = 0;
+        let weeklyBonusAwarded = false;
+
+        if (currentUser) {
+          const freshUserSnap = await getDoc(doc(db, 'users', currentUser.uid));
+          const freshProfile = freshUserSnap.exists() ? freshUserSnap.data() : {};
+          weeklyWeekId = freshProfile.weeklyWeekId ?? null;
+          weeklyAnsweredCount = freshProfile.weeklyAnsweredCount ?? 0;
+          weeklyBonusAwarded = freshProfile.weeklyBonusAwarded ?? false;
+        }
 
         if (weeklyWeekId === currentWeekId && weeklyBonusAwarded) {
           // Already fully completed this week
@@ -126,20 +139,34 @@ const WeeklyChallengePage = () => {
         setBonusAwarded(true);
       }
 
-      const questions = weekDoc.questions || [];
-      const nextIndex = questionIndex + 1;
+      // Remember whether the challenge is now complete so handleNextQuestion can use it
+      lastResponseRef.current = { weeklyComplete: data.weeklyComplete ?? false };
 
-      if (data.weeklyComplete || nextIndex >= questions.length) {
-        setPhase(PHASE.RESULTS);
-      } else {
-        setQuestionIndex(nextIndex);
-      }
+      // Show the per-question feedback; do NOT advance yet
+      setQuestionResult({
+        isCorrect: data.isCorrect,
+        correctAnswerMessage: data.correctAnswerMessage,
+        pointsEarned,
+      });
     } catch (err) {
       console.error('Error submitting weekly answer:', err);
       setSubmitError('Error al enviar la respuesta. Por favor intenta de nuevo.');
-      setIsSubmitting(false);
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const handleNextQuestion = () => {
+    const questions = weekDoc?.questions || [];
+    const isLast = questionIndex + 1 >= questions.length;
+    const weeklyComplete = lastResponseRef.current.weeklyComplete;
+
+    setQuestionResult(null);
+
+    if (weeklyComplete || isLast) {
+      setPhase(PHASE.RESULTS);
+    } else {
+      setQuestionIndex((prev) => prev + 1);
     }
   };
 
@@ -279,6 +306,9 @@ const WeeklyChallengePage = () => {
             totalQuestions={weekDoc.questions.length}
             onSubmit={handleSubmitAnswer}
             isSubmitting={isSubmitting}
+            result={questionResult}
+            onNext={handleNextQuestion}
+            isLastQuestion={questionIndex + 1 === weekDoc.questions.length}
           />
           {submitError && (
             <p style={{ color: '#EF4444', textAlign: 'center', marginTop: '1rem', fontWeight: 700 }}>

@@ -89,19 +89,19 @@ async function handleWeeklyAnswer(uid, weekId, answer, questionIndex) {
         bonusAwarded = userData.weeklyBonusAwarded || false;
       }
 
-      // Reject if the caller is not submitting the next expected question in sequence
-      if (questionIndex !== answeredCount) {
-        throw new HttpsError(
-          "invalid-argument",
-          `Expected questionIndex ${answeredCount}, got ${questionIndex}.`
-        );
-      }
-
       // Reject if already finished all questions this week
       if (answeredCount >= questions.length) {
         throw new HttpsError(
           "resource-exhausted",
           "You have already completed the weekly challenge for this week."
+        );
+      }
+
+      // Reject if the caller is not submitting the next expected question in sequence
+      if (questionIndex !== answeredCount) {
+        throw new HttpsError(
+          "invalid-argument",
+          `Expected questionIndex ${answeredCount}, got ${questionIndex}.`
         );
       }
 

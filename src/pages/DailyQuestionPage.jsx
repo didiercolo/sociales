@@ -14,6 +14,7 @@ const DailyQuestionPage = () => {
                     marginBottom: '2rem',
                     color: 'var(--text-muted)',
                     fontWeight: '600',
+                    textDecoration: 'none',
                 }}
             >
                 <span>&#8592;</span> Inicio

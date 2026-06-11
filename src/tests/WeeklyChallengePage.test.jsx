@@ -75,6 +75,12 @@ const docSnapExists = {
 /** A resolved Firestore snapshot for a missing doc. */
 const docSnapMissing = { exists: () => false };
 
+/** A resolved user doc snapshot with the base (fresh) profile. */
+const userDocSnap = (profile = baseProfile) => ({
+  exists: () => true,
+  data: () => ({ ...profile }),
+});
+
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
 const renderPage = () =>
@@ -164,7 +170,10 @@ describe('WeeklyChallengePage', () => {
   // ── 4. Start screen ────────────────────────────────────────────────────────
 
   it('shows start screen with "Comenzar Reto" button when doc exists and user has not started', async () => {
-    vi.mocked(getDoc).mockResolvedValueOnce(docSnapExists);
+    // First call: weekly challenge doc; second call: fresh user doc
+    vi.mocked(getDoc)
+      .mockResolvedValueOnce(docSnapExists)
+      .mockResolvedValueOnce(userDocSnap());
 
     renderPage();
 
@@ -176,18 +185,23 @@ describe('WeeklyChallengePage', () => {
   // ── 5. Already-completed state ─────────────────────────────────────────────
 
   it('shows already-completed results when user has bonusAwarded for the current week', async () => {
+    const completedProfile = {
+      ...baseProfile,
+      weeklyWeekId: CURRENT_WEEK_ID,
+      weeklyBonusAwarded: true,
+      weeklyAnsweredCount: MOCK_QUESTIONS.length,
+    };
+
     vi.mocked(useAuth).mockReturnValue({
       currentUser: mockUser,
-      userProfile: {
-        ...baseProfile,
-        weeklyWeekId: CURRENT_WEEK_ID,
-        weeklyBonusAwarded: true,
-        weeklyAnsweredCount: MOCK_QUESTIONS.length,
-      },
+      userProfile: completedProfile,
       loading: false,
     });
 
-    vi.mocked(getDoc).mockResolvedValueOnce(docSnapExists);
+    // First call: weekly challenge doc; second call: fresh user doc with completed state
+    vi.mocked(getDoc)
+      .mockResolvedValueOnce(docSnapExists)
+      .mockResolvedValueOnce(userDocSnap(completedProfile));
 
     renderPage();
 
@@ -198,10 +212,13 @@ describe('WeeklyChallengePage', () => {
     });
   });
 
-  // ── 6. Submit answer and advance questionIndex ─────────────────────────────
+  // ── 6. Submit answer → see feedback → advance to next question ─────────────
 
-  it('transitions from START → ACTIVE → next question after submitting an answer', async () => {
-    vi.mocked(getDoc).mockResolvedValueOnce(docSnapExists);
+  it('transitions from START → ACTIVE → feedback → next question after submitting an answer', async () => {
+    // First call: weekly challenge doc; second call: fresh user doc
+    vi.mocked(getDoc)
+      .mockResolvedValueOnce(docSnapExists)
+      .mockResolvedValueOnce(userDocSnap());
 
     renderPage();
 
@@ -226,7 +243,16 @@ describe('WeeklyChallengePage', () => {
     // httpsCallable should have been called with the correct function name
     expect(vi.mocked(httpsCallable)).toHaveBeenCalledWith(expect.anything(), 'submitAnswer');
 
-    // After submit resolves, second question should appear
+    // After submit resolves, feedback should appear (¡Correcto! since isCorrect: true)
+    await waitFor(() => {
+      expect(screen.getByText('¡Correcto!')).toBeInTheDocument();
+    });
+
+    // Click "Siguiente →" to advance to second question
+    const nextBtn = screen.getByRole('button', { name: /Siguiente →/i });
+    fireEvent.click(nextBtn);
+
+    // Second question should now appear
     await waitFor(() => {
       expect(screen.getByText('¿Cuántos huesos?')).toBeInTheDocument();
     });
