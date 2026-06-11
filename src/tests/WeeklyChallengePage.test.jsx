@@ -1,5 +1,5 @@
 // src/tests/WeeklyChallengePage.test.jsx
-import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import { getDoc } from 'firebase/firestore';
@@ -122,6 +122,18 @@ describe('WeeklyChallengePage', () => {
     expect(screen.getByText(/Cargando/i)).toBeInTheDocument();
   });
 
+  // ── 1b. Auth loading state ─────────────────────────────────────────────────
+
+  it('stays in loading state while auth is resolving', async () => {
+    vi.mocked(useAuth).mockReturnValue({ currentUser: null, userProfile: null, loading: true });
+    render(<MemoryRouter><WeeklyChallengePage /></MemoryRouter>);
+
+    // Should show loading indicator, not the auth guard
+    expect(screen.getByText(/Cargando/i)).toBeInTheDocument();
+    // Should NOT show the login prompt
+    expect(screen.queryByText(/Inicia sesión/i)).not.toBeInTheDocument();
+  });
+
   // ── 2. Auth guard ──────────────────────────────────────────────────────────
 
   it('shows login prompt when user is not logged in', () => {
@@ -211,8 +223,8 @@ describe('WeeklyChallengePage', () => {
     const confirmBtn = screen.getByRole('button', { name: /Confirmar Respuesta/i });
     fireEvent.click(confirmBtn);
 
-    // httpsCallable should have been called
-    expect(vi.mocked(httpsCallable)).toHaveBeenCalled();
+    // httpsCallable should have been called with the correct function name
+    expect(vi.mocked(httpsCallable)).toHaveBeenCalledWith(expect.anything(), 'submitAnswer');
 
     // After submit resolves, second question should appear
     await waitFor(() => {

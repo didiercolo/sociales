@@ -143,6 +143,15 @@ const WeeklyChallengePage = () => {
     }
   };
 
+  // --- Auth loading guard (wait for auth to resolve before showing login prompt) ---
+  if (loading) {
+    return (
+      <div style={{ maxWidth: 680, margin: '0 auto', padding: '3rem 1.5rem', textAlign: 'center', fontWeight: '700', color: 'var(--primary)' }}>
+        Cargando...
+      </div>
+    );
+  }
+
   // --- Auth guard ---
   if (!currentUser) {
     return (
