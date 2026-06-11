@@ -110,6 +110,7 @@ async function main() {
 
   await db.collection('weeklyChallenge').doc(weekId).set(doc);
   console.log(`✅ Seeded weeklyChallenge/${weekId}`);
+  process.exit(0);
 }
 
 main().catch((err) => {
