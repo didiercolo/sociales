@@ -30,7 +30,7 @@ async function handleWeeklyAnswer(uid, weekId, answer, questionIndex) {
   if (weekId !== currentWeekId) {
     throw new HttpsError(
       "invalid-argument",
-      `Invalid weekId. Expected ${currentWeekId}, got ${weekId}.`
+      "Invalid or expired weekId."
     );
   }
 
@@ -48,6 +48,10 @@ async function handleWeeklyAnswer(uid, weekId, answer, questionIndex) {
 
   const challengeData = challengeDoc.data();
   const questions = challengeData.questions || [];
+
+  if (questions.length === 0) {
+    throw new HttpsError("failed-precondition", "Weekly challenge has no questions.");
+  }
 
   if (questionIndex >= questions.length) {
     throw new HttpsError(
@@ -83,6 +87,14 @@ async function handleWeeklyAnswer(uid, weekId, answer, questionIndex) {
       } else {
         answeredCount = userData.weeklyAnsweredCount || 0;
         bonusAwarded = userData.weeklyBonusAwarded || false;
+      }
+
+      // Reject if the caller is not submitting the next expected question in sequence
+      if (questionIndex !== answeredCount) {
+        throw new HttpsError(
+          "invalid-argument",
+          `Expected questionIndex ${answeredCount}, got ${questionIndex}.`
+        );
       }
 
       // Reject if already finished all questions this week
