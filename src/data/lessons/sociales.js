@@ -4914,25 +4914,42 @@ export const socialesLessons = [
     "description": "Abolición del ejército y la nueva Constitución.",
     "sections": [
       {
-        "title": "1. Causas de la Guerra",
+        "title": "1. Causas de la Guerra Civil",
         "content": [
-          "<p>La <strong>anulación de las elecciones de 1948</strong> (donde ganó Otilio Ulate) y la corrupción electoral llevaron al país al conflicto armado.</p>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál fue la causa principal del estallido de la Guerra Civil?</li><li>¿Quién ganó oficialmente las elecciones de 1948 antes de ser anuladas?</li></ul>"
+          "<p>Las <strong>elecciones de 1948</strong> dieron el triunfo a <strong>Otilio Ulate Blanco</strong>, candidato de la oposición. Sin embargo, el Congreso, dominado por aliados de Calderón, <strong>anuló los resultados</strong> alegando irregularidades, lo que desencadenó una grave crisis política y el estallido de un conflicto armado.</p>",
+          "<p>Las principales causas que llevaron a la Guerra Civil fueron:</p>",
+          "<ul><li>La <strong>alianza política de Calderón con el Partido Comunista</strong>, que generaba profunda desconfianza en amplios sectores de la sociedad costarricense.</li><li>La <strong>crisis económica</strong> que vivía Costa Rica durante la década de 1940.</li><li>La <strong>anulación fraudulenta de las elecciones de 1948</strong>.</li><li>El <strong>sentimiento generalizado de desconfianza</strong> hacia el gobierno de turno.</li><li>El <strong>exilio previo de José Figueres Ferrer</strong> por persecución política, quien regresó con la firme intención de restaurar la democracia.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál fue la causa principal del estallido de la Guerra Civil?</li><li>¿Quién ganó oficialmente las elecciones de 1948 antes de ser anuladas?</li><li>¿Por qué la alianza de Calderón con el Partido Comunista generaba desconfianza?</li><li>¿Qué había ocurrido con Figueres antes del inicio del conflicto?</li></ul>"
         ]
       },
       {
-        "title": "2. José Figueres Ferrer y el Conflicto",
+        "title": "2. Desarrollo y Fin de la Guerra",
         "content": [
-          "<p>Figueres lideró el Ejército de Liberación Nacional. La guerra duró 44 días y cambió el rumbo del país.</p>",
-          "<h3>Logros de la Segunda República</h3><ul><li><strong>Abolición del Ejército (1º dic, 1948):</strong> Se eliminaron las fuerzas armadas para invertir en educación.</li><li><strong>Voto Femenino:</strong> Las mujeres pudieron votar por primera vez.</li><li><strong>TSE:</strong> Creación del tribunal para garantizar elecciones limpias.</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Por qué es importante la abolición del ejército para Costa Rica?</li><li>¿Qué nuevos derechos políticos se otorgaron tras la guerra?</li></ul>"
+          "<p><strong>José Figueres Ferrer</strong>, tras regresar del exilio, organizó el <strong>Ejército de Liberación Nacional</strong>, apoyado también por un grupo internacional llamado <strong>La Legión Caribe</strong>. Su ejército estaba bien preparado estratégicamente y logró vencer al ejército gubernamental. La guerra duró aproximadamente <strong>44 días</strong>.</p>",
+          "<p>Finalizó con el compromiso del presidente <strong>Teodoro Picado</strong> de dejar la presidencia; esta fue entregada provisionalmente a <strong>Santos León Herrera</strong> mientras se firmaba el <strong>Pacto Ulate-Figueres</strong>, que estableció tres puntos fundamentales:</p>",
+          "<ul><li>Costa Rica sería gobernada por una <strong>Junta Fundadora de la Segunda República</strong>, presidida por Figueres, durante <strong>18 meses</strong>, tras los cuales se entregaría el poder al ganador legítimo de las elecciones, Otilio Ulate.</li><li>Una <strong>Asamblea Nacional Constituyente</strong> se encargaría de redactar una nueva Constitución Política.</li><li>Se suspenderían las <strong>actividades electorales durante seis meses</strong>.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué grupo armado organizó Figueres y quién lo apoyó internacionalmente?</li><li>¿Cuánto tiempo duró la Guerra Civil de 1948?</li><li>¿Quién entregó provisionalmente la presidencia mientras se firmaba el pacto?</li><li>¿Cuáles fueron los tres puntos del Pacto Ulate-Figueres?</li></ul>"
         ]
       },
       {
-        "title": "3. Constitución de 1949",
+        "title": "3. Consecuencias de la Guerra Civil",
         "content": [
-          "<p>Es la ley fundamental que nos rige hoy. Estableció el derecho a la vida, la libertad de pensamiento y prohibió el ejército permanentemente.</p>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Qué derechos fundamentales establece la Constitución de 1949?</li><li>¿Qué significa que la vida humana sea inviolable según la ley?</li></ul>"
+          "<p>La Guerra Civil de 1948 transformó profundamente a Costa Rica. Sus consecuencias más importantes son:</p>",
+          "<ul><li><strong>Creación de la Constitución Política de 1949</strong>, que rige al país hasta el día de hoy.</li><li><strong>Abolición del ejército:</strong> En uno de los actos simbólicos más significativos de la historia costarricense, Figueres entregó el cuartel <strong>Bella Vista</strong> al Ministerio de Educación, destinándolo a la cultura (hoy <strong>Museo Nacional</strong>). Costa Rica se convirtió en uno de los pocos países del mundo sin fuerzas armadas permanentes.</li><li><strong>Reconocimiento pleno del voto femenino</strong>, que permitió a las mujeres participar en la vida política del país por primera vez.</li><li><strong>Nacionalización bancaria</strong>, que puso los bancos bajo control estatal para orientar el crédito hacia el desarrollo nacional y evitar la concentración de la riqueza en pocas manos.</li><li><strong>Creación del Tribunal Supremo de Elecciones (TSE)</strong>, institución independiente encargada de organizar, dirigir y garantizar la transparencia de todos los procesos electorales del país.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué hizo Figueres con el cuartel Bella Vista y qué es ese edificio hoy?</li><li>¿Qué derecho se reconoció plenamente a las mujeres tras la guerra?</li><li>¿Para qué se creó el Tribunal Supremo de Elecciones?</li><li>¿Cuál fue el objetivo de la nacionalización bancaria?</li></ul>"
+        ]
+      },
+      {
+        "title": "4. La Constitución de 1949 — Derechos Fundamentales",
+        "content": [
+          "<p>La Constitución Política de Costa Rica fue redactada por la <strong>Asamblea Nacional Constituyente</strong> y es el documento más importante del país; en ella están escritos los derechos que todos los costarricenses tienen por el simple hecho de ser personas. Establece el marco jurídico e institucional del Estado costarricense moderno.</p>",
+          "<h4>Derechos y artículos fundamentales</h4>",
+          "<ul><li><strong>Artículo 20 — Libertad personal:</strong> Toda persona es libre para elegir su vestimenta, religión, trabajo, profesión o estudios.</li><li><strong>Artículo 21 — Derecho a la vida:</strong> 'La vida humana es inviolable.' El Estado tiene la responsabilidad de garantizarlo a través de campañas de vacunación, leyes de tránsito, seguridad ciudadana y mejora de la esperanza de vida de la población.</li><li><strong>Artículo 29 — Libertad de pensamiento:</strong> Garantiza que todos pueden comunicar sus pensamientos de palabra o por escrito sin censura previa, aunque con responsabilidad sobre los abusos que cometan en el ejercicio de ese derecho.</li><li><strong>Artículo 51 — Protección a la familia:</strong> La familia tiene derecho a la protección especial del Estado; especialmente madres, niños, ancianos y personas con discapacidad.</li><li><strong>Artículo 89 — Preservación del arte y la cultura:</strong> El Estado debe proteger las bellezas naturales y el patrimonio histórico y artístico de la Nación.</li></ul>",
+          "<h4>Otros pilares de la Constitución</h4>",
+          "<ul><li><strong>Derecho a la educación, la salud y el trabajo</strong>, garantizados como derechos inalienables de todos los ciudadanos.</li><li><strong>Prohibición permanente del ejército</strong> y establecimiento del <strong>sufragio universal, libre, secreto y obligatorio</strong> como base del sistema democrático.</li><li><strong>Creación de instituciones autónomas</strong> para la prestación de servicios públicos de calidad, independientes del gobierno de turno.</li></ul>",
+          "<h4>Impacto en la vida cotidiana</h4>",
+          "<ul><li><strong>Libertad de expresión:</strong> Permite opinar, comunicarse y participar en debates sin miedo a represalias.</li><li><strong>Acceso a la educación y salud:</strong> Garantiza que todos puedan ir a la escuela y recibir atención médica.</li><li><strong>Protección legal y justicia:</strong> Derecho a ser escuchado en juicios justos y recibir trato igualitario ante la ley.</li><li><strong>Protección a la familia:</strong> Asegura que familias, niños, ancianos y personas vulnerables reciban apoyo del Estado.</li><li><strong>Seguridad y dignidad humana:</strong> Protege la integridad física y moral, evitando abusos.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué artículo protege el derecho a la vida y qué dice exactamente?</li><li>¿Qué garantiza el Artículo 29 sobre la libertad de pensamiento?</li><li>¿Por qué se prohibió el ejército en la Constitución de 1949?</li><li>¿Qué son las instituciones autónomas y por qué son importantes?</li><li>¿Cómo afecta la Constitución la vida diaria de los costarricenses?</li></ul>"
         ]
       }
     ],
