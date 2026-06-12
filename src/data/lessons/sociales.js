@@ -2297,29 +2297,62 @@ export const socialesLessons = [
     "description": "Ideas de libertad y eventos mundiales.",
     "sections": [
       {
-        "title": "Causas Externas",
+        "title": "1. Contexto: La Independencia de Centroamérica",
         "content": [
-          "<strong>Ilustración:</strong> Ideas de libertad de pensadores como <strong>Locke, Montesquieu y Rousseau</strong>.",
-          "<strong>Independencia de EE.UU. (1776):</strong> George Washington y Thomas Jefferson inspiraron a los criollos.",
-          "<strong>Revolución Francesa (1789):</strong> Declaración de los derechos del hombre.",
-          "<strong>Independencia de Haití:</strong> Primera república negra libre.",
-          "<strong>Invasión Napoleónica:</strong> Napoleon encarceló al rey de España, debilitando su control.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Qué ideas promovía el movimiento de la Ilustración?</li><li>¿En qué año se independizaron las Trece Colonias de Inglaterra?</li><li>¿Qué sucedió con el rey de España durante la invasión napoleónica?</li></ul>"
+          "<p>El <strong>15 de septiembre de 1821</strong> fue uno de los días más importantes en la historia de Costa Rica y de toda Centroamérica. Ese día, todos los países de la región declararon su independencia de España. Lo más especial de la independencia costarricense fue que fue un <strong>proceso pacífico</strong>, sin grandes guerras. Los costarricenses se unieron para decidir su futuro por medio del diálogo y la organización.</p>",
+          "<p>La independencia fue el resultado de dos tipos de causas: las <strong>causas externas</strong> (ideas e influencias que llegaron de Europa y América del Norte) y las <strong>causas internas</strong> (descontento y problemas dentro de las colonias hispanoamericanas).</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿En qué año se proclamó la independencia de Centroamérica?</li><li>¿Por qué se dice que la independencia de Costa Rica fue un proceso pacífico?</li></ul>"
         ]
       },
       {
-        "title": "Causas Internas",
+        "title": "2. Causas Externas",
         "content": [
-          "<strong>Descontento Criollo:</strong> No podían ocupar cargos públicos.",
-          "<strong>Monopolio comercial:</strong> Solo se podía comerciar con España.",
-          "<strong>Cortes de Cádiz:</strong> Intento de dar más libertades que luego el Rey eliminó.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Por qué estaban descontentos los criollos con la corona española?</li><li>¿En qué consistía el monopolio comercial?</li></ul>"
+          "<h4>La Ilustración</h4>",
+          "<p>El movimiento de la <strong>Ilustración</strong> surgió en Europa y propuso ideas revolucionarias sobre la libertad, la igualdad y la soberanía popular. Pensadores como <strong>Locke, Montesquieu y Rousseau</strong> argumentaban que el poder debía residir en el pueblo y no en los reyes. Sus escritos circularon en América a través de la imprenta e influenciaron profundamente a los criollos ilustrados.</p>",
+          "<h4>La Independencia de EE.UU. (1776)</h4>",
+          "<p>Las <strong>Trece Colonias</strong> de América del Norte lograron independizarse de Inglaterra en <strong>1776</strong>, lideradas por figuras como <strong>George Washington y Thomas Jefferson</strong>. Demostraron que era posible vencer a una potencia europea y construir una república propia. Este ejemplo inspiró directamente a los criollos hispanoamericanos.</p>",
+          "<h4>La Revolución Francesa (1789)</h4>",
+          "<p>La <strong>Revolución Francesa</strong> de <strong>1789</strong> produjo la <strong>Declaración de los Derechos del Hombre y del Ciudadano</strong>, con el lema <em>'Libertad, Igualdad y Fraternidad'</em>. Este documento proclamaba que todos los seres humanos nacen libres e iguales. Sus ideas se difundieron rápidamente por todo el mundo.</p>",
+          "<h4>La Independencia de Haití</h4>",
+          "<p>Haití fue la <strong>primera república negra libre</strong> de América Latina y el Caribe. Su independencia demostró que incluso los sectores más oprimidos podían liberarse del dominio colonial europeo.</p>",
+          "<h4>La Invasión Napoleónica a España (1808)</h4>",
+          "<p>En <strong>1808</strong>, <strong>Napoleón Bonaparte</strong> invadió España y encarceló al rey <strong>Fernando VII</strong>, debilitando gravemente la autoridad de la Corona sobre sus colonias. Sin un rey legítimo que obedecer, los criollos en América comenzaron a cuestionar abiertamente el dominio español y a plantearse el autogobierno.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué ideas promovía el movimiento de la Ilustración?</li><li>¿En qué año se independizaron las Trece Colonias de Inglaterra?</li><li>¿Qué sucedió con el rey de España durante la invasión napoleónica?</li><li>¿Cuál fue el lema de la Revolución Francesa?</li><li>¿Qué país fue la primera república negra libre en América?</li></ul>"
         ]
       },
       {
-        "title": "Idea principal",
+        "title": "3. Causas Internas",
         "content": [
-          "La independencia de Hispanoamérica fue resultado de ideas de libertad llegadas de Europa y del descontento interno de los criollos por la injusticia del sistema colonial."
+          "<h4>El Descontento de los Criollos</h4>",
+          "<p>Los <strong>criollos</strong> eran hijos de españoles nacidos en América. A pesar de ser la clase más acomodada de las colonias, sufrían <strong>discriminación</strong>: no podían ocupar los cargos públicos más importantes, que estaban reservados para los peninsulares (personas nacidas en España). Este trato injusto los llenó de resentimiento y los llevó a liderar los movimientos de independencia.</p>",
+          "<h4>El Monopolio Comercial</h4>",
+          "<p>España obligaba a sus colonias a comerciar <strong>únicamente con ella</strong> y a través de puertos autorizados. No podían vender sus productos a otros países ni comprar de ellos libremente. Este monopolio comercial perjudicaba la economía colonial y generaba gran descontento entre los comerciantes y productores locales.</p>",
+          "<h4>La Expulsión de los Jesuitas</h4>",
+          "<p>Los jesuitas eran sacerdotes que trabajaban en las colonias y proclamaban ideas de <strong>justicia y libertad</strong>. Al ser expulsados por la Corona española, muchos de sus seguidores se volvieron más críticos del sistema colonial y reforzaron su deseo de independencia.</p>",
+          "<h4>El Papel de los Periódicos y el Clero</h4>",
+          "<p>Los <strong>periódicos</strong> y el <strong>clero local</strong> jugaron un papel crucial al difundir las ideas de libertad e igualdad entre la población. La imprenta permitió que las ideas ilustradas llegaran a más personas y ayudó a crear conciencia sobre la necesidad de cambiar el sistema colonial.</p>",
+          "<h4>Las Cortes de Cádiz</h4>",
+          "<p>Ante la invasión napoleónica, se convocaron las <strong>Cortes de Cádiz</strong> en España, que en <strong>1812</strong> crearon una <strong>Constitución liberal</strong> con mayores libertades. Sin embargo, cuando Fernando VII recuperó el trono, la eliminó y restableció el absolutismo. Esto frustró las esperanzas de reforma y aceleró los movimientos independentistas.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Por qué estaban descontentos los criollos con la corona española?</li><li>¿En qué consistía el monopolio comercial?</li><li>¿Qué papel jugaron los periódicos en la independencia?</li><li>¿Qué grupo social lideró los movimientos de independencia en América?</li></ul>"
+        ]
+      },
+      {
+        "title": "4. El 15 de Setiembre de 1821 y la Llegada de la Noticia a Costa Rica",
+        "content": [
+          "<p>La independencia fue proclamada en Ciudad de Guatemala el <strong>15 de septiembre de 1821</strong>. Sin embargo, Costa Rica era una de las provincias más alejadas y pobres de la Capitanía General de Guatemala, por lo que la noticia tardó en llegar.</p>",
+          "<p>El <strong>13 de octubre de 1821</strong>, casi un mes después, la noticia de la independencia llegó a <strong>Cartago</strong>, que era entonces la capital de Costa Rica. La noticia fue recibida con alegría, pero también con incertidumbre: ¿qué significaba la independencia para una provincia tan pequeña y aislada?</p>",
+          "<p>El <strong>1° de diciembre de 1821</strong> se firmó el <strong>Pacto de Concordia</strong>, considerado la <strong>primera Constitución Política</strong> de Costa Rica. Estableció las bases del nuevo gobierno independiente.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuándo llegó la noticia de la independencia a Cartago?</li><li>¿Qué fue el Pacto de Concordia y cuándo se firmó?</li></ul>"
+        ]
+      },
+      {
+        "title": "5. Consecuencias de la Independencia",
+        "content": [
+          "<p>Tras la independencia, Costa Rica vivió un período de definición política. En <strong>1822</strong>, se unió brevemente al <strong>Imperio Mexicano de Agustín de Iturbide</strong>, y en <strong>1823</strong> decidió unirse a las <strong>Provincias Unidas de Centroamérica</strong>.</p>",
+          "<p>En <strong>abril de 1823</strong>, se produjo la <strong>Batalla de Ochomogo</strong>, un conflicto interno entre las ciudades de <strong>Cartago</strong> (que apoyaba la unión con México) y <strong>San José y Alajuela</strong> (que preferían la independencia plena). Ganó San José, y como consecuencia la <strong>capital fue trasladada de Cartago a San José</strong>.</p>",
+          "<p>En <strong>1824</strong>, Costa Rica adoptó la <strong>Ley Fundamental del Estado Libre de Costa Rica</strong>, que estableció la separación de poderes y el sistema republicano. Ese mismo año se <strong>anexó el Partido de Nicoya</strong> a Costa Rica.</p>",
+          "<h4>Principales consecuencias</h4><ul><li>Costa Rica se convirtió en un Estado libre con gobierno y Constitución propios.</li><li>Se nombraron sus propias autoridades de gobierno y ejército.</li><li>Se creó el Pacto de Concordia (primera Constitución Política).</li><li>La capital se trasladó a San José tras la Batalla de Ochomogo.</li><li>Se anexó el Partido de Nicoya en 1824.</li><li>Se iniciaron relaciones comerciales con otros países.</li><li>Se fortaleció la identidad nacional y surgió la necesidad de crear símbolos patrios.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué fue la Batalla de Ochomogo y cuál fue su resultado?</li><li>¿A dónde se trasladó la capital tras la batalla?</li><li>¿Qué territorio se anexó a Costa Rica en 1824?</li><li>¿Qué estableció la Ley Fundamental del Estado Libre de Costa Rica?</li><li>Mencione tres consecuencias de la independencia para Costa Rica.</li></ul>"
         ]
       }
     ],
