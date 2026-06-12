@@ -1442,32 +1442,51 @@ export const socialesLessons = [
     "description": "Los viajes de Colón y la conquista.",
     "sections": [
       {
-        "title": "1. La Llegada de Colón (1502)",
+        "title": "1. Los Cuatro Viajes de Cristóbal Colón",
         "content": [
-          "<p>Imagínate que un día llegan personas de otro continente a tu país, con armas que nunca habías visto, y te dicen que ahora ellos mandan. Eso fue exactamente lo que les pasó a los pueblos indígenas de Costa Rica cuando llegaron los españoles. En <strong>1502</strong>, <strong>Cristóbal Colón</strong> llegó por primera vez a las costas costarricenses, marcando el inicio de un proceso que duraría décadas y cambiaría para siempre la vida de los pueblos originarios.</p>",
-          "<p>El período de la <strong>Conquista española en Costa Rica</strong> abarcó de <strong>1502 a 1575</strong>. Fue un momento muy difícil para los pueblos indígenas, que perdieron su libertad, sus tierras y muchas personas de su comunidad.</p>",
-          "<h4>Fechas clave</h4><ul><li><strong>1502:</strong> Cristóbal Colón llega por primera vez a las costas costarricenses.</li><li><strong>1502–1575:</strong> Período de la Conquista española en Costa Rica.</li></ul>"
+          "<p>Cristóbal Colón realizó cuatro viajes al continente americano, cada uno con objetivos y descubrimientos distintos:</p>",
+          "<ul><li><strong>1er viaje (1492):</strong> Descubrió Guanahani (San Salvador) y La Española. Fue el primer contacto europeo con América.</li><li><strong>2do viaje (1493):</strong> Llegó con 17 barcos y descubrió Dominica y Puerto Rico.</li><li><strong>3er viaje (1498):</strong> Llegó a Venezuela, siendo la primera vez que pisó tierra continental americana.</li><li><strong>4to viaje (1502):</strong> Llegó a las costas de Costa Rica. Murió en 1506 sin saber que había descubierto un nuevo continente.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué tierras descubrió Colón en su primer viaje en 1492?</li><li>¿En cuál de sus viajes llegó Colón por primera vez a tierra continental (Venezuela)?</li><li>¿Cuántos barcos llevó Colón en su segundo viaje?</li></ul>"
         ]
       },
       {
-        "title": "2. Causas de la Conquista",
+        "title": "2. La Llegada de Colón a Costa Rica (1502)",
+        "content": [
+          "<p>Imagínate que un día llegan personas de otro continente a tu país, con armas que nunca habías visto, y te dicen que ahora ellos mandan. Eso fue exactamente lo que les pasó a los pueblos indígenas de Costa Rica cuando llegaron los españoles. El <strong>18 de septiembre de 1502</strong>, <strong>Cristóbal Colón</strong> llegó a <strong>Cariay</strong> (hoy Limón) en su cuarto viaje, marcando el inicio de un proceso que duraría décadas y cambiaría para siempre la vida de los pueblos originarios.</p>",
+          "<p>Los indígenas llamaban <strong>Quiribrí</strong> a la isla frente a Cariay. Para ellos, la llegada de los españoles fue algo sobrenatural: su vestimenta, sus animales (especialmente el caballo) y su idioma eran completamente diferentes. Colón llamó a estas tierras <strong>'Costa Rica'</strong> por los adornos de oro que vio en los indígenas.</p>",
+          "<p>El período de la <strong>Conquista española en Costa Rica</strong> abarcó de <strong>1502 a 1575</strong>. Fue un momento muy difícil para los pueblos indígenas, que perdieron su libertad, sus tierras y muchas personas de su comunidad.</p>",
+          "<h4>Fechas clave</h4><ul><li><strong>18 de septiembre de 1502:</strong> Cristóbal Colón llega a Cariay (Limón).</li><li><strong>1502–1575:</strong> Período de la Conquista española en Costa Rica.</li><li><strong>1506:</strong> Muere Cristóbal Colón sin saber que había descubierto un nuevo continente.</li></ul>"
+        ]
+      },
+      {
+        "title": "3. Causas de la Conquista",
         "content": [
           "<p>Los españoles llegaron a América impulsados por varias razones que los motivaban a explorar y dominar nuevos territorios:</p>",
           "<ul><li>España necesitaba encontrar nuevos mercados para vender sus productos.</li><li>Los avances tecnológicos en barcos y armas les permitieron viajar lejos y conquistar.</li><li>Buscaban <strong>oro</strong> y otros <strong>metales preciosos</strong>.</li><li>Querían convertir a los pueblos indígenas a la <strong>religión católica</strong>.</li><li>Necesitaban <strong>mano de obra barata</strong> para trabajar en sus territorios.</li></ul>"
         ]
       },
       {
-        "title": "3. Resistencia Indígena: ¿Por Qué Fue Más Difícil en Costa Rica?",
+        "title": "4. La Conquista del Territorio",
+        "content": [
+          "<p>La conquista de Costa Rica se desarrolló en dos fases principales:</p>",
+          "<p><strong>Primera fase (1502–1543):</strong> Se limitó a la exploración de las costas. En <strong>1522</strong>, <strong>Gil González Dávila</strong> recorrió la costa pacífica. No se fundaron poblaciones estables en el interior durante esta fase.</p>",
+          "<p><strong>Segunda fase (1560–1575):</strong> Se penetró al interior y se fundaron poblaciones permanentes:</p>",
+          "<ul><li><strong>Juan de Cavallón</strong> introdujo el ganado vacuno y los caballos, transformando la economía.</li><li><strong>Juan Vásquez de Coronado</strong> fundó la ciudad de <strong>Cartago en 1563</strong> y es considerado el verdadero conquistador de Costa Rica.</li><li><strong>Perafán de Rivera</strong> impuso el sistema de la <strong>encomienda</strong>: los indígenas eran entregados a un español (encomendero) para trabajar a cambio de evangelización, aunque en la práctica era una forma de trabajo forzado.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál es la diferencia entre la primera y la segunda fase de la conquista?</li><li>¿Quién fundó la ciudad de Cartago y es considerado el verdadero conquistador?</li><li>¿Qué introdujo Juan de Cavallón en Costa Rica?</li><li>¿En qué consistía el sistema de encomienda?</li></ul>"
+        ]
+      },
+      {
+        "title": "5. Resistencia Indígena: ¿Por Qué Fue Más Difícil en Costa Rica?",
         "content": [
           "<p>La conquista de Costa Rica fue más lenta y difícil que en otros territorios americanos. Los conquistadores encontraron varios obstáculos que frenaron su avance:</p>",
           "<ul><li>Los <strong>indígenas resistieron con valentía</strong>.</li><li>El <strong>clima tropical húmedo</strong> dificultaba el avance español.</li><li>El <strong>terreno montañoso</strong> hacía muy difícil moverse.</li><li><strong>No había grandes cantidades de oro</strong> ni metales preciosos que justificaran el esfuerzo de la conquista.</li></ul>"
         ]
       },
       {
-        "title": "4. Consecuencias de la Conquista",
+        "title": "6. Consecuencias de la Conquista",
         "content": [
           "<p>La llegada de los españoles transformó profundamente la vida de los pueblos indígenas y dio origen a una nueva sociedad. Las principales consecuencias fueron:</p>",
-          "<ul><li>Disminuyó mucho la <strong>población indígena</strong> por guerras y enfermedades traídas por los europeos.</li><li>Se impuso la <strong>cultura europea</strong> sobre las culturas indígenas.</li><li>Se introdujo el <strong>idioma español</strong> y la <strong>religión católica</strong>.</li><li>Se establecieron nuevas <strong>relaciones comerciales</strong> entre pueblos y países.</li><li>Se introdujeron nuevos cultivos: <strong>trigo, arroz y azúcar</strong>.</li><li>Se trajeron <strong>animales de granja</strong>: caballos, vacas, cerdos y cabras.</li><li>Se produjo el <strong>mestizaje</strong> y surgieron nuevas etnias con costumbres propias.</li></ul>",
+          "<ul><li>Disminuyó mucho la <strong>población indígena</strong> por guerras y enfermedades traídas por los europeos (como la gripe y la viruela).</li><li>Se impuso la <strong>cultura europea</strong> sobre las culturas indígenas.</li><li>Se introdujo el <strong>idioma español</strong> y la <strong>religión católica</strong> (cristianismo).</li><li>Se establecieron nuevas <strong>relaciones comerciales</strong> entre pueblos y países.</li><li>Se introdujeron nuevos cultivos: <strong>trigo, arroz y azúcar</strong>.</li><li>Se trajeron <strong>animales de granja</strong>: caballos, vacas, cerdos y cabras.</li><li>Se produjo el <strong>mestizaje</strong> y surgieron nuevas etnias con costumbres propias.</li><li>Se estableció el sistema de la <strong>encomienda</strong> como forma de trabajo forzado indígena.</li></ul>",
           "<h4>Preguntas de repaso</h4><ul><li>¿En qué año llegó Cristóbal Colón por primera vez a las costas costarricenses?</li><li>¿Cuáles fueron las principales causas que impulsaron a los españoles a conquistar nuevos territorios?</li><li>¿Por qué la conquista fue más lenta y difícil en Costa Rica que en otros lugares?</li><li>Menciona tres consecuencias de la Conquista española para los pueblos indígenas de Costa Rica.</li><li>¿Qué es el mestizaje y cómo surgió como consecuencia de la Conquista?</li></ul>"
         ]
       }
