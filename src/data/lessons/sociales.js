@@ -3132,26 +3132,44 @@ export const socialesLessons = [
     "description": "Unión voluntaria de Guanacaste a Costa Rica.",
     "sections": [
       {
-        "title": "El proceso",
+        "title": "Contexto del Partido de Nicoya",
         "content": [
-          "El Jefe de Estado <strong>Juan Mora Fernández</strong> invitó a Nicoya a unirse. El <strong>25 de julio de 1824</strong>, Nicoya, Santa Cruz y Guanacaste (Liberia) decidieron unirse.",
-          "El alcalde <strong>Cupertino Briceño</strong> organizó el cabildo bajo el lema: 'De la Patria por nuestra voluntad'.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿En qué fecha se celebra la Anexión del Partido de Nicoya?</li><li>¿Quién era el Jefe de Estado de Costa Rica que invitó a Nicoya a unirse?</li><li>¿Qué significa la frase 'De la Patria por nuestra voluntad'?</li></ul>"
+          "Antes de 1824, el <strong>Partido de Nicoya</strong> pertenecía a <strong>Nicaragua</strong> (bajo la Intendencia de León). Su población era mayormente indígena <strong>Chorotega</strong>, mestiza y afrodescendiente, con una cultura muy rica en tradiciones, música y gastronomía.",
+          "El Partido de Nicoya estaba compuesto por tres pueblos principales: <strong>Nicoya</strong>, <strong>Santa Cruz</strong> y <strong>Guanacaste</strong> (hoy Liberia). Los habitantes de esta región compartían lazos comerciales con Costa Rica a través del Golfo de Nicoya, y buscaban estabilidad política para su comunidad."
         ]
       },
       {
-        "title": "Aportes de Guanacaste",
+        "title": "El 25 de julio de 1824",
         "content": [
-          "<strong>Cultura:</strong> La marimba, el quijongo, las bombas y retahílas.",
-          "<strong>Comida:</strong> Tortillas, tamales, pozol.",
-          "<strong>Economía:</strong> Tierras para ganadería y hermosas playas para el turismo.",
-          "<h4>Preguntas de repaso</h4><ul><li>Mencione tres aportes culturales de Guanacaste a Costa Rica.</li><li>¿Qué beneficios económicos obtuvo el país con esta anexión?</li></ul>"
+          "El Jefe de Estado de Costa Rica, <strong>Juan Mora Fernández</strong>, invitó formalmente al Partido de Nicoya a unirse al país. El <strong>25 de julio de 1824</strong>, los habitantes de Nicoya, Santa Cruz y Guanacaste (Liberia) tomaron la decisión de manera voluntaria.",
+          "El alcalde <strong>Cupertino Briceño</strong> organizó el cabildo donde se firmó el acta de anexión. La reunión se llevó a cabo en <strong>Nicoya</strong>, y se convocó al pueblo mediante bando (pregón) para que participara en tan trascendental decisión."
         ]
       },
       {
-        "title": "Idea principal",
+        "title": "\"De la Patria por nuestra voluntad\"",
         "content": [
-          "La anexión del Partido de Nicoya fue una decisión libre de sus habitantes que enriquecró enormemente a Costa Rica en territorio, cultura y economía."
+          "El lema <strong>'De la Patria por nuestra voluntad'</strong> resume el carácter pacífico y democrático de la anexión: no hubo guerra, ni imposición, ni armas de por medio. Fue una decisión libre del pueblo nicoyanno.",
+          "Esta frase es un orgullo nacional porque demuestra que el territorio de Guanacaste se integró a Costa Rica por la voluntad soberana de sus habitantes, evitando así conflictos armados con Nicaragua y sentando un ejemplo de paz y democracia en Centroamérica."
+        ]
+      },
+      {
+        "title": "Los partidos de Nicoya, Santa Cruz y Guanacaste",
+        "content": [
+          "Los tres pueblos que conformaban el Partido de Nicoya —<strong>Nicoya</strong>, <strong>Santa Cruz</strong> y <strong>Guanacaste</strong> (hoy Liberia)— votaron en favor de la unión a Costa Rica. Hoy, Liberia es la capital de la provincia de Guanacaste.",
+          "Cada pueblo tenía sus propias tradiciones y costumbres, pero compartían la identidad guanacasteca: el amor por la tierra, la ganadería, la música y las fiestas populares que hoy siguen siendo emblemas de la provincia."
+        ]
+      },
+      {
+        "title": "Consecuencias e importancia de la Anexión",
+        "content": [
+          "<strong>Territorio:</strong> La anexión aumentó considerablemente el tamaño del país, incorporando vastas tierras fértiles aptas para la agricultura y la ganadería.",
+          "<strong>Población:</strong> Incrementó la cantidad de habitantes de Costa Rica, enriqueciendo la diversidad cultural de la nación.",
+          "<strong>Folclor musical:</strong> Costa Rica recibió canciones tradicionales como <em>'El Torito'</em>, <em>'Pasión'</em> y <em>'Pampa'</em>, e instrumentos autóctonos como el <strong>quijongo</strong>, tambores, ocarinas y la <strong>marimba</strong>. Las bombas y retahílas también son parte de esta herencia.",
+          "<strong>Agricultura:</strong> La región aportó tierras fértiles para cultivar arroz, caña de azúcar y sorgo, además de ser un territorio ideal para la <strong>ganadería</strong> (haciendas de ganado vacuno).",
+          "<strong>Gastronomía:</strong> La cocina a base de maíz se integró a la cultura nacional: <strong>tortillas</strong>, <strong>tamales</strong>, <strong>bizcochos</strong>, chicha y choro son herencia guanacasteca.",
+          "<strong>Costumbres y tradiciones:</strong> La monta de toros, el gipipiá, las leyendas, el Punto Guanacasteco (baile donde el hombre imita al gallo) y el grito tradicional '¡Uyuyuy bajura!' son parte viva de la identidad nacional.",
+          "<strong>Turismo:</strong> Guanacaste ofrece hermosos escenarios naturales — playas, volcanes, áreas silvestres — que atraen visitantes de todo el mundo, constituyendo un pilar fundamental de la economía turística del país.",
+          "<h4>Preguntas de repaso</h4><ul><li>¿En qué fecha y año se celebra la Anexión del Partido de Nicoya?</li><li>¿Quién era el Jefe de Estado de Costa Rica que invitó a Nicoya a unirse?</li><li>¿Quién era el alcalde de Nicoya que organizó el cabildo?</li><li>¿Cuáles eran los tres pueblos del Partido de Nicoya?</li><li>¿Qué significa el lema 'De la Patria por nuestra voluntad'?</li><li>Mencione tres aportes culturales de Guanacaste a Costa Rica.</li><li>¿Qué alimentos a base de maíz nos heredó Guanacaste?</li><li>¿Qué beneficios económicos trajo la anexión a Costa Rica?</li></ul>"
         ]
       }
     ],
