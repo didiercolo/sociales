@@ -4514,23 +4514,33 @@ export const socialesLessons = [
     "description": "La creación de la CCSS, UCR y garantías sociales.",
     "sections": [
       {
-        "title": "1. Crisis del Modelo Liberal",
+        "title": "1. Contexto: La Caída del Estado Liberal",
         "content": [
-          "<p>El modelo liberal dejó problemas: pobreza, desnutrición y falta de derechos laborales. Los trabajadores no tenían salario mínimo ni seguro médico.</p>",
+          "<p>El modelo liberal, a pesar de sus logros en educación e infraestructura, dejó importantes problemas sociales sin resolver. La <strong>mortalidad infantil</strong> era muy elevada debido a la desnutrición; los trabajadores no recibían un <strong>salario mínimo</strong> digno y las jornadas laborales eran excesivamente largas; la recolección del café era prácticamente la única actividad económica disponible para los campesinos y era muy mal pagada.</p>",
+          "<p>El <strong>Partido Comunista</strong>, liderado por <strong>Manuel Mora Valverde</strong>, ganaba influencia al denunciar estas injusticias y exigir cambios estructurales.</p>",
           "<h4>Preguntas de repaso</h4><ul><li>¿Qué problemas sociales dejó el modelo liberal sin resolver?</li><li>¿Por qué era necesaria una reforma en los derechos de los trabajadores?</li></ul>"
         ]
       },
       {
-        "title": "2. Las Grandes Reformas",
+        "title": "2. La Alianza Histórica de Calderón Guardia",
         "content": [
-          "<p>El presidente <strong>Rafael Ángel Calderón Guardia</strong> impulsó cambios profundos con una alianza histórica entre el Gobierno, la Iglesia Católica y el Partido Comunista.</p>",
-          "<ul>",
-          "<li><strong>UCR (1941):</strong> Creación de la primera universidad pública moderna.</li>",
-          "<li><strong>CCSS:</strong> Seguro social para salud y pensiones.</li>",
-          "<li><strong>Garantías Sociales:</strong> Derechos incluidos en la Constitución (vacaciones, huelga, 8 horas).</li>",
-          "<li><strong>Código de Trabajo (1943):</strong> Leyes que protegen al trabajador frente al patrono.</li>",
-          "</ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>Mencione tres de las reformas sociales más importantes de esta década.</li><li>¿Qué actores formaron la 'Alianza Histórica' para estas reformas?</li></ul>"
+          "<p>El presidente <strong>Rafael Ángel Calderón Guardia</strong> (1940–1944) impulsó las principales reformas sociales que transformaron estructuralmente a Costa Rica. Para llevarlas a cabo formó una <strong>alianza histórica</strong> entre su gobierno, la <strong>Iglesia Católica</strong> (representada por Monseñor <strong>Víctor Manuel Sanabria</strong>) y el <strong>Partido Comunista</strong> (liderado por Manuel Mora Valverde).</p>",
+          "<p>Aunque políticamente contrarios en muchos aspectos, los tres actores coincidían en la necesidad urgente de proteger a los sectores más vulnerables de la sociedad costarricense. Gracias a estas reformas, hoy los costarricenses tienen derechos como la atención médica gratuita, vacaciones pagadas y una jornada laboral justa.</p>",
+          "<h4>Fechas clave</h4><ul><li><strong>1941:</strong> Se crean la <strong>CCSS</strong> y la <strong>Universidad de Costa Rica (UCR)</strong>.</li><li><strong>1942:</strong> Las Garantías Sociales se integran en la <strong>Constitución Política</strong>.</li><li><strong>1943:</strong> Se crea el <strong>Código de Trabajo</strong>.</li><li><strong>1949:</strong> Las Garantías Sociales quedan garantizadas en la nueva <strong>Constitución Política</strong>.</li></ul>"
+        ]
+      },
+      {
+        "title": "3. Las Reformas Sociales más Importantes",
+        "content": [
+          "<h4>La Universidad de Costa Rica (UCR, 1941)</h4>",
+          "<p>Al cerrarse la Universidad de Santo Tomás durante la era liberal, Costa Rica quedó sin educación superior pública por décadas. El gobierno calderonista creó la <strong>primera universidad pública del país</strong>, con el objetivo de formar los profesionales que la nación necesitaba para desarrollarse: médicos, abogados, ingenieros, docentes, entre otros. La UCR abrió las puertas a miles de costarricenses de todas las clases sociales. Con el tiempo se crearon otras universidades públicas (como la UNA, el ITCR y la UNED) y múltiples universidades privadas que han ampliado el acceso a la educación superior.</p>",
+          "<h4>La Caja Costarricense del Seguro Social (CCSS, 1941)</h4>",
+          "<p>Antes de la CCSS, los trabajadores y sus familias estaban completamente desprotegidos cuando se enfermaban. La institución fue creada en <strong>1941</strong>, primero para empleados públicos y luego también para trabajadores del sector privado y sus familias. Brinda <strong>seguridad social</strong> mediante seguros de salud, maternidad, invalidez y pensiones. Su financiamiento se basa en contribuciones <strong>tripartitas</strong> de los trabajadores, los patronos y el Estado. Gracias a la CCSS se crearon <strong>clínicas y hospitales públicos</strong> en todo el país, lo que permitió aumentar la <strong>esperanza de vida</strong>, reducir el contagio de enfermedades y <strong>disminuir la mortalidad infantil</strong>. Hoy es considerada una de las instituciones más valiosas del país por garantizar atención médica universal.</p>",
+          "<h4>Las Garantías Sociales (1942)</h4>",
+          "<p>Conjunto de <strong>derechos laborales</strong> incorporados directamente a la Constitución Política en <strong>1942</strong>, que protegen a los trabajadores: derecho a huelga, jornada laboral máxima de <strong>ocho horas</strong>, derecho a vacaciones pagadas, protección contra el despido injustificado, salario mínimo garantizado, derecho a organizarse en sindicatos y negociación colectiva, <strong>prohibición del trabajo infantil</strong> y derecho a la seguridad social (atención médica, pensiones, licencias por maternidad y enfermedad). Estas garantías quedaron reforzadas en la nueva Constitución Política de <strong>1949</strong>, donde forman un pilar del Estado Social de Derecho costarricense.</p>",
+          "<h4>El Código de Trabajo (1943)</h4>",
+          "<p>Normativa legal integral aprobada en <strong>1943</strong> que regula todas las relaciones entre patronos y trabajadores, estableciendo derechos y obligaciones claras de ambas partes. Entre sus disposiciones destacan: salario mínimo revisado periódicamente, <strong>jornada laboral de 48 horas semanales</strong> (8 horas diarias con un día de descanso), derecho a condiciones de <strong>higiene y seguridad</strong> en el trabajo, derecho a <strong>formar sindicatos</strong>, derecho a vacaciones pagadas y <strong>prohibición del trabajo infantil</strong>. Permitió que los trabajadores tuvieran un marco legal que los protegiera ante abusos patronales.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>Mencione tres de las reformas sociales más importantes de esta década.</li><li>¿Qué actores formaron la 'Alianza Histórica' para estas reformas?</li><li>¿Cómo se financia la CCSS?</li><li>¿En qué año se aprobó el Código de Trabajo?</li><li>¿Cuándo se integraron las Garantías Sociales en la Constitución Política?</li></ul>"
         ]
       }
     ],
