@@ -3804,7 +3804,7 @@ export const socialesLessons = [
           "<p>La gran prueba de esa independencia llegó durante los años <strong>1856 y 1857</strong>, cuando se desarrolló la <strong>Campaña Nacional</strong>, considerada la consolidación definitiva de la soberanía costarricense frente a la amenaza de los filibusteros liderados por el estadounidense <strong>William Walker</strong>. Esta campaña es uno de los momentos más heroicos de la historia de Costa Rica: la población entera — ricos y pobres, del campo y de la ciudad — se unió para defender su país y su libertad.</p>",
           "<h4>Los protagonistas principales</h4>",
           "<p><strong>Juan Rafael Mora Porras</strong> nació en San José en 1814. Aunque no pudo estudiar en una escuela formal, aprendió mucho leyendo por su cuenta. Trabajó como comerciante de café, caña de azúcar y bienes raíces. Llegó a ser presidente de Costa Rica tres veces, gobernando de 1849 a 1859. Durante sus gobiernos hizo cosas muy importantes: promovió el cultivo de café, inauguró el alumbrado público en San José, se construyó la Fábrica Nacional de Licores, se compuso la música del himno nacional y se firmó el Tratado Cañas-Jerez. Lo más importante fue que organizó y dirigió la Campaña Nacional contra los filibusteros.</p>",
-          "<p><strong>William Walker</strong> nació en Nashville, Tennessee, Estados Unidos, en 1824. Estudió medicina, derecho y periodismo, pero era ante todo un aventurero con ambiciones militares. Antes de llegar a Nicaragua, ya había invadido territorios mexicanos de Baja California y Sonora y se había declarado presidente de esa república, hasta que lo obligaron a rendirse. Después llegó a Nicaragua en 1855 y trató de conquistar toda Centroamérica."
+          "<p><strong>William Walker</strong> nació en Nashville, Tennessee, Estados Unidos, en 1824. Estudió medicina, derecho y periodismo, pero era ante todo un aventurero con ambiciones militares. Antes de llegar a Nicaragua, ya había invadido territorios mexicanos de Baja California y Sonora y se había declarado presidente de esa república, hasta que lo obligaron a rendirse. Después llegó a Nicaragua en 1855 y trató de conquistar toda Centroamérica.</p>"
         ]
       },
       {
@@ -3829,7 +3829,7 @@ export const socialesLessons = [
         "content": [
           "<p>El ejército costarricense siguió dos rutas — llamadas la <strong>Ruta de los Héroes</strong> — para llegar a Nicaragua: una <strong>por mar</strong> desde Puntarenas hacia el Pacífico, y otra <strong>al norte</strong> usando los ríos Sarapiquí y San Carlos para cubrir la Vía del Tránsito.</p>",
           "<h4>Batalla de Santa Rosa — 20 de marzo de 1856</h4>",
-          "<p>La primera victoria costarricense se libró en la <strong>Casona de Santa Rosa, Guanacaste</strong>. El combate duró apenas <strong>14 minutos</strong>: tras una carga de bayonetas, los filibusteros huyeron derrotados. Los comandantes costarricenses fueron el <strong>General José Joaquín Mora</strong> (Comandante en Jefe, con 200 soldados de reserva), el <strong>Coronel Lorenzo Salazar</strong> (280 soldados en dos columnas) y el <strong>Capitán José María Gutiérrez</strong> (200 soldados por detrás de la Casona). El enemigo, al mando del <strong>Coronel Schlessinger</strong> con 280 soldados, huyó en su mayoría al iniciar la batalla. Esta victoria motivó a los costarricenses a perseguir a los filibusteros hasta Nicaragua.</p>",
+          "<p>La primera victoria costarricense se libró en la <strong>Casona de Santa Rosa, Guanacaste</strong>. El combate duró apenas <strong>entre 15 y 20 minutos</strong>: tras una carga de bayonetas, los filibusteros huyeron derrotados. Los comandantes costarricenses fueron el <strong>General José Joaquín Mora</strong> (Comandante en Jefe, con 200 soldados de reserva), el <strong>Coronel Lorenzo Salazar</strong> (280 soldados en dos columnas) y el <strong>Capitán José María Gutiérrez</strong> (200 soldados por detrás de la Casona). El enemigo, al mando del <strong>Coronel Schlessinger</strong> con 280 soldados, huyó en su mayoría al iniciar la batalla. Esta victoria motivó a los costarricenses a perseguir a los filibusteros hasta Nicaragua.</p>",
           "<h4>Batalla de Sardinal — 10 de abril de 1856</h4>",
           "<p>Tras la derrota en Santa Rosa, parte de los filibusteros se desplazó hacia <strong>Castillo Viejo</strong>, en la ribera del río San Juan. El <strong>7 de abril</strong>, una columna de <strong>300 hombres</strong> cruzó el río San Juan y ocupó San Juan del Sur y La Virgen, asegurando una posición estratégica de pinzas. El <strong>10 de abril</strong>, en el punto donde se unen el río Sarapiquí y el río San Juan, los costarricenses obligaron a los filibusteros a retroceder hasta La Trinidad. La batalla duró entre <strong>30 y 40 minutos</strong>; los comandantes costarricenses fueron el <strong>General de Brigada Florentino</strong> y el <strong>Teniente Coronel Rafael Orozco</strong>, frente al <strong>Capitán John Baldwin</strong> de los filibusteros. Costa Rica aseguró así el control estratégico del río San Juan e impidió que el enemigo reingresara por esa ruta.</p>",
           "<h4>Batalla de Rivas — 11 de abril de 1856</h4>",
@@ -3846,7 +3846,7 @@ export const socialesLessons = [
         "title": "4. Fase Intermedia — El Cólera",
         "content": [
           "<p>A finales de abril de 1856, al regresar a Costa Rica, los soldados traían consigo una enfermedad mortal: una devastadora <strong>epidemia de cólera</strong>. El agua en las zonas de combate había sido contaminada con fecales y cadáveres depositados por Walker. Como en aquella época aún no se conocían las bacterias, los soldados enfermos propagaron la enfermedad por todo el territorio nacional — especialmente por <strong>Liberia, Puntarenas y el Valle Central</strong> — a través de las ciudades y poblados por donde pasó el ejército de regreso.</p>",
-          "<p>El <strong>cólera</strong> se caracteriza por provocar diarrea severa, vómito, calambres musculares y cambios bruscos de temperatura; se transmite a través del agua contaminada por una bacteria. La epidemia duró de <strong>mayo a agosto de 1856</strong> y causó la muerte de entre <strong>8,500 y 9,000 personas</strong> — aproximadamente el <strong>8.5% de la población total</strong> del país en ese entonces. Esta epidemia fue, en muchos sentidos, más letal que las batallas mismas y obligó a una pausa en el conflicto.</p>",
+          "<p>El <strong>cólera</strong> se caracteriza por provocar diarrea severa, vómito, calambres musculares y cambios bruscos de temperatura; se transmite a través del agua contaminada por una bacteria. La epidemia duró de <strong>mayo a agosto de 1856</strong> y causó la muerte de cerca del <strong>10% de la población</strong> del país (entre 8,500 y 9,000 personas). Esta epidemia fue, en muchos sentidos, más letal que las batallas mismas y obligó a una pausa en el conflicto.</p>",
           "<p>Entre las víctimas notables estuvo el propio <strong>presidente en ejercicio Francisco María Oreamuno</strong>, quien falleció a causa del cólera. Sin embargo, Walker comprendió que no sería sencillo conquistar a Costa Rica.</p>",
           "<p>Mientras Costa Rica se recuperaba, <strong>Walker se declaró presidente de Nicaragua</strong>, lo que provocó que los liberales y los conservadores nicaragüenses rompieran su alianza con él y le declararan la guerra. Esto llevó a que <strong>Guatemala, Honduras, El Salvador</strong> y opositores nicaragüenses continuaran la guerra contra los filibusteros y se unieran a la causa de Costa Rica, fortaleciendo la coalición anti-filibustera."
         ]
@@ -3929,7 +3929,7 @@ export const socialesLessons = [
         "options": [
           "5 horas",
           "2 días",
-          "14 minutos",
+          "entre 15 y 20 minutos",
           "30 minutos"
         ],
         "correct": 2
@@ -3965,7 +3965,7 @@ export const socialesLessons = [
         "correct": 1
       },
       {
-        "question": "¿Qué enfermedad causó la muerte de aproximadamente el 8.5% de la población costarricense en 1856?",
+        "question": "¿Qué enfermedad causó la muerte de aproximadamente el 10% de la población costarricense en 1856?",
         "options": [
           "Fiebre amarilla",
           "Cólera",
