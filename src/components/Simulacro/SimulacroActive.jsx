@@ -68,9 +68,9 @@ const SimulacroActive = ({ questions, onFinish }) => {
       </div>
 
       <div style={{
-        background: 'white', border: '3px solid var(--bg-dark)',
+        background: 'white', border: 'none',
         borderRadius: 'var(--radius-md)', padding: '1.5rem',
-        boxShadow: '4px 4px 0 var(--bg-dark)', marginBottom: '1.5rem'
+        boxShadow: '0 4px 16px rgba(99,102,241,0.10)', marginBottom: '1.5rem'
       }}>
         <p style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--bg-dark)', margin: 0 }}>
           {question.question}
@@ -86,9 +86,9 @@ const SimulacroActive = ({ questions, onFinish }) => {
               padding: '0.875rem 1.25rem', textAlign: 'left',
               background: selected === i ? 'var(--primary)' : 'white',
               color: selected === i ? 'white' : 'var(--bg-dark)',
-              border: `3px solid ${selected === i ? 'var(--primary)' : 'var(--bg-dark)'}`,
+              border: `1px solid ${selected === i ? 'var(--primary)' : 'var(--border)'}`,
               borderRadius: 'var(--radius-sm)', fontWeight: 700, fontSize: '1rem',
-              cursor: 'pointer', boxShadow: '2px 2px 0 var(--bg-dark)'
+              cursor: 'pointer', boxShadow: selected === i ? '0 2px 8px rgba(79,70,229,0.20)' : '0 1px 3px rgba(0,0,0,0.06)'
             }}
           >
             <span style={{ marginRight: '0.75rem', fontWeight: 800 }}>{String.fromCharCode(65 + i)}.</span>
@@ -103,10 +103,10 @@ const SimulacroActive = ({ questions, onFinish }) => {
         style={{
           width: '100%', padding: '0.875rem',
           background: selected === undefined ? '#CBD5E1' : 'var(--cta)',
-          color: 'white', border: '3px solid var(--bg-dark)',
+          color: 'white', border: 'none',
           borderRadius: 'var(--radius-full)', fontSize: '1.1rem', fontWeight: 800,
           cursor: selected === undefined ? 'not-allowed' : 'pointer',
-          boxShadow: selected === undefined ? 'none' : '3px 3px 0 var(--bg-dark)'
+          boxShadow: selected === undefined ? 'none' : '0 2px 8px rgba(99,102,241,0.25)'
         }}
       >
         {isLast ? 'Finalizar' : 'Siguiente →'}

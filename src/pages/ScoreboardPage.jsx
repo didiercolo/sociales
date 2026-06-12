@@ -21,17 +21,16 @@ const UserRow = ({ rank, user, highlight }) => {
       display: 'flex', alignItems: 'center', padding: '1rem 1.25rem',
       borderRadius: 'var(--radius-sm)',
       background: highlight ? 'rgba(79,70,229,0.06)' : '#F8FAFC',
-      border: '3px solid var(--bg-dark)',
-      boxShadow: highlight ? '3px 3px 0 var(--primary)' : '3px 3px 0 var(--bg-dark)',
+      border: 'none',
+      boxShadow: highlight ? '0 2px 12px rgba(79,70,229,0.20)' : '0 1px 4px rgba(0,0,0,0.06)',
       marginBottom: '0.75rem'
     }}>
       <div style={{
         width: 40, height: 40, borderRadius: '50%',
         background: highlight ? 'var(--accent)' : '#CBD5E1',
-        border: '2px solid var(--bg-dark)', color: 'var(--bg-dark)',
+        color: 'var(--bg-dark)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontWeight: 900, fontSize: '1.1rem', marginRight: '1rem',
-        boxShadow: '1px 1px 0 var(--bg-dark)'
+        fontWeight: 900, fontSize: '1.1rem', marginRight: '1rem'
       }}>
         {rank}
       </div>
@@ -44,9 +43,9 @@ const UserRow = ({ rank, user, highlight }) => {
         </span>
       </div>
       <div style={{
-        background: 'var(--cta)', border: '2px solid var(--bg-dark)', color: 'white',
+        background: 'var(--cta)', color: 'white',
         padding: '0.4rem 1rem', borderRadius: 'var(--radius-full)',
-        fontWeight: 800, fontSize: '1rem', boxShadow: '2px 2px 0 var(--bg-dark)'
+        fontWeight: 800, fontSize: '1rem'
       }}>
         {user.score} pts
       </div>

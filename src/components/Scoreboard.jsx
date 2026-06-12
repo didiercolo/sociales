@@ -42,9 +42,9 @@ const Scoreboard = () => {
       background: 'white',
       borderRadius: 'var(--radius-md)',
       padding: '2.5rem',
-      boxShadow: '6px 6px 0px var(--bg-dark)',
+      boxShadow: '0 4px 20px rgba(99,102,241,0.10)',
       marginTop: '2rem',
-      border: '3px solid var(--bg-dark)'
+      border: 'none'
     }}>
       <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
         <h2 style={{ fontSize: '2rem', color: 'var(--bg-dark)', marginBottom: '0.5rem', fontFamily: 'var(--font-heading)', fontWeight: '800' }}>🏆 Top 50 Estudiantes</h2>
@@ -72,8 +72,8 @@ const Scoreboard = () => {
                 padding: '1rem 1.25rem',
                 borderRadius: 'var(--radius-sm)',
                 background: isTop3 ? 'rgba(79, 70, 229, 0.06)' : '#F8FAFC',
-                border: '3px solid var(--bg-dark)',
-                boxShadow: isTop3 ? '3px 3px 0px var(--primary)' : '3px 3px 0px var(--bg-dark)',
+                border: 'none',
+                boxShadow: isTop3 ? '0 2px 12px rgba(79,70,229,0.20)' : '0 1px 4px rgba(0,0,0,0.06)',
                 transition: 'var(--transition)'
               }}>
                 <div style={{
@@ -81,15 +81,13 @@ const Scoreboard = () => {
                   height: '40px',
                   borderRadius: '50%',
                   background: isTop3 ? 'var(--accent)' : '#CBD5E1',
-                  border: '2px solid var(--bg-dark)',
                   color: 'var(--bg-dark)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontWeight: '900',
                   fontSize: '1.2rem',
-                  marginRight: '1rem',
-                  boxShadow: '1px 1px 0px var(--bg-dark)'
+                  marginRight: '1rem'
                 }}>
                   {index + 1}
                 </div>
@@ -105,13 +103,11 @@ const Scoreboard = () => {
 
                 <div style={{
                   background: 'var(--cta)',
-                  border: '2px solid var(--bg-dark)',
                   color: 'white',
                   padding: '0.4rem 1rem',
                   borderRadius: 'var(--radius-full)',
                   fontWeight: '800',
-                  fontSize: '1.05rem',
-                  boxShadow: '2px 2px 0px var(--bg-dark)'
+                  fontSize: '1.05rem'
                 }}>
                   {user.score} pts
                 </div>

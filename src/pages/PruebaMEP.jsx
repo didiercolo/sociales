@@ -37,10 +37,10 @@ const PruebaMEP = () => {
           const isOpen = !!open[subjectId];
           return (
             <div key={subjectId} style={{
-              border: '3px solid var(--bg-dark)',
+              border: '1px solid var(--border)',
               borderRadius: 'var(--radius-md)',
               overflow: 'hidden',
-              boxShadow: '3px 3px 0 var(--bg-dark)'
+              boxShadow: '0 1px 4px rgba(0,0,0,0.06)'
             }}>
               <button
                 onClick={() => toggle(subjectId)}
@@ -83,8 +83,8 @@ const PruebaMEP = () => {
                       background: 'var(--primary)', color: 'white',
                       padding: '0.5rem 1.25rem', borderRadius: 'var(--radius-full)',
                       fontWeight: 700, fontSize: '0.9rem',
-                      border: '2px solid var(--bg-dark)',
-                      boxShadow: '2px 2px 0 var(--bg-dark)',
+                      border: 'none',
+                      boxShadow: '0 2px 8px rgba(99,102,241,0.25)',
                       textDecoration: 'none'
                     }}
                   >

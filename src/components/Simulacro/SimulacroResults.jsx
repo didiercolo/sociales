@@ -30,8 +30,8 @@ const SimulacroResults = ({ questions, answers, timeUsed, subject, onRestart }) 
       </h1>
 
       <div style={{
-        background: 'white', border: '3px solid var(--bg-dark)',
-        borderRadius: 'var(--radius-md)', boxShadow: '4px 4px 0 var(--bg-dark)',
+        background: 'white', border: 'none',
+        borderRadius: 'var(--radius-md)', boxShadow: '0 4px 20px rgba(99,102,241,0.10)',
         padding: '2rem', margin: '1.5rem 0'
       }}>
         <p style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--primary)', margin: '0 0 0.25rem' }}>
@@ -71,9 +71,9 @@ const SimulacroResults = ({ questions, answers, timeUsed, subject, onRestart }) 
           onClick={onRestart}
           style={{
             background: 'var(--primary)', color: 'white',
-            border: '3px solid var(--bg-dark)', borderRadius: 'var(--radius-full)',
+            border: 'none', borderRadius: 'var(--radius-full)',
             padding: '0.75rem 1.75rem', fontSize: '1rem', fontWeight: 800,
-            cursor: 'pointer', boxShadow: '3px 3px 0 var(--bg-dark)'
+            cursor: 'pointer', boxShadow: '0 2px 8px rgba(99,102,241,0.25)'
           }}
         >
           🔄 Intentar de nuevo
@@ -82,9 +82,9 @@ const SimulacroResults = ({ questions, answers, timeUsed, subject, onRestart }) 
           to={`/${subject}`}
           style={{
             background: 'white', color: 'var(--bg-dark)',
-            border: '3px solid var(--bg-dark)', borderRadius: 'var(--radius-full)',
+            border: '1px solid var(--border)', borderRadius: 'var(--radius-full)',
             padding: '0.75rem 1.75rem', fontSize: '1rem', fontWeight: 800,
-            textDecoration: 'none', boxShadow: '3px 3px 0 var(--bg-dark)'
+            textDecoration: 'none', boxShadow: '0 1px 4px rgba(0,0,0,0.06)'
           }}
         >
           📚 Volver a {config.label}

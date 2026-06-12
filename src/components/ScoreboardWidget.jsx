@@ -36,7 +36,7 @@ const ScoreboardWidget = () => {
 
         <div style={{
           background: 'white', borderRadius: 'var(--radius-md)',
-          border: '3px solid var(--bg-dark)', boxShadow: '4px 4px 0 var(--bg-dark)',
+          border: 'none', boxShadow: '0 4px 20px rgba(99,102,241,0.10)',
           overflow: 'hidden', maxWidth: 480, margin: '0 auto'
         }}>
           {loading ? (
@@ -54,7 +54,7 @@ const ScoreboardWidget = () => {
                 <div key={user.uid || i} style={{
                   display: 'flex', alignItems: 'center',
                   padding: '0.75rem 1.25rem',
-                  borderBottom: i < topUsers.length - 1 ? '2px solid var(--bg-dark)' : 'none',
+                  borderBottom: i < topUsers.length - 1 ? '1px solid var(--border)' : 'none',
                   background: i === 0 ? 'rgba(79,70,229,0.05)' : 'white'
                 }}>
                   <span style={{ width: 28, fontWeight: 900, fontSize: '1rem', color: 'var(--bg-dark)' }}>
@@ -65,7 +65,7 @@ const ScoreboardWidget = () => {
                   <span style={{
                     background: 'var(--cta)', color: 'white',
                     padding: '0.2rem 0.75rem', borderRadius: 'var(--radius-full)',
-                    fontWeight: 800, fontSize: '0.85rem', border: '2px solid var(--bg-dark)'
+                    fontWeight: 800, fontSize: '0.85rem'
                   }}>
                     {user.score} pts
                   </span>
@@ -75,7 +75,7 @@ const ScoreboardWidget = () => {
           )}
 
           <div style={{
-            padding: '0.875rem 1.25rem', borderTop: '2px solid var(--bg-dark)',
+            padding: '0.875rem 1.25rem', borderTop: '1px solid var(--border)',
             textAlign: 'center', background: '#f8fafc'
           }}>
             <Link to="/scoreboard" style={{ fontWeight: 700, color: 'var(--primary)', fontSize: '0.9rem' }}>
