@@ -2726,26 +2726,39 @@ export const socialesLessons = [
     "description": "Independencia y formación de la República.",
     "sections": [
       {
-        "title": "Independencia (1821)",
+        "title": "1. La Independencia de Costa Rica (1821)",
         "content": [
-          "El 15 de septiembre se firmó el acta en Guatemala. <strong>Dolores Bedoya</strong> animó al pueblo a presionar por la libertad.",
-          "El Acta llegó a Cartago el 13 de octubre junto con el 'Acta de los Nublados'. El 29 de octubre, Costa Rica firmó su independencia.",
-          "El <strong>Pacto de Concordia</strong> (diciembre 1821) fue la primera Constitución. Estableció un gobierno rotativo.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿En qué fecha firmó Costa Rica su acta de independencia?</li><li>¿Quién fue Dolores Bedoya y qué hizo para apoyar la independencia?</li><li>¿Cómo se llamó nuestra primera Constitución Política?</li></ul>"
+          "<p>El <strong>15 de septiembre de 1821</strong> se firmó el acta de independencia en <strong>Guatemala</strong>. La valiente <strong>Dolores Bedoya</strong> animó al pueblo guatemalteco a presionar por la libertad, recorriendo las calles con antorchas y músicos para que los ciudadanos expresaran su apoyo a la independencia.</p>",
+          "<p>La noticia tardó casi un mes en llegar a Costa Rica por el <strong>Correo de la Independencia</strong> (correo a caballo). El acta llegó a <strong>Cartago</strong> el <strong>13 de octubre de 1821</strong>, junto con el <em>Acta de los Nublados</em>, documento que pedía esperar \'hasta que se aclararan los nublados del día\' para ver qué ocurría en España antes de decidir. En ese momento era Jefe Político de Costa Rica <strong>Juan Manuel de Cañas</strong>, quien tuvo que dejar su cargo como gobernador español al consumarse la independencia.</p>",
+          "<p>El <strong>29 de octubre de 1821</strong> Costa Rica firmó su propia acta de independencia en Cartago. Se creó una <strong>Junta Provisional de Gobierno</strong> para decidir los pasos a seguir. El intelectual <strong>Rafael Francisco Osejo</strong> apoyó la educación y la libertad en estos primeros años de vida independiente, y fue nombrado presidente de la Junta que redactaría el Pacto de Concordia.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿En qué fecha y lugar se firmó el acta centroamericana de independencia?</li><li>¿Quién fue Dolores Bedoya y qué hizo para apoyar la independencia?</li><li>¿Por qué el acta tardó casi un mes en llegar a Costa Rica?</li><li>¿En qué fecha firmó Costa Rica su propio acta de independencia?</li></ul>"
         ]
       },
       {
-        "title": "Guerra de Ochomogo (1823)",
+        "title": "2. El Pacto de Concordia (1° de diciembre de 1821)",
         "content": [
-          "Guerra civil entre imperialistas (Cartago/Heredia) y republicanos (San José/Alajuela).",
-          "<strong>Gregorio José Ramírez</strong> lideró a los republicanos y ganó. La capital pasó de Cartago a San José.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Qué provincias se enfrentaron en la Guerra de Ochomogo?</li><li>¿Quién lideró a los republicanos y cuál fue el resultado de la guerra?</li><li>¿A qué ciudad pasó la capital después de este conflicto?</li></ul>"
+          "<p>Cuando Costa Rica se independizó de España, necesitaba reglas para organizarse como país. Por eso, el <strong>1° de diciembre de 1821</strong>, una <strong>Junta de Legados de los Pueblos</strong> redactó el <strong>Pacto de Concordia</strong>. Su nombre oficial completo es <em>Pacto Social Fundamental Interino de Costa Rica</em>.</p>",
+          "<h4>¿Qué fue el Pacto de Concordia?</h4><p>Fue la <strong>primera Constitución Política de Costa Rica</strong>. Sentó las bases de cómo debía funcionar el nuevo país libre. Aunque solo estuvo vigente <strong>dos años</strong> (hasta 1823), su importancia llega hasta nuestros días porque estableció que Costa Rica sería un país libre, ordenado y respetuoso de sus ciudadanos.</p>",
+          "<h4>Contenido y disposiciones principales</h4><ul><li>Declaró la <strong>independencia de España</strong>, la <strong>religión católica</strong> y el <strong>español</strong> como idioma oficial.</li><li>Consagró los <strong>derechos y deberes</strong> de los ciudadanos costarricenses.</li><li>Estableció que el gobierno sería una <strong>Junta Superior Gubernativa</strong> de <strong>7 miembros</strong> electos cada año — un gobierno rotativo entre las ciudades principales.</li><li>Estableció que Costa Rica era <strong>libre y capaz de constituir su propio sistema de gobierno</strong>.</li><li>Sentó las <strong>bases republicanas</strong> del Estado costarricense.</li></ul>",
+          "<h4>Importancia del Pacto</h4><p>El Pacto de Concordia es considerado la \'partida de nacimiento\' de nuestra organización política. Aunque fue provisional e interino, demostró la capacidad de los costarricenses de gobernarse a sí mismos con orden y respeto. El primer pabellón de Costa Rica en 1821 era de <strong>color blanco con estrella roja</strong>. En 1848, <strong>José María Castro Madriz</strong> proclamó formalmente la <strong>República de Costa Rica</strong>. Nuestro primer Jefe de Estado fue <strong>Juan Mora Fernández</strong>.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál es el nombre oficial completo del Pacto de Concordia?</li><li>¿Qué tipo de cuerpo de gobierno estableció el Pacto y cuántos miembros tenía?</li><li>¿Cuánto tiempo estuvo vigente el Pacto de Concordia?</li><li>¿Qué declaró el Pacto sobre la religión y el idioma?</li></ul>"
         ]
       },
       {
-        "title": "Idea principal",
+        "title": "3. La Guerra de Ochomogo (1823)",
         "content": [
-          "Costa Rica logró su independencia de forma pacífica, pero tuvo que librar una pequeña guerra civil para decidir su futuro como república libre."
+          "<p>Tras la independencia, Costa Rica se dividió entre dos visiones del futuro del país. Cartago y Heredia querían unirse al <strong>Imperio de Agustín de Iturbide</strong> (México) — eran los <strong>imperialistas</strong>. San José y Alajuela querían mantenerse como república libre — eran los <strong>republicanos</strong>.</p>",
+          "<p>El conflicto culminó en una batalla en el <strong>Alto de Ochomogo</strong> en <strong>1823</strong>. <strong>Gregorio José Ramírez</strong> lideró a las fuerzas republicanas (San José y Alajuela) y venció a los imperialistas. Tras la victoria, Ramírez entregó el poder <strong>pacíficamente</strong> a las nuevas autoridades.</p>",
+          "<p>Como resultado, la <strong>capital pasó de Cartago a San José</strong>, y Costa Rica optó definitivamente por ser una <strong>república democrática</strong>. El Pacto de Concordia dejó de tener vigencia en ese mismo año de 1823.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué provincias se enfrentaron en la Guerra de Ochomogo y qué defendía cada bando?</li><li>¿Quién lideró a los republicanos y cuál fue el resultado de la guerra?</li><li>¿A qué ciudad pasó la capital después de este conflicto?</li><li>¿Qué le ocurrió al Pacto de Concordia tras la guerra?</li></ul>"
+        ]
+      },
+      {
+        "title": "4. Contexto post-independencia e idea principal",
+        "content": [
+          "<p>Costa Rica logró su independencia de forma relativamente pacífica, pero tuvo que resolver internamente si sería parte de un imperio o una república libre. La Guerra de Ochomogo de 1823 definió ese rumbo: Costa Rica eligió la <strong>libertad republicana</strong>.</p>",
+          "<p>Con el Pacto de Concordia como primera constitución, las bases del Estado costarricense quedaron asentadas: gobierno propio, derechos ciudadanos, y una identidad nacional fundada en el respeto al orden y la ley. Estos principios forjaron la tradición democrática que Costa Rica sigue celebrando cada <strong>15 de septiembre</strong> con las antorchas del fuego de la libertad.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Por qué el Pacto de Concordia es tan importante para Costa Rica?</li><li>¿Qué forma de gobierno eligió definitivamente Costa Rica tras 1823?</li><li>¿Cuál fue el primer nombre oficial del país tras la independencia?</li><li>¿Quién fue nuestro primer Jefe de Estado y en qué año se fundó formalmente la República de Costa Rica?</li></ul>"
         ]
       }
     ],
