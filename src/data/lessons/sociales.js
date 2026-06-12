@@ -1861,44 +1861,69 @@ export const socialesLessons = [
     "description": "Vida, economía y clases sociales.",
     "sections": [
       {
-        "title": "Instituciones Políticas",
+        "title": "El Período Colonial (1575–1821)",
         "content": [
-          "España controló sus colonias mediante instituciones:",
-          "<ul><li><strong>En España:</strong> Consejo de Indias (leyes) y Casa de Contratación de Sevilla (comercio).</li><li><strong>En América:</strong> Virreinatos, Capitanías Generales y Cabildos.</li></ul>",
-          "Costa Rica pertenecía a la <strong>Capitanía General de Guatemala</strong>.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿A qué capitanía general pertenecía la provincia de Costa Rica?</li><li>¿Qué institución en España se encargaba de crear las leyes para América?</li><li>¿Cuál era la función de la Casa de Contratación de Sevilla?</li></ul>"
+          "Después de la conquista comenzó el <strong>período colonial</strong>. Durante esta etapa Costa Rica no era un país independiente, sino una pequeña provincia que obedecía las órdenes del Rey de España. Los españoles controlaban todo: la economía, la religión, la educación y el gobierno. Este período duró aproximadamente <strong>246 años</strong> (de 1575 a 1821).",
+          "<ul><li><strong>1575:</strong> Inicia el período colonial al finalizar la conquista.</li><li><strong>1821:</strong> Finaliza con la independencia de Centroamérica.</li><li><strong>Duración:</strong> aproximadamente 246 años.</li></ul>"
         ]
       },
       {
-        "title": "Economía Colonial",
+        "title": "Organización Política y Administrativa",
         "content": [
-          "Costa Rica era una provincia pobre y aislada. La capital era Cartago.",
-          "<strong>Chacra:</strong> Pequeñas fincas de subsistencia (Valle Central).",
-          "<strong>Hacienda:</strong> Grandes extensiones de ganadería (Guanacaste).",
-          "<strong>Plantación:</strong> Cultivo de cacao (Matina).",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál fue la capital de Costa Rica durante la mayor parte de la colonia?</li><li>¿Qué era una chacra y qué se producía en ella?</li><li>¿En qué zona se ubicaban las plantaciones de cacao?</li></ul>"
+          "España controló sus colonias mediante una red de instituciones tanto en Europa como en América:",
+          "<ul><li><strong>En España:</strong> el <strong>Consejo de Indias</strong> creaba las leyes para América, y la <strong>Casa de Contratación de Sevilla</strong> controlaba el comercio y la navegación.</li><li><strong>En América:</strong> Virreinatos, Capitanías Generales y Cabildos (ayuntamientos) locales.</li></ul>",
+          "Costa Rica era una <strong>pequeña provincia</strong> que pertenecía a la <strong>Capitanía General de Guatemala</strong>, la cual a su vez formaba parte del <strong>Virreinato de Nueva España</strong>. La provincia estaba a cargo de un <strong>gobernador</strong>.",
+          "La <strong>capital de Costa Rica durante la colonia era Cartago</strong>. Por ser la provincia más alejada de la Capitanía, Costa Rica sufrió de <strong>aislamiento económico</strong>, falta de metales preciosos y escasa mano de obra indígena.",
+          "El gobierno local en las ciudades lo ejercía el <strong>Cabildo o Ayuntamiento</strong>. Gracias a la colonia se establecieron provincias, cabildos y gobernaciones que sirvieron de base para el sistema administrativo actual de Costa Rica.",
+          "<h4>Preguntas de repaso</h4><ul><li>¿A qué Capitanía General pertenecía la provincia de Costa Rica?</li><li>¿Qué institución en España se encargaba de crear las leyes para América?</li><li>¿Cuál era la función de la Casa de Contratación de Sevilla?</li><li>¿Qué institución representaba al gobierno local en las ciudades coloniales?</li></ul>"
         ]
       },
       {
-        "title": "Clases Sociales",
+        "title": "Economía de Pobreza",
         "content": [
-          "La sociedad era desigual, basada en el color de piel:",
-          "<ul><li><strong>Peninsulares:</strong> Nacidos en España, tenían el poder.</li><li><strong>Criollos:</strong> Hijos de españoles nacidos en América.</li><li><strong>Mestizos:</strong> Blanco e indígena.</li><li><strong>Mulatos y Zambos:</strong> Mezclas con afrodescendientes, discriminados.</li><li><strong>Negros:</strong> Esclavos traídos de África.</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál era la diferencia entre un español peninsular y un criollo?</li><li>¿Quiénes ocupaban el lugar más alto en la pirámide social colonial?</li></ul>"
+          "Costa Rica era la provincia <strong>más pobre y aislada</strong> de la Capitanía porque carecía de minas de oro y plata y su población indígena era muy escasa. La economía se basó en la agricultura y la ganadería con tres formas principales de usar la tierra:",
+          "<ul><li><strong>La chacra:</strong> Pequeñas fincas familiares de subsistencia ubicadas principalmente en el <strong>Valle Central</strong>. Se producía maíz, frijoles y otros alimentos para el consumo propio.</li><li><strong>La plantación:</strong> Cultivo orientado al comercio, especialmente <strong>cacao en la región de Matina</strong> (Caribe). El cacao también se intercambiaba de contrabando con los ingleses en Jamaica.</li><li><strong>La hacienda:</strong> Grandes propiedades agrícolas o ganaderas, especialmente en <strong>Guanacaste</strong>.</li></ul>",
+          "Además del cacao, se cultivaron <strong>tabaco y añil</strong>. La principal vía de comunicación hacia el Pacífico era el <strong>Camino de Mulas</strong>; <strong>mulas y bueyes</strong> facilitaban el transporte de carga. El puerto caribeño de Matina era frecuentemente atacado por <strong>piratas</strong>.",
+          "La <strong>Iglesia</strong> cobraba el <strong>diezmo</strong>: un impuesto equivalente al 10 % de los ingresos de cada persona.",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Por qué se dice que Costa Rica era la provincia más pobre de la Capitanía?</li><li>¿Qué era una chacra y en qué zona se encontraba?</li><li>¿En qué región se ubicaban las plantaciones de cacao?</li><li>¿Cuál era la principal vía de comunicación hacia el Pacífico?</li><li>¿Qué producto se intercambiaba de contrabando con los ingleses en el Caribe?</li></ul>"
         ]
       },
       {
-        "title": "Sistemas de Trabajo y Resistencia",
+        "title": "Sociedad y Grupos Sociales",
         "content": [
-          "<strong>Encomienda:</strong> Sistema donde un español controlaba un grupo de indígenas para trabajo o tributo.",
-          "<strong>Resistencia:</strong> Líderes como <strong>Pablo Presbere</strong> (Talamanca) lucharon contra la dominación española.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿En qué consistía el sistema de encomienda?</li><li>¿Quién fue Pablo Presbere y por qué es importante en nuestra historia?</li></ul>"
+          "La sociedad colonial era <strong>muy desigual</strong>. La posición social se determinaba según el <strong>origen y el color de piel</strong>. En la cima estaban los <strong>españoles peninsulares</strong> y sus descendientes directos; en los niveles más bajos se encontraban mestizos, indígenas y esclavos africanos.",
+          "<table style=\"width:100%;border-collapse:collapse;\"><thead><tr><th style=\"border:1px solid #ccc;padding:4px;\">Grupo</th><th style=\"border:1px solid #ccc;padding:4px;\">Descripción</th></tr></thead><tbody><tr><td style=\"border:1px solid #ccc;padding:4px;\"><strong>Peninsulares</strong></td><td style=\"border:1px solid #ccc;padding:4px;\">Nacidos en España; tenían el poder político total.</td></tr><tr><td style=\"border:1px solid #ccc;padding:4px;\"><strong>Criollos</strong></td><td style=\"border:1px solid #ccc;padding:4px;\">Hijos de españoles nacidos en América; dueños de tierras y comercio local.</td></tr><tr><td style=\"border:1px solid #ccc;padding:4px;\"><strong>Mestizos</strong></td><td style=\"border:1px solid #ccc;padding:4px;\">Mezcla de blanco e indígena.</td></tr><tr><td style=\"border:1px solid #ccc;padding:4px;\"><strong>Mulatos</strong></td><td style=\"border:1px solid #ccc;padding:4px;\">Mezcla de español y negro.</td></tr><tr><td style=\"border:1px solid #ccc;padding:4px;\"><strong>Zambos</strong></td><td style=\"border:1px solid #ccc;padding:4px;\">Hijos de indígenas y negros.</td></tr><tr><td style=\"border:1px solid #ccc;padding:4px;\"><strong>Negros</strong></td><td style=\"border:1px solid #ccc;padding:4px;\">Esclavos traídos de África y las Antillas; en la base de la pirámide sin derechos.</td></tr></tbody></table>",
+          "La <strong>Iglesia Católica</strong> tuvo un papel central en la vida social, política y cultural. Controlaba la educación (enfocada en enseñanza religiosa y moral) y cobró el diezmo. La convivencia de diferentes grupos étnicos produjo el proceso de <strong>mestizaje</strong>.",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué marcaba la diferencia de clases sociales en la colonia?</li><li>¿Cuál era la diferencia entre un peninsular y un criollo?</li><li>¿Quiénes eran los mulatos y los zambos?</li><li>¿Cómo se llama el proceso de mezcla biológica y cultural?</li></ul>"
         ]
       },
       {
-        "title": "Idea principal",
+        "title": "Sistemas de Trabajo y Resistencia Indígena",
         "content": [
-          "La colonia fue un período de gran desigualdad donde el poder, la riqueza y los derechos dependían del color de piel y el origen de las personas."
+          "Los españoles impusieron sistemas de trabajo forzado sobre los pueblos indígenas:",
+          "<ul><li><strong>La Encomienda:</strong> Un español (el <strong>encomendero</strong>) controlaba un grupo de indígenas que debían trabajar sus tierras y pagar tributo indígena. El encomendero debía cuidar su salud y alimentación, pero esto no siempre se cumplía. Los indígenas debían trabajar a cambio de 'protección' y enseñanza religiosa.</li><li><strong>La Mita:</strong> Sistema de reparto de indígenas para obras públicas como la construcción de caminos y edificios.</li></ul>",
+          "Los <strong>esclavos negros</strong> trabajaban en plantaciones de cacao, ganadería, construcción de caminos, casas e iglesias, y labores domésticas. Podían ser rematados, heredados, vendidos o alquilados. Los afrodescendientes aportaron su <strong>fuerza de trabajo y su rica cultura</strong> a la sociedad costarricense.",
+          "La población indígena disminuyó drásticamente por: la superioridad en armas de los españoles, las enfermedades traídas (viruela, sarampión), los trabajos forzados y los cambios en la dieta que causaron desnutrición.",
+          "<strong>Resistencia:</strong> El líder indígena <strong>Pablo Presbere</strong> encabezó una rebelión en <strong>Talamanca en 1709</strong> contra la dominación española. La región de <strong>Talamanca</strong> fue la que mantuvo mayor independencia de los españoles durante la colonia.",
+          "<h4>Preguntas de repaso</h4><ul><li>¿En qué consistía el sistema de encomienda?</li><li>¿Cómo se llamaba el sistema de reparto de indígenas para obras públicas?</li><li>¿Quién fue Pablo Presbere y por qué es importante en nuestra historia?</li><li>¿Qué importancia tuvo la llegada de los grupos afrodescendientes en la colonia?</li></ul>"
+        ]
+      },
+      {
+        "title": "Vida Cotidiana y Ciudades",
+        "content": [
+          "La vida cotidiana giraba en torno a la <strong>Iglesia Católica</strong>. Se construyeron iglesias, conventos y se organizaron fiestas religiosas. El arte colonial estuvo fuertemente influenciado por la religión. El legado arquitectónico de la colonia son las <strong>iglesias y casas de adobe</strong>.",
+          "La gente se divertía en <strong>turnos, corridas de toros y fiestas religiosas</strong>. Se impuso el <strong>idioma español</strong> como lengua oficial en toda la colonia.",
+          "La <strong>capital Cartago</strong> fue destruida varias veces por cenizas volcánicas y terremotos. Para alejar a los habitantes de los peligros de Cartago se fundó la ciudad de <strong>Cubujuquí (hoy Heredia)</strong>.",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué ciudad colonial fue destruida varias veces por cenizas y temblores?</li><li>¿Qué ciudad se fundó para alejar a la gente de Cartago y sus peligros?</li><li>¿Cómo se divertía la gente en la época colonial?</li><li>¿Qué lengua se impuso como obligatoria en toda la colonia?</li><li>¿Cuál es el legado arquitectónico de la colonia?</li></ul>"
+        ]
+      },
+      {
+        "title": "Fin del Período Colonial e Idea Principal",
+        "content": [
+          "El período colonial concluyó en <strong>1821</strong> con la independencia de Centroamérica. Durante 246 años, la colonia transformó profundamente a Costa Rica: impuso el idioma español, la religión católica y un sistema social desigual basado en el origen y el color de piel.",
+          "Los aportes coloniales que perduran hasta hoy incluyen: el sistema de provincias y cabildos (base del sistema administrativo actual), el idioma español, la Iglesia Católica como institución central, el mestizaje como identidad nacional, y el cultivo de productos como el cacao, el tabaco y el añil.",
+          "<strong>Idea principal:</strong> La colonia fue un período de gran desigualdad donde el poder, la riqueza y los derechos dependían del color de piel y el origen de las personas. Al mismo tiempo, sentó las bases culturales, lingüísticas e institucionales de la Costa Rica actual.",
+          "<h4>Preguntas de repaso</h4><ul><li>¿En qué año terminó el período colonial en Costa Rica?</li><li>¿Cuáles son algunos aportes de la colonia que perduran hasta hoy?</li><li>¿Por qué se dice que la sociedad colonial era muy desigual?</li><li>¿Qué cultivos impulsó la colonia además del cacao?</li></ul>"
         ]
       }
     ],
