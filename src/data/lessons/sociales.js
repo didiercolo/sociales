@@ -8,62 +8,34 @@ export const socialesLessons = [
     "description": "Costa Rica y su Geografía",
     "sections": [
       {
-        "title": "1. Líneas Imaginarias",
+        "title": "1. Posición Geográfica de Costa Rica",
         "content": [
-          "Las líneas imaginarias nos ayudan a ubicar lugares en la Tierra. No son reales, pero son muy importantes.",
-          "<h3>Paralelos</h3><ul><li>Van de este a oeste.</li><li>Miden la <strong>latitud</strong>.</li><li>El más importante es el <strong>Ecuador (0°)</strong>.</li><li>Divide la Tierra en Hemisferio Norte y Hemisferio Sur.</li></ul>",
-          "<h3>Meridianos</h3><ul><li>Van de norte a sur.</li><li>Miden la <strong>longitud</strong>.</li><li>El más importante es el <strong>Meridiano de Greenwich (0°)</strong>.</li><li>Divide la Tierra en Hemisferio Oriental y Hemisferio Occidental.</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cómo se llaman las líneas que miden la latitud?</li><li>¿Cuál es el meridiano más importante?</li><li>¿En qué hemisferios divide el Ecuador a la Tierra?</li></ul>"
-        ],
-        "videoId": "r6Mg005jCds"
-      },
-      {
-        "title": "2. Ubicación de Costa Rica",
-        "content": [
-          "Costa Rica se ubica en:",
-          "<ul><li><strong>Hemisferio Norte</strong> (al norte del Ecuador).</li><li><strong>Hemisferio Occidental</strong> (al oeste de Greenwich).</li><li>En <strong>América Central</strong>, entre América del Norte y América del Sur.</li><li>Entre el Océano Pacífico y el Mar Caribe.</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿En qué hemisferios se ubica Costa Rica?</li><li>¿En qué parte del continente americano se encuentra nuestro país?</li><li>¿Cuáles son los dos cuerpos de agua que rodean a Costa Rica?</li></ul>"
+          "<p>¿Sabías que la ubicación de Costa Rica en el mapa es muy especial? Nuestro país se encuentra en <strong>América Central</strong>, justo en el medio del continente americano. Esto significa que estamos en el <strong>Hemisferio Norte</strong> y en el <strong>Hemisferio Occidental</strong>. Estar en esta posición tiene muchas ventajas, como tener costas en dos océanos diferentes y una gran variedad de plantas y animales. Sin embargo, también trae algunos peligros naturales que debemos conocer para estar preparados.</p>",
+          "<ul><li>Costa Rica se encuentra en <strong>Centroamérica</strong>, entre <strong>Nicaragua</strong> (al norte) y <strong>Panamá</strong> (al sur).</li><li>Se ubica en el <strong>Hemisferio Norte</strong> y en el <strong>Hemisferio Occidental</strong>.</li><li>Está situada entre el <strong>Océano Pacífico</strong> (al oeste) y el <strong>Mar Caribe</strong> (al este).</li></ul>"
         ]
       },
       {
-        "title": "3. Océanos y Continentes",
+        "title": "2. Ventajas de nuestra Posición",
         "content": [
-          "<h3>Océanos</h3><p>Los cinco océanos son: Pacífico, Atlántico, Índico, Ártico y Antártico.</p>",
-          "<h3>Continentes</h3><p>Los continentes son: Asia, África, Europa, América, Oceanía y Antártida.</p>",
-          "<h4>Preguntas de repaso</h4><ul><li>Mencione el nombre de los cinco océanos.</li><li>¿Cuántos continentes existen y cuáles son sus nombres?</li></ul>"
-        ],
-        "videoId": "QDfJ4m1t1mQ"
-      },
-      {
-        "title": "4. Costas de Costa Rica",
-        "content": [
-          "<h3>Costa Pacífica</h3><ul><li>Es más grande.</li><li>Tiene muchos golfos, bahías y penínsulas.</li><li>Importante para turismo y pesca.</li></ul>",
-          "<h3>Costa Caribe</h3><ul><li>Es más pequeña.</li><li>Tiene playas hermosas.</li><li>Importante para puertos y comercio.</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál de las dos costas de Costa Rica es la más extensa?</li><li>¿Qué actividades económicas son importantes en la costa pacífica?</li><li>¿Para qué son importantes los puertos en el Caribe?</li></ul>"
+          "<p>La posición geográfica de Costa Rica le otorga grandes ventajas para sus habitantes, su economía y su naturaleza.</p>",
+          "<ul><li><strong>Suelos fértiles:</strong> Gracias a los volcanes y las lluvias, la tierra es muy buena para cultivar alimentos.</li><li><strong>Puente biológico:</strong> Costa Rica conecta América del Norte y América del Sur, por eso tenemos animales y plantas de los dos continentes.</li><li><strong>Dos costas:</strong> Tenemos playas en el Océano Pacífico y en el Mar Caribe, lo que ayuda al comercio y al turismo.</li><li><strong>Clima tropical:</strong> Contamos con dos estaciones (seca y lluviosa) y muchos microclimas que aumentan la biodiversidad.</li><li><strong>Turismo:</strong> Al ser un país pequeño, se puede ir de una costa a la otra en un solo día.</li><li><strong>Gran biodiversidad:</strong> Costa Rica posee una flora y fauna únicas en el mundo, gracias a su posición como puente entre continentes.</li></ul>"
         ]
       },
       {
-        "title": "5. Sistemas Montañosos",
+        "title": "3. Desventajas — Fenómenos Naturales",
         "content": [
-          "Principales cordilleras:<ul><li>Cordillera Volcánica Central</li><li>Cordillera de Talamanca</li><li>Cordillera de Guanacaste</li><li>Cordillera de Tilarán</li></ul>",
-          "Estas montañas tienen volcanes, ayudan a formar ríos, afectan el clima y son importantes para la naturaleza y el turismo.",
-          "<h4>Preguntas de repaso</h4><ul><li>Mencione dos de las principales cordilleras de Costa Rica.</li><li>¿Por qué son importantes las montañas para nuestro país?</li></ul>"
+          "<p>La misma posición geográfica que nos da tantas ventajas también nos expone a peligros naturales que debemos conocer y ante los cuales debemos estar preparados.</p>",
+          "<ul><li><strong>Huracanes:</strong> Tormentas con vientos de más de 250 km/h que causan mucha destrucción. Ejemplos históricos: huracanes César (1996), Mitch (1998) y Otto (2016).</li><li><strong>Inundaciones:</strong> Cuando llueve demasiado y los ríos se desbordan; pueden generar deslizamientos que afectan comunidades enteras.</li><li><strong>Terremotos:</strong> Movimientos de la tierra causados por las placas tectónicas o fallas geológicas que cruzan el territorio nacional.</li><li><strong>Sequías:</strong> Cuando no llueve por mucho tiempo y falta el agua en los campos y en los hogares.</li><li><strong>Erupciones volcánicas:</strong> Cuando un volcán expulsa lava, ceniza y gases de su interior, afectando personas, animales y cultivos cercanos.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son tres fenómenos naturales que afectan a Costa Rica?</li><li>¿Qué causa los terremotos según la fuente?</li><li>¿Por qué los huracanes son peligrosos?</li></ul>"
         ]
       },
       {
-        "title": "6. Ventajas y Desventajas de la Ubicación",
+        "title": "4. Formas de Relieve de Costa Rica",
         "content": [
-          "<h3>Ventajas</h3><ul><li>Acceso a dos océanos.</li><li>Rica en biodiversidad.</li><li>Bellas playas y bosques.</li><li>Buenas oportunidades de comercio.</li></ul>",
-          "<h3>Desventajas</h3><ul><li>Puede tener terremotos y huracanes.</li><li>Inundaciones en algunas áreas.</li><li>Actividad volcánica.</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>Mencione dos ventajas de la ubicación geográfica de Costa Rica.</li><li>¿Cuáles son algunos riesgos naturales que enfrenta el país?</li></ul>"
-        ]
-      },
-      {
-        "title": "7. Importancia de Estudios Sociales y Cívica",
-        "content": [
-          "<p><strong>Estudios Sociales:</strong> Nos ayuda a entender historia y geografía, aprender sobre nuestro país y ser ciudadanos responsables.</p>",
-          "<p><strong>Educación Cívica:</strong> Nos enseña respeto, responsabilidad, democracia y cómo vivir en paz con los demás.</p>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿En qué nos ayuda la materia de Estudios Sociales?</li><li>¿Qué valores nos enseña la Educación Cívica?</li></ul>"
+          "<p>El <strong>relieve</strong> es la forma que tiene la superficie de la Tierra. Costa Rica tiene una gran variedad de paisajes, desde montañas muy altas hasta playas planas. Conocer las formas del relieve nos ayuda a entender por qué algunas zonas son buenas para la agricultura, por qué hay ríos en ciertos lugares y por qué algunas regiones son más frías que otras.</p>",
+          "<h4>Cordilleras principales de Costa Rica</h4><table><thead><tr><th>Cordillera</th><th>Característica</th></tr></thead><tbody><tr><td><strong>Volcánica Central</strong></td><td>Tiene volcanes activos como el Poás, el Irazú y el Turrialba.</td></tr><tr><td><strong>De Talamanca</strong></td><td>La más larga y alta del país; incluye el cerro Chirripó, el punto más alto de Costa Rica.</td></tr><tr><td><strong>De Guanacaste</strong></td><td>Se ubica en la región norte; tiene volcanes como el Rincón de la Vieja.</td></tr><tr><td><strong>De Tilarán</strong></td><td>Se encuentra entre la Cordillera de Guanacaste y la zona norte del país.</td></tr></tbody></table>",
+          "<h4>Otras formas del relieve</h4><ul><li><strong>Valles:</strong> Terrenos bajos entre montañas o colinas. Por ellos generalmente pasan ríos. Son muy importantes para vivir y cultivar. El <strong>Valle Central</strong> es el más poblado del país.</li><li><strong>Llanuras:</strong> Tierras planas y bajas, cerca del nivel del mar. Sus suelos son muy fértiles e ideales para la agricultura. Las más importantes son las <strong>Llanuras del Caribe</strong> y las <strong>Llanuras del Norte</strong>.</li><li><strong>Costas:</strong> Lugar donde el mar toca la tierra. Pueden tener playas, acantilados o ríos que llegan al mar. Costa Rica tiene costa Pacífica y costa Caribeña.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué es el relieve?</li><li>¿Cuál es la cordillera más alta de Costa Rica y cuál es su punto más alto?</li><li>¿Qué volcanes pertenecen a la Cordillera Volcánica Central?</li><li>¿Cuál es el valle más poblado del país?</li><li>¿Cuáles son las llanuras más importantes de Costa Rica?</li></ul>"
         ]
       }
     ],
