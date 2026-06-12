@@ -4093,27 +4093,54 @@ export const socialesLessons = [
     "description": "Modernización del país, ferrocarril y reformas.",
     "sections": [
       {
-        "title": "1. El Estado Liberal",
+        "title": "1. El Estado Liberal en Costa Rica",
         "content": [
-          "<p>A finales del siglo XIX, bajo el lema <strong>'Orden y Progreso'</strong>, Costa Rica inició una modernización liderada por el general <strong>Tomás Guardia</strong> (1870).</p>",
-          "<h3>Características</h3><ul><li>Desarrollo económico.</li><li>Libertades individuales (expresión, culto).</li><li>Separación de la Iglesia y el Estado.</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Quién fue el líder que inició la modernización del Estado Liberal?</li><li>¿Cuál era el lema de esta época?</li></ul>"
+          "<p>Hacia finales del siglo XIX, Costa Rica entró en la llamada <strong>época liberal</strong>, que se caracterizó por un proyecto de modernización del Estado. Este proceso fue impulsado principalmente por el general <strong>Tomás Guardia</strong>, quien ejerció el poder como dictador a partir de <strong>1870</strong> y gobernó de manera autoritaria. A pesar de su carácter autoritario, la población costarricense se benefició de sus ideas progresistas, resumidas en el lema <strong>\"orden y progreso\"</strong>.</p>",
+          "<p>La primera <strong>Constitución Política de corte liberal</strong> fue promulgada en <strong>1871</strong>. Esta carta magna garantizó los derechos individuales de los costarricenses de la época: la igualdad ante la ley, el derecho a la propiedad privada, la libertad de tránsito y de reunión. Además, estableció la división de poderes, aunque el Poder Ejecutivo ganó mayor importancia: el presidente podía nombrar y remover gobernadores y secretarios de Estado, y administrar la Hacienda Pública.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Quién fue el general que ejerció el poder a partir de 1870 y lideró la época liberal?</li><li>¿Cuál era el lema del Estado Liberal costarricense?</li><li>¿En qué año se promulgó la primera Constitución Política liberal? ¿Qué derechos garantizó?</li></ul>"
         ]
       },
       {
-        "title": "2. El Ferrocarril al Caribe",
+        "title": "2. Características de un Estado Liberal",
         "content": [
-          "<p>Para exportar café a Europa más barato, era necesario un puerto en Limón. Se pidió un préstamo a Inglaterra, pero no alcanzó.</p>",
-          "<p>El estadounidense <strong>Minor Keith</strong> terminó la obra a cambio de tierras para cultivar banano, lo que cambió la economía del Caribe.</p>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Por qué era necesario construir un ferrocarril al Caribe?</li><li>¿Quién fue Minor Keith y qué cultivo impulsó?</li></ul>"
+          "<p>Los estados liberales del siglo XIX compartían características fundamentales que los distinguían de los modelos anteriores de gobierno:</p>",
+          "<ul><li>El gobierno buscaba el <strong>máximo desarrollo económico</strong> posible, promoviendo el comercio, la agricultura de exportación y la inversión extranjera.</li><li>Se favorecían las <strong>libertades individuales</strong>: libertad de expresión, libertad de culto, libertad de reunión y el derecho a la <strong>propiedad privada</strong>.</li><li>El liberalismo se oponía a ciertas <strong>tradiciones religiosas</strong> que consideraba un obstáculo al progreso, lo que generó tensiones directas con la <strong>Iglesia Católica</strong>.</li></ul>",
+          "<p>Esta tensión con la Iglesia se expresó en una serie de <strong>leyes anticlericales</strong> que limitaron el poder eclesiástico: la expulsión del obispo <strong>Bernardo Augusto Thiel</strong> y de los jesuitas, la secularización de los cementerios, la prohibición de las órdenes monásticas y los monasterios, la prohibición de la enseñanza religiosa en las instituciones del Estado, la prohibición de recolectar limosnas durante las misas, y la prohibición de procesiones fuera de las iglesias —excepto en Semana Santa—.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>Mencione tres libertades individuales que promovía el Estado Liberal.</li><li>¿Por qué el liberalismo generaba tensiones con la Iglesia Católica?</li><li>¿Qué eran las leyes anticlericales? Mencione dos ejemplos.</li></ul>"
         ]
       },
       {
-        "title": "3. Reformas Liberales",
+        "title": "3. El Ferrocarril al Caribe",
         "content": [
-          "<h3>Reforma Educativa (1886)</h3><p><strong>Mauro Fernández</strong> impulsó leyes para que la educación primaria fuera <strong>gratuita, obligatoria y laica</strong>.</p>",
-          "<h3>Otras reformas</h3><ul><li><strong>Jurídica:</strong> Matrimonio civil y divorcio.</li><li><strong>Religiosa:</strong> Cementerios pasaron al Estado (secularización).</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son las tres características de la educación según la reforma de 1886?</li><li>Mencione una reforma jurídica o religiosa de la época liberal.</li></ul>"
+          "<p>En <strong>1871</strong>, el general Tomás Guardia ordenó la construcción de un <strong>ferrocarril al Caribe</strong>. El objetivo era conectar el <strong>Valle Central</strong> con la costa atlántica y establecer un <strong>puerto en Limón</strong>, reduciendo así el tiempo y los costos de exportación del café a Europa. Desde el puerto de Puntarenas en el Pacífico, los barcos podían tardar hasta <strong>cinco meses</strong> en llegar a Europa; el nuevo ferrocarril y el puerto caribeño recortarían drásticamente esa demora.</p>",
+          "<p>Para financiar la obra, el gobierno solicitó un préstamo a <strong>Inglaterra</strong> por <strong>3 400 000 libras esterlinas</strong>. Sin embargo, los fondos resultaron insuficientes dadas las <strong>extremas condiciones geográficas y climáticas</strong> del territorio caribeño, que estaba casi inexplorado y carecía de vías de comunicación.</p>",
+          "<p>El empresario estadounidense <strong>Minor Keith</strong> completó la construcción del ferrocarril a cambio de extensas <strong>tierras en la costa Caribe</strong>, donde más tarde desarrollaría el cultivo del banano a escala industrial.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál era el objetivo principal de construir el ferrocarril al Caribe en 1871?</li><li>¿Cuánto tiempo podían tardar los barcos desde Puntarenas hasta Europa antes del ferrocarril?</li><li>¿A quién se le pidió el préstamo y por cuánto monto en libras esterlinas?</li><li>¿Quién terminó la obra y qué recibió a cambio?</li></ul>"
+        ]
+      },
+      {
+        "title": "4. La Actividad Bananera",
+        "content": [
+          "<p>Con el ferrocarril construido y las tierras recibidas como pago, <strong>Minor Keith</strong> inició el cultivo masivo del <strong>banano</strong> en la costa Caribe costarricense. Esta actividad dio origen eventualmente a la <strong>United Fruit Company</strong>, popularmente conocida como <strong>\"la Yunai\"</strong>.</p>",
+          "<p>La United Fruit Company dominó durante décadas la economía de la zona caribeña costarricense, generando tanto <strong>desarrollo económico</strong> —empleos, infraestructura— como profundas <strong>desigualdades sociales y conflictos laborales</strong> entre sus trabajadores. La construcción del ferrocarril y el auge bananero estuvieron directamente ligados a las ideas de modernización y progreso económico impulsadas por el liberalismo.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué empresa fundó Minor Keith para comercializar el banano? ¿Cómo se le conocía popularmente?</li><li>¿Qué beneficios y qué problemas trajo la actividad bananera a la zona Caribe?</li></ul>"
+        ]
+      },
+      {
+        "title": "5. Las Reformas Liberales",
+        "content": [
+          "<p>Las reformas liberales abarcaron tres grandes áreas que transformaron la sociedad costarricense a finales del siglo XIX:</p>",
+          "<h4>Reforma Educativa</h4>",
+          "<p>La reforma educativa fue impulsada por el expresidente <strong>Bernardo Soto Alfaro</strong> y su Secretario de Instrucción Pública, <strong>Mauro Fernández</strong>. Fernández promovió dos leyes fundamentales: la <strong>Ley Fundamental de Instrucción Pública (1885)</strong> y la <strong>Ley General de Educación Común (1886)</strong>.</p>",
+          "<p>Estas leyes establecieron principios que rigen la educación costarricense hasta hoy:</p>",
+          "<ul><li>La educación primaria sería <strong>gratuita, obligatoria, laica y financiada por el Estado</strong>.</li><li>Los niños de <strong>7 a 14 años</strong> debían asistir a la escuela.</li><li>Se definieron <strong>seis grados</strong> de educación primaria, con un certificado al finalizar.</li><li>El <strong>Estado</strong> —no la Iglesia— sería el responsable de elaborar los planes de estudio.</li><li>Las <strong>municipalidades y juntas de educación</strong> administrarían la enseñanza.</li></ul>",
+          "<p>Se crearon nuevos centros de enseñanza secundaria: el <strong>Instituto de Alajuela</strong>, el <strong>Liceo de Costa Rica</strong> y el <strong>Colegio de Señoritas</strong>. También se fundaron la <strong>Biblioteca Nacional</strong> y el <strong>Archivo Nacional</strong>.</p>",
+          "<p>Anteriormente, la <strong>Ley del Concordato (1852)</strong> le daba a la Iglesia Católica el control sobre los contenidos educativos y la mayoría de los maestros eran sacerdotes. Ante las reformas, la Iglesia reaccionó pidiendo a los padres no enviar a sus hijos a las escuelas públicas, creando escuelas privadas religiosas y sufriendo persecución política (como el obispo Thiel).</p>",
+          "<h4>Reforma Jurídica</h4>",
+          "<p>En el plano jurídico, la <strong>Constitución Política de 1871</strong> garantizó los derechos individuales de los ciudadanos. Se estableció el <strong>Código Civil</strong>, que reguló el <strong>matrimonio civil</strong>, el <strong>divorcio</strong> y el derecho de las mujeres a disponer libremente de su <strong>patrimonio</strong>. También se promulgaron leyes de comportamiento público como la <strong>Ley de Vagos</strong> y la <strong>Ley de Juegos</strong>.</p>",
+          "<h4>Reforma Religiosa</h4>",
+          "<p>La reforma religiosa avanzó hacia una clara separación entre la Iglesia y el Estado. Sus medidas más importantes fueron: la <strong>secularización del cementerio</strong> (que pasó a ser administrado por el Estado), la instauración del <strong>matrimonio civil</strong> como figura legal independiente del religioso, y la limitación general de la influencia eclesiástica en los asuntos públicos.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Quiénes fueron los impulsores de la reforma educativa liberal?</li><li>¿Cuáles son las cuatro características de la educación primaria según las leyes de 1885 y 1886?</li><li>¿Qué edades abarcaba la educación primaria obligatoria? ¿Cuántos grados tenía?</li><li>¿Qué centros educativos y culturales se crearon durante las reformas liberales?</li><li>¿Qué decía la Ley del Concordato de 1852 y por qué cambió con las reformas?</li><li>¿Qué es la secularización del cementerio y qué significa para la separación Iglesia-Estado?</li></ul>"
         ]
       }
     ],
