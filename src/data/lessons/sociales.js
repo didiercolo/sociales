@@ -8011,18 +8011,49 @@ export const socialesLessons = [
     "description": "Nuestra identidad multiétnica y plurilingüe.",
     "sections": [
       {
-        "title": "República Multiétnica",
+        "title": "1. República Democrática, Multiétnica y Pluricultural",
         "content": [
-          "Desde 2015, la Constitución reconoce a Costa Rica como 'multiétnica y pluricultural'.",
-          "Nuestra identidad se forma por indígenas, afrodescendientes, chinos, europeos y migrantes de todo el mundo.",
-          "<strong>Mestizo:</strong> El costarricense tiene raíces de diversas culturas y todas merecen respeto e igualdad.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Qué significa que Costa Rica sea un país multiétnico y pluricultural?</li><li>¿En qué año se reformó la Constitución para este reconocimiento?</li><li>¿Qué significa ser mestizo?</li></ul>"
+          "<p>Costa Rica no es un país de una sola cultura o de un solo tipo de personas. Somos un país diverso, donde conviven personas de diferentes etnias, idiomas y tradiciones. La <strong>Constitución Política</strong> reconoce a Costa Rica como una <strong>República democrática, libre, independiente, multiétnica y pluricultural</strong>.</p>",
+          "<p>Desde <strong>2015</strong>, la Constitución (Artículo 1) reconoce oficialmente esta diversidad. Nuestra identidad se forma por la convivencia de indígenas, afrodescendientes, chinos, europeos y migrantes de todo el mundo. El resultado es una identidad <strong>mestiza</strong> — como un <em>mosaico</em> formado por piezas de muchas culturas diferentes — y todas merecen igual respeto e igualdad.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué significa que Costa Rica sea un país multiétnico y pluricultural?</li><li>¿En qué año se reformó la Constitución para este reconocimiento?</li><li>¿Qué significa ser mestizo?</li><li>¿Por qué se dice que nuestra identidad es un 'mosaico'?</li></ul>"
         ]
       },
       {
-        "title": "Idea principal",
+        "title": "2. Características de la Sociedad Costarricense",
         "content": [
-          "La diversidad cultural es una riqueza que debemos valorar y respetar, ya que todas las etnias han contribuido a construir Costa Rica."
+          "<p>La sociedad costarricense se describe con tres conceptos clave:</p>",
+          "<p><strong>Intercultural:</strong> Existe interacción entre culturas; hay comunicación entre grupos con distintas costumbres, promoviendo la igualdad y la convivencia armoniosa entre todos.</p>",
+          "<p><strong>Multiétnica:</strong> La sociedad está conformada por diversas etnias: indígenas, mestizos, mulatos, asiáticos y afrodescendientes, todos conviviendo en un mismo país.</p>",
+          "<p><strong>Plurilingüe:</strong> En Costa Rica se comparten diversas lenguas que se integran para conformar la cultura nacional. Además del español, se hablan lenguas indígenas y otras traídas por distintos grupos migrantes.</p>",
+          "<p>El valor fundamental para vivir en esta sociedad intercultural es el <strong>respeto y la tolerancia</strong> hacia todas las personas y sus tradiciones.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué significa que Costa Rica sea intercultural?</li><li>¿Qué es ser plurilingüe?</li><li>¿Qué valor es fundamental para vivir en una sociedad intercultural?</li></ul>"
+        ]
+      },
+      {
+        "title": "3. Aportes de los Pueblos Originarios (Indígenas)",
+        "content": [
+          "<p>Los pueblos originarios han contribuido de manera fundamental a la identidad costarricense. Entre sus principales aportes se encuentran:</p>",
+          "<ul><li><strong>Alimentación:</strong> comidas a base de maíz (tortillas, tamales, chorreadas) que siguen siendo parte de nuestra dieta diaria.</li><li><strong>Vocabulario:</strong> muchas palabras del español costarricense tienen origen indígena (por ejemplo, <em>tiquicia</em>, <em>maíz</em>, <em>cacao</em>).</li><li><strong>Técnicas de cultivo:</strong> métodos agrícolas tradicionales adaptados al entorno tropical.</li><li><strong>Objetos artesanales:</strong> tejidos, cerámicas y otros objetos que reflejan su cosmovisión y arte.</li><li><strong>Amor y respeto por la naturaleza:</strong> filosofía de vida que valora el equilibrio con el ambiente.</li><li><strong>Plantas medicinales:</strong> conocimiento ancestral sobre el uso terapéutico de plantas.</li><li><strong>Esferas de piedra del Diquís:</strong> patrimonio arqueológico declarado Patrimonio de la Humanidad por la UNESCO, creadas por culturas prehispánicas en el sur del país.</li><li><strong>Cerámica Chorotega (Guanacaste):</strong> tradición artesanal que identifica a los pueblos indígenas del Pacífico Norte.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son tres aportes de los pueblos indígenas a la cultura costarricense?</li><li>¿Qué son las esferas de piedra del Diquís?</li><li>¿A qué grupo se asocia con la tradición de la cerámica en Guanacaste?</li></ul>"
+        ]
+      },
+      {
+        "title": "4. Aportes de los Afrocostarricenses",
+        "content": [
+          "<p>La comunidad afrodescendiente llegó principalmente a la región Caribe, muchos de ellos traídos para construir el <strong>ferrocarril al Caribe</strong> junto con trabajadores chinos. Sus aportes a la identidad nacional son muy ricos:</p>",
+          "<ul><li><strong>Gastronomía:</strong> el <em>Rice and Beans</em>, el <em>pan bon</em> y otras comidas típicas de la región Caribe que hoy se disfrutan en todo el país.</li><li><strong>Vestimenta:</strong> estilos y tradiciones de vestido propios de su cultura.</li><li><strong>Música e instrumentos musicales:</strong> el <em>Calipso</em> y otros ritmos musicales únicos de la cultura afrocaribeña.</li><li><strong>Carnavales:</strong> celebraciones culturales vibrantes, como el Carnaval de Limón, que atraen visitantes de todo el país.</li><li><strong>Literatura:</strong> escritores y poetas afrocostarricenses que han enriquecido las letras nacionales.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál es un aporte de la cultura afrodescendiente a Costa Rica?</li><li>¿Qué construcción los afrodescendientes y los chinos ayudaron a realizar?</li></ul>"
+        ]
+      },
+      {
+        "title": "5. Aportes de los Inmigrantes Asiáticos y Europeos",
+        "content": [
+          "<p>Otros grupos migrantes también han dejado una huella importante en Costa Rica:</p>",
+          "<p><strong>Inmigrantes Chinos:</strong> llegaron principalmente a trabajar en la construcción del ferrocarril al Caribe. Con el tiempo se establecieron en el comercio, especialmente en tiendas de abarrotes (<em>pulperías</em>), influyendo así en el comercio cotidiano del país. Han aportado también su gastronomía, cultura y valores de trabajo y familia.</p>",
+          "<p><strong>Inmigrantes Españoles (colonización):</strong> la colonización española dejó el idioma español, la religión católica, la arquitectura de las ciudades coloniales y muchas tradiciones que hoy forman parte central de la cultura nacional.</p>",
+          "<p><strong>Otros grupos europeos y migrantes del mundo:</strong> han contribuido con sus propias tradiciones, gastronomía y valores, enriqueciendo aún más el mosaico cultural costarricense.</p>",
+          "<p>La diversidad cultural es una <strong>riqueza</strong> que debemos valorar y respetar, ya que todas las etnias han contribuido a construir Costa Rica.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué grupo inmigrante influyó mucho en el comercio de abarrotes?</li><li>¿Qué aportaron los españoles durante la colonización a la cultura costarricense?</li><li>¿Qué grupos ayudaron a construir el ferrocarril al Caribe?</li><li>¿Por qué la diversidad cultural se considera una riqueza?</li></ul>"
         ]
       }
     ],
