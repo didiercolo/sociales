@@ -7621,23 +7621,23 @@ export const socialesLessons = [
       {
         "title": "Huellas de nuestros antepasados",
         "content": [
-          "Los indígenas nos dejaron un legado enorme que aún vivimos hoy:",
-          "<ul><li><strong>Alimentación:</strong> Maíz, cacao, frijoles, yuca, camote, ayote, vainilla.</li><li><strong>Idioma:</strong> Palabras como Talamanca, Tarrazú, Escazú, Curridabat, Aserrí.</li><li><strong>Medicina:</strong> Uso de plantas como el hombre grande (fiebre) y el mozote (estómago).</li><li><strong>Arte:</strong> Cerámica, orfebrería (oro) y las esferas de piedra del Diquís.</li></ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>Mencione tres alimentos que heredamos de los indígenas.</li><li>¿Para qué se utiliza la planta 'hombre grande' en la medicina natural?</li><li>¿Qué representan las esferas de piedra para nuestra cultura?</li></ul>"
+          "Los pueblos originarios de Costa Rica nos dejaron un legado enorme que todavía vivimos y disfrutamos hoy en día. Es importante reconocer y valorar todo lo que estos pueblos aportaron a nuestra cultura.",
+          "<h4>Aportes culturales</h4><table><thead><tr><th>Aporte</th><th>Ejemplos</th></tr></thead><tbody><tr><td><strong>Gastronomía (alimentos)</strong></td><td>Maíz, frijoles, cacao, aguacate, yuca, camote, ayote, vainilla</td></tr><tr><td><strong>Idioma (palabras al español)</strong></td><td>Aguacate, jaguar, elote, chocolate; también topónimos: Talamanca, Tarrazú, Escazú, Curridabat, Aserrí</td></tr><tr><td><strong>Respeto por la naturaleza</strong></td><td>Visión de vivir en armonía con el ambiente</td></tr><tr><td><strong>Cerámica</strong></td><td>Objetos monocromos y polícromos</td></tr><tr><td><strong>Expresiones culturales</strong></td><td>Bailes (como el Baile del Sorbón de los Bribris y Cabécares), leyendas, artesanías</td></tr><tr><td><strong>Medicina natural</strong></td><td>Plantas como el hombre grande (para bajar la fiebre) y el mozote (para problemas del estómago); también manzanilla y sábila</td></tr><tr><td><strong>Arte</strong></td><td>Objetos en oro (orfebrería), jade y piedra</td></tr><tr><td><strong>Técnicas de cultivo</strong></td><td>Semicultura, vegecultura, roza y quema</td></tr><tr><td><strong>Esferas de piedra del Diquís</strong></td><td>Patrimonio de la Humanidad; elaboradas por pueblos precolombinos del sur de Costa Rica</td></tr></tbody></table>",
+          "<h4>Preguntas de repaso</h4><ul><li>Mencione tres alimentos que heredamos de los indígenas.</li><li>¿Para qué se utiliza la planta 'hombre grande' en la medicina natural?</li><li>¿Qué representan las esferas de piedra del Diquís para nuestra cultura?</li><li>Dé dos ejemplos de palabras del español que tienen origen indígena.</li><li>¿Qué son las técnicas de roza y quema y quiénes las desarrollaron?</li></ul>"
         ]
       },
       {
-        "title": "Desafíos de hoy",
+        "title": "Desafíos actuales de los pueblos originarios",
         "content": [
-          "Las comunidades indígenas enfrentan problemas graves: pobreza, falta de médicos y escuelas, y caminos en mal estado.",
-          "Es fundamental respetar sus territorios y su cultura para que no se pierdan sus lenguas y tradiciones.",
-          "<h4>Preguntas de repaso</h4><ul><li>Mencione dos problemas que enfrentan las comunidades indígenas actualmente.</li><li>¿Por qué es importante proteger los territorios indígenas?</li></ul>"
+          "Hoy en día, los pueblos indígenas de Costa Rica todavía enfrentan muchos problemas que necesitan solución urgente. Las comunidades indígenas sufren pobreza (más del 70% vive en condición de pobreza), falta de médicos y escuelas cercanas, y caminos en mal estado que dificultan el acceso a servicios esenciales.",
+          "<ol><li><strong>Mejorar las vías de comunicación:</strong> Los caminos en mal estado impiden el acceso al comercio, a las escuelas y a los hospitales. Los niños indígenas deben recorrer largas distancias sin transporte adecuado para asistir a la escuela.</li><li><strong>Construcción de escuelas y clínicas cercanas:</strong> Muchas comunidades no cuentan con centros educativos ni de salud próximos, lo que obliga a las personas a viajar grandes distancias.</li><li><strong>Incrementar las oportunidades económicas y de comercio:</strong> Muchas comunidades viven en pobreza extrema y tienen pocas opciones para generar ingresos.</li><li><strong>Garantizar una vivienda digna y servicios básicos:</strong> Agua potable, electricidad y salud son derechos que aún no llegan a todas las reservas indígenas (territorios protegidos donde viven los pueblos originarios).</li><li><strong>Promover la participación política:</strong> Es necesario que las voces de los pueblos originarios sean escuchadas y respetadas en todos los ámbitos sociales y gubernamentales.</li><li><strong>Proteger el territorio y la cultura:</strong> Es fundamental respetar sus territorios para que no se pierdan sus lenguas, tradiciones y cosmovisión.</li></ol>",
+          "<h4>Preguntas de repaso</h4><ul><li>Mencione dos problemas que enfrentan las comunidades indígenas actualmente.</li><li>¿Por qué es importante proteger los territorios indígenas?</li><li>¿Qué son las reservas indígenas?</li><li>¿Cuál es el porcentaje aproximado de la población indígena que vive en pobreza?</li><li>¿Por qué es difícil para los niños indígenas asistir a la escuela?</li></ul>"
         ]
       },
       {
         "title": "Idea principal",
         "content": [
-          "Debemos sentir orgullo por nuestras raíces indígenas y trabajar para que estos pueblos tengan las mismas oportunidades y respeto que todos los costarricenses."
+          "Debemos sentir orgullo por nuestras raíces indígenas y trabajar para que estos pueblos tengan las mismas oportunidades y respeto que todos los costarricenses. Reconocer y valorar los aportes de los pueblos originarios — su gastronomía, idioma, artesanía, medicina y agricultura — es parte esencial de nuestra identidad nacional."
         ]
       }
     ],
