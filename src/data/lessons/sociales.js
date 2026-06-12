@@ -8427,37 +8427,44 @@ export const socialesLessons = [
     "description": "Representaciones de nuestra identidad.",
     "sections": [
       {
-        "title": "Símbolos Principales",
+        "title": "1. La Bandera Nacional",
         "content": [
-          "<strong>Bandera Nacional (1848):</strong> Diseñada por Pacífica Fernández. Inspirada en Francia (azul, blanco y rojo).",
-          "<strong>Escudo Nacional (1848):</strong> Marco dorado, tres volcanes, un valle entre dos océanos con barcos mercantes, un sol naciente y siete estrellas.",
-          "<strong>Himno Nacional:</strong> Música de Manuel María Gutiérrez (1852) y letra de José María Zeledón (1903).",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Quién diseñó la bandera actual y en qué país se inspiró?</li><li>¿Qué representan los tres volcanes y las siete estrellas en el escudo?</li><li>¿Quiénes compusieron la música y la letra del Himno Nacional?</li></ul>"
+          "<p>Los símbolos nacionales nos representan como país y nos recuerdan nuestra historia y valores. Costa Rica tiene tres símbolos nacionales principales: la Bandera, el Escudo y el Himno Nacional.</p>",
+          "<h3>Origen y diseño</h3><p><strong>Año clave: 1848.</strong> La bandera fue establecida durante el mandato del presidente <strong>José María Castro Madriz</strong>. Fue diseñada por <strong>Pacífica Fernández de Mora</strong>, inspirándose en la bandera de <strong>Francia</strong>.</p>",
+          "<h3>Colores y su significado</h3><table><tr><th>Color</th><th>Significado</th></tr><tr><td>Azul</td><td>El cielo</td></tr><tr><td>Blanco</td><td>La paz</td></tr><tr><td>Rojo (franja central, más ancha)</td><td>La sangre de los caídos por la libertad; también el amor a la patria y el trabajo</td></tr></table>",
+          "<h3>Normas de uso</h3><ul><li>La bandera debe usarse con respeto y <strong>no puede tocar el piso</strong>.</li><li>Cuando lleva el escudo se llama <strong>Pabellón Nacional</strong>.</li><li>El Pabellón Nacional solo se usa en <strong>actos oficiales</strong> y se coloca a la derecha.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Quién diseñó la bandera actual y en qué país se inspiró?</li><li>¿Qué significan los colores azul, blanco y rojo?</li><li>¿Cómo se llama la bandera cuando lleva el escudo y para qué se usa?</li></ul>"
         ]
       },
       {
-        "title": "Emblemas Nacionales",
+        "title": "2. El Escudo Nacional",
         "content": [
-          "<ul>",
-          "<li><strong>Árbol de Guanacaste (1959):</strong> Su sombra representa la protección del Estado.</li>",
-          "<li><strong>Guaria Morada (1939):</strong> Flor nacional.</li>",
-          "<li><strong>Yigüirro (1977):</strong> Su canto anuncia las lluvias.</li>",
-          "<li><strong>Carreta típica (1988):</strong> Símbolo del trabajo y el progreso.</li>",
-          "<li><strong>Marimba (1996):</strong> Instrumento musical nacional.</li>",
-          "<li><strong>Venado cola blanca (1995):</strong> Símbolo de la fauna.</li>",
-          "<li><strong>Antorcha de la Independencia (2005):</strong> Recorre Centroamérica cada setiembre.</li>",
-          "<li><strong>Crestones del Chirripó (2011):</strong> Sitio turístico nacional.</li>",
-          "<li><strong>Manatí (2014):</strong> Símbolo de la fauna marina.</li>",
-          "<li><strong>Esferas de piedra (2014):</strong> Herencia indígena.</li>",
-          "<li><strong>Teatro Nacional (2018):</strong> Símbolo del arte y la cultura.</li>",
-          "</ul>",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Por qué se eligió al yigüirro como ave nacional?</li><li>¿Qué representa la carreta típica como símbolo nacional?</li><li>Mencione tres emblemas nacionales que representen nuestra fauna.</li></ul>"
+          "<p><strong>Fecha clave: 29 de septiembre de 1848.</strong> El Escudo Nacional fue promulgado durante la administración del <strong>Dr. José María Castro Madriz</strong>. Desde su creación ha sufrido varias modificaciones, como la <strong>eliminación de las armas</strong>.</p>",
+          "<h3>Elementos y su significado</h3><table><tr><th>Elemento</th><th>Significado</th></tr><tr><td>Marco dorado</td><td>Representa el grano de oro (el café)</td></tr><tr><td>Siete estrellas plateadas</td><td>Representan las siete provincias de Costa Rica</td></tr><tr><td>Tres montañas humeantes (volcanes)</td><td>Simbolizan los volcanes y las tres cordilleras del país de la época</td></tr><tr><td>Dos océanos a los lados</td><td>El Pacífico y el Mar Caribe, que bordean Costa Rica</td></tr><tr><td>Barcos mercantes</td><td>Simbolizan el comercio internacional</td></tr><tr><td>Valle Central entre los dos océanos</td><td>Representa el Valle Central</td></tr><tr><td>Sol naciente en el horizonte</td><td>Representa el progreso y la nueva vida de la república</td></tr></table>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué representan las siete estrellas del escudo?</li><li>¿Qué simbolizan el marco dorado y los barcos?</li><li>¿Qué significan los dos océanos y cómo se llaman?</li></ul>"
+        ]
+      },
+      {
+        "title": "3. El Himno Nacional",
+        "content": [
+          "<h3>Fechas clave</h3><ul><li><strong>1852:</strong> La música fue compuesta por <strong>Manuel María Gutiérrez</strong>.</li><li><strong>1903:</strong> La letra fue creada por <strong>José María Zeledón</strong>.</li><li><strong>10 de junio de 1949:</strong> La letra fue declarada oficial.</li></ul>",
+          "<p>La música fue compuesta durante la administración del general <strong>Juan Rafael Mora Porras</strong> para recibir misiones diplomáticas de <strong>Gran Bretaña y Estados Unidos</strong>.</p>",
+          "<p>El himno exalta las <strong>virtudes del costarricense</strong>, su voluntad de trabajo y el sentido del honor patrio.</p>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Quiénes compusieron la música y la letra del Himno Nacional?</li><li>¿En qué año se declaró oficial la letra del Himno?</li><li>¿Para qué ocasión se compuso la música originalmente?</li></ul>"
+        ]
+      },
+      {
+        "title": "4. Emblemas Nacionales",
+        "content": [
+          "<p>Además de los tres símbolos principales, Costa Rica ha declarado otros emblemas nacionales que representan su naturaleza, cultura y tradiciones.</p>",
+          "<h3>Emblemas naturales y culturales</h3><ul><li><strong>Árbol de Guanacaste (1959):</strong> Su sombra representa la protección del Estado. Es el árbol nacional.</li><li><strong>Guaria Morada (1939):</strong> Flor nacional, asociada con la Cuaresma.</li><li><strong>Yigüirro (1977):</strong> Ave nacional; su canto humilde anuncia las lluvias.</li><li><strong>Carreta típica (1988):</strong> Símbolo del trabajo, el progreso y la paz y sencillez del costarricense.</li><li><strong>Venado Cola Blanca (1995):</strong> Símbolo de la fauna silvestre terrestre.</li><li><strong>Marimba (1996):</strong> Instrumento musical nacional.</li><li><strong>Antorcha de la Independencia (2005):</strong> Recorre Centroamérica cada setiembre; representa la luz de la libertad de Centroamérica.</li><li><strong>Crestones del Chirripó (2011):</strong> Sitio turístico natural nacional, ubicado en el Parque Nacional Chirripó.</li><li><strong>Manatí (2014):</strong> Símbolo de la fauna marina; vive en los canales de Tortuguero.</li><li><strong>Esferas de piedra del Diquís (2014):</strong> Símbolo arqueológico; herencia indígena ubicada en Osa y Palmar Sur (Zona Sur).</li><li><strong>Teatro Nacional (2018):</strong> Símbolo del arte, la cultura y el patrimonio histórico.</li><li><strong>Café — grano de oro (2020):</strong> Producto agrícola símbolo nacional.</li><li><strong>Perezoso de dos y tres dedos, y Mariposa Morpho (2021):</strong> Mamífero lento y mariposa declarados símbolos nacionales.</li><li><strong>Mascarada Tradicional Costarricense (2022):</strong> Tradición popular declarada símbolo nacional; máscaras de madera asociadas a los Bruncas (Borucas).</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Por qué se eligió al yigüirro como ave nacional?</li><li>¿Qué representa la carreta típica como símbolo nacional?</li><li>Mencione tres emblemas nacionales que representen la fauna de Costa Rica.</li><li>¿Qué herencia indígena es símbolo arqueológico nacional desde 2014 y dónde se encuentra?</li></ul>"
         ]
       },
       {
         "title": "Idea principal",
         "content": [
-          "Los símbolos y emblemas nacionales representan nuestra historia, naturaleza, cultura y valores como pueblo, y debemos respetarlos y valorarlos."
+          "<p>Los símbolos y emblemas nacionales representan nuestra historia, naturaleza, cultura y valores como pueblo. Debemos conocerlos, respetarlos y valorarlos porque son parte de nuestra identidad y nos unen como nación.</p>"
         ]
       }
     ],
