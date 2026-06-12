@@ -649,40 +649,35 @@ export const socialesLessons = [
     "description": "Los primeros pobladores and sus modos de vida.",
     "sections": [
       {
-        "title": "El pasado precolombino",
+        "title": "1. Línea de Tiempo Precolombina",
         "content": [
-          "Costa Rica fue habitada por grupos humanos desde hace aproximadamente 12,000 años. Los costarricenses de hoy son producto del mestizaje entre indígenas, blancos, negros y otras etnias. Los modos de vida se dividen en cuatro etapas.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Hace cuántos años aproximadamente llegaron los primeros pobladores a Costa Rica?</li><li>¿Cuáles son las cuatro etapas de los modos de vida precolombinos?</li></ul>"
+          "<p>Mucho antes de que llegaran los españoles a América, Costa Rica ya estaba habitada por personas. Estas personas vivieron aquí por miles de años y fueron cambiando su forma de vida poco a poco. Empezaron siendo cazadores que se movían de un lugar a otro, y con el tiempo aprendieron a sembrar sus propios alimentos y a vivir en comunidades organizadas.</p>",
+          "<p>La historia precolombina de Costa Rica se organiza en cuatro grandes períodos:</p>",
+          "<table><thead><tr><th>Período</th><th>Fecha</th><th>¿Cómo vivían?</th></tr></thead><tbody><tr><td>Primeros pobladores</td><td>12.000 a.C.</td><td>Cazadores y recolectores nómadas</td></tr><tr><td>De la caza a los primeros cultivos</td><td>8.000 a.C.</td><td>Empezaron a sembrar</td></tr><tr><td>Aldeanos igualitarios</td><td>2.000 a.C.</td><td>Agricultura, propiedad colectiva, sin jerarquías</td></tr><tr><td>Aldeanos cacicales</td><td>500 d.C. – 1.500 d.C.</td><td>Líderes (caciques), sociedad organizada y jerarquizada</td></tr></tbody></table>"
         ]
       },
       {
-        "title": "Cazadores y recolectores (12,000 a.C. – 2,000 a.C.)",
+        "title": "2. Cazadores y Recolectores (12.000 a.C.)",
         "content": [
-          "Eran nómadas que buscaban alimento. Los hombres cazaban animales de la <strong>megafauna</strong> como el mastodonte y el perezoso gigante, mientras las mujeres recolectaban frutos.",
-          "Usaban herramientas de piedra, hueso y madera, como puntas de lanza y raspadores. Con el tiempo, la megafauna desapareció por cambios climáticos y empezaron a cazar animales pequeños como venados y dantas.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Qué significa ser nómada?</li><li>¿Qué tipo de animales de la megafauna cazaban los primeros pobladores?</li><li>¿Qué herramientas utilizaban para cazar?</li></ul>"
+          "<p>Los primeros habitantes de Costa Rica no tenían casas fijas. Se movían de un lugar a otro buscando comida. Eran <strong>nómadas estacionales</strong>: se desplazaban según la época del año en busca de recursos.</p>",
+          "<ul><li>La evidencia arqueológica se encuentra principalmente en <strong>Guanacaste y Turrialba</strong>.</li><li>Usaban <strong>herramientas de piedra</strong> para trabajar madera, hueso y alimentos.</li><li>Cazaban animales enormes llamados <strong>megafauna</strong>: el <strong>armadillo gigante</strong>, el <strong>perezoso gigante</strong> y el <strong>mastodonte</strong>.</li><li>Vivían en grupos de <strong>20 a 30 personas</strong> unidas por lazos familiares.</li><li>Vivían en <strong>cuevas</strong> o construían <strong>campamentos al aire libre</strong>.</li><li><strong>Las mujeres</strong> recolectaban frutos y <strong>los hombres</strong> cazaban.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Qué significa ser nómada estacional?</li><li>¿En qué zonas del país se han encontrado las principales evidencias arqueológicas de este período?</li><li>¿Qué animales de la megafauna cazaban los primeros pobladores?</li><li>¿Cuántas personas formaban un grupo típico de cazadores?</li><li>¿Cuál era el rol de las mujeres y el de los hombres en este período?</li></ul>"
         ]
       },
       {
-        "title": "Aldeanos igualitarios (2,000 a.C. – 500 a.C.)",
+        "title": "3. Aldeanos Igualitarios (2.000 a.C.)",
         "content": [
-          "La agricultura se volvió central y los pobladores se hicieron sedentarios. No existían jefes: todos eran iguales. Fabricaban cerámica de colores para guardar cultivos.",
-          "Practicaban la <strong>semicultura</strong> (siembra de semillas como el maíz) y la <strong>vegecultura</strong> (siembra de tubérculos como la yuca). Usaban la técnica de roza y quema para preparar la tierra.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál es la diferencia entre semicultura y vegecultura?</li><li>¿Por qué se les llama 'aldeanos igualitarios' a los pobladores de este periodo?</li><li>¿En qué consiste la técnica de roza y quema?</li></ul>"
+          "<p>Con el tiempo, las personas aprendieron a sembrar y se quedaron en un mismo lugar formando las primeras aldeas. La <strong>agricultura</strong> fue su actividad principal y transformó completamente su modo de vida.</p>",
+          "<ul><li>Practicaban la <strong>semicultura</strong>: siembra de semillas como el <strong>maíz, frijoles, ñame y yuca</strong>.</li><li>Practicaban la <strong>vegecultura</strong>: siembra de tubérculos como la <strong>yuca</strong>.</li><li>Usaban la técnica de <strong>roza y quema</strong> para preparar los campos de cultivo.</li><li>La propiedad era <strong>colectiva</strong>: todo era de todos; no había ricos ni pobres ni jerarquización.</li><li>Elaboraban cerámica <strong>bícroma</strong> (dos colores) y <strong>policroma</strong> (varios colores) para guardar semillas.</li><li>Se establecieron las primeras <strong>tribus y aldeas permanentes</strong>.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuál es la diferencia entre semicultura y vegecultura?</li><li>¿En qué consiste la técnica de roza y quema?</li><li>¿Por qué se les llama 'igualitarios' a los aldeanos de este período?</li><li>¿Para qué usaban la cerámica bícroma y policroma?</li></ul>"
         ]
       },
       {
-        "title": "Aldeanos cacicales (500 a.C. – 1,500 d.C.)",
+        "title": "4. Aldeanos Cacicales (500 d.C. – 1.500 d.C.)",
         "content": [
-          "Las aldeas crecieron y surgieron líderes: caciques (políticos) y chamanes (religiosos). La sociedad se dividió en clases sociales.",
-          "Se fabricaron objetos de jade y luego de oro. Las aldeas se hicieron complejas, con construcciones como <strong>montículos</strong> y calzadas.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Qué funciones tenía el cacique y quién era el líder religioso?</li><li>¿Qué tipo de construcciones complejas se hicieron en las aldeas cacicales?</li></ul>"
-        ]
-      },
-      {
-        "title": "Idea principal",
-        "content": [
-          "Los primeros pobladores de Costa Rica evolucionaron de ser nómadas cazadores a formar sociedades organizadas con agricultura, líderes y arte."
+          "<p>La población creció y la sociedad se volvió más compleja. Aparecieron líderes y diferencias entre las personas. Este período se caracteriza por la aparición de los <strong>cacicazgos</strong>: comunidades organizadas bajo la autoridad de un <strong>cacique</strong>.</p>",
+          "<ul><li>Con la agricultura, los pobladores se volvieron <strong>sedentarios</strong> (establecidos en un solo lugar).</li><li>El líder político de cada tribu era el <strong>cacique</strong>.</li><li>Los líderes religiosos eran los <strong>chamanes</strong>.</li><li>Fabricaban objetos de <strong>jade</strong> que servían como adornos y marcaban el <strong>rango social</strong>.</li><li>Construían <strong>basamentos, montículos, hornos y pozos</strong> en las aldeas principales.</li><li>Se inició la <strong>diferenciación social</strong> y se aplicaron técnicas avanzadas de decoración en la cerámica.</li><li>La necesidad de nuevos recursos llevó a <strong>conquistar nuevos territorios</strong>.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Quién era el cacique y cuál era su función?</li><li>¿Quiénes eran los chamanes?</li><li>¿Para qué servían los objetos de jade en esta sociedad?</li><li>¿Qué tipo de construcciones se encuentran en las aldeas cacicales?</li><li>¿Por qué se dice que la sociedad cacical era jerarquizada?</li></ul>"
         ]
       }
     ],
