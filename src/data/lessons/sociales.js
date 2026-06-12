@@ -1051,41 +1051,24 @@ export const socialesLessons = [
     "description": "Áreas culturales y las 8 etnias indígenas.",
     "sections": [
       {
-        "title": "Áreas culturales de América",
+        "title": "1. Territorios Indígenas de Costa Rica",
         "content": [
-          "<strong>Área Mesoamericana:</strong> Desde México hasta el norte de Costa Rica. Civilizaciones como aztecas y mayas. Tenían escritura, calendarios y dieta de maíz.",
-          "<strong>Área Intermedia:</strong> Desde Honduras hasta Colombia y Venezuela. Organización en tribus con caciques. Trabajo en piedra, jade, oro y barro. Famosas esferas de piedra.",
-          "<strong>Área Andina:</strong> Cordillera de los Andes, con los Incas como cultura principal. Cultivo en terrazas y uso de quipus.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son las tres áreas culturales de América que influyeron en Costa Rica?</li><li>¿Qué dieta caracterizaba al Área Mesoamericana?</li><li>¿Qué civilización fue la más importante en el Área Andina?</li></ul>"
+          "<p>Costa Rica tiene ocho grupos indígenas originarios. Cada uno tiene su propia forma de ver el mundo, sus propias costumbres, su arte y su cultura. Aunque hoy en día viven en territorios específicos del país, siguen manteniendo vivas sus tradiciones. Es muy importante conocerlos y respetarlos porque son parte fundamental de nuestra identidad como costarricenses.</p>",
+          "<table><thead><tr><th>Etnia</th><th>Territorios principales</th></tr></thead><tbody><tr><td>Chorotega</td><td>Matambú</td></tr><tr><td>Maleku (Guatuso)</td><td>Guatuso</td></tr><tr><td>Huetar</td><td>Quitirrisí, Zapatón</td></tr><tr><td>Cabécar</td><td>Nairi-Awari, Chirripó, Talamanca, Ujarrás y otros</td></tr><tr><td>Bribri</td><td>Talamanca, Kekoldi, Salitre, Cabagra</td></tr><tr><td>Térraba</td><td>Térraba</td></tr><tr><td>Brunca (Boruca)</td><td>Curré, Boruca</td></tr><tr><td>Guaymí (Ngäbe)</td><td>Coto Brus, Osa, Abrojo Montezuma y otros</td></tr></tbody></table>"
         ]
       },
       {
-        "title": "Regiones arqueológicas de Costa Rica",
+        "title": "2. Los Pueblos Originarios de Costa Rica",
         "content": [
-          "<strong>Gran Nicoya:</strong> Guanacaste y norte de Puntarenas. Influencia mesoamericana (Chorotegas). Cerámica policroma.",
-          "<strong>Región Central:</strong> Centro del país. Influencia de las tres áreas. Habitada por huetares y malekus. Monumento Guayabo.",
-          "<strong>Subregión Diquís:</strong> Sureste del país. Influencia andina. Esferas de piedra.",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son las tres regiones arqueológicas de Costa Rica?</li><li>¿En qué región se encuentra el Monumento Nacional Guayabo?</li><li>¿Qué influencia recibió la Gran Nicoya?</li></ul>"
-        ]
-      },
-      {
-        "title": "Las 8 etnias indígenas de Costa Rica",
-        "content": [
-          "<strong>1. Chorotegas:</strong> En Matambú, Guanacaste. Adoraban al jaguar y el maíz. Famosos por su cerámica de barro.",
-          "<strong>2. Huetares:</strong> En Quitirrisí y Zapatón. Rendían culto al Sol y la Luna. Fabricaban cestas y usaban la ocarina.",
-          "<strong>3. Cabécares:</strong> En Talamanca. Creen en Sibö y su líder es el Jawá. Danzas en círculo.",
-          "<strong>4. Bribris:</strong> Talamanca. Practican la danza del Sorbón y se especializan en cestería.",
-          "<strong>5. Bruncas:</strong> En Puntarenas. Celebran el 'Baile de los Diablitos' cada 31 de diciembre.",
-          "<strong>6. Malekus:</strong> Alajuela. Creen en el dios Tocu. Trabajan madera de balsa.",
-          "<strong>7. Térrabas:</strong> Buenos Aires. Veneran la Mano de Tigre. Hacen artesanías con jícaras.",
-          "<strong>8. Ngäbes:</strong> Pacífico Sur. Las mujeres usan vestidos coloridos. Fabrican bolsas (chácaras).",
-          "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son las ocho etnias indígenas de Costa Rica?</li><li>¿Qué celebran los bruncas cada 31 de diciembre?</li><li>¿Quién es el dios creador para los cabécares y bribris?</li></ul>"
-        ]
-      },
-      {
-        "title": "Idea principal",
-        "content": [
-          "Costa Rica fue un puente cultural entre las grandes civilizaciones americanas, y sus ocho etnias indígenas conservan tradiciones valiosas que enriquecen nuestra identidad."
+          "<h4>Chorotegas</h4><p>Los chorotegas vivían principalmente en la región de Guanacaste. Eran muy hábiles haciendo cerámica y tenían creencias muy relacionadas con la naturaleza.</p><ul><li>Sus dioses eran la <strong>luna, el sol, la lluvia, el fuego y el jaguar</strong>.</li><li>Consideraban el <strong>maíz como un dios</strong>; hacían fiestas y comidas a base de maíz.</li><li>Creían en la vida más allá de la muerte.</li><li>Su cerámica se destaca por elementos <strong>antropomorfos</strong> (forma humana) y <strong>zoomorfos</strong> (forma de animales).</li><li>Confeccionaban bellas vasijas, figuras decorativas y <strong>hamacas</strong>.</li></ul>",
+          "<h4>Huetares</h4><p>Los huetares habitaban principalmente en la región central de Costa Rica. Tenían una profunda conexión con el sol, la luna y sus ancestros.</p><ul><li>Rendían culto al <strong>Sol y a la Luna</strong>, construyendo altares y montículos de piedra.</li><li>Veneraban los huesos de sus antepasados y adoraban a los astros.</li><li>Realizaban sacrificios humanos durante la luna llena.</li><li>Sus esculturas de piedra representaban a sus ancestros.</li><li>Practicaban danzas y cantos al Sol y la Luna en ceremonias comunitarias.</li><li>Usaban el <strong>tambor</strong> para avisar cuándo ir a la guerra.</li><li>Su artesanía se elaboraba con palma, bejuco, zacate y fibras naturales.</li></ul>",
+          "<h4>Cabécares</h4><p>Los cabécares son uno de los grupos más numerosos de Costa Rica y viven principalmente en la región de Talamanca. Tienen una visión espiritual muy profunda del mundo.</p><ul><li>Creen en <strong>Sibô</strong>, el dios creador de todas las cosas y el universo.</li><li>Rinden tributo a los <strong>Useklas</strong>, grupos de sabios sacerdotes.</li><li>Consideran la tierra como una mujer y la adoran como madre.</li><li>Un sacerdote llamado <strong>Jawá</strong> actúa como intermediario entre lo espiritual y lo físico.</li><li>Sus actividades consideran las fases de la luna y las épocas de lluvia o verano para recolectar bejucos y mimbres.</li><li>Realizan dos danzas tradicionales: en línea (<strong>dúret</strong>) y en círculo (<strong>buLikLak</strong>).</li><li>Su expresión artesanal es la <strong>cestería</strong> y la fabricación de instrumentos musicales.</li></ul>",
+          "<h4>Bribris</h4><p>Los bribris viven en la zona de Talamanca y comparten algunas creencias con los cabécares. Son conocidos por su música y sus danzas llenas de significado.</p><ul><li>También creen en <strong>Sibô</strong>, el dios creador.</li><li>Realizan la ancestral <strong>danza del Sorbón</strong>, donde hombres y mujeres forman un gran círculo que simboliza la solidaridad y la pertenencia a la tierra.</li><li>Sus cantos contienen rituales de curación ancestral, sobre el paso del alma del difunto por ríos peligrosos donde acechan espíritus.</li><li>Su expresión artesanal es la <strong>cestería</strong> y la fabricación de instrumentos musicales.</li></ul>",
+          "<h4>Bruncas o Borucas</h4><p>Los bruncas o borucas viven en la zona sur de Costa Rica. Son famosos por su colorida tradición del Baile de los Diablitos.</p><ul><li>Creen en espíritus como 'el espíritu de las aguas', 'el protector de los chanchos de monte' y 'el espíritu de la gran serpiente'.</li><li>Su expresión artesanal se basa en los <strong>tejidos</strong> y las jícaras con diseños muy elaborados.</li><li>Su manifestación cultural más famosa es el <strong>Baile de los Diablitos</strong>, que se realiza cada <strong>31 de diciembre</strong>. Confeccionan máscaras artesanales para llevarlo a cabo.</li></ul>",
+          "<h4>Malekus o Guatusos</h4><p>Los malekus viven en la zona norte de Costa Rica, cerca de la laguna Cano Negro. Tienen creencias muy particulares sobre la vida, la muerte y los seres espirituales.</p><ul><li>Conciben tres órdenes de entidades: <strong>dioses, diablos y espectros</strong>.</li><li>Los dioses les impusieron normas: respeto por la vida humana y prohibición de consumir tiburones, manigordos y felinos.</li><li>Entierran a sus muertos <strong>dentro de las viviendas</strong> porque creen que los espíritus siguen influyendo de manera benéfica.</li><li>Creen en su dios <strong>Tocu</strong>, a quien rinden culto bañándose todos los días a las <strong>4 de la mañana</strong>.</li><li>Su artesanía incluye figuras de cerámica, artículos de madera en balsa, arcos y flechas.</li></ul>",
+          "<h4>Térrabas</h4><p>Los térrabas viven en la zona sur del país y tienen una profunda relación con la naturaleza.</p><ul><li>Consideran a la <strong>naturaleza</strong> como parte integral de la vida; adoptan una visión ecológica, cultural y económica.</li><li><strong>La Mano de Tigre</strong> es una marca en una piedra grande en una montaña cercana al pueblo; es venerada por su comunidad.</li><li>El conocimiento sobre artesanías se transmite de generación en generación usando madera caída y jícaras.</li></ul>",
+          "<h4>Ngäbes o Guaymíes</h4><p>Los ngäbes son el grupo indígena más numeroso de Costa Rica. Son conocidos por su colorida vestimenta y sus artesanías.</p><ul><li>Creen en <strong>Nicorare</strong> (el espíritu del mal), contra el cual luchan los chamanes para liberar al enfermo.</li><li>Tienen animales sagrados que, según sus creencias, dan agua cuando las personas mueren y llegan al otro mundo.</li><li>Las mujeres confeccionan <strong>chácaras</strong> (bolsas tejidas) y collares con cuentas, conchas y huesos.</li><li>Elaboran vestidos de <strong>vistosos colores</strong>.</li></ul>",
+          "<h4>Preguntas de repaso</h4><ul><li>¿Cuáles son los ocho pueblos originarios de Costa Rica?</li><li>¿Qué dioses adoraban los chorotegas?</li><li>¿Quién es el dios creador para cabécares y bribris?</li><li>¿Qué celebran los bruncas cada 31 de diciembre?</li><li>¿En qué dios creen los malekus y cómo le rinden culto?</li><li>¿Qué es 'La Mano de Tigre' para los térrabas?</li><li>¿Cuál es el grupo indígena más numeroso de Costa Rica?</li><li>¿Qué son las chácaras y quiénes las confeccionan?</li></ul>"
         ]
       }
     ],
