@@ -5,21 +5,16 @@ import Quiz from '../components/Quiz';
 import TextQuiz from '../components/TextQuiz';
 
 const LessonView = () => {
-    const { subject, gradeId, lessonId } = useParams();
-    const gradeLessons = lessonsData[subject]?.[gradeId] || [];
-    const lesson = gradeLessons.find(l => l.id.toString() === lessonId);
+    const { subject, lessonId } = useParams();
+    const lesson = lessonsData[subject]?.lessons?.find(l => l.id === lessonId);
 
     if (!lesson) {
-        return <Navigate to={`/${subject}/grade/${gradeId}`} replace />;
-    }
-
-    if (lesson.disabled) {
-        return <Navigate to="/coming-soon" replace />;
+        return <Navigate to={`/${subject}`} replace />;
     }
 
     return (
         <div className="lesson-view container" style={{ padding: '3rem 1.5rem' }}>
-            <Link to={`/${subject}/grade/${gradeId}`} className="back-link" style={{
+            <Link to={`/${subject}`} className="back-link" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',

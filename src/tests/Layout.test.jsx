@@ -23,7 +23,7 @@ describe('Layout component', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('EduPortal CR')).toBeInTheDocument();
+    expect(screen.getAllByText('EduPortal CR')[0]).toBeInTheDocument();
     expect(screen.getByText('Ingresar')).toBeInTheDocument();
     expect(screen.getByText('Registrarse')).toBeInTheDocument();
   });

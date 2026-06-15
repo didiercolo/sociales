@@ -6,6 +6,7 @@ import { auth } from '../firebase/config';
 export default function Login() {
     const [nickname, setNickname] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
@@ -52,15 +53,39 @@ export default function Login() {
 
                     <div className="form-group">
                         <label htmlFor="password">Contraseña</label>
-                        <input
-                            id="password"
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            placeholder="Tu contraseña..."
-                            required
-                            autoComplete="current-password"
-                        />
+                        <div style={{ position: 'relative' }}>
+                            <input
+                                id="password"
+                                type={showPassword ? "text" : "password"}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                placeholder="Tu contraseña..."
+                                required
+                                autoComplete="current-password"
+                                style={{ width: '100%', paddingRight: '3.5rem' }}
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                style={{
+                                    position: 'absolute',
+                                    right: '12px',
+                                    top: '50%',
+                                    transform: 'translateY(-50%)',
+                                    background: 'none',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    fontSize: '1.25rem',
+                                    padding: '4px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    color: 'var(--text-muted)'
+                                }}
+                            >
+                                {showPassword ? '👁️' : '🙈'}
+                            </button>
+                        </div>
                     </div>
 
                     {error && <div className="auth-error">⚠️ {error}</div>}

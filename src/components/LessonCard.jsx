@@ -1,41 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const LessonCard = ({ id, title, description, disabled, gradeId, imageUrl, subject }) => {
-    const cardImage = imageUrl || `https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=500&auto=format&fit=crop`;
-
-    if (disabled) {
-        return (
-            <Link to="/coming-soon" className="lesson-card disabled">
-                <div className="card-image" style={{ backgroundImage: `url(${cardImage})` }}>
-                    <div className="card-icon-overlay">🔒</div>
-                </div>
-                <div className="card-content">
-                    <h3>Lección {id}</h3>
-                    <p>{description}</p>
-                </div>
-                <div className="card-footer">
-                    <span className="status-tag">Próximamente</span>
-                </div>
-            </Link>
-        );
-    }
-
-    return (
-        <Link to={`/${subject}/grade/${gradeId}/lesson/${id}`} className="lesson-card">
-            <div className="card-image" style={{ backgroundImage: `url(${cardImage})` }}>
-                <div className="card-icon-overlay">📚</div>
+const LessonCard = ({ id, title, description, subject, bloqueColor, lessonNumber }) => (
+    <Link to={`/${subject}/lesson/${id}`} className="lesson-card">
+        <div className="card-content">
+            <div style={{ color: bloqueColor, fontWeight: '700', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                LECCIÓN {lessonNumber}
             </div>
-            <div className="card-content">
-                <h3>Lección {id}</h3>
-                <p>{description}</p>
-            </div>
-            <div className="card-footer">
-                <span className="status-tag status-available">Disponible</span>
-                <span style={{ color: 'var(--secondary)', fontWeight: '700', fontSize: '0.8rem' }}>ENTRAR →</span>
-            </div>
-        </Link>
-    );
-};
+            <h3>{title}</h3>
+            {description && <p>{description}</p>}
+        </div>
+        <div className="card-footer">
+            <span className="status-tag status-available">Disponible</span>
+            <span style={{ color: 'var(--secondary)', fontWeight: '700', fontSize: '0.8rem' }}>ENTRAR →</span>
+        </div>
+    </Link>
+);
 
 export default LessonCard;

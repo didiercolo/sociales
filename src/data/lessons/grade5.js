@@ -247,7 +247,6 @@ export const grade5Lessons = [
     },
     {
         id: 2,
-        disabled: true,
         title: "Lección 2: Etnias de la Costa Rica antigua",
         description: "Áreas culturales y las 8 etnias indígenas.",
         sections: [
@@ -495,7 +494,6 @@ export const grade5Lessons = [
     },
     {
         id: 3,
-        disabled: true,
         title: "Lección 3: Situación actual de los pueblos originarios",
         description: "Legados, desafíos y realidad actual.",
         sections: [
@@ -727,7 +725,6 @@ export const grade5Lessons = [
     },
     {
         id: 4,
-        disabled: true,
         title: "Lección 4: Costa Rica, sociedad intercultural",
         description: "Nuestra identidad multiétnica y plurilingüe.",
         sections: [
@@ -952,7 +949,6 @@ export const grade5Lessons = [
     },
     {
         id: 5,
-        disabled: true,
         title: "Lección 5: El momento del contacto (Colón)",
         description: "Los viajes de Colón y la conquista.",
         sections: [
@@ -1194,7 +1190,6 @@ export const grade5Lessons = [
     },
     {
         id: 6,
-        disabled: true,
         title: "Lección 6: La sociedad colonial",
         description: "Vida, economía y clases sociales.",
         sections: [
@@ -1445,7 +1440,6 @@ export const grade5Lessons = [
     },
     {
         id: 7,
-        disabled: true,
         title: "Lección 7: Causas de la independencia",
         description: "Ideas de libertad y eventos mundiales.",
         sections: [
@@ -1681,7 +1675,6 @@ export const grade5Lessons = [
     },
     {
         id: 8,
-        disabled: true,
         title: "Lección 8: La libertad política de Costa Rica",
         description: "Independencia y formación de la República.",
         sections: [
@@ -1914,7 +1907,6 @@ export const grade5Lessons = [
     },
     {
         id: 9,
-        disabled: true,
         title: "Lección 9: La anexión del Partido de Nicoya",
         description: "Unión voluntaria de Guanacaste a Costa Rica.",
         sections: [
@@ -2147,7 +2139,6 @@ export const grade5Lessons = [
     },
     {
         id: 10,
-        disabled: true,
         title: "Lección 10: Los símbolos nacionales",
         description: "Representaciones de nuestra identidad.",
         sections: [
@@ -2391,7 +2382,6 @@ export const grade5Lessons = [
     },
     {
         id: 11,
-        disabled: true,
         title: "Lección 11: Banco de Preguntas Completo",
         description: "Guía de estudio integral con las 200 preguntas de quinto grado para repaso general.",
         sections: [

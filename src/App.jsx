@@ -3,19 +3,19 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import { AuthProvider } from './context/AuthContext';
 
-// Lazy load pages for better initial performance
-const Home = lazy(() => import('./pages/Home'));
-const CienciasHome = lazy(() => import('./pages/CienciasHome'));
-const EspanolHome = lazy(() => import('./pages/EspanolHome'));
 const SubjectSelection = lazy(() => import('./pages/SubjectSelection'));
-const LessonsList = lazy(() => import('./pages/LessonsList'));
+const SubjectHome = lazy(() => import('./pages/SubjectHome'));
 const LessonView = lazy(() => import('./pages/LessonView'));
 const ComingSoon = lazy(() => import('./pages/ComingSoon'));
 const About = lazy(() => import('./pages/About'));
 const Register = lazy(() => import('./pages/Register'));
 const Login = lazy(() => import('./pages/Login'));
+const ScoreboardPage = lazy(() => import('./pages/ScoreboardPage'));
+const Simulacro = lazy(() => import('./pages/Simulacro'));
+const PruebaMEP = lazy(() => import('./pages/PruebaMEP'));
+const DailyQuestionPage = lazy(() => import('./pages/DailyQuestionPage'));
+const WeeklyChallengePage = lazy(() => import('./pages/WeeklyChallengePage'));
 
-// Loading fallback component
 const PageLoader = () => (
     <div style={{ padding: '2rem', textAlign: 'center', fontFamily: 'var(--font-heading)', color: 'var(--primary-color)' }}>
         <h2>Cargando... 📚</h2>
@@ -29,15 +29,17 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<SubjectSelection />} />
-                        <Route path="sociales" element={<Home />} />
-                        <Route path="ciencias" element={<CienciasHome />} />
-                        <Route path="espanol" element={<EspanolHome />} />
+                        <Route path=":subject" element={<SubjectHome />} />
+                        <Route path=":subject/lesson/:lessonId" element={<LessonView />} />
                         <Route path="coming-soon" element={<ComingSoon />} />
                         <Route path="sobre-nosotros" element={<About />} />
                         <Route path="registro" element={<Register />} />
                         <Route path="login" element={<Login />} />
-                        <Route path=":subject/grade/:gradeId" element={<LessonsList />} />
-                        <Route path=":subject/grade/:gradeId/lesson/:lessonId" element={<LessonView />} />
+                        <Route path="scoreboard" element={<ScoreboardPage />} />
+                        <Route path="simulacro/:subject" element={<Simulacro />} />
+                        <Route path="prueba-mep" element={<PruebaMEP />} />
+                        <Route path="pregunta-del-dia" element={<DailyQuestionPage />} />
+                        <Route path="reto-semanal" element={<WeeklyChallengePage />} />
                     </Route>
                 </Routes>
             </Suspense>
