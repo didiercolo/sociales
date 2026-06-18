@@ -20,12 +20,18 @@ describe('socialesExtraExams', () => {
       expect(q, `question ${i}`).toHaveProperty('options');
       expect(q, `question ${i}`).toHaveProperty('correct');
       expect(q, `question ${i}`).toHaveProperty('mepBloque');
+      expect(q.stimulus.length, `question ${i} stimulus`).toBeGreaterThan(0);
+      expect(q.source.length, `question ${i} source`).toBeGreaterThan(0);
+      expect(q.question.length, `question ${i} question text`).toBeGreaterThan(0);
     });
   });
 
   it('every question has exactly 3 options', () => {
     socialesExtraExams.flat().forEach((q, i) => {
       expect(q.options, `question ${i} options`).toHaveLength(3);
+      q.options.forEach((opt, j) => {
+        expect(opt.length, `question ${i} option ${j}`).toBeGreaterThan(0);
+      });
     });
   });
 
@@ -55,6 +61,7 @@ describe('socialesExtraExams', () => {
       ...socialesExtraExams[1].map(q => q.question),
     ]);
     const duplicates = socialesExtraExams[2].filter(q => exam12Qs.has(q.question));
+    // Exam 3 appends exactly 5 repeated questions (Q1, Q16, Q36, Q51, Q66) with reordered options
     expect(duplicates).toHaveLength(5);
   });
 });
