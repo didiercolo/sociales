@@ -3,11 +3,16 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { subjectConfig } from '../data/subjectConfig';
 import { socialesExtraExams } from '../data/socialesExtraExams';
+import { cienciasExtraExams } from '../data/cienciasExtraExams';
 import SimulacroStart from '../components/Simulacro/SimulacroStart';
 import SimulacroActive from '../components/Simulacro/SimulacroActive';
 import SimulacroResults from '../components/Simulacro/SimulacroResults';
 
-const VALID_SUBJECTS = ['sociales'];
+const extraExamsBySubject = {
+  sociales: socialesExtraExams,
+  ciencias: cienciasExtraExams,
+};
+const VALID_SUBJECTS = Object.keys(extraExamsBySubject);
 
 const getBloqueBreakdown = (questions, config) =>
   config.bloques
@@ -32,9 +37,9 @@ const SimulacroExtra = () => {
   }, [examIndex]);
 
   if (!VALID_SUBJECTS.includes(subject) || !config) return <Navigate to="/" replace />;
-  if (isNaN(index) || index < 0 || index >= socialesExtraExams.length) return <Navigate to="/" replace />;
+  if (isNaN(index) || index < 0 || index >= extraExamsBySubject[subject].length) return <Navigate to="/" replace />;
 
-  const questions = socialesExtraExams[index];
+  const questions = extraExamsBySubject[subject][index];
   const subtitle = `Examen Extra ${examIndex}`;
 
   const handleStart = () => {

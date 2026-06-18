@@ -28,6 +28,31 @@ vi.mock('../data/socialesExtraExams', () => ({
   ],
 }));
 
+vi.mock('../data/cienciasExtraExams', () => ({
+  cienciasExtraExams: [
+    Array.from({ length: 35 }, (_, i) => ({
+      stimulus: `Estímulo Ciencias ${i}`,
+      source: `Fuente Ciencias ${i}`,
+      question: `Pregunta Ciencias ${i}`,
+      options: ['A', 'B', 'C'],
+      correct: 0,
+      mepBloque: 'cuerpo-humano',
+    })),
+    Array.from({ length: 35 }, (_, i) => ({
+      question: `Pregunta Ciencias B${i}`,
+      options: ['X', 'Y', 'Z'],
+      correct: 1,
+      mepBloque: 'biodiversidad',
+    })),
+    Array.from({ length: 35 }, (_, i) => ({
+      question: `Pregunta Ciencias C${i}`,
+      options: ['P', 'Q', 'R'],
+      correct: 2,
+      mepBloque: 'energia',
+    })),
+  ],
+}));
+
 const renderAt = (path) =>
   render(
     <MemoryRouter initialEntries={[path]}>
@@ -68,5 +93,20 @@ describe('SimulacroExtra', () => {
   it('shows 35 preguntas in the start screen header area', () => {
     renderAt('/simulacro-extra/sociales/1');
     expect(screen.getAllByText(/35 preguntas/i).length).toBeGreaterThan(0);
+  });
+
+  it('renders the start screen for ciencias exam 1', () => {
+    renderAt('/simulacro-extra/ciencias/1');
+    expect(screen.getByText(/Examen Extra 1/i)).toBeInTheDocument();
+  });
+
+  it('renders the start screen for ciencias exam 2', () => {
+    renderAt('/simulacro-extra/ciencias/2');
+    expect(screen.getByText(/Examen Extra 2/i)).toBeInTheDocument();
+  });
+
+  it('renders the start screen for ciencias exam 3', () => {
+    renderAt('/simulacro-extra/ciencias/3');
+    expect(screen.getByText(/Examen Extra 3/i)).toBeInTheDocument();
   });
 });
