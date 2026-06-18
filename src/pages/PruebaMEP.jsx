@@ -90,6 +90,37 @@ const PruebaMEP = () => {
                   >
                     🎯 Practicar Simulacro
                   </Link>
+                  {subjectId === 'sociales' && (
+                    <div style={{ marginTop: '1.25rem' }}>
+                      <div style={{
+                        display: 'flex', alignItems: 'center', gap: '0.5rem',
+                        marginBottom: '0.75rem'
+                      }}>
+                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                          Exámenes Extra
+                        </span>
+                        <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
+                      </div>
+                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                        {[1, 2, 3].map(n => (
+                          <Link
+                            key={n}
+                            to={`/simulacro-extra/sociales/${n}`}
+                            style={{
+                              display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+                              background: 'white', color: config.accent,
+                              padding: '0.4rem 1rem', borderRadius: 'var(--radius-full)',
+                              fontWeight: 700, fontSize: '0.85rem',
+                              border: `2px solid ${config.accent}`,
+                              textDecoration: 'none'
+                            }}
+                          >
+                            📝 Examen Extra {n}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
