@@ -10,7 +10,7 @@ describe('TextQuiz component', () => {
 
   it('renders the first question', () => {
     // Predictable shuffle
-    vi.spyOn(Math, 'random').mockReturnValue(0.1);
+    vi.spyOn(Math, 'random').mockReturnValue(0.9);
     
     render(<TextQuiz textQuestions={textQuestions} questionCount={2} />);
     expect(screen.getByText(/Pregunta Abierta 1 de 2/i)).toBeInTheDocument();
@@ -19,7 +19,7 @@ describe('TextQuiz component', () => {
   });
 
   it('validates a correct answer (case and accent insensitive)', () => {
-    vi.spyOn(Math, 'random').mockReturnValue(0.1);
+    vi.spyOn(Math, 'random').mockReturnValue(0.9);
     render(<TextQuiz textQuestions={textQuestions} questionCount={1} />);
     
     const input = screen.getByPlaceholderText(/Escribe tu respuesta aquí/i);
@@ -34,7 +34,7 @@ describe('TextQuiz component', () => {
   });
 
   it('validates an incorrect answer', () => {
-    vi.spyOn(Math, 'random').mockReturnValue(0.1);
+    vi.spyOn(Math, 'random').mockReturnValue(0.9);
     render(<TextQuiz textQuestions={textQuestions} questionCount={1} />);
     
     const input = screen.getByPlaceholderText(/Escribe tu respuesta aquí/i);
@@ -48,7 +48,7 @@ describe('TextQuiz component', () => {
   });
 
   it('completes the quiz and shows results', async () => {
-    vi.spyOn(Math, 'random').mockReturnValue(0.1);
+    vi.spyOn(Math, 'random').mockReturnValue(0.9);
     render(<TextQuiz textQuestions={textQuestions} questionCount={1} />);
     
     // Correct answer
@@ -65,7 +65,7 @@ describe('TextQuiz component', () => {
   });
 
   it('handles Enter key for validation and next', () => {
-    vi.spyOn(Math, 'random').mockReturnValue(0.1);
+    vi.spyOn(Math, 'random').mockReturnValue(0.9);
     render(<TextQuiz textQuestions={textQuestions} questionCount={1} />);
     
     const input = screen.getByPlaceholderText(/Escribe tu respuesta aquí/i);

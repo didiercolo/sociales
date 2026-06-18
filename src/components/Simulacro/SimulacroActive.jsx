@@ -1,11 +1,6 @@
 // src/components/Simulacro/SimulacroActive.jsx
 import React, { useState, useEffect, useRef } from 'react';
-
-const formatTime = (seconds) => {
-  const m = Math.floor(seconds / 60).toString().padStart(2, '0');
-  const s = (seconds % 60).toString().padStart(2, '0');
-  return `${m}:${s}`;
-};
+import { formatTime } from '../../utils';
 
 const SimulacroActive = ({ questions, onFinish }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

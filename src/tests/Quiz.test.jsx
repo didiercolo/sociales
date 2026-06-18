@@ -33,7 +33,7 @@ describe('Quiz component', () => {
   };
 
   it('handles correct answer and shows feedback', () => {
-    vi.spyOn(Math, 'random').mockReturnValue(0.1);
+    vi.spyOn(Math, 'random').mockReturnValue(0.9);
 
     render(<Quiz questions={questions} questionCount={2} />);
     fireEvent.click(getStartButton());
@@ -50,7 +50,7 @@ describe('Quiz component', () => {
   });
 
   it('handles incorrect answer and shows feedback', () => {
-    vi.spyOn(Math, 'random').mockReturnValue(0.1);
+    vi.spyOn(Math, 'random').mockReturnValue(0.9);
 
     render(<Quiz questions={questions} questionCount={2} />);
     fireEvent.click(getStartButton());
@@ -68,7 +68,7 @@ describe('Quiz component', () => {
   });
 
   it('shows results after finishing all questions', () => {
-    vi.spyOn(Math, 'random').mockReturnValue(0.1);
+    vi.spyOn(Math, 'random').mockReturnValue(0.9);
 
     render(<Quiz questions={questions} questionCount={1} />);
     fireEvent.click(getStartButton());

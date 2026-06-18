@@ -1,16 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { formatDate } from '../../utils';
 
 const WeeklyChallengeResults = ({ totalPointsEarned, bonusAwarded, weekDoc, alreadyCompleted }) => {
   const { weekId, startDate, endDate, questions = [] } = weekDoc || {};
 
   const weekLabel = weekId ? `Semana ${weekId.split('-')[1]}` : 'Reto Semanal';
-
-  const formatDate = (dateStr) => {
-    if (!dateStr) return '';
-    const d = new Date(dateStr);
-    return d.toLocaleDateString('es-CR', { day: 'numeric', month: 'long' });
-  };
 
   return (
     <div style={{

@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { subjectConfig } from '../data/subjectConfig';
 import { lessonsData } from '../data/lessonsData';
+import { shuffle } from '../utils';
 import SimulacroStart from '../components/Simulacro/SimulacroStart';
 import SimulacroActive from '../components/Simulacro/SimulacroActive';
 import SimulacroResults from '../components/Simulacro/SimulacroResults';
@@ -14,7 +15,7 @@ const sampleQuestions = (subject) => {
   const all = lessons.flatMap(lesson =>
     (lesson.quiz || []).map(q => ({ ...q, mepBloque: lesson.mepBloque }))
   );
-  return [...all].sort(() => Math.random() - 0.5).slice(0, MAX_QUESTIONS);
+  return shuffle(all).slice(0, MAX_QUESTIONS);
 };
 
 const getBloqueBreakdown = (questions, config) =>

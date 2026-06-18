@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase/config';
+import { getTierInfo } from '../utils';
 import '../index.css';
 
 const Scoreboard = () => {
@@ -26,16 +27,6 @@ const Scoreboard = () => {
 
     return () => unsubscribe();
   }, []);
-
-  const getTierInfo = (tier) => {
-    switch (tier) {
-      case 4: return { name: 'Maestro', icon: '👑', color: '#fbbf24' };
-      case 3: return { name: 'Especialista', icon: '💎', color: '#60a5fa' };
-      case 2: return { name: 'Aventurero', icon: '⚔️', color: '#f87171' };
-      case 1:
-      default: return { name: 'Explorador', icon: '🗺️', color: '#94a3b8' };
-    }
-  };
 
   return (
     <div className="scoreboard-container" style={{

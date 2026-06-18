@@ -2,12 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { subjectConfig } from '../../data/subjectConfig';
-
-const formatTime = (seconds) => {
-  const m = Math.floor(seconds / 60).toString().padStart(2, '0');
-  const s = (seconds % 60).toString().padStart(2, '0');
-  return `${m}:${s}`;
-};
+import { formatTime } from '../../utils';
 
 const SimulacroResults = ({ questions, answers, timeUsed, subject, onRestart }) => {
   const config = subjectConfig[subject];

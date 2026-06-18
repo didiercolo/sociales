@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import QuizStart from './Quiz/QuizStart';
 import QuizActive from './Quiz/QuizActive';
 import QuizResults from './Quiz/QuizResults';
+import { shuffle } from '../utils';
 
 const Quiz = ({ questions, questionCount = 5 }) => {
     const [activeQuestions, setActiveQuestions] = useState([]);
@@ -13,8 +14,7 @@ const Quiz = ({ questions, questionCount = 5 }) => {
 
     const initializeQuiz = useCallback(() => {
         if (questions && questions.length > 0) {
-            const shuffled = [...questions].sort(() => 0.5 - Math.random());
-            setActiveQuestions(shuffled.slice(0, questionCount));
+            setActiveQuestions(shuffle(questions).slice(0, questionCount));
         }
     }, [questions, questionCount]);
 

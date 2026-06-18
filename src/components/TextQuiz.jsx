@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { shuffle } from '../utils';
 
 const normalizeText = (text) => {
     return text.toLowerCase()
@@ -21,8 +22,7 @@ const TextQuiz = ({ textQuestions, questionCount = 5 }) => {
 
     const initializeQuiz = useCallback(() => {
         if (textQuestions && textQuestions.length > 0) {
-            const shuffled = [...textQuestions].sort(() => 0.5 - Math.random());
-            setActiveQuestions(shuffled.slice(0, questionCount));
+            setActiveQuestions(shuffle(textQuestions).slice(0, questionCount));
             setCurrentIndex(0);
             setScore(0);
             setIsFinished(false);

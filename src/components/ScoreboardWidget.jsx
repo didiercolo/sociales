@@ -2,15 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase/config';
-
-const getTierInfo = (tier) => {
-  switch (tier) {
-    case 4: return { icon: '👑' };
-    case 3: return { icon: '💎' };
-    case 2: return { icon: '⚔️' };
-    default: return { icon: '🗺️' };
-  }
-};
+import { getTierInfo } from '../utils';
 
 const ScoreboardWidget = () => {
   const [topUsers, setTopUsers] = useState([]);
