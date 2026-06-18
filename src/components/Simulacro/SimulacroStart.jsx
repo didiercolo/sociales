@@ -1,7 +1,7 @@
 // src/components/Simulacro/SimulacroStart.jsx
 import React from 'react';
 
-const SimulacroStart = ({ config, questionCount, bloqueBreakdown, onStart }) => {
+const SimulacroStart = ({ config, questionCount, bloqueBreakdown, onStart, subtitle = 'Simulacro MEP' }) => {
   const displayCount = Math.min(questionCount, 35);
   const isFull = questionCount >= 35;
 
@@ -12,7 +12,7 @@ const SimulacroStart = ({ config, questionCount, bloqueBreakdown, onStart }) => 
         {config.label}
       </h1>
       <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '0.5rem', fontWeight: 700 }}>
-        Simulacro MEP
+        {subtitle}
       </p>
 
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '2rem 0', flexWrap: 'wrap' }}>
