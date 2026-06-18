@@ -9,6 +9,8 @@ const subjectNotes = {
   espanol: 'La prueba tiene dos partes: Comprensión Lectora (50%) y Producción de Texto Expositivo (50%, mínimo 200 palabras).',
 };
 
+const SUBJECTS_WITH_EXTRA_EXAMS = ['sociales', 'ciencias'];
+
 const PruebaMEP = () => {
   const [open, setOpen] = useState({});
 
@@ -90,7 +92,7 @@ const PruebaMEP = () => {
                   >
                     🎯 Practicar Simulacro
                   </Link>
-                  {subjectId === 'sociales' && (
+                  {SUBJECTS_WITH_EXTRA_EXAMS.includes(subjectId) && (
                     <div style={{ marginTop: '1.25rem' }}>
                       <div style={{
                         display: 'flex', alignItems: 'center', gap: '0.5rem',
@@ -105,7 +107,7 @@ const PruebaMEP = () => {
                         {[1, 2, 3].map(n => (
                           <Link
                             key={n}
-                            to={`/simulacro-extra/sociales/${n}`}
+                            to={`/simulacro-extra/${subjectId}/${n}`}
                             style={{
                               display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
                               background: 'white', color: config.accent,

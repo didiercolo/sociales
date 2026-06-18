@@ -76,7 +76,18 @@ describe('PruebaMEP', () => {
 
   it('does NOT show extra exam links inside other subject accordions', () => {
     renderPage();
-    fireEvent.click(screen.getByRole('button', { name: /Ciencias/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Español/i }));
     expect(screen.queryByText(/Examen Extra 1/i)).not.toBeInTheDocument();
+  });
+
+  it('shows links to the 3 extra exams inside expanded ciencias accordion', () => {
+    renderPage();
+    fireEvent.click(screen.getByRole('button', { name: /Ciencias/i }));
+    const link1 = screen.getByRole('link', { name: /Examen Extra 1/i });
+    const link2 = screen.getByRole('link', { name: /Examen Extra 2/i });
+    const link3 = screen.getByRole('link', { name: /Examen Extra 3/i });
+    expect(link1.getAttribute('href')).toBe('/simulacro-extra/ciencias/1');
+    expect(link2.getAttribute('href')).toBe('/simulacro-extra/ciencias/2');
+    expect(link3.getAttribute('href')).toBe('/simulacro-extra/ciencias/3');
   });
 });
