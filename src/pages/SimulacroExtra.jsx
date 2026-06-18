@@ -29,7 +29,6 @@ const SimulacroExtra = () => {
   const [answers, setAnswers] = useState({});
   const [timeUsed, setTimeUsed] = useState(0);
   const startTimeRef = useRef(null);
-  const answersRef = useRef({});
 
   const handleStart = () => {
     startTimeRef.current = Date.now();
@@ -41,14 +40,12 @@ const SimulacroExtra = () => {
       ? Math.floor((Date.now() - startTimeRef.current) / 1000)
       : 0;
     setAnswers(finalAnswers);
-    answersRef.current = finalAnswers;
     setTimeUsed(elapsed);
     setPhase('results');
   };
 
   const handleRestart = () => {
     startTimeRef.current = null;
-    answersRef.current = {};
     setAnswers({});
     setPhase('start');
   };
