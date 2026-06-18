@@ -18,7 +18,9 @@ const baseProps = (q) => ({
 describe('SimulacroActive — stimulus rendering', () => {
   it('does NOT render a stimulus block when stimulus is absent', () => {
     render(<SimulacroActive {...baseProps(makeQuestion())} />);
-    expect(screen.queryByText(/Lea el siguiente/)).not.toBeInTheDocument();
+    // No stimulus field → the gray stimulus box must not appear at all
+    expect(screen.queryByText('Costa Rica tiene dos costas.')).not.toBeInTheDocument();
+    expect(screen.queryByText(/Fuente:/)).not.toBeInTheDocument();
   });
 
   it('renders stimulus text when stimulus is present', () => {
