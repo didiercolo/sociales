@@ -1,5 +1,5 @@
 // src/pages/SimulacroExtra.jsx
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { subjectConfig } from '../data/subjectConfig';
 import { socialesExtraExams } from '../data/socialesExtraExams';
@@ -19,16 +19,23 @@ const SimulacroExtra = () => {
   const config = subjectConfig[subject];
   const index = parseInt(examIndex, 10) - 1;
 
+  const [phase, setPhase] = useState('start');
+  const [answers, setAnswers] = useState({});
+  const [timeUsed, setTimeUsed] = useState(0);
+  const startTimeRef = useRef(null);
+
+  useEffect(() => {
+    setPhase('start');
+    setAnswers({});
+    setTimeUsed(0);
+    startTimeRef.current = null;
+  }, [examIndex]);
+
   if (!VALID_SUBJECTS.includes(subject) || !config) return <Navigate to="/" replace />;
   if (isNaN(index) || index < 0 || index >= socialesExtraExams.length) return <Navigate to="/" replace />;
 
   const questions = socialesExtraExams[index];
   const subtitle = `Examen Extra ${examIndex}`;
-
-  const [phase, setPhase] = useState('start');
-  const [answers, setAnswers] = useState({});
-  const [timeUsed, setTimeUsed] = useState(0);
-  const startTimeRef = useRef(null);
 
   const handleStart = () => {
     startTimeRef.current = Date.now();
