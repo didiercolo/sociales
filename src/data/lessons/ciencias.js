@@ -153,6 +153,7 @@ export const cienciasLessons = [
             '<li><strong>Epiglotis:</strong> Válvula que se abre y cierra para evitar que los alimentos pasen hacia los pulmones.</li>' +
             '<li><strong>Tráquea:</strong> Conducto formado por anillos cartilaginosos que lleva el aire a los pulmones.</li>' +
             '<li><strong>Bronquios:</strong> Ramificaciones que transportan el aire desde la tráquea hacia los bronquiolos.</li>' +
+            '<li><strong>Bronquiolos:</strong> Conducen el aire desde los bronquios hasta los alvéolos pulmonares.</li>' +
             '<li><strong>Pulmones:</strong> Realizan el intercambio gaseoso entre el oxígeno del aire y el dióxido de carbono de la sangre.</li>' +
           '</ul>'
         ]
@@ -173,8 +174,14 @@ export const cienciasLessons = [
       {
         title: '4. Sistema Renal, Endocrino y Nervioso',
         content: [
-          '<p><strong>Sistema Renal:</strong> Se encarga de eliminar las sustancias nocivas producidas por el organismo a través de la orina. Compuesto por riñones, uréteres, vejiga y uretra.</p>',
-          '<p><strong>Sistema Endocrino:</strong> Conjunto de glándulas que fabrican y liberan hormonas. Actúan como mensajeros químicos que viajan por la sangre y regulan muchas funciones del cuerpo (crecimiento, metabolismo, pubertad).</p>',
+          '<p><strong>Sistema Renal:</strong> Se encarga de eliminar las sustancias nocivas producidas por el organismo a través de la orina.</p>',
+          '<ul>' +
+            '<li><strong>Riñones:</strong> Filtran la sangre a través de unas estructuras llamadas nefronas y forman la orina.</li>' +
+            '<li><strong>Uréteres:</strong> Transportan la orina desde los riñones hasta la vejiga.</li>' +
+            '<li><strong>Vejiga:</strong> Almacena la orina hasta el momento de su expulsión.</li>' +
+            '<li><strong>Uretra:</strong> Conducto que comunica la vejiga con el exterior y permite la expulsión de la orina.</li>' +
+          '</ul>',
+          '<p><strong>Sistema Endocrino:</strong> Conjunto de glándulas que fabrican y liberan hormonas. Actúan como mensajeros químicos que viajan por la sangre y regulan muchas funciones del cuerpo (crecimiento, metabolismo, pubertad). Entre las principales glándulas se encuentran el hipotálamo, la glándula pituitaria, la tiroides, las paratiroides, las suprarrenales, el páncreas y las glándulas sexuales (testículos u ovarios).</p>',
           '<p><strong>Sistema Nervioso:</strong> Es el conjunto de órganos y estructuras de control e información del cuerpo humano. Está formado por células altamente diferenciadas llamadas <strong>neuronas</strong>, capaces de transmitir impulsos eléctricos.</p>',
           '<ul>' +
             '<li><strong>Cerebro:</strong> Controla la atención, memoria, información sensorial, comportamiento, emociones e inteligencia.</li>' +
@@ -279,6 +286,7 @@ export const cienciasLessons = [
             '<li>Consumir frutas y vegetales.</li>' +
             '<li>Realizar suficiente ejercicio.</li>' +
             '<li>Beber suficiente agua.</li>' +
+            '<li>Dormir al menos 8 horas diarias.</li>' +
             '<li>Respirar por la nariz y no por la boca.</li>' +
             '<li>Evitar consumir alimentos con mucha grasa o mucha sal.</li>' +
             '<li>Utilizar bloqueador solar.</li>' +
@@ -290,7 +298,7 @@ export const cienciasLessons = [
         title: '2. Implicaciones negativas de los malos hábitos',
         content: [
           '<ul>' +
-            '<li>El exceso de azúcar puede producir caries.</li>' +
+            '<li>El exceso de azúcar puede producir caries y diabetes.</li>' +
             '<li>El exceso de comida chatarra puede generar obesidad.</li>' +
             '<li>El fumado puede generar enfermedades respiratorias y cáncer de pulmón.</li>' +
             '<li>La falta de sueño puede generar problemas en el sistema nervioso.</li>' +
@@ -310,6 +318,7 @@ export const cienciasLessons = [
             '<li><strong>Excretor + Circulatorio:</strong> El circulatorio lleva los desechos a los riñones; el excretor (renal) se encarga de eliminarlos mediante la orina.</li>' +
             '<li><strong>Muscular + Óseo:</strong> Trabajan juntos para permitir el movimiento del cuerpo. Los huesos dan soporte y los músculos permiten que nos podamos mover.</li>' +
             '<li><strong>Endocrino + Nervioso:</strong> Ambos sistemas se encargan de la regulación del funcionamiento del organismo. Las respuestas del organismo a las hormonas están controladas y reguladas por el cerebro.</li>' +
+            '<li><strong>Reproductor + Endocrino:</strong> El sistema endocrino transforma la información de las hormonas en las características sexuales secundarias que los adolescentes experimentan durante la pubertad.</li>' +
           '</ul>'
         ]
       }
@@ -479,7 +488,7 @@ export const cienciasLessons = [
         content: [
           '<p>En 1969, el científico <strong>Robert Whittaker</strong> propuso la creación de cinco reinos biológicos, clasificando los seres vivos según: nivel de complejidad (unicelular/pluricelular), tipo de células (procariotas/eucariotas), tipo de nutrición (autótrofa/heterótrofa) y tipo de movilidad.</p>',
           '<ul>' +
-            '<li><strong>Reino Monera (Bacterias):</strong> Unicelulares, sin núcleo definido (procariotas). Pueden ser autótrofas o heterótrofas. Formas: cocos (esférica), bacilos (bastón), espirilos (espiral). Beneficios: digestión, prevención de enfermedades, fabricación de insulina, fijación de nitrógeno.</li>' +
+            '<li><strong>Reino Monera (Bacterias):</strong> Unicelulares, sin núcleo definido (procariotas). Pueden ser autótrofas o heterótrofas. Formas: cocos (esférica), bacilos (bastón), espirilos (espiral). Algunas bacterias son benéficas, pero otras producen enfermedades como el cólera y la tuberculosis. Beneficios: digestión, prevención de enfermedades, fabricación de insulina, fijación de nitrógeno.</li>' +
             '<li><strong>Reino Protista:</strong> Eucariotas, en su mayoría unicelulares. Incluye: mohos deslizantes, protozoarios (organismos microscópicos que se mueven con cilios y flagelos) y algas. Algunos protozoarios causan enfermedades: malaria, disentería, enfermedad del sueño.</li>' +
             '<li><strong>Reino Fungi (Hongos):</strong> La mayoría son pluricelulares (la levadura es unicelular). Son heterótrofos e inmóviles. Pueden ser parásitos o descomponedores. Ejemplos: levaduras, champiñones, setas, moho del pan. Usos: alimento, penicilina. Algunos son venenosos (Amanita phalloides).</li>' +
           '</ul>'
@@ -493,7 +502,24 @@ export const cienciasLessons = [
             '<li>Son pluricelulares, autótrofos e inmóviles.</li>' +
             '<li>Producen su alimento por medio de la <strong>fotosíntesis</strong>.</li>' +
           '</ul>',
-          '<p><strong>Fotosíntesis:</strong> Las plantas obtienen su alimento absorbiendo luz solar mediante la <strong>clorofila</strong> en los <strong>cloroplastos</strong>. Usan agua (raíces), dióxido de carbono (aire) y luz solar para producir azúcares (alimento) y liberar oxígeno.</p>',
+          '<p><strong>Plantas sin semillas:</strong></p>',
+          '<ul>' +
+            '<li><strong>Musgos:</strong> Crecen adheridos a rocas y troncos.</li>' +
+            '<li><strong>Helechos:</strong> Crecen en lugares húmedos y se reproducen por medio de esporas.</li>' +
+          '</ul>',
+          '<p><strong>Plantas con semillas:</strong></p>',
+          '<ul>' +
+            '<li><strong>Angiospermas:</strong> No poseen flores. Ejemplos: ciprés, cedro.</li>' +
+            '<li><strong>Gimnospermas:</strong> Poseen flores. Ejemplos: naranjo, orquídeas.</li>' +
+          '</ul>',
+          '<p><strong>Fotosíntesis:</strong> Las plantas obtienen su alimento absorbiendo luz solar mediante la <strong>clorofila</strong> en los <strong>cloroplastos</strong>. Usan agua (raíces), dióxido de carbono (aire), luz solar y una <strong>temperatura adecuada</strong> para producir glucosa (alimento) y liberar oxígeno.</p>',
+          '<p><strong>El proceso de la fotosíntesis:</strong></p>',
+          '<ol>' +
+            '<li>Las raíces absorben el agua y los minerales de la tierra.</li>' +
+            '<li>El agua y los minerales circulan a través del tallo hacia las hojas.</li>' +
+            '<li>Las hojas se orientan hacia la luz para captarla; la clorofila absorbe la luz junto con el dióxido de carbono que la planta toma del aire.</li>' +
+            '<li>La planta elabora azúcares (glucosa) que utiliza como alimento y libera oxígeno a la atmósfera.</li>' +
+          '</ol>',
           '<p><strong>Importancia de la fotosíntesis:</strong></p>',
           '<ul>' +
             '<li>Produce el oxígeno que necesitamos para respirar.</li>' +
@@ -519,6 +545,21 @@ export const cienciasLessons = [
           '</ul>',
           '<p><strong>Animales vertebrados:</strong> Peces (escamas, aletas, branquias), anfibios (cuatro patas, piel húmeda, sangre fría), reptiles (escamas, sangre fría), mamíferos (pelo, pulmones, sangre caliente) y aves (plumas, pico, alas, ponen huevos).</p>'
         ]
+      },
+      {
+        title: '4. Clasificación de los organismos',
+        content: [
+          '<p>Además de los reinos biológicos, los organismos se pueden clasificar según varios criterios:</p>',
+          '<ul>' +
+            '<li><strong>Autótrofos (tipo de nutrición):</strong> Producen su propio alimento. Ejemplos: plantas, algas, cianobacterias.</li>' +
+            '<li><strong>Heterótrofos (tipo de nutrición):</strong> Necesitan alimentarse de otros seres vivos. Ejemplos: animales, hongos.</li>' +
+            '<li><strong>Unicelulares (nivel de complejidad):</strong> Formados por una sola célula. Ejemplos: amebas, protozoos, levaduras.</li>' +
+            '<li><strong>Pluricelulares (nivel de complejidad):</strong> Formados por más de una célula. Ejemplos: animales, hongos, plantas.</li>' +
+            '<li><strong>Procariotas (tipo de células):</strong> Células sin núcleo definido. Ejemplos: algas verdeazuladas, bacterias.</li>' +
+            '<li><strong>Eucariotas (tipo de células):</strong> Células con núcleo definido. Ejemplos: plantas, insectos, hongos.</li>' +
+            '<li><strong>Tipo de movilidad:</strong> Se desplazan (ejemplo: animales) o no se desplazan (ejemplo: plantas).</li>' +
+          '</ul>'
+        ]
       }
     ],
     quiz: []
@@ -534,8 +575,18 @@ export const cienciasLessons = [
         title: '1. Relaciones entre organismos',
         content: [
           '<ul>' +
-            '<li><strong>Relaciones intraespecíficas:</strong> Ocurren entre individuos de la misma especie. Ejemplo: un grupo de leones que vive, caza y se protege juntos. Pueden ser de cooperación o de competencia.</li>' +
+            '<li><strong>Relaciones intraespecíficas:</strong> Ocurren entre individuos de la misma especie.</li>' +
             '<li><strong>Relaciones interespecíficas:</strong> Ocurren entre individuos de diferentes especies. Ejemplo: abejas y flores.</li>' +
+          '</ul>',
+          '<p><strong>Tipos de relaciones intraespecíficas:</strong></p>',
+          '<ul>' +
+            '<li><strong>Competencia:</strong> Los animales compiten por alimento, por la reproducción o por un territorio. Ejemplo: los leones compiten entre sí por el dominio del territorio y la reproducción.</li>' +
+            '<li><strong>Asociación:</strong> Los animales cooperan entre sí para cazar, defenderse de los depredadores o proteger su territorio. Ejemplo: los lobos se unen en grupos para cazar de forma más efectiva.</li>' +
+          '</ul>',
+          '<p>Las relaciones interespecíficas pueden ser de dos tipos:</p>',
+          '<ul>' +
+            '<li><strong>Relación simbiótica:</strong> Dos especies diferentes son interdependientes y se relacionan de forma positiva. Ejemplo: el tiburón y el pez rémora.</li>' +
+            '<li><strong>Relación antagónica:</strong> Al menos una de las especies sale perjudicada. Ejemplo: la orca y las focas.</li>' +
           '</ul>',
           '<p><strong>Tipos de relaciones simbióticas:</strong></p>',
           '<ul>' +
@@ -682,6 +733,41 @@ export const cienciasLessons = [
             '<li><strong>Caza y pesca desmedida:</strong> Rompe el equilibrio ecológico y aumenta el número de especies en peligro de extinción.</li>' +
           '</ul>',
           '<p><strong>Consecuencias de la ruptura del equilibrio ecológico:</strong> modificación y destrucción de hábitats, calentamiento global, destrucción de la capa de ozono, alteración de la cadena alimentaria, erosión de los suelos y extinción de especies.</p>'
+        ]
+      }
+    ],
+    quiz: []
+  },
+
+  {
+    id: 'biodiversidad-costa-rica',
+    mepBloque: 'biodiversidad',
+    title: 'Factores que Favorecen la Biodiversidad de Costa Rica',
+    description: 'El clima, la posición geográfica, el sistema montañoso y la composición del suelo explican la alta biodiversidad de Costa Rica.',
+    sections: [
+      {
+        title: '1. El clima',
+        content: [
+          '<p>Costa Rica tiene dos estaciones climáticas (seca y lluviosa), ya que se ubica en la <strong>zona intertropical</strong> del planeta. Por ello, las precipitaciones son abundantes y la temperatura varía muy poco, y los vientos alisios mantienen la humedad del país, lo que permite que se desarrollen varios <strong>microclimas</strong>.</p>',
+          '<p>Los microclimas generan hábitats muy variados para las diferentes especies de flora y fauna, por lo que favorecen la biodiversidad.</p>'
+        ]
+      },
+      {
+        title: '2. La posición geográfica',
+        content: [
+          '<p>Costa Rica tiene una formación geológica reciente que inició hace 100 millones de años. Además, fue el último eslabón en la unión entre Norteamérica y Sudamérica, lo que permite la migración de especies tanto del norte como del sur, además de poseer dos costas y gran variedad de ecosistemas.</p>'
+        ]
+      },
+      {
+        title: '3. El sistema montañoso',
+        content: [
+          '<p>Las cordilleras del país sirven de barrera y delimitan valles y planicies. Las diferentes altitudes atraen a muchas especies de flora y fauna debido a la diversidad de temperaturas que determinan los tipos de bosques y vegetación.</p>'
+        ]
+      },
+      {
+        title: '4. La composición del suelo',
+        content: [
+          '<p>Los suelos de Costa Rica se caracterizan por ser sumamente fértiles, debido principalmente a que el país es un territorio joven, emergido del mar y con suelos volcánicos, lo que permite el crecimiento de plantas y el desarrollo de hábitats para los animales.</p>'
         ]
       }
     ],
