@@ -1313,7 +1313,7 @@ const Q = [
 ];
 
 // Helper: pick questions by 1-based indices
-const pick = (indices) => indices.map((i) => Q[i]);
+const pick = (indices) => indices.map((i) => ({ ...Q[i] }));
 
 const exam1 = pick([
   1, 16, 36, 51, 66, 76, 86,
