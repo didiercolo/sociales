@@ -67,6 +67,26 @@ const SimulacroActive = ({ questions, onFinish }) => {
         <div style={{ height: '100%', width: `${progress}%`, background: 'var(--primary)', transition: 'width 0.3s' }} />
       </div>
 
+      {question.stimulus && (
+        <div style={{
+          background: '#F1F5F9',
+          border: '1px solid #CBD5E1',
+          borderRadius: 'var(--radius-sm)',
+          padding: '1rem 1.25rem',
+          marginBottom: '1rem',
+          fontSize: '0.95rem',
+          color: 'var(--bg-dark)',
+          lineHeight: 1.6,
+        }}>
+          <p style={{ margin: '0 0 0.5rem', fontStyle: 'italic' }}>{question.stimulus}</p>
+          {question.source && (
+            <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 600 }}>
+              Fuente: {question.source}
+            </p>
+          )}
+        </div>
+      )}
+
       <div style={{
         background: 'white', border: 'none',
         borderRadius: 'var(--radius-md)', padding: '1.5rem',
