@@ -9,7 +9,7 @@ const subjectNotes = {
   espanol: 'La prueba tiene dos partes: Comprensión Lectora (50%) y Producción de Texto Expositivo (50%, mínimo 200 palabras).',
 };
 
-const SUBJECTS_WITH_EXTRA_EXAMS = ['sociales', 'ciencias'];
+const SUBJECTS_WITH_EXTRA_EXAMS = ['sociales', 'ciencias', 'espanol'];
 
 const PruebaMEP = () => {
   const [open, setOpen] = useState({});
