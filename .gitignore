@@ -32,3 +32,6 @@ antigravity/
 .env
 .env.local
 .env.production
+
+# Claude Code worktrees
+.claude/worktrees/
