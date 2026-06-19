@@ -20,7 +20,7 @@ Two concrete problems exist today:
 
 1. **Missing lesson.** Bloque 1 ("Ideas Fundamentales y Complementarias") has
    no theory lesson at all, even though quiz questions testing it exist.
-2. **Misfiled quiz.** All 32 existing quiz questions — covering ideas
+2. **Misfiled quiz.** All 35 existing quiz questions — covering ideas
    fundamentales, complementarias, causa-efecto, tema, ideología, conflictos,
    and comportamientos — are dumped into the `relaciones-causa-efecto`
    lesson's `quiz[]`. The other three doc-backed lessons
@@ -105,7 +105,7 @@ md's possibly-mislabeled section header):
 
 ### Process
 
-1. **Redistribute first.** Move each of the 32 existing quiz questions out of
+1. **Redistribute first.** Move each of the 35 existing quiz questions out of
    `relaciones-causa-efecto` into the lesson matching its actual topic. This
    alone fixes the "empty quiz" problem for 3 lessons before any new content
    is added.
