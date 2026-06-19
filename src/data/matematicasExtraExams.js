@@ -1130,15 +1130,15 @@ const exam3Unique = pick([
 
 // 5 repeated questions for Exam 3 with options reordered so correct is at index 0
 const exam3Repeats = [
-  // Repeat of Q1 — correct moved to index 0
+  // Repeat of Q1 — correct moved to index 2
   {
     question: "Observe el siguiente número: 5 207 481 936. ¿Cuál es la forma correcta de leer este número?",
     options: [
-      "cinco mil doscientos siete millones cuatrocientos ochenta y un mil novecientos treinta y seis.",
       "cinco millones doscientos siete mil cuatrocientos ochenta y uno.",
       "quinientos veinte millones setecientos cuarenta y ocho mil novecientos treinta y seis.",
+      "cinco mil doscientos siete millones cuatrocientos ochenta y un mil novecientos treinta y seis.",
     ],
-    correct: 0,
+    correct: 2,
     mepBloque: "numeros",
   },
   // Repeat of Q23 — correct moved to index 0

@@ -67,4 +67,15 @@ describe('matematicasExtraExams', () => {
     const duplicates = matematicasExtraExams[2].filter(q => exam12Qs.has(q.question));
     expect(duplicates).toHaveLength(5);
   });
+
+  it('every exam 3 repeat has its options reordered (not identical to the original)', () => {
+    const exam12 = [...matematicasExtraExams[0], ...matematicasExtraExams[1]];
+    const exam3 = matematicasExtraExams[2];
+    const repeats = exam3.filter(q => exam12.some(orig => orig.question === q.question));
+    expect(repeats).toHaveLength(5);
+    repeats.forEach((repeat) => {
+      const original = exam12.find(orig => orig.question === repeat.question);
+      expect(repeat.options, `repeat of "${repeat.question.slice(0, 30)}..."`).not.toEqual(original.options);
+    });
+  });
 });
