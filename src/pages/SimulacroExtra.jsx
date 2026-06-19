@@ -4,6 +4,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import { subjectConfig } from '../data/subjectConfig';
 import { socialesExtraExams } from '../data/socialesExtraExams';
 import { cienciasExtraExams } from '../data/cienciasExtraExams';
+import { espanolExtraExams } from '../data/espanolExtraExams';
 import SimulacroStart from '../components/Simulacro/SimulacroStart';
 import SimulacroActive from '../components/Simulacro/SimulacroActive';
 import SimulacroResults from '../components/Simulacro/SimulacroResults';
@@ -11,6 +12,7 @@ import SimulacroResults from '../components/Simulacro/SimulacroResults';
 const extraExamsBySubject = {
   sociales: socialesExtraExams,
   ciencias: cienciasExtraExams,
+  espanol: espanolExtraExams,
 };
 const VALID_SUBJECTS = Object.keys(extraExamsBySubject);
 
