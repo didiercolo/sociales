@@ -1,14 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { doc, getDoc } from 'firebase/firestore';
-import { getFunctions, httpsCallable } from 'firebase/functions';
-import { db } from '../firebase/config';
+import { supabase } from '../supabase/client';
 import { useAuth } from '../context/AuthContext';
 import WeeklyChallengeStart from '../components/WeeklyChallenge/WeeklyChallengeStart';
 import WeeklyChallengeActive from '../components/WeeklyChallenge/WeeklyChallengeActive';
 import WeeklyChallengeResults from '../components/WeeklyChallenge/WeeklyChallengeResults';
-
-const functions = getFunctions();
 
 // State machine phases
 const PHASE = {
@@ -61,29 +57,32 @@ const WeeklyChallengePage = () => {
       setWeekId(currentWeekId);
 
       try {
-        const ref = doc(db, 'weeklyChallenge', currentWeekId);
-        const snap = await getDoc(ref);
+        const { data: challenge, error: challengeError } = await supabase
+          .rpc('get_weekly_challenge', { p_week_id: currentWeekId });
+        if (challengeError) throw challengeError;
 
-        if (!snap.exists()) {
+        if (!challenge || !challenge.weekId) {
           setNoChallenge(true);
           setPhase(PHASE.LOADING); // Stay in loading-like state, render no-challenge message
           return;
         }
 
-        const data = { weekId: snap.id, ...snap.data() };
-        setWeekDoc(data);
+        setWeekDoc(challenge);
 
-        // Re-fetch the user doc fresh so we don't rely on the stale AuthContext snapshot
+        // Re-fetch the user's weekly progress fresh so we don't rely on the stale AuthContext snapshot
         let weeklyWeekId = null;
         let weeklyAnsweredCount = 0;
         let weeklyBonusAwarded = false;
 
         if (currentUser) {
-          const freshUserSnap = await getDoc(doc(db, 'users', currentUser.uid));
-          const freshProfile = freshUserSnap.exists() ? freshUserSnap.data() : {};
-          weeklyWeekId = freshProfile.weeklyWeekId ?? null;
-          weeklyAnsweredCount = freshProfile.weeklyAnsweredCount ?? 0;
-          weeklyBonusAwarded = freshProfile.weeklyBonusAwarded ?? false;
+          const { data: freshProfile } = await supabase
+            .from('profiles')
+            .select('weeklyWeekId:weekly_week_id, weeklyAnsweredCount:weekly_answered_count, weeklyBonusAwarded:weekly_bonus_awarded')
+            .eq('id', currentUser.id)
+            .maybeSingle();
+          weeklyWeekId = freshProfile?.weeklyWeekId ?? null;
+          weeklyAnsweredCount = freshProfile?.weeklyAnsweredCount ?? 0;
+          weeklyBonusAwarded = freshProfile?.weeklyBonusAwarded ?? false;
         }
 
         if (weeklyWeekId === currentWeekId && weeklyBonusAwarded) {
@@ -122,16 +121,15 @@ const WeeklyChallengePage = () => {
     setIsSubmitting(true);
 
     try {
-      const submitAnswer = httpsCallable(functions, 'submitAnswer');
-
-      const response = await submitAnswer({
-        questionId: weekId,
+      const { data: rpcData, error: rpcError } = await supabase.rpc('submit_answer', {
+        question_id: weekId,
         answer: selectedAnswer,
-        questionType: 'weekly',
-        questionIndex,
+        question_type: 'weekly',
+        question_index: questionIndex,
       });
+      if (rpcError) throw rpcError;
 
-      const data = response.data || {};
+      const data = rpcData || {};
       const pointsEarned = data.pointsEarned ?? 0;
       setTotalPointsEarned((prev) => prev + pointsEarned);
 

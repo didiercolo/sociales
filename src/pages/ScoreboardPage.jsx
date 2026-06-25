@@ -1,9 +1,8 @@
 // src/pages/ScoreboardPage.jsx
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { doc, onSnapshot } from 'firebase/firestore';
-import { db } from '../firebase/config';
 import { useAuth } from '../context/AuthContext';
+import { useScoreboard } from '../hooks/useScoreboard';
 
 const getTierInfo = (tier) => {
   switch (tier) {
@@ -54,19 +53,10 @@ const UserRow = ({ rank, user, highlight }) => {
 };
 
 const ScoreboardPage = () => {
-  const [topUsers, setTopUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { topUsers, loading } = useScoreboard();
   const { currentUser, userProfile } = useAuth();
 
-  useEffect(() => {
-    const unsub = onSnapshot(doc(db, 'system', 'scoreboard'), (snap) => {
-      setTopUsers(snap.exists() ? (snap.data().topUsers || []) : []);
-      setLoading(false);
-    }, () => setLoading(false));
-    return unsub;
-  }, []);
-
-  const userInTop50 = currentUser && topUsers.some(u => u.uid === currentUser.uid);
+  const userInTop50 = currentUser && topUsers.some(u => u.uid === currentUser.id);
 
   return (
     <div className="container" style={{ padding: '3rem 1.5rem' }}>

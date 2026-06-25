@@ -1,20 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { doc, onSnapshot } from 'firebase/firestore';
-import { db } from '../firebase/config';
 import { getTierInfo } from '../utils';
+import { useScoreboard } from '../hooks/useScoreboard';
 
 const ScoreboardWidget = () => {
-  const [topUsers, setTopUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const unsub = onSnapshot(doc(db, 'system', 'scoreboard'), (snap) => {
-      setTopUsers(snap.exists() ? (snap.data().topUsers || []).slice(0, 5) : []);
-      setLoading(false);
-    }, () => setLoading(false));
-    return unsub;
-  }, []);
+  const { topUsers: allUsers, loading } = useScoreboard();
+  const topUsers = allUsers.slice(0, 5);
 
   return (
     <section style={{ padding: '2rem 0' }}>

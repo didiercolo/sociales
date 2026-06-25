@@ -1,7 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { onAuthStateChanged, signInAnonymously } from 'firebase/auth';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { auth, db } from '../firebase/config';
+import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
+import { supabase } from '../supabase/client';
 
 const AuthContext = createContext();
 
@@ -9,40 +7,64 @@ export const useAuth = () => {
     return useContext(AuthContext);
 };
 
+// Pull the profile row for a signed-in user. Returns null if none exists yet
+// (e.g. between auth sign-up and the profile insert during registration).
+const fetchProfile = async (userId) => {
+    const { data } = await supabase
+        .from('profiles')
+        .select('id, nickname, tier, tierSubject:tier_subject, score, questionsToday:questions_today')
+        .eq('id', userId)
+        .maybeSingle();
+    return data;
+};
+
 export const AuthProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
     const [userProfile, setUserProfile] = useState(null);
     const [loading, setLoading] = useState(true);
+    // Monotonic guard so a slower/earlier profile fetch can't overwrite a newer one
+    // (notably the SIGNED_IN fetch that runs before registration inserts the row).
+    const profileSeq = useRef(0);
+    const userRef = useRef(null);
+    const mounted = useRef(true);
+
+    const loadProfile = async (user) => {
+        const seq = ++profileSeq.current;
+        const profile = user ? await fetchProfile(user.id) : null;
+        if (mounted.current && seq === profileSeq.current) setUserProfile(profile);
+    };
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (user) => {
-            setCurrentUser(user);
+        mounted.current = true;
 
-            if (user) {
-                // Fetch or create user profile in Firestore
-                const userDocRef = doc(db, 'users', user.uid);
-                const userDocSnap = await getDoc(userDocRef);
+        const applySession = async (session) => {
+            const user = session?.user ?? null;
+            userRef.current = user;
+            if (mounted.current) setCurrentUser(user);
+            await loadProfile(user);
+            if (mounted.current) setLoading(false);
+        };
 
-                if (userDocSnap.exists()) {
-                    setUserProfile(userDocSnap.data());
-                } else {
-                    // Initial anonymous account might not have a profile yet until they pick a nickname
-                    setUserProfile(null);
-                }
-            } else {
-                setUserProfile(null);
-            }
-
-            setLoading(false);
+        supabase.auth.getSession().then(({ data }) => applySession(data.session));
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+            applySession(session);
         });
 
-        return unsubscribe;
+        return () => {
+            mounted.current = false;
+            subscription.unsubscribe();
+        };
     }, []);
+
+    // Re-fetch the current user's profile. Called after registration once the
+    // profile row exists, so the UI reflects the logged-in state without a reload.
+    const refreshProfile = () => loadProfile(userRef.current);
 
     const value = {
         currentUser,
         userProfile,
-        loading
+        loading,
+        refreshProfile
     };
 
     return (

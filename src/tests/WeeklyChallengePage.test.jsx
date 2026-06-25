@@ -2,9 +2,8 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
-import { getDoc } from 'firebase/firestore';
-import { httpsCallable } from 'firebase/functions';
 import { useAuth } from '../context/AuthContext';
+import { supabase } from '../supabase/client';
 import WeeklyChallengePage from '../pages/WeeklyChallengePage';
 
 // ─── Module mocks ────────────────────────────────────────────────────────────
@@ -13,37 +12,16 @@ vi.mock('../context/AuthContext', () => ({
   useAuth: vi.fn(),
 }));
 
-// firebase/firestore is globally mocked in vitest.setup.js (getDoc is a vi.fn())
-// firebase/functions is NOT in vitest.setup.js, so we mock it here
-vi.mock('firebase/functions', () => ({
-  getFunctions: vi.fn(() => ({})),
-  httpsCallable: vi.fn(),
-}));
-
 // ─── Mock data ───────────────────────────────────────────────────────────────
 
 const MOCK_QUESTIONS = [
-  {
-    question: '¿Cuál es la capital?',
-    options: ['San José', 'Cartago', 'Heredia', 'Alajuela'],
-    correctAnswer: 'San José',
-    explanation: 'San José es la capital.',
-    subject: 'Sociales',
-  },
-  {
-    question: '¿Cuántos huesos?',
-    options: ['106', '206', '306', '406'],
-    correctAnswer: '206',
-    explanation: 'Son 206 huesos.',
-    subject: 'Ciencias',
-  },
+  { question: '¿Cuál es la capital?', options: ['San José', 'Cartago', 'Heredia', 'Alajuela'], subject: 'Sociales' },
+  { question: '¿Cuántos huesos?', options: ['106', '206', '306', '406'], subject: 'Ciencias' },
 ];
 
-const mockUser = { uid: 'test-uid' };
+const mockUser = { id: 'test-uid' };
 
 const baseProfile = {
-  nickname: 'TestUser',
-  tier: 1,
   weeklyWeekId: null,
   weeklyAnsweredCount: 0,
   weeklyBonusAwarded: false,
@@ -61,27 +39,28 @@ function getCurrentISOWeekId(date = new Date()) {
 
 const CURRENT_WEEK_ID = getCurrentISOWeekId();
 
-/** A resolved Firestore snapshot that has the weekly challenge doc. */
-const docSnapExists = {
-  exists: () => true,
-  data: () => ({
-    weekId: CURRENT_WEEK_ID,
-    startDate: '2026-06-09',
-    endDate: '2026-06-15',
-    questions: MOCK_QUESTIONS,
-  }),
+const challengeData = {
+  weekId: CURRENT_WEEK_ID,
+  startDate: '2026-06-09',
+  endDate: '2026-06-15',
+  questions: MOCK_QUESTIONS,
 };
 
-/** A resolved Firestore snapshot for a missing doc. */
-const docSnapMissing = { exists: () => false };
-
-/** A resolved user doc snapshot with the base (fresh) profile. */
-const userDocSnap = (profile = baseProfile) => ({
-  exists: () => true,
-  data: () => ({ ...profile }),
-});
-
-// ─── Helpers ─────────────────────────────────────────────────────────────────
+// Stubs supabase.rpc to return the weekly challenge and a submit result, and
+// supabase.from('profiles') to return the given weekly progress.
+const setup = ({ challenge = challengeData, profile = baseProfile, submit } = {}) => {
+  supabase.rpc.mockImplementation((fn) => {
+    if (fn === 'get_weekly_challenge') return Promise.resolve({ data: challenge, error: null });
+    if (fn === 'submit_answer') return Promise.resolve({ data: submit, error: null });
+    return Promise.resolve({ data: null, error: null });
+  });
+  const chain = {
+    select: vi.fn(() => chain),
+    eq: vi.fn(() => chain),
+    maybeSingle: vi.fn(() => Promise.resolve({ data: profile, error: null })),
+  };
+  supabase.from.mockReturnValue(chain);
+};
 
 const renderPage = () =>
   render(
@@ -95,164 +74,83 @@ const renderPage = () =>
 describe('WeeklyChallengePage', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-
-    // Default: logged-in user, no challenge completed yet
-    vi.mocked(useAuth).mockReturnValue({
-      currentUser: mockUser,
-      userProfile: { ...baseProfile },
-      loading: false,
-    });
-
-    // Default httpsCallable stub (overridden in specific tests)
-    vi.mocked(httpsCallable).mockReturnValue(() =>
-      Promise.resolve({
-        data: {
-          success: true,
-          pointsEarned: 2,
-          isCorrect: true,
-          bonusAwarded: false,
-          weeklyComplete: false,
-        },
-      })
-    );
+    vi.mocked(useAuth).mockReturnValue({ currentUser: mockUser, userProfile: { ...baseProfile }, loading: false });
+    setup();
   });
 
-  // ── 1. Loading state ───────────────────────────────────────────────────────
-
-  it('shows loading state initially before getDoc resolves', () => {
-    // getDoc never resolves during this synchronous check
-    vi.mocked(getDoc).mockReturnValue(new Promise(() => {}));
-
+  it('shows loading state initially before the challenge resolves', () => {
+    supabase.rpc.mockReturnValue(new Promise(() => {}));
     renderPage();
-
     expect(screen.getByText(/Cargando/i)).toBeInTheDocument();
   });
 
-  // ── 1b. Auth loading state ─────────────────────────────────────────────────
-
-  it('stays in loading state while auth is resolving', async () => {
+  it('stays in loading state while auth is resolving', () => {
     vi.mocked(useAuth).mockReturnValue({ currentUser: null, userProfile: null, loading: true });
-    render(<MemoryRouter><WeeklyChallengePage /></MemoryRouter>);
-
-    // Should show loading indicator, not the auth guard
+    renderPage();
     expect(screen.getByText(/Cargando/i)).toBeInTheDocument();
-    // Should NOT show the login prompt
     expect(screen.queryByText(/Inicia sesión/i)).not.toBeInTheDocument();
   });
 
-  // ── 2. Auth guard ──────────────────────────────────────────────────────────
-
   it('shows login prompt when user is not logged in', () => {
-    vi.mocked(useAuth).mockReturnValue({
-      currentUser: null,
-      userProfile: null,
-      loading: false,
-    });
-
+    vi.mocked(useAuth).mockReturnValue({ currentUser: null, userProfile: null, loading: false });
     renderPage();
-
     expect(screen.getByText(/Inicia sesión/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Iniciar Sesión/i })).toBeInTheDocument();
   });
 
-  // ── 3. No challenge available ──────────────────────────────────────────────
-
-  it('shows "no hay reto" message when weeklyChallenge doc does not exist', async () => {
-    vi.mocked(getDoc).mockResolvedValueOnce(docSnapMissing);
-
+  it('shows "no hay reto" message when there is no challenge for the week', async () => {
+    setup({ challenge: null });
     renderPage();
-
     await waitFor(() => {
       expect(screen.getByText(/no hay reto disponible/i)).toBeInTheDocument();
     });
   });
 
-  // ── 4. Start screen ────────────────────────────────────────────────────────
-
-  it('shows start screen with "Comenzar Reto" button when doc exists and user has not started', async () => {
-    // First call: weekly challenge doc; second call: fresh user doc
-    vi.mocked(getDoc)
-      .mockResolvedValueOnce(docSnapExists)
-      .mockResolvedValueOnce(userDocSnap());
-
+  it('shows start screen when challenge exists and user has not started', async () => {
     renderPage();
-
     await waitFor(() => {
       expect(screen.getByRole('button', { name: /Comenzar Reto/i })).toBeInTheDocument();
     });
   });
 
-  // ── 5. Already-completed state ─────────────────────────────────────────────
-
-  it('shows already-completed results when user has bonusAwarded for the current week', async () => {
+  it('shows already-completed results when the user finished the current week', async () => {
     const completedProfile = {
-      ...baseProfile,
       weeklyWeekId: CURRENT_WEEK_ID,
       weeklyBonusAwarded: true,
       weeklyAnsweredCount: MOCK_QUESTIONS.length,
     };
-
-    vi.mocked(useAuth).mockReturnValue({
-      currentUser: mockUser,
-      userProfile: completedProfile,
-      loading: false,
-    });
-
-    // First call: weekly challenge doc; second call: fresh user doc with completed state
-    vi.mocked(getDoc)
-      .mockResolvedValueOnce(docSnapExists)
-      .mockResolvedValueOnce(userDocSnap(completedProfile));
+    vi.mocked(useAuth).mockReturnValue({ currentUser: mockUser, userProfile: completedProfile, loading: false });
+    setup({ profile: completedProfile });
 
     renderPage();
-
     await waitFor(() => {
-      expect(
-        screen.getByText(/Ya completaste el reto de esta semana/i)
-      ).toBeInTheDocument();
+      expect(screen.getByText(/Ya completaste el reto de esta semana/i)).toBeInTheDocument();
     });
   });
 
-  // ── 6. Submit answer → see feedback → advance to next question ─────────────
-
-  it('transitions from START → ACTIVE → feedback → next question after submitting an answer', async () => {
-    // First call: weekly challenge doc; second call: fresh user doc
-    vi.mocked(getDoc)
-      .mockResolvedValueOnce(docSnapExists)
-      .mockResolvedValueOnce(userDocSnap());
+  it('transitions START → ACTIVE → feedback → next question after submitting', async () => {
+    setup({ submit: { success: true, pointsEarned: 2, isCorrect: true, bonusAwarded: false, weeklyComplete: false } });
 
     renderPage();
 
-    // Wait for start screen
     const startBtn = await screen.findByRole('button', { name: /Comenzar Reto/i });
-
-    // Click "Comenzar Reto" → ACTIVE phase
     fireEvent.click(startBtn);
 
-    // Should now show first question
     await waitFor(() => {
       expect(screen.getByText('¿Cuál es la capital?')).toBeInTheDocument();
     });
 
-    // Select an option
     fireEvent.click(screen.getByText('San José'));
+    fireEvent.click(screen.getByRole('button', { name: /Confirmar Respuesta/i }));
 
-    // Click "Confirmar Respuesta"
-    const confirmBtn = screen.getByRole('button', { name: /Confirmar Respuesta/i });
-    fireEvent.click(confirmBtn);
+    expect(supabase.rpc).toHaveBeenCalledWith('submit_answer', expect.objectContaining({ question_type: 'weekly' }));
 
-    // httpsCallable should have been called with the correct function name
-    expect(vi.mocked(httpsCallable)).toHaveBeenCalledWith(expect.anything(), 'submitAnswer');
-
-    // After submit resolves, feedback should appear (¡Correcto! since isCorrect: true)
     await waitFor(() => {
       expect(screen.getByText('¡Correcto!')).toBeInTheDocument();
     });
 
-    // Click "Siguiente →" to advance to second question
-    const nextBtn = screen.getByRole('button', { name: /Siguiente →/i });
-    fireEvent.click(nextBtn);
+    fireEvent.click(screen.getByRole('button', { name: /Siguiente →/i }));
 
-    // Second question should now appear
     await waitFor(() => {
       expect(screen.getByText('¿Cuántos huesos?')).toBeInTheDocument();
     });

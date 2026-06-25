@@ -1,20 +1,17 @@
 import { render, waitFor, screen } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { AuthProvider, useAuth } from '../context/AuthContext';
-import { onAuthStateChanged } from 'firebase/auth';
-import { getDoc } from 'firebase/firestore';
+import { supabase } from '../supabase/client';
 
-// Mocking dependencies
-vi.mock('firebase/auth', () => ({
-  onAuthStateChanged: vi.fn(),
-  getAuth: vi.fn(),
-}));
-
-vi.mock('firebase/firestore', () => ({
-  getFirestore: vi.fn(),
-  doc: vi.fn((db, coll, id) => ({ id })),
-  getDoc: vi.fn(),
-}));
+// Builds a from() chain whose maybeSingle() resolves to the given profile row.
+const mockProfileFetch = (profile) => {
+  const chain = {
+    select: vi.fn(() => chain),
+    eq: vi.fn(() => chain),
+    maybeSingle: vi.fn(() => Promise.resolve({ data: profile, error: null })),
+  };
+  supabase.from.mockReturnValue(chain);
+};
 
 // Helper component to access context
 const TestComponent = ({ onValue }) => {
@@ -28,21 +25,15 @@ const TestComponent = ({ onValue }) => {
 describe('AuthContext Integration', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    supabase.auth.onAuthStateChange.mockReturnValue({ data: { subscription: { unsubscribe: vi.fn() } } });
   });
 
-  it('loads user profile from Firestore when user is authenticated', async () => {
-    const mockUser = { uid: 'user123' };
-    const mockProfile = { nickname: 'IntegrationTester' };
+  it('loads user profile from Supabase when user is authenticated', async () => {
+    const mockUser = { id: 'user123' };
+    const mockProfile = { id: 'user123', nickname: 'IntegrationTester', tier: 1, score: 0 };
 
-    onAuthStateChanged.mockImplementation((auth, callback) => {
-      callback(mockUser);
-      return () => {};
-    });
-
-    getDoc.mockResolvedValue({
-      exists: () => true,
-      data: () => mockProfile,
-    });
+    supabase.auth.getSession.mockResolvedValue({ data: { session: { user: mockUser } } });
+    mockProfileFetch(mockProfile);
 
     let contextValue;
     render(
@@ -51,24 +42,17 @@ describe('AuthContext Integration', () => {
       </AuthProvider>
     );
 
-    // Initial state is loading, wait for 'done'
     await waitFor(() => expect(screen.getByText('done')).toBeInTheDocument());
-    
+
     expect(contextValue.currentUser).toEqual(mockUser);
     expect(contextValue.userProfile).toEqual(mockProfile);
   });
 
-  it('handles user without Firestore profile', async () => {
-    const mockUser = { uid: 'user456' };
+  it('handles user without a profile row', async () => {
+    const mockUser = { id: 'user456' };
 
-    onAuthStateChanged.mockImplementation((auth, callback) => {
-      callback(mockUser);
-      return () => {};
-    });
-
-    getDoc.mockResolvedValue({
-      exists: () => false,
-    });
+    supabase.auth.getSession.mockResolvedValue({ data: { session: { user: mockUser } } });
+    mockProfileFetch(null);
 
     let contextValue;
     render(
@@ -78,7 +62,7 @@ describe('AuthContext Integration', () => {
     );
 
     await waitFor(() => expect(screen.getByText('done')).toBeInTheDocument());
-    
+
     expect(contextValue.currentUser).toEqual(mockUser);
     expect(contextValue.userProfile).toBeNull();
   });

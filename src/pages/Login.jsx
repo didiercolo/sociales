@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase/config';
+import { supabase } from '../supabase/client';
 
 export default function Login() {
     const [nickname, setNickname] = useState('');
@@ -19,7 +18,8 @@ export default function Login() {
         try {
             // Reconstruct the pseudo-email from the nickname
             const pseudoEmail = `${nickname.trim().toLowerCase().replace(/\s+/g, '_')}@eduportalcr.app`;
-            await signInWithEmailAndPassword(auth, pseudoEmail, password);
+            const { error: signInError } = await supabase.auth.signInWithPassword({ email: pseudoEmail, password });
+            if (signInError) throw signInError;
             navigate('/');
         } catch (err) {
             console.error(err);

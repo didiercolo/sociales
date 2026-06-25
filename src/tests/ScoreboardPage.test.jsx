@@ -2,12 +2,16 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
-import { onSnapshot } from 'firebase/firestore';
+import { useScoreboard } from '../hooks/useScoreboard';
 import ScoreboardPage from '../pages/ScoreboardPage';
 import * as AuthContext from '../context/AuthContext';
 
 vi.mock('../context/AuthContext', () => ({
   useAuth: vi.fn(() => ({ currentUser: null, userProfile: null })),
+}));
+
+vi.mock('../hooks/useScoreboard', () => ({
+  useScoreboard: vi.fn(),
 }));
 
 const mockUsers = Array.from({ length: 3 }, (_, i) => ({
@@ -19,10 +23,8 @@ const mockUsers = Array.from({ length: 3 }, (_, i) => ({
 
 describe('ScoreboardPage', () => {
   beforeEach(() => {
-    vi.mocked(onSnapshot).mockImplementation((_ref, callback) => {
-      callback({ exists: () => true, data: () => ({ topUsers: mockUsers }) });
-      return () => {};
-    });
+    vi.mocked(useScoreboard).mockReturnValue({ topUsers: mockUsers, loading: false });
+    vi.mocked(AuthContext.useAuth).mockReturnValue({ currentUser: null, userProfile: null });
   });
 
   const renderPage = () => render(<MemoryRouter><ScoreboardPage /></MemoryRouter>);
@@ -46,22 +48,20 @@ describe('ScoreboardPage', () => {
 
   it('shows pinned row for logged-in user not in top-50', () => {
     vi.mocked(AuthContext.useAuth).mockReturnValue({
-      currentUser: { uid: 'outside' },
+      currentUser: { id: 'outside' },
       userProfile: { nickname: 'OutsideUser', score: 3, tier: 1 },
     });
     renderPage();
     expect(screen.getByText(/OutsideUser/)).toBeInTheDocument();
     expect(screen.getByText(/Fuera del top 50/i)).toBeInTheDocument();
-    vi.mocked(AuthContext.useAuth).mockReturnValue({ currentUser: null, userProfile: null });
   });
 
   it('does not show pinned row when user is in top-50', () => {
     vi.mocked(AuthContext.useAuth).mockReturnValue({
-      currentUser: { uid: '1' },
+      currentUser: { id: '1' },
       userProfile: { nickname: 'User1', score: 150, tier: 1 },
     });
     renderPage();
     expect(screen.queryByText(/Fuera del top 50/i)).not.toBeInTheDocument();
-    vi.mocked(AuthContext.useAuth).mockReturnValue({ currentUser: null, userProfile: null });
   });
 });
