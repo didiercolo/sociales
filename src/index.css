@@ -1385,11 +1385,20 @@ main { flex: 1; }
    AUTH PROMPT MODAL
    ============================================================ */
 .auth-modal {
+  /* Center explicitly — the global `* { margin: 0 }` reset kills the
+     <dialog> UA `margin: auto` that would otherwise center the modal. */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
   border: none;
   border-radius: var(--radius-md);
   padding: 0;
   max-width: 420px;
   width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: var(--shadow-lg);
 }
 .auth-modal::backdrop {
