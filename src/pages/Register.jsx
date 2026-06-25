@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc, getDocs, updateDoc, collection, query, where } from 'firebase/firestore';
-import { auth, db } from '../firebase/config';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { supabase } from '../supabase/client';
+import { useAuth } from '../context/AuthContext';
 import { NICKNAMES_SEED } from '../scripts/seedNicknames';
 
 const STEPS = {
@@ -24,6 +23,8 @@ export default function Register() {
     const [loading, setLoading] = useState(false);
     const [honeypot, setHoneypot] = useState('');
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const { refreshProfile } = useAuth();
 
     // Load available (unused) nicknames from Firestore on mount
     useEffect(() => {
@@ -38,15 +39,14 @@ export default function Register() {
 
         const loadNicknames = async () => {
             try {
-                const q = query(collection(db, 'nicknames'), where('used', '==', false));
-                const snapshot = await getDocs(q);
+                const { data, error } = await supabase
+                    .from('nicknames')
+                    .select('id, name, emoji')
+                    .eq('used', false);
+                if (error) throw error;
 
-                if (!snapshot.empty) {
-                    const entries = [];
-                    snapshot.forEach((docSnap) => {
-                        const { name, emoji } = docSnap.data();
-                        entries.push({ name, emoji: emoji || '', docId: docSnap.id });
-                    });
+                if (data && data.length > 0) {
+                    const entries = data.map(({ name, emoji, id }) => ({ name, emoji: emoji || '', docId: id }));
                     setAvailableNicknames(shuffle(entries));
                 } else {
                     // Firestore nicknames collection not seeded yet — use hardcoded list
@@ -55,8 +55,8 @@ export default function Register() {
                     );
                 }
             } catch (err) {
-                console.error('Error loading nicknames from Firestore:', err);
-                // Fall back to full hardcoded list on any Firestore error
+                console.error('Error loading nicknames from Supabase:', err);
+                // Fall back to full hardcoded list on any error
                 setAvailableNicknames(
                     shuffle(NICKNAMES_SEED.map(({ name, emoji }) => ({ name, emoji, docId: null })))
                 );
@@ -105,43 +105,59 @@ export default function Register() {
 
         setLoading(true);
         try {
-            // Create Firebase account using pseudo-email (never shown to user).
-            // email-already-in-use means the nickname is taken — Firebase Auth enforces uniqueness.
+            // Create Supabase account using pseudo-email (never shown to user).
+            // A taken nickname surfaces as a sign-up error or a unique-violation on the profile.
             const pseudoEmail = `${activeNickname.toLowerCase().replace(/\s+/g, '_')}@eduportalcr.app`;
-            const userCredential = await createUserWithEmailAndPassword(auth, pseudoEmail, password);
-            const user = userCredential.user;
+            const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+                email: pseudoEmail,
+                password,
+            });
+            if (signUpError) {
+                if (/already|registered|exist/i.test(signUpError.message)) {
+                    setError('Ese nombre ya está tomado. ¡Elige otro!');
+                } else {
+                    setError('Ocurrió un error al crear tu cuenta. Inténtalo de nuevo.');
+                }
+                setLoading(false);
+                return;
+            }
 
-            // Create Firestore user document with default values
-            await setDoc(doc(db, 'users', user.uid), {
-                uid: user.uid,
+            const user = signUpData.user;
+
+            // Create the profile row with default values (RLS enforces tier/score/questions_today).
+            const { error: profileError } = await supabase.from('profiles').insert({
+                id: user.id,
                 nickname: activeNickname,
                 tier: 1,
-                tierSubject: null,
-                tierExpiresAt: null,
                 score: 0,
-                questionsToday: 0,
-                lastQuestionDate: null,
-                createdAt: new Date(),
+                questions_today: 0,
             });
+            if (profileError) {
+                if (profileError.code === '23505') {
+                    setError('Ese nombre ya está tomado. ¡Elige otro!');
+                } else {
+                    setError('Ocurrió un error al crear tu cuenta. Inténtalo de nuevo.');
+                }
+                setLoading(false);
+                return;
+            }
 
-            // If nickname came from a Firestore-backed entry, mark it as used
+            // If nickname came from a Supabase-backed entry, mark it as used.
             const pickedEntry = availableNicknames.find((e) => e.name === activeNickname);
             if (nicknameMode === 'list' && pickedEntry?.docId) {
-                await updateDoc(doc(db, 'nicknames', pickedEntry.docId), {
-                    used: true,
-                });
+                await supabase.from('nicknames').update({ used: true }).eq('id', pickedEntry.docId);
             }
 
-            navigate('/');
+            // Profile row now exists — refresh context so the UI shows the
+            // logged-in state immediately (signUp already created the session).
+            await refreshProfile();
+
+            navigate(searchParams.get('redirect') || '/');
         } catch (err) {
             console.error(err);
-            if (err.code === 'auth/email-already-in-use') {
-                setError('Ese nombre ya está tomado. ¡Elige otro!');
-            } else {
-                setError('Ocurrió un error al crear tu cuenta. Inténtalo de nuevo.');
-            }
+            setError('Ocurrió un error al crear tu cuenta. Inténtalo de nuevo.');
+            setLoading(false);
         }
-        setLoading(false);
     };
 
     return (

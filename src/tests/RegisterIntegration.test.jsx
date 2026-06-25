@@ -2,46 +2,52 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import Register from '../pages/Register';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { getDocs, setDoc } from 'firebase/firestore';
+import { supabase } from '../supabase/client';
+import { useAuth } from '../context/AuthContext';
 
-// Mock Firebase Auth
-vi.mock('firebase/auth', () => ({
-  createUserWithEmailAndPassword: vi.fn(),
-  getAuth: vi.fn(),
-  onAuthStateChanged: vi.fn(() => () => {}),
-}));
-
-// Mock Firebase Firestore
-vi.mock('firebase/firestore', () => ({
-  getFirestore: vi.fn(),
-  collection: vi.fn(),
-  query: vi.fn(),
-  where: vi.fn(),
-  getDocs: vi.fn(),
-  doc: vi.fn(),
-  setDoc: vi.fn(),
-  updateDoc: vi.fn(),
-}));
-
-// Mock seedNicknames script — must export NICKNAMES_SEED since Register.jsx uses it as Firestore fallback
+// Register.jsx imports NICKNAMES_SEED as the picker fallback list.
 vi.mock('../scripts/seedNicknames', () => ({
-  seedNicknames: vi.fn(() => Promise.resolve()),
   NICKNAMES_SEED: [{ name: 'NebulaByte', emoji: '🌌' }],
 }));
 
+// Register calls useAuth().refreshProfile; it isn't wrapped in AuthProvider here.
+vi.mock('../context/AuthContext', () => ({
+  useAuth: vi.fn(),
+}));
+
+// Mock navigation so we can assert the post-signup redirect target.
+const navigate = vi.hoisted(() => vi.fn());
+vi.mock('react-router-dom', async (orig) => ({
+  ...(await orig()),
+  useNavigate: () => navigate,
+}));
+
+// A from() chain that resolves to the seeded nickname row for every terminal
+// call (select/.eq for the picker load, insert for the profile, update for the
+// claim). insert/update paths only read `error`, so one result satisfies all.
+const mockFrom = (result = { data: [{ id: 'nick1', name: 'NebulaByte', emoji: '🌌' }], error: null }) => {
+  const chain = {
+    select: vi.fn(() => chain),
+    insert: vi.fn(() => Promise.resolve(result)),
+    update: vi.fn(() => chain),
+    eq: vi.fn(() => Promise.resolve(result)),
+  };
+  supabase.from.mockReturnValue(chain);
+  return chain;
+};
+
 describe('Register Page Integration', () => {
+  let refreshProfile;
+
   beforeEach(() => {
-    // resetAllMocks clears mock implementations AND the once-queue, preventing inter-test bleed
-    vi.resetAllMocks();
+    vi.clearAllMocks();
+    mockFrom();
+    refreshProfile = vi.fn().mockResolvedValue(undefined);
+    vi.mocked(useAuth).mockReturnValue({ refreshProfile });
   });
 
-  it('completes the registration flow successfully', async () => {
-    getDocs.mockResolvedValueOnce({
-      forEach: (cb) => cb({ id: 'nick1', data: () => ({ name: 'NebulaByte', emoji: '🌌' }) }),
-      empty: false
-    });
-    createUserWithEmailAndPassword.mockResolvedValueOnce({ user: { uid: 'u1' } });
+  it('completes the registration flow and refreshes auth so the user is logged in', async () => {
+    supabase.auth.signUp.mockResolvedValueOnce({ data: { user: { id: 'u1' } }, error: null });
 
     render(<MemoryRouter><Register /></MemoryRouter>);
 
@@ -54,17 +60,14 @@ describe('Register Page Integration', () => {
     fireEvent.click(screen.getByText(/¡Crear mi cuenta!/i));
 
     await waitFor(() => {
-      expect(setDoc).toHaveBeenCalled();
+      expect(supabase.auth.signUp).toHaveBeenCalled();
+      expect(supabase.from).toHaveBeenCalledWith('profiles');
+      expect(refreshProfile).toHaveBeenCalled();
     });
   });
 
   it('handles nickname already taken error', async () => {
-    getDocs.mockResolvedValueOnce({
-      forEach: (cb) => cb({ id: 'nick1', data: () => ({ name: 'NebulaByte', emoji: '🌌' }) }),
-      empty: false
-    });
-    // Register.jsx uses Firebase Auth email uniqueness to detect taken nicknames
-    createUserWithEmailAndPassword.mockRejectedValueOnce({ code: 'auth/email-already-in-use' });
+    supabase.auth.signUp.mockResolvedValueOnce({ data: {}, error: { message: 'User already registered' } });
 
     render(<MemoryRouter><Register /></MemoryRouter>);
 
@@ -81,12 +84,26 @@ describe('Register Page Integration', () => {
     });
   });
 
-  it('allows switching to custom nickname mode', async () => {
-    getDocs.mockResolvedValueOnce({
-      forEach: (cb) => cb({ id: 'nick1', data: () => ({ name: 'NebulaByte', emoji: '🌌' }) }),
-      empty: false
-    });
+  it('redirects to the ?redirect target after signup', async () => {
+    supabase.auth.signUp.mockResolvedValueOnce({ data: { user: { id: 'u1' } }, error: null });
 
+    render(
+      <MemoryRouter initialEntries={['/registro?redirect=/pregunta-del-dia']}>
+        <Register />
+      </MemoryRouter>
+    );
+
+    const nickBtn = await screen.findByText(/NebulaByte/i);
+    fireEvent.click(nickBtn);
+    fireEvent.click(screen.getByText(/Continuar/i));
+    const passInput = await screen.findByLabelText(/Contraseña/i);
+    fireEvent.change(passInput, { target: { value: 'password123' } });
+    fireEvent.click(screen.getByText(/¡Crear mi cuenta!/i));
+
+    await waitFor(() => expect(navigate).toHaveBeenCalledWith('/pregunta-del-dia'));
+  });
+
+  it('allows switching to custom nickname mode', async () => {
     render(<MemoryRouter><Register /></MemoryRouter>);
 
     const customBtn = await screen.findByText(/Escribir el mío/i);
