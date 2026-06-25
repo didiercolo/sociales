@@ -1,16 +1,13 @@
 /**
  * seedNicknames.js
  * =================
- * ONE-TIME SCRIPT to populate the Firestore `nicknames` collection.
- * Each document: { name: "NinjaPanda", emoji: "🐼", used: false }
+ * Source list of preset nicknames, each { name, emoji }.
  *
  * - The emoji is displayed in the picker UI only.
  * - Only `name` (without emoji) is saved as the user's account nickname.
- * - To add more nicknames: Firebase Console → Firestore → nicknames → Add document.
+ * - Used by Register.jsx as the picker fallback, and by scripts/seed.mjs to
+ *   populate the Supabase `nicknames` table.
  */
-
-import { collection, writeBatch, doc, getDocs } from 'firebase/firestore';
-import { db } from '../firebase/config';
 
 export const NICKNAMES_SEED = [
   // ⛏️ Minecraft / Builders
@@ -139,31 +136,3 @@ export const NICKNAMES_SEED = [
   { emoji: "🌟", name: "EpicExplorer" },
   { emoji: "🚀", name: "TurboVoyager" },
 ];
-
-/**
- * Seeds the Firestore `nicknames` collection.
- * Re-seeds automatically if existing documents are missing the emoji field.
- */
-export async function seedNicknames() {
-  const nicknamesRef = collection(db, 'nicknames');
-  const snapshot = await getDocs(nicknamesRef);
-
-  if (!snapshot.empty) {
-    // Check if first doc has the emoji field — if not, re-seed
-    const firstDoc = snapshot.docs[0].data();
-    if (firstDoc.emoji !== undefined) {
-      console.log('✅ Nicknames already seeded with emoji. Skipping.');
-      return;
-    }
-    console.log('⚠️ Nicknames missing emoji field — re-seeding...');
-  }
-
-  const batch = writeBatch(db);
-  NICKNAMES_SEED.forEach(({ emoji, name }) => {
-    const docRef = doc(nicknamesRef);
-    batch.set(docRef, { name, emoji, used: false });
-  });
-
-  await batch.commit();
-  console.log(`✅ Seeded ${NICKNAMES_SEED.length} nicknames to Firestore.`);
-}

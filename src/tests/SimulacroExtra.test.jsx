@@ -77,6 +77,29 @@ vi.mock('../data/espanolExtraExams', () => ({
   ],
 }));
 
+vi.mock('../data/matematicasExtraExams', () => ({
+  matematicasExtraExams: [
+    Array.from({ length: 35 }, (_, i) => ({
+      question: `Pregunta Matemáticas ${i}`,
+      options: ['A', 'B', 'C'],
+      correct: 0,
+      mepBloque: 'numeros',
+    })),
+    Array.from({ length: 35 }, (_, i) => ({
+      question: `Pregunta Matemáticas B${i}`,
+      options: ['X', 'Y', 'Z'],
+      correct: 1,
+      mepBloque: 'geometria',
+    })),
+    Array.from({ length: 35 }, (_, i) => ({
+      question: `Pregunta Matemáticas C${i}`,
+      options: ['P', 'Q', 'R'],
+      correct: 2,
+      mepBloque: 'medidas',
+    })),
+  ],
+}));
+
 const renderAt = (path) =>
   render(
     <MemoryRouter initialEntries={[path]}>
@@ -146,6 +169,21 @@ describe('SimulacroExtra', () => {
 
   it('renders the start screen for espanol exam 3', () => {
     renderAt('/simulacro-extra/espanol/3');
+    expect(screen.getByText(/Examen Extra 3/i)).toBeInTheDocument();
+  });
+
+  it('renders the start screen for matematicas exam 1', () => {
+    renderAt('/simulacro-extra/matematicas/1');
+    expect(screen.getByText(/Examen Extra 1/i)).toBeInTheDocument();
+  });
+
+  it('renders the start screen for matematicas exam 2', () => {
+    renderAt('/simulacro-extra/matematicas/2');
+    expect(screen.getByText(/Examen Extra 2/i)).toBeInTheDocument();
+  });
+
+  it('renders the start screen for matematicas exam 3', () => {
+    renderAt('/simulacro-extra/matematicas/3');
     expect(screen.getByText(/Examen Extra 3/i)).toBeInTheDocument();
   });
 });

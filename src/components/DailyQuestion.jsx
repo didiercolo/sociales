@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { doc, getDoc } from 'firebase/firestore';
-import { getFunctions, httpsCallable } from 'firebase/functions';
-import { auth, db } from '../firebase/config';
-import { onAuthStateChanged } from 'firebase/auth';
+import { supabase } from '../supabase/client';
+import AuthPromptModal from './AuthPromptModal';
 import '../index.css';
 
 const DailyQuestion = () => {
@@ -13,92 +11,67 @@ const DailyQuestion = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
+  const [authPromptOpen, setAuthPromptOpen] = useState(false);
 
-  // Get current date string in YYYY-MM-DD format
-  const getTodayString = () => {
-    return new Date().toISOString().split("T")[0];
-  };
+  const getTodayString = () => new Date().toISOString().split('T')[0];
 
+  // Fetch the question for everyone (no auth gate).
   useEffect(() => {
-    const unsubscribeAuth = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) {
-        fetchDailyQuestion();
-      } else {
+    const fetchDailyQuestion = async () => {
+      setLoading(true);
+      try {
+        const { data, error: rpcError } = await supabase.rpc('get_daily_question', { p_date: getTodayString() });
+        if (rpcError) throw rpcError;
+        setQuestion(data && data.length > 0 ? data[0] : null);
+      } catch (err) {
+        console.error('Error fetching daily question:', err);
+      } finally {
         setLoading(false);
       }
-    });
-
-    return () => unsubscribeAuth();
+    };
+    fetchDailyQuestion();
   }, []);
 
-  const fetchDailyQuestion = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const todayStr = getTodayString();
-      const qRef = doc(db, 'dailyQuestions', todayStr);
-      const qSnap = await getDoc(qRef);
+  // Track auth for submit gating (not for showing the question).
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => setUser(data.user));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+    return () => subscription.unsubscribe();
+  }, []);
 
-      if (qSnap.exists()) {
-        const data = qSnap.data();
-        setQuestion({ id: qSnap.id, ...data });
-      } else {
-        setQuestion(null);
-      }
-    } catch (err) {
-      console.error("Error fetching daily question:", err);
-      // Fallback or handle error
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleSubmit = async () => {
-    if (!selectedOption || !user) return;
-    
+  const doSubmit = async (option) => {
     setIsSubmitting(true);
     setError(null);
     try {
-      const functions = getFunctions();
-      const submitAnswerCall = httpsCallable(functions, 'submitAnswer');
-      
-      const response = await submitAnswerCall({
-        questionId: question.id,
-        answer: selectedOption
+      const { data, error: rpcError } = await supabase.rpc('submit_answer', {
+        question_id: question.id,
+        answer: option,
       });
-
-      setResult(response.data);
+      if (rpcError) throw rpcError;
+      setResult(data);
     } catch (err) {
-      console.error("Error submitting answer:", err);
-      // Firebase functions errors have a message
-      setError(err.message || "Ocurrió un error al enviar la respuesta.");
+      console.error('Error submitting answer:', err);
+      setError(err.message || 'Ocurrió un error al enviar la respuesta.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // If user is not logged in, we do not render the daily question
-  // Alternatively, we could show a "Inicia sesión para jugar" banner
-  if (!user && !loading) {
-    return (
-      <div className="daily-question-container" style={{
-        background: 'linear-gradient(135deg, var(--bg-dark) 0%, var(--primary) 100%)',
-        borderRadius: 'var(--radius-md)',
-        padding: '2.5rem',
-        color: 'white',
-        textAlign: 'center',
-        marginTop: '2rem',
-        border: 'none',
-        boxShadow: '0 4px 16px rgba(99,102,241,0.20)'
-      }}>
-        <h2 style={{ fontFamily: 'var(--font-heading)', fontWeight: '800' }}>✨ Pregunta del Día ✨</h2>
-        <p style={{ marginTop: '1rem', fontSize: '1.2rem', marginBottom: '2rem', fontWeight: '600' }}>
-          Inicia sesión para participar, ganar puntos y subir en el marcador.
-        </p>
-      </div>
-    );
-  }
+  const handleSubmit = () => {
+    if (!selectedOption) return;
+    if (!user) {
+      setAuthPromptOpen(true);
+      return;
+    }
+    doSubmit(selectedOption);
+  };
+
+  const handleAuthenticated = () => {
+    setAuthPromptOpen(false);
+    doSubmit(selectedOption);
+  };
 
   if (loading) {
     return <div style={{ textAlign: 'center', padding: '2rem', fontWeight: '700', color: 'var(--primary)' }}>Cargando Pregunta del Día...</div>;
@@ -194,6 +167,12 @@ const DailyQuestion = () => {
           )}
         </div>
       )}
+
+      <AuthPromptModal
+        open={authPromptOpen}
+        onClose={() => setAuthPromptOpen(false)}
+        onAuthenticated={handleAuthenticated}
+      />
     </div>
   );
 };

@@ -1,15 +1,16 @@
+import { useState } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { signOut } from 'firebase/auth';
-import { auth } from '../firebase/config';
+import { supabase } from '../supabase/client';
 
 const Layout = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const { currentUser, userProfile } = useAuth();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleLogout = async () => {
-        await signOut(auth);
+        await supabase.auth.signOut();
         navigate('/');
     };
 
@@ -35,14 +36,12 @@ const Layout = () => {
                         <h1>EduPortal CR</h1>
                     </Link>
 
-                    <nav>
-                        <ul className="nav-links">
+                    <nav className={`main-nav${menuOpen ? ' open' : ''}`}>
+                        <ul className="nav-links" onClick={() => setMenuOpen(false)}>
                             <li><Link to="/sobre-nosotros">Sobre Nosotros</Link></li>
+                            <li><Link to="/pregunta-del-dia">⭐ Pregunta del Día</Link></li>
                             {currentUser && userProfile && (
-                                <>
-                                    <li><Link to="/pregunta-del-dia">⭐ Pregunta del Día</Link></li>
-                                    <li><Link to="/reto-semanal">🗓 Reto Semanal</Link></li>
-                                </>
+                                <li><Link to="/reto-semanal">🗓 Reto Semanal</Link></li>
                             )}
                             <li><Link to="/scoreboard">🏆 Ranking</Link></li>
                             <li><Link to="/prueba-mep">📋 Prueba MEP</Link></li>
@@ -71,6 +70,15 @@ const Layout = () => {
                             )}
                         </ul>
                     </nav>
+
+                    <button
+                        className="nav-toggle"
+                        aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+                        aria-expanded={menuOpen}
+                        onClick={() => setMenuOpen((o) => !o)}
+                    >
+                        {menuOpen ? '✕' : '☰'}
+                    </button>
                 </div>
             </header>
 

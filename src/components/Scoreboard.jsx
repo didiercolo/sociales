@@ -1,32 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { doc, onSnapshot } from 'firebase/firestore';
-import { db } from '../firebase/config';
+import React from 'react';
 import { getTierInfo } from '../utils';
+import { useScoreboard } from '../hooks/useScoreboard';
 import '../index.css';
 
 const Scoreboard = () => {
-  const [topUsers, setTopUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Listen to the central scoreboard document
-    const scoreboardRef = doc(db, 'system', 'scoreboard');
-    
-    const unsubscribe = onSnapshot(scoreboardRef, (docSnap) => {
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        setTopUsers(data.topUsers || []);
-      } else {
-        setTopUsers([]);
-      }
-      setLoading(false);
-    }, (error) => {
-      console.error("Error fetching scoreboard:", error);
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
-  }, []);
+  const { topUsers, loading } = useScoreboard();
 
   return (
     <div className="scoreboard-container" style={{

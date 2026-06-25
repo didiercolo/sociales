@@ -5,6 +5,7 @@ import { subjectConfig } from '../data/subjectConfig';
 import { socialesExtraExams } from '../data/socialesExtraExams';
 import { cienciasExtraExams } from '../data/cienciasExtraExams';
 import { espanolExtraExams } from '../data/espanolExtraExams';
+import { matematicasExtraExams } from '../data/matematicasExtraExams';
 import SimulacroStart from '../components/Simulacro/SimulacroStart';
 import SimulacroActive from '../components/Simulacro/SimulacroActive';
 import SimulacroResults from '../components/Simulacro/SimulacroResults';
@@ -13,6 +14,7 @@ const extraExamsBySubject = {
   sociales: socialesExtraExams,
   ciencias: cienciasExtraExams,
   espanol: espanolExtraExams,
+  matematicas: matematicasExtraExams,
 };
 const VALID_SUBJECTS = Object.keys(extraExamsBySubject);
 

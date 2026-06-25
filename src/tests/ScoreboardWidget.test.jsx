@@ -1,8 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
-import { onSnapshot } from 'firebase/firestore';
+import { useScoreboard } from '../hooks/useScoreboard';
 import ScoreboardWidget from '../components/ScoreboardWidget';
+
+vi.mock('../hooks/useScoreboard', () => ({
+  useScoreboard: vi.fn(),
+}));
 
 const mockUsers = [
   { uid: '1', nickname: 'NinjaPanda', tier: 4, score: 200 },
@@ -15,10 +19,7 @@ const mockUsers = [
 
 describe('ScoreboardWidget', () => {
   beforeEach(() => {
-    vi.mocked(onSnapshot).mockImplementation((_ref, callback) => {
-      callback({ exists: () => true, data: () => ({ topUsers: mockUsers }) });
-      return () => {};
-    });
+    vi.mocked(useScoreboard).mockReturnValue({ topUsers: mockUsers, loading: false });
   });
 
   const renderWidget = () =>
@@ -53,16 +54,13 @@ describe('ScoreboardWidget', () => {
   });
 
   it('shows loading state before data arrives', () => {
-    vi.mocked(onSnapshot).mockImplementation(() => () => {});
+    vi.mocked(useScoreboard).mockReturnValue({ topUsers: [], loading: true });
     renderWidget();
     expect(screen.getByText(/Cargando/i)).toBeInTheDocument();
   });
 
   it('shows empty state when no users', () => {
-    vi.mocked(onSnapshot).mockImplementation((_ref, callback) => {
-      callback({ exists: () => false, data: () => null });
-      return () => {};
-    });
+    vi.mocked(useScoreboard).mockReturnValue({ topUsers: [], loading: false });
     renderWidget();
     expect(screen.getByText(/no hay usuarios/i)).toBeInTheDocument();
   });

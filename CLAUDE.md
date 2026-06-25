@@ -20,15 +20,15 @@ Deployment to eduportalcr.com via GitHub Pages:
 npm run deploy       # Builds and deploys to gh-pages branch
 ```
 
-Firebase environment variables are required in `.env`:
+Supabase environment variables are required in `.env` (the anon key is publishable; access is enforced by RLS):
 ```
-VITE_FIREBASE_API_KEY
-VITE_FIREBASE_AUTH_DOMAIN
-VITE_FIREBASE_PROJECT_ID
-VITE_FIREBASE_STORAGE_BUCKET
-VITE_FIREBASE_MESSAGING_SENDER_ID
-VITE_FIREBASE_APP_ID
-VITE_FIREBASE_MEASUREMENT_ID
+VITE_SUPABASE_URL
+VITE_SUPABASE_ANON_KEY
+```
+
+Database schema, RLS, and server functions live as SQL migrations in `supabase/migrations/`. Apply them with the Supabase CLI (`supabase db push` against the cloud project, or `supabase start` locally). Seed content with:
+```bash
+SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... node scripts/seed.mjs   # nicknames, weekly challenge, today's daily question
 ```
 
 ## Architecture
@@ -39,7 +39,7 @@ VITE_FIREBASE_MEASUREMENT_ID
 
 `src/App.jsx` defines all routes inside a single `<Layout>` shell. All pages are lazy-loaded. The route pattern for lessons is `/:subject/grade/:gradeId/lesson/:lessonId`.
 
-`AuthContext` (`src/context/AuthContext.jsx`) wraps the entire app. It exposes `{ currentUser, userProfile, loading }`. `currentUser` is the raw Firebase Auth user; `userProfile` is the matching document from `users/{uid}` in Firestore (contains nickname, points, tier). The app supports anonymous sign-in, email/password registration, and email/password login.
+`AuthContext` (`src/context/AuthContext.jsx`) wraps the entire app. It exposes `{ currentUser, userProfile, loading }`. `currentUser` is the raw Supabase Auth user (`session.user`); `userProfile` is the matching row from `public.profiles` (contains nickname, score, tier). The app uses pseudo-email (`<nickname>@eduportalcr.app`) email/password registration and login — no real email is collected. The Supabase client is `src/supabase/client.js`.
 
 ### Lesson Content Data
 
@@ -61,18 +61,22 @@ Each `Lesson` object has:
 
 To add lessons for a subject/grade, edit the corresponding file in `src/data/lessons/` and export the array.
 
-### Firebase Backend
+### Supabase Backend
 
-**Firestore collections:**
-- `users/{uid}` — user profile: `nickname`, `points`, `tier` (1–4), `dailyAnswers`
-- `dailyQuestions/{YYYY-MM-DD}` — one question per day with options and correct answer
-- `system/scoreboard` — pre-aggregated top-users list, maintained by Cloud Functions
+All backend objects are defined in `supabase/migrations/` (SQL).
 
-**Cloud Functions** (`functions/index.js`, Firebase v2):
-- `submitAnswer` — callable function; validates auth, enforces tier answer limits, awards points using a Firestore transaction, triggers scoreboard updates
-- `updateScoreboard` — Firestore trigger on `users` writes; maintains the `system/scoreboard` aggregate
+**Postgres tables (RLS enabled):**
+- `profiles` — PK = `auth.users.id`; `nickname`, `tier` (1–4), `tier_subject`, `score`, `questions_today`, `last_question_date`, weekly progress fields. Owner-read; owner-insert with safe defaults; **no client update** (scoring goes through the RPC).
+- `nicknames` — preset picker list; public read, authenticated may only flip `used` false→true.
+- `daily_questions` (PK `date`) and `weekly_challenge` (PK `week_id`) — **no client read policy**; correct answers never reach the browser.
+- `scoreboard` — single row with `top_users` jsonb; world-readable, maintained by trigger, on the `supabase_realtime` publication.
 
-The frontend calls `submitAnswer` via `httpsCallable` from `firebase/functions`.
+**Postgres functions (RPC):**
+- `submit_answer(question_id, answer, question_type, question_index)` — `SECURITY DEFINER`; enforces tier/daily limits and sequential weekly answers, awards points atomically, returns the same JSON the old Cloud Function did. Called via `supabase.rpc('submit_answer', …)`.
+- `get_daily_question(p_date)` / `get_weekly_challenge(p_week_id)` — `SECURITY DEFINER` getters returning only safe fields (no correct answers).
+- `refresh_scoreboard()` — trigger on `profiles` insert/update; rebuilds the top-50 `scoreboard` row.
+
+The scoreboard live-updates via the `useScoreboard` hook (`src/hooks/useScoreboard.js`), which subscribes to `postgres_changes` on the `scoreboard` table.
 
 ### Quiz Component
 
@@ -80,4 +84,4 @@ The frontend calls `submitAnswer` via `httpsCallable` from `firebase/functions`.
 
 ### Testing
 
-Tests are in `src/tests/` and use Vitest + Testing Library. `vitest.setup.js` globally mocks all Firebase modules (`firebase/app`, `firebase/auth`, `firebase/firestore`) and stubs `import.meta.env`. Tests do **not** hit real Firebase.
+Tests are in `src/tests/` and use Vitest + Testing Library. `vitest.setup.js` globally mocks the Supabase client (`src/supabase/client`) — `auth.*`, `from().select/insert/update/eq/maybeSingle`, `rpc`, and `channel` — and stubs `import.meta.env`. Tests override individual methods per case and do **not** hit real Supabase.
