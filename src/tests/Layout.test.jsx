@@ -2,8 +2,8 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import Layout from '../components/Layout';
-import { AuthProviderMock } from './AuthMock';
 import * as AuthContextModule from '../context/AuthContext';
+import { supabase } from '../supabase/client';
 
 // Mock useAuth directly since it's used in Layout
 vi.mock('../context/AuthContext', () => ({
@@ -26,6 +26,8 @@ describe('Layout component', () => {
     expect(screen.getAllByText('EduPortal CR')[0]).toBeInTheDocument();
     expect(screen.getByText('Ingresar')).toBeInTheDocument();
     expect(screen.getByText('Registrarse')).toBeInTheDocument();
+    expect(screen.getByText(/Pregunta del Día/i)).toBeInTheDocument();
+    expect(screen.queryByText(/Reto Semanal/i)).not.toBeInTheDocument();
   });
 
   it('renders authenticated navigation correctly', () => {
@@ -46,15 +48,8 @@ describe('Layout component', () => {
   });
 
   it('calls logout when clicking the exit button', async () => {
-    const mockSignOut = vi.fn();
-    // Re-mock firebase/auth for this test
-    vi.mock('firebase/auth', () => ({
-      signOut: vi.fn(() => Promise.resolve()),
-      getAuth: vi.fn(() => ({})),
-    }));
-
     AuthContextModule.useAuth.mockReturnValue({
-      currentUser: { uid: '123' },
+      currentUser: { id: '123' },
       userProfile: { nickname: 'TestUser' },
     });
 
@@ -64,11 +59,8 @@ describe('Layout component', () => {
       </MemoryRouter>
     );
 
-    const logoutBtn = screen.getByText('Salir');
-    fireEvent.click(logoutBtn);
+    fireEvent.click(screen.getByText('Salir'));
 
-    // We expect signOut to be called with auth
-    const { signOut } = await import('firebase/auth');
-    expect(signOut).toHaveBeenCalled();
+    await waitFor(() => expect(supabase.auth.signOut).toHaveBeenCalled());
   });
 });
