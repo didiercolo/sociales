@@ -29,6 +29,7 @@ const renderDQ = () => render(<MemoryRouter><DailyQuestion /></MemoryRouter>);
 describe('DailyQuestion', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    localStorage.clear();
     setupRpc();
     supabase.auth.onAuthStateChange.mockReturnValue({ data: { subscription: { unsubscribe: vi.fn() } } });
   });
@@ -50,6 +51,40 @@ describe('DailyQuestion', () => {
     await waitFor(() => expect(document.querySelector('dialog').open).toBe(true));
     expect(supabase.rpc).not.toHaveBeenCalledWith('submit_answer', expect.anything());
     expect(screen.queryByText(/Has ganado/i)).not.toBeInTheDocument();
+  });
+
+  it('stashes the guest\'s answer in localStorage when the modal opens', async () => {
+    asGuest();
+    renderDQ();
+    fireEvent.click(await screen.findByText('206'));
+    fireEvent.click(screen.getByRole('button', { name: /Enviar Respuesta/i }));
+
+    await waitFor(() => {
+      const stash = JSON.parse(localStorage.getItem('pendingDailyAnswer') || 'null');
+      expect(stash).toEqual({ questionId: '2026-06-25', option: '206' });
+    });
+  });
+
+  it('auto-submits a stashed answer after returning from signup', async () => {
+    asUser();
+    localStorage.setItem('pendingDailyAnswer', JSON.stringify({ questionId: '2026-06-25', option: '206' }));
+    renderDQ();
+
+    await waitFor(() =>
+      expect(supabase.rpc).toHaveBeenCalledWith('submit_answer', { question_id: '2026-06-25', answer: '206' })
+    );
+    expect(await screen.findByText(/Has ganado/i)).toBeInTheDocument();
+    expect(localStorage.getItem('pendingDailyAnswer')).toBeNull();
+  });
+
+  it('ignores a stashed answer for a different question', async () => {
+    asUser();
+    localStorage.setItem('pendingDailyAnswer', JSON.stringify({ questionId: '1999-01-01', option: '206' }));
+    renderDQ();
+
+    await screen.findByText(QUESTION.question);
+    await waitFor(() => expect(localStorage.getItem('pendingDailyAnswer')).toBeNull());
+    expect(supabase.rpc).not.toHaveBeenCalledWith('submit_answer', expect.anything());
   });
 
   it('submits and shows the result for a logged-in user', async () => {
