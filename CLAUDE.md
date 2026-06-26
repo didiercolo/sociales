@@ -78,6 +78,19 @@ All backend objects are defined in `supabase/migrations/` (SQL).
 
 The scoreboard live-updates via the `useScoreboard` hook (`src/hooks/useScoreboard.js`), which subscribes to `postgres_changes` on the `scoreboard` table.
 
+### Security rules (non-negotiable — enforced in CI)
+
+See `docs/superpowers/specs/2026-06-25-supabase-security-hardening-design.md` for the full threat model. When writing or generating backend code:
+
+- **Every new table** migration must `enable row level security` and ship at least one policy. `npm run check:rls` (CI) fails the build otherwise.
+- **RLS `with check` clauses must pin every client-settable column** to its safe default — never trust the client to set only the columns you expect. All score/tier/weekly mutations go through `submit_answer`, not direct client writes.
+- **No `using (true)` write policies.** Reads may be public where intended (`scoreboard`, `nicknames` picker); writes never are. Privileged writes go through a `SECURITY DEFINER` RPC scoped by `auth.uid()`.
+- **Every `SECURITY DEFINER` function** pins `set search_path = public` and null-checks `auth.uid()` before any privileged action.
+- **Authorization reads from the `profiles` table** (via `auth.uid()`), never from JWT claims.
+- **Service-role key only in `scripts/` (from env).** Never import it into `src/`; only `VITE_`-prefixed (publishable) vars reach the client bundle.
+- Add an assertion to `scripts/test-rls.mjs` (`npm run test:rls`, run against a **dev** project) for each new policy: anon, owner, and cross-user.
+- **No public Storage buckets.** If a bucket is ever added: private + signed, short-expiry URLs.
+
 ### Quiz Component
 
 `src/components/Quiz/` is split into three sub-components: `QuizStart` (intro screen), `QuizActive` (question loop), `QuizResults` (score display). The parent `Quiz.jsx` manages state transitions between them. `TextQuiz.jsx` is a separate component for open-ended text answers.

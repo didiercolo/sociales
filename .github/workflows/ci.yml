@@ -7,6 +7,21 @@ on:
     branches: [ "main", "master" ]
 
 jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # gitleaks scans full history
+
+    - name: Secret scan (gitleaks)
+      uses: gitleaks/gitleaks-action@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: RLS-lint (every table has RLS enabled)
+      run: node scripts/check-rls.mjs
+
   build_and_test:
     runs-on: ubuntu-latest
 

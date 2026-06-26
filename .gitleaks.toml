@@ -1,0 +1,14 @@
+# gitleaks config — keeps all default rules, allowlists only known-public history.
+[extend]
+useDefault = true
+
+[allowlist]
+description = """
+Historical .env commits held only Firebase *web client* keys (VITE_FIREBASE_*),
+which are public by design (like the Supabase anon key) and belong to the now-
+decommissioned Firebase stack. Not secrets. All other detections still fail CI.
+"""
+commits = [
+  "19103d8b1089d43226b38ebfc01791de6d2f9f0f",
+  "6e3dd509a2503497b6d339a45cf7902c1cdaaed6",
+]
