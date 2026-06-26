@@ -3,6 +3,10 @@ import { supabase } from '../supabase/client';
 import AuthPromptModal from './AuthPromptModal';
 import '../index.css';
 
+// Remembers a guest's picked answer across the signup round-trip so it can be
+// auto-submitted on return. localStorage (not sessionStorage) survives a new tab.
+const PENDING_KEY = 'pendingDailyAnswer';
+
 const DailyQuestion = () => {
   const [user, setUser] = useState(null);
   const [question, setQuestion] = useState(null);
@@ -43,6 +47,24 @@ const DailyQuestion = () => {
     return () => subscription.unsubscribe();
   }, []);
 
+  // After a guest signs up and returns logged in, auto-submit the answer they
+  // had picked (stashed before the signup redirect). Runs once: the stash is
+  // cleared whether it matches today's question or not.
+  useEffect(() => {
+    if (!user || !question || result) return;
+    const raw = localStorage.getItem(PENDING_KEY);
+    if (!raw) return;
+    localStorage.removeItem(PENDING_KEY);
+    try {
+      const pending = JSON.parse(raw);
+      if (pending && pending.questionId === question.id && pending.option) {
+        doSubmit(pending.option);
+      }
+    } catch {
+      /* malformed stash — already cleared */
+    }
+  }, [user, question]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const doSubmit = async (option) => {
     setIsSubmitting(true);
     setError(null);
@@ -64,6 +86,8 @@ const DailyQuestion = () => {
   const handleSubmit = () => {
     if (!selectedOption) return;
     if (!user) {
+      // Stash the answer so it survives the signup round-trip (see effect above).
+      localStorage.setItem(PENDING_KEY, JSON.stringify({ questionId: question.id, option: selectedOption }));
       setAuthPromptOpen(true);
       return;
     }
@@ -71,6 +95,9 @@ const DailyQuestion = () => {
   };
 
   const handleAuthenticated = () => {
+    // Login-in-popup path submits directly here; drop the stash so the
+    // auto-submit effect doesn't fire a second time.
+    localStorage.removeItem(PENDING_KEY);
     setAuthPromptOpen(false);
     doSubmit(selectedOption);
   };
