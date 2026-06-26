@@ -67,8 +67,8 @@ async function main() {
   if (weekErr) throw weekErr;
   console.log(`✅ Seeded weekly_challenge/${weekId}.`);
 
-  // Daily question — today, rotating through the bank by day-of-year
-  const todayStr = now.toISOString().split('T')[0];
+  // Daily question — today (Costa Rica date, UTC-6), rotating through the bank by day-of-year
+  const todayStr = now.toLocaleDateString('en-CA', { timeZone: 'America/Costa_Rica' });
   const dayOfYear = Math.floor((now - new Date(Date.UTC(now.getUTCFullYear(), 0, 0))) / 86400000);
   const q = QUESTIONS[dayOfYear % QUESTIONS.length];
   const { error: dailyErr } = await supabase
