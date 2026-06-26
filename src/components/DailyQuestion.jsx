@@ -13,7 +13,9 @@ const DailyQuestion = () => {
   const [error, setError] = useState(null);
   const [authPromptOpen, setAuthPromptOpen] = useState(false);
 
-  const getTodayString = () => new Date().toISOString().split('T')[0];
+  // Costa Rica calendar date (UTC-6) so the question rolls at CR midnight, not 6pm.
+  // 'en-CA' formats as YYYY-MM-DD.
+  const getTodayString = () => new Date().toLocaleDateString('en-CA', { timeZone: 'America/Costa_Rica' });
 
   // Fetch the question for everyone (no auth gate).
   useEffect(() => {
