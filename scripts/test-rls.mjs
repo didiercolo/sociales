@@ -35,12 +35,22 @@ async function makeUser(nick) {
   const c = anonClient();
   const email = `rls_${nick}@eduportalcr.app`;
   const password = 'test-password-123';
-  await c.auth.signUp({ email, password });
-  const { data: { user } } = await c.auth.getUser();
-  if (user) {
-    await c.from('profiles').insert({ id: user.id, nickname: `rls_${nick}`, tier: 1, score: 0, questions_today: 0 });
+  const { data, error } = await c.auth.signUp({ email, password });
+  if (error) throw new Error(`signUp failed for ${email}: ${error.message}`);
+  // Fail loudly: without a session the user/profile never exist, and every
+  // downstream assertion would pass vacuously (empty rows) — a false green.
+  if (!data.session || !data.user) {
+    throw new Error(
+      `signUp for ${email} returned no session. The dev project likely has email ` +
+      `confirmation enabled — disable it (Auth > Providers > Email > "Confirm email") ` +
+      `so the pseudo-email scheme works, then re-run.`
+    );
   }
-  return { client: c, id: user?.id };
+  const { error: insErr } = await c.from('profiles').insert({
+    id: data.user.id, nickname: `rls_${nick}`, tier: 1, score: 0, questions_today: 0,
+  });
+  if (insErr) throw new Error(`profile insert failed for ${email}: ${insErr.message}`);
+  return { client: c, id: data.user.id };
 }
 
 async function main() {
@@ -66,14 +76,16 @@ async function main() {
   const aClaim = await a.client.rpc('claim_nickname', { p_name: 'SomeoneElsesName' });
   ok(aClaim.error != null, 'User A cannot claim a foreign nickname');
 
-  // JWT tamper: corrupt the access token -> server rejects
+  // JWT tamper: corrupt the signature and hit PostgREST directly. A raw fetch
+  // avoids supabase-js's auto-refresh (which would mint a valid token from the
+  // still-good refresh_token and mask the result). Assert on the HTTP status —
+  // the server must reject the bad signature with 401, not return rows.
   const { data: { session } } = await a.client.auth.getSession();
-  if (session) {
-    const bad = createClient(URL, ANON, { auth: { persistSession: false } });
-    await bad.auth.setSession({ access_token: session.access_token.slice(0, -3) + 'xxx', refresh_token: session.refresh_token });
-    const tampered = await bad.from('profiles').select('id');
-    ok((tampered.data ?? []).length === 0, 'tampered JWT is rejected');
-  }
+  const tamperedToken = session.access_token.slice(0, -3) + 'xxx';
+  const res = await fetch(`${URL}/rest/v1/profiles?select=id`, {
+    headers: { apikey: ANON, Authorization: `Bearer ${tamperedToken}` },
+  });
+  ok(res.status === 401, `tampered JWT rejected (got HTTP ${res.status})`);
 
   // --- Cleanup (needs service role) ---
   if (SERVICE && a.id && b.id) {
