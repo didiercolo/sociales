@@ -73,7 +73,7 @@ const LessonView = () => {
                     </section>
                 ))}
 
-                {lesson.quiz && (
+                {lesson.quiz && lesson.quiz.length > 0 && (
                     <div className="quiz-container-wrapper" style={{ marginTop: '5rem', animation: 'fadeIn 1s ease-out 0.5s both' }}>
                         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                             <span style={{ fontSize: '3rem', display: 'block' }}>🏁</span>
@@ -83,7 +83,7 @@ const LessonView = () => {
                         <Quiz questions={lesson.quiz} questionCount={lesson.questionCount || 5} />
                     </div>
                 )}
-                {lesson.openQuestions && (
+                {lesson.openQuestions && lesson.openQuestions.length > 0 && (
                     <div className="text-quiz-container-wrapper" style={{ marginTop: '5rem', marginBottom: '3rem', animation: 'fadeIn 1s ease-out 0.8s both' }}>
                         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                             <span style={{ fontSize: '3rem', display: 'block' }}>✍️</span>
