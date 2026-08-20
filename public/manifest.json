@@ -1,11 +1,12 @@
 {
-  "name": "Estudios Sociales - 5to Grado",
-  "short_name": "Sociales 5to",
+  "name": "EduPortal CR - Plataforma 6to Grado",
+  "short_name": "EduPortal CR",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f4f4f9",
-  "theme_color": "#4CAF50",
-  "description": "Aplicación de Estudios Sociales para niños de 5to grado en Costa Rica.",
+  "background_color": "#F9FAFB",
+  "theme_color": "#4F46E5",
+  "lang": "es-CR",
+  "description": "Resúmenes, lecciones y quizzes de Español, Estudios Sociales, Ciencias y Matemática para 6to grado en Costa Rica, según el temario del MEP.",
   "icons": [
     {
       "src": "/vite.svg",

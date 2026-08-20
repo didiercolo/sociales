@@ -1,12 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="es-CR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EduPortal CR - Plataforma 6to Grado</title>
+    <title>EduPortal CR - Plataforma de estudio para 6to Grado en Costa Rica</title>
+    <meta name="description" content="Plataforma gratuita de estudio para 6to grado en Costa Rica: resúmenes, lecciones y quizzes de Español, Estudios Sociales, Ciencias y Matemática según el temario del MEP." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#4F46E5" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EduPortal CR" />
+    <meta property="og:locale" content="es_CR" />
+    <meta property="og:title" content="EduPortal CR - Plataforma de estudio para 6to Grado en Costa Rica" />
+    <meta property="og:description" content="Resúmenes, lecciones y quizzes de Español, Estudios Sociales, Ciencias y Matemática según el temario del MEP." />
+    <meta property="og:image" content="https://eduportalcr.com/vite.svg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EduPortal CR - Plataforma de estudio para 6to Grado en Costa Rica" />
+    <meta name="twitter:description" content="Resúmenes, lecciones y quizzes de Español, Estudios Sociales, Ciencias y Matemática según el temario del MEP." />
+    <meta name="twitter:image" content="https://eduportalcr.com/vite.svg" />
+
     <!-- Preload fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- ponytail: self-referencing canonical + og:url set from the real URL.
+         A hardcoded canonical would point every SPA route at the homepage and
+         deindex the subpages, which is worse than having no canonical at all.
+         Upgrade path: prerender per-route <head> if JS-rendered canonicals ever
+         prove unreliable for a crawler you care about. -->
+    <script>
+      (function () {
+        var path = location.pathname.replace(/\/+$/, '');
+        var href = location.origin + (path || '/');
+        var link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = href;
+        document.head.appendChild(link);
+        var og = document.createElement('meta');
+        og.setAttribute('property', 'og:url');
+        og.content = href;
+        document.head.appendChild(og);
+      })();
+    </script>
     
     <!-- Redirection script for GitHub Pages SPA routing -->
     <script type="text/javascript">
