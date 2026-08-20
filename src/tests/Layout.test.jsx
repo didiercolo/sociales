@@ -24,9 +24,13 @@ describe('Layout component', () => {
     );
 
     expect(screen.getAllByText('EduPortal CR')[0]).toBeInTheDocument();
-    expect(screen.getByText('Ingresar')).toBeInTheDocument();
-    expect(screen.getByText('Registrarse')).toBeInTheDocument();
-    expect(screen.getByText(/Pregunta del Día/i)).toBeInTheDocument();
+    expect(screen.getAllByText('Sobre Nosotros').length).toBeGreaterThan(0); // nav + footer
+    expect(screen.getByText(/Prueba MEP/i)).toBeInTheDocument();
+    // Removed from the nav on purpose
+    expect(screen.queryByText('Ingresar')).not.toBeInTheDocument();
+    expect(screen.queryByText('Registrarse')).not.toBeInTheDocument();
+    expect(screen.queryByText(/Pregunta del Día/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Ranking/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/Reto Semanal/i)).not.toBeInTheDocument();
   });
 

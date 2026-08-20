@@ -33,19 +33,17 @@ const Layout = () => {
                 <div className="container header-content">
                     <Link to="/" className="logo">
                         <div className="logo-icon">🎓</div>
-                        <h1>EduPortal CR</h1>
+                        <span className="logo-text">EduPortal CR</span>
                     </Link>
 
                     <nav className={`main-nav${menuOpen ? ' open' : ''}`}>
                         <ul className="nav-links" onClick={() => setMenuOpen(false)}>
                             <li><Link to="/sobre-nosotros">Sobre Nosotros</Link></li>
-                            <li><Link to="/pregunta-del-dia">⭐ Pregunta del Día</Link></li>
                             {currentUser && userProfile && (
                                 <li><Link to="/reto-semanal">🗓 Reto Semanal</Link></li>
                             )}
-                            <li><Link to="/scoreboard">🏆 Ranking</Link></li>
                             <li><Link to="/prueba-mep">📋 Prueba MEP</Link></li>
-                            {currentUser && userProfile ? (
+                            {currentUser && userProfile && (
                                 <>
                                     <li>
                                         <span className="nav-nickname">
@@ -56,15 +54,6 @@ const Layout = () => {
                                         <button onClick={handleLogout} className="nav-logout-btn">
                                             Salir
                                         </button>
-                                    </li>
-                                </>
-                            ) : (
-                                <>
-                                    <li><Link to="/login">Ingresar</Link></li>
-                                    <li>
-                                        <Link to="/registro" className="nav-register-btn">
-                                            Registrarse
-                                        </Link>
                                     </li>
                                 </>
                             )}
