@@ -11,12 +11,12 @@ const QuizActive = ({
 }) => {
     return (
         <div className="quiz-section">
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', opacity: 0.6, fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'uppercase' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', marginBottom: '2rem', opacity: 0.6, fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'uppercase' }}>
                 <span>Pregunta {index + 1} de {total}</span>
-                <span>Social Studies Quiz</span>
+                <span>Quiz</span>
             </div>
 
-            <div className="quiz-question" style={{ fontSize: '1.8rem', marginBottom: '2.5rem', fontFamily: 'var(--font-heading)', lineHeight: '1.4' }}>
+            <div className="quiz-question" style={{ fontSize: 'clamp(1.25rem, 4.5vw, 1.8rem)', marginBottom: '2.5rem', fontFamily: 'var(--font-heading)', lineHeight: '1.4' }}>
                 {question.question}
             </div>
 

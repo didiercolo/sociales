@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ScoreboardWidget from '../components/ScoreboardWidget';
 
 const SubjectSelection = () => {
     const subjects = [
@@ -179,8 +178,6 @@ const SubjectSelection = () => {
                     </div>
                 </div>
             </section>
-
-            <ScoreboardWidget />
 
             {/* Features */}
             <section style={{ background: 'var(--bg-card)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '5rem 0' }}>

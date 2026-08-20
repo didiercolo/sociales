@@ -16,6 +16,7 @@ const PruebaMEP = lazy(() => import('./pages/PruebaMEP'));
 const SimulacroExtra = lazy(() => import('./pages/SimulacroExtra'));
 const DailyQuestionPage = lazy(() => import('./pages/DailyQuestionPage'));
 const WeeklyChallengePage = lazy(() => import('./pages/WeeklyChallengePage'));
+const Sonny = lazy(() => import('./pages/Sonny'));
 
 const PageLoader = () => (
     <div style={{ padding: '2rem', textAlign: 'center', fontFamily: 'var(--font-heading)', color: 'var(--primary-color)' }}>
@@ -42,6 +43,8 @@ function App() {
                         <Route path="prueba-mep" element={<PruebaMEP />} />
                         <Route path="pregunta-del-dia" element={<DailyQuestionPage />} />
                         <Route path="reto-semanal" element={<WeeklyChallengePage />} />
+                        {/* Not linked from the nav; reached by direct URL (and listed in sitemap.xml) */}
+                        <Route path="sonny" element={<Sonny />} />
                     </Route>
                 </Routes>
             </Suspense>
