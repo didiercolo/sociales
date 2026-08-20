@@ -1,0 +1,1 @@
+const n=o=>{const t=Math.floor(o/60).toString().padStart(2,"0"),r=(o%60).toString().padStart(2,"0");return`${t}:${r}`},e=o=>o?new Date(o).toLocaleDateString("es-CR",{day:"numeric",month:"long"}):"",s=o=>{const t=[...o];for(let r=t.length-1;r>0;r--){const a=Math.floor(Math.random()*(r+1));[t[r],t[a]]=[t[a],t[r]]}return t};export{e as a,n as f,s};
