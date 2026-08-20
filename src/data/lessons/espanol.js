@@ -1,5 +1,8 @@
 // src/data/lessons/espanol.js
+import { sonnyEspanolLesson } from './sonnyEspanol';
+
 export const espanolLessons = [
+  sonnyEspanolLesson,
   // ─── COMPRENSIÓN LECTORA ─────────────────────────────────
   {
     id: 'relaciones-causa-efecto',
