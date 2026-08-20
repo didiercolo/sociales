@@ -783,7 +783,7 @@ export const cienciasLessons = [
     description: 'Explora la masa, el peso, las fuerzas, la gravedad y cómo se mueven los objetos en el espacio y el agua.',
     extraMaterial: {
       title: 'Examen de Repaso: Capítulo 1',
-      url: '/sociales/docs/Science_Exam_Chapter1_6thGrade.pdf',
+      url: '/docs/Science_Exam_Chapter1_6thGrade.pdf',
       type: 'PDF'
     },
     sections: [

@@ -3,7 +3,11 @@
 // Content sourced from OCR of scanned PDF (Profesora Adriana Gutiérrez Rodríguez)
 // Organized by mepBloque: numeros | geometria | medidas | algebra | estadistica
 
+import { sonnyMatematicasLesson } from './sonnyMatematicas';
+
 export const matematicasLessons = [
+
+  sonnyMatematicasLesson,
 
   // ─── NÚMEROS ─────────────────────────────────────────────
 

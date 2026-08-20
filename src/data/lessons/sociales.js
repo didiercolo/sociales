@@ -3848,7 +3848,7 @@ export const socialesLessons = [
     "description": "Consolidación de la independencia y lucha contra los filibusteros.",
     "extraMaterial": {
       "title": "Examen de Repaso: Estudios Sociales",
-      "url": "/sociales/docs/Examen_EstudiosSociales_6toGrado_2026.pdf",
+      "url": "/docs/Examen_EstudiosSociales_6toGrado_2026.pdf",
       "type": "PDF"
     },
     "sections": [
