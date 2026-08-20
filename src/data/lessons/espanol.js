@@ -443,7 +443,7 @@ export const espanolLessons = [
     description: 'Repaso de Tipos de Lenguaje, Comunicación, Sinónimos/Antónimos, Acentuación y Uso de Letras.',
     extraMaterial: {
       title: 'Examen de Repaso: Primer Examen',
-      url: '/sociales/docs/Examen_Espanol_6toGrado_2026.pdf',
+      url: '/docs/Examen_Espanol_6toGrado_2026.pdf',
       type: 'PDF'
     },
     questionCount: 20,

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Práctica de Matemática – VI Nivel · Temas 3 y 4</title>
+<style>
+  :root { --ink:#1f2937; --muted:#6b7280; --line:#d1d5db; --accent:#dc2626; --soft:#fef2f2; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink); line-height: 1.55;
+    max-width: 780px; margin: 0 auto; padding: 2rem 1.5rem 4rem; background:#fff;
+  }
+  h1 { font-size: 1.7rem; margin: 0 0 .25rem; }
+  h2 {
+    font-size: 1.15rem; margin: 2.5rem 0 .75rem; padding: .4rem .7rem;
+    background: var(--soft); border-left: 5px solid var(--accent); border-radius: 4px;
+  }
+  h3 { font-size: 1rem; margin: 1.25rem 0 .4rem; color: var(--accent); }
+  p.sub { color: var(--muted); margin: 0 0 1.5rem; font-size: .95rem; }
+  ol { padding-left: 1.4rem; }
+  ol li { margin-bottom: .85rem; }
+  .work { display: block; border-bottom: 1px dotted var(--line); height: 1.4rem; margin-top: .3rem; }
+  .work.tall { height: 3.6rem; border-bottom: 1px dotted var(--line); }
+  .nota {
+    border: 1px solid var(--line); border-radius: 6px; padding: .75rem 1rem;
+    background: #f9fafb; font-size: .92rem; margin: 1rem 0;
+  }
+  .mono { font-family: ui-monospace, "Courier New", monospace; }
+  pre {
+    font-family: ui-monospace, "Courier New", monospace; font-size: .88rem;
+    background: #f9fafb; border-left: 3px solid var(--line); padding: .5rem .8rem;
+    margin: .35rem 0 .35rem 0; white-space: pre-wrap; line-height: 1.5;
+  }
+  .datos { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 1rem 0 2rem; font-size: .95rem; }
+  .datos span { border-bottom: 1px solid var(--ink); min-width: 200px; padding-bottom: 2px; }
+  .sol h2 { background: #eff6ff; border-left-color: #2563eb; }
+  .sol h3 { color: #2563eb; }
+  .sol ol li { margin-bottom: .6rem; }
+  .print-btn {
+    display: inline-block; margin-bottom: 1.5rem; padding: .6rem 1.2rem;
+    background: var(--accent); color: #fff; border: 0; border-radius: 6px;
+    font-family: system-ui, sans-serif; font-size: .95rem; cursor: pointer;
+  }
+  .page-break { break-before: page; }
+  @media print {
+    body { padding: 0; max-width: none; font-size: 11.5pt; }
+    .print-btn, .no-print { display: none !important; }
+    h2 { break-after: avoid; }
+    ol li, pre { break-inside: avoid; }
+    @page { margin: 1.6cm; }
+  }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Imprimir o guardar como PDF</button>
+
+<h1>Práctica de Matemática – VI Nivel</h1>
+<p class="sub">
+  Temas 3 y 4 de <em>enVision Matemáticas</em> · I Semestre 2026 · Profesora Adriana Rodríguez<br>
+  Resolvé cada ejercicio <strong>mostrando el procedimiento</strong>. En las ecuaciones, escribí la operación
+  inversa aplicada a los dos lados y la comprobación. En los problemas con palabras: asigná una letra a la
+  incógnita, traducí, planteá la igualdad, despejá y <strong>escribí la respuesta</strong>.
+</p>
+
+<div class="datos no-print">
+  <div>Nombre: <span>&nbsp;</span></div>
+  <div>Fecha: <span>&nbsp;</span></div>
+</div>
+
+<h2>Lección 3-1 · Entender y representar los exponentes</h2>
+<ol>
+  <li>Escribí como potencia: 5 × 5 × 5 × 5 = <span class="work"></span></li>
+  <li>Escribí 7³ como multiplicación repetida. <span class="work"></span></li>
+  <li>Calculá 9². <span class="work"></span></li>
+  <li>Calculá 2⁵. <span class="work"></span></li>
+  <li>Calculá 3⁴. <span class="work"></span></li>
+  <li>Calculá 22². <span class="work"></span></li>
+  <li>Calculá 10⁴. <span class="work"></span></li>
+  <li>Calculá 3 105⁰. <span class="work"></span></li>
+  <li>Calculá (0,5)². <span class="work"></span></li>
+  <li>Calculá (½)³ y escribí el resultado como fracción. <span class="work"></span></li>
+  <li><strong>Problema.</strong> Una caja tiene forma de cubo y cada arista mide 4 cm. El volumen se calcula
+      con la potencia 4³. ¿Cuál es el volumen de la caja? <span class="work tall"></span></li>
+  <li><strong>Razonar.</strong> Roberto dice que 4³ y 3⁴ dan el mismo resultado porque usan los mismos números.
+      ¿Tiene razón? Explicá por qué. <span class="work tall"></span></li>
+</ol>
+
+<h2>Lección 3-2 · Máximo común divisor y mínimo común múltiplo</h2>
+<p class="nota">Usá el <strong>método de la escalera</strong>: dividí los dos números entre factores primos comunes.
+Para el M.C.D. se multiplican los factores que dividen a los dos a la vez; para el m.c.m. se sigue hasta que ambos
+lleguen a 1 y se multiplican todos los factores.</p>
+<ol>
+  <li>Hallá el M.C.D. de 12 y 18. <span class="work tall"></span></li>
+  <li>Hallá el M.C.D. de 24 y 36. <span class="work tall"></span></li>
+  <li>Hallá el M.C.D. de 75 y 125. <span class="work tall"></span></li>
+  <li>Hallá el m.c.m. de 4 y 6. <span class="work tall"></span></li>
+  <li>Hallá el m.c.m. de 8 y 12. <span class="work tall"></span></li>
+  <li>Hallá el m.c.m. de 15 y 21. <span class="work tall"></span></li>
+  <li>Para 45 y 60, hallá el M.C.D. y el m.c.m. <span class="work tall"></span></li>
+  <li>Usá el M.C.D. de 24 y 36 para reescribir la suma 24 + 36 con la propiedad distributiva. <span class="work"></span></li>
+  <li><strong>Problema (bolsas idénticas).</strong> Doña Marta tiene 84 lápices y 126 borradores. Quiere armar
+      bolsas idénticas usando todo, sin que sobre nada. ¿Cuántas bolsas puede armar como máximo y cuántos
+      lápices y borradores lleva cada una? <span class="work tall"></span></li>
+  <li><strong>Problema (coincidencia).</strong> De la parada salen dos buses: uno cada 12 minutos y otro cada
+      18 minutos. Si salieron juntos a las 6:00 a. m., ¿a qué hora vuelven a salir juntos? <span class="work tall"></span></li>
+  <li><strong>Razonar.</strong> Explicá por qué el m.c.m. de dos números nunca puede ser menor que el mayor
+      de ellos. <span class="work tall"></span></li>
+</ol>
+
+<h2>Lección 3-3 · Escribir y evaluar expresiones numéricas</h2>
+<ol>
+  <li>15 + 3 × 4 = <span class="work"></span></li>
+  <li>(15 + 3) × 4 = <span class="work"></span></li>
+  <li>2³ + 6 ÷ 3 − 1 = <span class="work"></span></li>
+  <li>80 − 4² ÷ 8 = <span class="work"></span></li>
+  <li>50 − [3 × (2 + 6)] = <span class="work"></span></li>
+  <li>3² + 2[(21 − 9) ÷ 4] = <span class="work tall"></span></li>
+  <li>92,3 − (3,2 ÷ 0,4) × 2³ = <span class="work tall"></span></li>
+  <li>[(2³ × 2,5) ÷ ½] + 120 = <span class="work tall"></span></li>
+  <li>[(2 × 10⁰) ÷ ⅓] + 8 = <span class="work tall"></span></li>
+  <li><strong>Problema.</strong> Para una excursión se compraron 3 entradas de ₡2 500 y 2 entradas de ₡1 800.
+      Escribí una expresión numérica y calculá el total. <span class="work tall"></span></li>
+  <li><strong>Razonar.</strong> Ana resolvió 20 − 2 × 5 y obtuvo 90. ¿Qué error cometió y cuál es el resultado
+      correcto? <span class="work tall"></span></li>
+</ol>
+
+<h2>Lección 3-4 · Escribir expresiones algebraicas</h2>
+<ol>
+  <li>La suma de 8 y un número <em>a</em>. <span class="work"></span></li>
+  <li>Cinco menos que un número <em>b</em>. <span class="work"></span></li>
+  <li>El producto de 8 y un número <em>c</em>. <span class="work"></span></li>
+  <li>El cociente de <em>d</em> dividido por 2. <span class="work"></span></li>
+  <li>22 menos que 5 por un número <em>f</em>. <span class="work"></span></li>
+  <li>48 por una cantidad de piezas <em>j</em>. <span class="work"></span></li>
+  <li>Una cantidad de huevos <em>h</em> dividida por 12. <span class="work"></span></li>
+  <li>3 por la suma de <em>m</em> y 7. <span class="work"></span></li>
+  <li>En la expresión 12r + r/2 − 19, indicá: cuántos términos tiene, cuál es el coeficiente de <em>r</em>
+      y cuál es la constante. <span class="work tall"></span></li>
+  <li><strong>Problema.</strong> La entrada al museo cuesta ₡3 500 por persona y además se pagan ₡1 200 fijos
+      de parqueo. Escribí una expresión para el costo total si van <em>p</em> personas. <span class="work tall"></span></li>
+  <li><strong>Razonar.</strong> Un compañero escribió «7 menos que un número n» como 7 − n. ¿Es correcto?
+      Explicá. <span class="work tall"></span></li>
+</ol>
+
+<h2>Lección 3-5 · Evaluar expresiones algebraicas</h2>
+<ol>
+  <li>Evaluá 9x para x = 6. <span class="work"></span></li>
+  <li>Evaluá 20 + 3c para c = 10, c = 12 y c = 14. <span class="work tall"></span></li>
+  <li>Evaluá w² + 2 para w = 5. <span class="work"></span></li>
+  <li>Evaluá 48 ÷ (2z) para z = 3. <span class="work"></span></li>
+  <li>Evaluá 3y + 6 ÷ 2 para y = 4. <span class="work"></span></li>
+  <li>Si m = r ÷ g, hallá m cuando r = 1 560 y g = 60. <span class="work"></span></li>
+  <li>Evaluá 4,5n + 2 para n = 3. <span class="work"></span></li>
+  <li>Evaluá 2j + 3/5 para j = ½. <span class="work tall"></span></li>
+  <li>Evaluá 27 ÷ l² para l = ⅓. <span class="work tall"></span></li>
+  <li><strong>Problema.</strong> Alquilar un carro cuesta ₡45 000 por día más ₡30 000 fijos de seguro.
+      Escribí la expresión para <em>d</em> días y calculá el costo de 5 días. <span class="work tall"></span></li>
+  <li><strong>Razonar.</strong> ¿Cuánto vale la expresión 5x + 7 cuando x = 0? Explicá por qué. <span class="work tall"></span></li>
+</ol>
+
+<h2 class="page-break">Lección 4-3 · Ecuaciones de suma y de resta</h2>
+<p class="nota">En cada ecuación: escribí la operación inversa aplicada a <strong>los dos lados</strong>,
+resolvé y <strong>comprobá</strong> sustituyendo el valor hallado.</p>
+<ol>
+  <li>x + 2 = 19 <span class="work tall"></span></li>
+  <li>y − 12 = 89 <span class="work tall"></span></li>
+  <li>80 + r = 160 <span class="work tall"></span></li>
+  <li>20 = y + 12 <span class="work tall"></span></li>
+  <li>60 = x − 16 <span class="work tall"></span></li>
+  <li>z − 313 = 176 <span class="work tall"></span></li>
+  <li>x + 2,5 = 8,1 <span class="work tall"></span></li>
+  <li>w + 4⅓ = 7 <span class="work tall"></span></li>
+  <li><strong>Problema.</strong> Le das 21 cromos a un amigo y te quedan 9. ¿Cuántos cromos tenías al inicio?
+      <span class="work tall"></span></li>
+  <li><strong>Problema.</strong> Sofía ahorró ₡4 500 esta semana y ahora tiene ₡12 300. ¿Cuánto tenía antes?
+      <span class="work tall"></span></li>
+  <li><strong>Razonar.</strong> Para resolver n − 8 = 15, un estudiante restó 8 en los dos lados.
+      ¿Es correcto? ¿Qué debía hacer? <span class="work tall"></span></li>
+</ol>
+
+<h2>Lección 4-4 · Ecuaciones de multiplicación y de división</h2>
+<ol>
+  <li>8x = 64 <span class="work tall"></span></li>
+  <li>7x = 77 <span class="work tall"></span></li>
+  <li>15x = 45 <span class="work tall"></span></li>
+  <li>26 = 13x <span class="work tall"></span></li>
+  <li>x ÷ 12 = 8 <span class="work tall"></span></li>
+  <li>x ÷ 20 = 120 <span class="work tall"></span></li>
+  <li>2 448 ÷ 48 = x <span class="work tall"></span></li>
+  <li><strong>Problema.</strong> Se guardaron 96 lápices en 6 cajas iguales. ¿Cuántos lápices lleva cada caja?
+      Planteá la ecuación. <span class="work tall"></span></li>
+  <li><strong>Problema.</strong> La maestra repartió unos stickers en partes iguales entre 8 estudiantes y a
+      cada uno le tocaron 7. ¿Cuántos stickers tenía? <span class="work tall"></span></li>
+  <li><strong>Razonar.</strong> En la ecuación 9z = 63, ¿por qué se divide y no se resta para despejar la z?
+      <span class="work tall"></span></li>
+</ol>
+
+<h2>Lección 4-5 · Ecuaciones con números racionales</h2>
+<ol>
+  <li>x/3 = 9 <span class="work tall"></span></li>
+  <li>12x = 19,2 <span class="work tall"></span></li>
+  <li>17,9 − x = 12,8 <span class="work tall"></span></li>
+  <li>x − 4/8 = 4¼ <span class="work tall"></span></li>
+  <li>x + 3⅝ = 7¼ <span class="work tall"></span></li>
+  <li>x ÷ 15 = 8⅓ <span class="work tall"></span></li>
+  <li>(4/2)x = 6 <span class="work tall"></span></li>
+  <li>(3/5)n = 2/3 <span class="work tall"></span></li>
+  <li><strong>Problema.</strong> Daniel llevaba cierta cantidad de dinero, gastó ₡1 275 en el bus y le quedaron
+      ₡725. ¿Cuánto llevaba? <span class="work tall"></span></li>
+  <li><strong>Razonar.</strong> ¿Por qué para resolver (3/5)n = 2/3 se multiplica por 5/3 y no por 3/5?
+      <span class="work tall"></span></li>
+</ol>
+
+<div class="sol page-break">
+<h1>Hoja de respuestas</h1>
+<p class="sub">Con el procedimiento resuelto, igual que se pide en el cuaderno.</p>
+
+<h2>Lección 3-1 · Exponentes</h2>
+<ol>
+  <li>5⁴</li>
+  <li>7 × 7 × 7 = 343</li>
+  <li>9² = 9 × 9 = <strong>81</strong></li>
+  <li>2⁵ = 2×2×2×2×2 = <strong>32</strong></li>
+  <li>3⁴ = 3×3×3×3 = <strong>81</strong></li>
+  <li>22² = 22 × 22 = <strong>484</strong></li>
+  <li>10⁴ = 10×10×10×10 = <strong>10 000</strong></li>
+  <li>3 105⁰ = <strong>1</strong> (todo número elevado a 0 es 1)</li>
+  <li>(0,5)² = 0,5 × 0,5 = <strong>0,25</strong></li>
+  <li>(½)³ = ½ × ½ × ½ = <strong>1/8</strong></li>
+  <li>4³ = 4 × 4 × 4 = <strong>64 cm³</strong>. Respuesta: el volumen de la caja es 64 cm³.</li>
+  <li>No tiene razón. 4³ = 64 y 3⁴ = 81. La base y el exponente cumplen papeles distintos: la base es
+      el número que se repite y el exponente dice cuántas veces se repite.</li>
+</ol>
+
+<h2>Lección 3-2 · M.C.D. y m.c.m.</h2>
+<ol>
+  <li><pre>12 | 18 | 2
+ 6 |  9 | 3
+ 2 |  3 |
+M.C.D. = 2 × 3 = 6</pre></li>
+  <li><pre>24 | 36 | 2
+12 | 18 | 2
+ 6 |  9 | 3
+ 2 |  3 |
+M.C.D. = 2 × 2 × 3 = 12</pre></li>
+  <li><pre>75 | 125 | 5
+15 |  25 | 5
+ 3 |   5 |
+M.C.D. = 5 × 5 = 25</pre></li>
+  <li><pre>4 | 6 | 2
+2 | 3 | 2
+1 | 3 | 3
+1 | 1 |
+m.c.m. = 2 × 2 × 3 = 12</pre></li>
+  <li><pre> 8 | 12 | 2
+ 4 |  6 | 2
+ 2 |  3 | 2
+ 1 |  3 | 3
+ 1 |  1 |
+m.c.m. = 2 × 2 × 2 × 3 = 24</pre></li>
+  <li><pre>15 | 21 | 3
+ 5 |  7 | 5
+ 1 |  7 | 7
+ 1 |  1 |
+m.c.m. = 3 × 5 × 7 = 105</pre></li>
+  <li>45 = 3 × 3 × 5 y 60 = 2 × 2 × 3 × 5. <strong>M.C.D. = 3 × 5 = 15</strong>;
+      <strong>m.c.m. = 2 × 2 × 3 × 3 × 5 = 180</strong>.</li>
+  <li>M.C.D.(24, 36) = 12 → 24 + 36 = <strong>12(2 + 3)</strong> = 12 × 5 = 60 ✓</li>
+  <li>Se pide repartir en bolsas idénticas → <strong>M.C.D.</strong><pre> 84 | 126 | 2
+ 42 |  63 | 3
+ 14 |  21 | 7
+  2 |   3 |
+M.C.D. = 2 × 3 × 7 = 42</pre>
+      Respuesta: puede armar <strong>42 bolsas</strong>, cada una con 84 ÷ 42 = <strong>2 lápices</strong> y
+      126 ÷ 42 = <strong>3 borradores</strong>.</li>
+  <li>Se pregunta cuándo vuelven a coincidir → <strong>m.c.m.</strong><pre>12 | 18 | 2
+ 6 |  9 | 2
+ 3 |  9 | 3
+ 1 |  3 | 3
+ 1 |  1 |
+m.c.m. = 2 × 2 × 3 × 3 = 36</pre>
+      Respuesta: coinciden cada 36 minutos, es decir a las <strong>6:36 a. m.</strong></li>
+  <li>Porque el m.c.m. tiene que ser múltiplo de los dos números. Un múltiplo de un número nunca es menor
+      que ese número (salvo el 0), así que el m.c.m. es como mínimo igual al mayor de los dos.</li>
+</ol>
+
+<h2>Lección 3-3 · Expresiones numéricas</h2>
+<ol>
+  <li>15 + 3 × 4 = 15 + 12 = <strong>27</strong></li>
+  <li>(15 + 3) × 4 = 18 × 4 = <strong>72</strong></li>
+  <li>2³ + 6 ÷ 3 − 1 = 8 + 2 − 1 = <strong>9</strong></li>
+  <li>80 − 4² ÷ 8 = 80 − 16 ÷ 8 = 80 − 2 = <strong>78</strong></li>
+  <li>50 − [3 × (2 + 6)] = 50 − [3 × 8] = 50 − 24 = <strong>26</strong></li>
+  <li><pre>3² + 2[(21 − 9) ÷ 4]
+= 3² + 2[12 ÷ 4]
+= 3² + 2 × 3
+= 9 + 6
+= 15</pre></li>
+  <li><pre>92,3 − (3,2 ÷ 0,4) × 2³
+= 92,3 − 8 × 8
+= 92,3 − 64
+= 28,3</pre></li>
+  <li><pre>[(2³ × 2,5) ÷ ½] + 120
+= [(8 × 2,5) ÷ ½] + 120
+= [20 ÷ ½] + 120
+= [20 × 2] + 120
+= 40 + 120 = 160</pre></li>
+  <li><pre>[(2 × 10⁰) ÷ ⅓] + 8
+= [(2 × 1) ÷ ⅓] + 8
+= [2 × 3] + 8
+= 6 + 8 = 14</pre></li>
+  <li>(3 × 2 500) + (2 × 1 800) = 7 500 + 3 600 = <strong>₡11 100</strong></li>
+  <li>Hizo primero la resta (20 − 2 = 18; 18 × 5 = 90). Según el orden de las operaciones, la multiplicación
+      va antes: 20 − 2 × 5 = 20 − 10 = <strong>10</strong>.</li>
+</ol>
+
+<h2>Lección 3-4 · Escribir expresiones algebraicas</h2>
+<ol>
+  <li>8 + a</li>
+  <li>b − 5 <em>(el orden se invierte)</em></li>
+  <li>8c</li>
+  <li>d ÷ 2 (o d/2)</li>
+  <li>5f − 22</li>
+  <li>48j</li>
+  <li>h ÷ 12 (o h/12)</li>
+  <li>3(m + 7)</li>
+  <li><strong>Tres términos</strong>: 12r, r/2 y 19. El <strong>coeficiente</strong> de r es <strong>12</strong>
+      y la <strong>constante</strong> es <strong>19</strong>.</li>
+  <li>3 500p + 1 200</li>
+  <li>No es correcto. «7 menos que n» significa que a <em>n</em> se le quitan 7, así que se escribe
+      <strong>n − 7</strong>. La expresión 7 − n sería «7 menos un número n», que no es lo mismo.</li>
+</ol>
+
+<h2>Lección 3-5 · Evaluar expresiones algebraicas</h2>
+<ol>
+  <li>9x con x = 6 → 9 × 6 = <strong>54</strong></li>
+  <li>20 + 3(10) = <strong>50</strong>; 20 + 3(12) = <strong>56</strong>; 20 + 3(14) = <strong>62</strong></li>
+  <li>w² + 2 con w = 5 → 25 + 2 = <strong>27</strong></li>
+  <li>48 ÷ (2z) con z = 3 → 48 ÷ (2 × 3) = 48 ÷ 6 = <strong>8</strong></li>
+  <li>3y + 6 ÷ 2 con y = 4 → 12 + 3 = <strong>15</strong></li>
+  <li>m = 1 560 ÷ 60 = <strong>26</strong></li>
+  <li>4,5(3) + 2 = 13,5 + 2 = <strong>15,5</strong></li>
+  <li>2(½) + 3/5 = 1 + 3/5 = <strong>1 3/5</strong></li>
+  <li><pre>27 ÷ l²  con l = ⅓
+= 27 ÷ (⅓ × ⅓)
+= 27 ÷ 1/9
+= 27 × 9
+= 243</pre></li>
+  <li>Expresión: 45 000d + 30 000. Para d = 5: 45 000(5) + 30 000 = 225 000 + 30 000 =
+      <strong>₡255 000</strong>.</li>
+  <li>5(0) + 7 = 0 + 7 = <strong>7</strong>. Al multiplicar por 0 ese término desaparece y queda solo la
+      constante.</li>
+</ol>
+
+<h2>Lección 4-3 · Ecuaciones de suma y de resta</h2>
+<ol>
+  <li><pre>x + 2 = 19
+x + 2 − 2 = 19 − 2
+x = 17     Comprobación: 17 + 2 = 19 ✓</pre></li>
+  <li><pre>y − 12 = 89
+y − 12 + 12 = 89 + 12
+y = 101    Comprobación: 101 − 12 = 89 ✓</pre></li>
+  <li><pre>80 + r = 160
+80 + r − 80 = 160 − 80
+r = 80     Comprobación: 80 + 80 = 160 ✓</pre></li>
+  <li><pre>20 = y + 12
+20 − 12 = y + 12 − 12
+y = 8      Comprobación: 8 + 12 = 20 ✓</pre></li>
+  <li><pre>60 = x − 16
+60 + 16 = x − 16 + 16
+x = 76     Comprobación: 76 − 16 = 60 ✓</pre></li>
+  <li><pre>z − 313 = 176
+z − 313 + 313 = 176 + 313
+z = 489    Comprobación: 489 − 313 = 176 ✓</pre></li>
+  <li><pre>x + 2,5 = 8,1
+x = 8,1 − 2,5
+x = 5,6    Comprobación: 5,6 + 2,5 = 8,1 ✓</pre></li>
+  <li><pre>w + 4⅓ = 7
+w = 7 − 4⅓
+w = 2⅔     Comprobación: 2⅔ + 4⅓ = 7 ✓</pre></li>
+  <li><pre>c = cromos al inicio
+c − 21 = 9
+c − 21 + 21 = 9 + 21
+c = 30     Comprobación: 30 − 21 = 9 ✓
+Respuesta: tenía 30 cromos.</pre></li>
+  <li><pre>a = dinero que tenía antes
+a + 4 500 = 12 300
+a = 12 300 − 4 500
+a = 7 800  Comprobación: 7 800 + 4 500 = 12 300 ✓
+Respuesta: tenía ₡7 800.</pre></li>
+  <li>No es correcto. Como la ecuación <em>resta</em> 8, hay que hacer la operación inversa: <strong>sumar 8
+      en los dos lados</strong> → n = 23. Comprobación: 23 − 8 = 15 ✓</li>
+</ol>
+
+<h2>Lección 4-4 · Ecuaciones de multiplicación y de división</h2>
+<ol>
+  <li><pre>8x = 64
+8x ÷ 8 = 64 ÷ 8
+x = 8      Comprobación: 8 × 8 = 64 ✓</pre></li>
+  <li><pre>7x = 77
+x = 77 ÷ 7
+x = 11     Comprobación: 7 × 11 = 77 ✓</pre></li>
+  <li><pre>15x = 45
+x = 45 ÷ 15
+x = 3      Comprobación: 15 × 3 = 45 ✓</pre></li>
+  <li><pre>26 = 13x
+26 ÷ 13 = x
+x = 2      Comprobación: 13 × 2 = 26 ✓</pre></li>
+  <li><pre>x ÷ 12 = 8
+x ÷ 12 × 12 = 8 × 12
+x = 96     Comprobación: 96 ÷ 12 = 8 ✓</pre></li>
+  <li><pre>x ÷ 20 = 120
+x = 120 × 20
+x = 2 400  Comprobación: 2 400 ÷ 20 = 120 ✓</pre></li>
+  <li>2 448 ÷ 48 = <strong>x = 51</strong>. Comprobación: 51 × 48 = 2 448 ✓</li>
+  <li><pre>c = lápices por caja
+6c = 96
+c = 96 ÷ 6
+c = 16     Comprobación: 6 × 16 = 96 ✓
+Respuesta: cada caja lleva 16 lápices.</pre></li>
+  <li><pre>s = stickers en total
+s ÷ 8 = 7
+s = 7 × 8
+s = 56     Comprobación: 56 ÷ 8 = 7 ✓
+Respuesta: tenía 56 stickers.</pre></li>
+  <li>Porque la z está <em>multiplicada</em> por 9, y la operación inversa de la multiplicación es la
+      división. Restar 9 no despejaría la variable.</li>
+</ol>
+
+<h2>Lección 4-5 · Ecuaciones con números racionales</h2>
+<ol>
+  <li><pre>x/3 = 9
+x = 9 × 3
+x = 27     Comprobación: 27 ÷ 3 = 9 ✓</pre></li>
+  <li><pre>12x = 19,2
+x = 19,2 ÷ 12
+x = 1,6    Comprobación: 12 × 1,6 = 19,2 ✓</pre></li>
+  <li><pre>17,9 − x = 12,8
+x = 17,9 − 12,8
+x = 5,1    Comprobación: 17,9 − 5,1 = 12,8 ✓</pre></li>
+  <li><pre>x − 4/8 = 4¼        (4/8 = ½)
+x = 4¼ + ½
+x = 4¾     Comprobación: 4¾ − ½ = 4¼ ✓</pre></li>
+  <li><pre>x + 3⅝ = 7¼
+x = 7¼ − 3⅝  →  58/8 − 29/8 = 29/8
+x = 3⅝     Comprobación: 3⅝ + 3⅝ = 7¼ ✓</pre></li>
+  <li><pre>x ÷ 15 = 8⅓
+x = 8⅓ × 15  →  25/3 × 15 = 375/3
+x = 125    Comprobación: 125 ÷ 15 = 8⅓ ✓</pre></li>
+  <li><pre>(4/2)x = 6  →  2x = 6
+x = 6 ÷ 2
+x = 3      Comprobación: 2 × 3 = 6 ✓</pre></li>
+  <li><pre>(3/5)n = 2/3
+(5/3) × (3/5)n = (5/3) × (2/3)
+n = 10/9 = 1 1/9
+Comprobación: (3/5) × 10/9 = 30/45 = 2/3 ✓</pre></li>
+  <li><pre>d = dinero que llevaba
+d − 1 275 = 725
+d = 725 + 1 275
+d = 2 000  Comprobación: 2 000 − 1 275 = 725 ✓
+Respuesta: llevaba ₡2 000.</pre></li>
+  <li>Porque 5/3 es el <strong>recíproco</strong> de 3/5 y al multiplicarlos dan 1, lo que deja la <em>n</em>
+      sola. Multiplicar otra vez por 3/5 solo haría el número más pequeño y no despejaría la variable.</li>
+</ol>
+</div>
+
+</body>
+</html>

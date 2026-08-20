@@ -111,7 +111,8 @@ const LessonView = () => {
                         </p>
                         <a
                             href={lesson.extraMaterial.url}
-                            download
+                            target="_blank"
+                            rel="noopener"
                             className="btn-primary"
                             style={{
                                 display: 'inline-flex',
