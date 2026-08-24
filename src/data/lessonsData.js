@@ -3,6 +3,7 @@ import { socialesLessons } from './lessons/sociales';
 import { cienciasLessons } from './lessons/ciencias';
 import { espanolLessons } from './lessons/espanol';
 import { matematicasLessons } from './lessons/matematicas';
+import { sonnyLanguageArtsLesson } from './lessons/sonnyLanguageArts';
 
 export const lessonsData = {
     sociales: {
@@ -20,5 +21,10 @@ export const lessonsData = {
     matematicas: {
         bloques: subjectConfig.matematicas.bloques,
         lessons: matematicasLessons,
+    },
+    // ponytail: sonny-only subject; no subjectConfig entry, so /language-arts redirects home.
+    'language-arts': {
+        bloques: [],
+        lessons: [sonnyLanguageArtsLesson],
     },
 };

@@ -17,6 +17,18 @@ const Sonny = () => {
             link: '/espanol/lesson/sonny-resumen-espanol',
         },
         {
+            id: 'language-arts',
+            name: 'Language Arts',
+            kicker: 'Exam Sep 2, 2026',
+            desc: 'II Semester study guide: Future Continuous, Balance vocabulary, Defining Relative Clauses and Instructional Guide writing, with quiz.',
+            icon: '📝',
+            accent: '#8B5CF6',
+            accentLight: '#F5F3FF',
+            status: 'Disponible',
+            disabled: false,
+            link: '/language-arts/lesson/sonny-language-arts-6',
+        },
+        {
             id: 'matematicas',
             name: 'Matemática',
             kicker: 'Temas 3 y 4',
