@@ -23,8 +23,8 @@ vi.mock('react-router-dom', async (orig) => ({
 }));
 
 // A from() chain that resolves to the seeded nickname row for every terminal
-// call (select/.eq for the picker load, insert for the profile, update for the
-// claim). insert/update paths only read `error`, so one result satisfies all.
+// call (select/.eq for the picker load, insert for the profile). The nickname
+// claim now goes through supabase.rpc('claim_nickname') (globally mocked).
 const mockFrom = (result = { data: [{ id: 'nick1', name: 'NebulaByte', emoji: '🌌' }], error: null }) => {
   const chain = {
     select: vi.fn(() => chain),

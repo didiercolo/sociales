@@ -12,6 +12,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "seed": "node scripts/seed.mjs",
+    "check:rls": "node scripts/check-rls.mjs",
+    "test:rls": "node scripts/test-rls.mjs",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },

@@ -143,9 +143,11 @@ export default function Register() {
             }
 
             // If nickname came from a Supabase-backed entry, mark it as used.
+            // Ownership-scoped RPC (the profile row now exists with this nickname);
+            // the broad client UPDATE policy was removed in migration 0002.
             const pickedEntry = availableNicknames.find((e) => e.name === activeNickname);
             if (nicknameMode === 'list' && pickedEntry?.docId) {
-                await supabase.from('nicknames').update({ used: true }).eq('id', pickedEntry.docId);
+                await supabase.rpc('claim_nickname', { p_name: activeNickname });
             }
 
             // Profile row now exists — refresh context so the UI shows the
